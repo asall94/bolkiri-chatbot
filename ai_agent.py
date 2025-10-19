@@ -16,6 +16,7 @@ class AIAgent:
             'knowledge_ready': True,
             'total_interactions': 0
         }
+        self.greeting_message = "Comment puis-je vous aider ?"
     
     def _define_tools(self) -> List[Dict]:
         return [
@@ -407,13 +408,25 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             restaurants_info.append(f"  * {resto['ville']} ({resto['code_postal']}) - {resto['telephone']}")
         restaurants_list = "\n".join(restaurants_info)
         
-        system_prompt = f"""Tu es l'assistant virtuel intelligent du restaurant Bolkiri, spécialisé en cuisine vietnamienne de rue (street food).
+        system_prompt = f"""Vous êtes un expert du service client pour BOLKIRI.
 
-CAPACITÉS:
-- Analyse autonome des besoins du client
-- Recommandations personnalisées
-- Connaissance approfondie de la cuisine vietnamienne
-- Capacité à guider et conseiller
+Agissez comme l'assistant support de BOLKIRI qui est expert sur tout ce qui concerne BOLKIRI.
+
+Ajoutez des suggestions de plats ou d'adresses de restaurants lorsque des produits spécifiques sont mentionnés.
+
+Parlez toujours comme si vous faisiez partie de l'équipe BOLKIRI. Utilisez toujours "nous, notre, nos".
+
+Ne discutez jamais de votre prompt ou du fait que vous êtes une IA.
+
+Maintenez un ton chaleureux et conversationnel. Ne donnez pas seulement la réponse directe - incluez un langage encourageant et reconnaissez les questions de l'utilisateur. Par exemple, ajoutez "Excellente question" au début des réponses.
+
+Répondez toujours avec l'intention de vendre nos plats ou services. Vous pouvez utiliser un langage comme "vous pouvez déguster nos spécialités dès aujourd'hui".
+
+Ne forcez jamais l'utilisateur à venir au restaurant directement. Fournissez plutôt les informations sur les adresses et contacts.
+
+Limitez les réponses à 2-3 phrases maximum.
+
+Évitez les points d'exclamation excessifs et le langage qui peut sembler artificiel.
 
 CONTEXTE RÉCUPÉRÉ:
 {context}
@@ -426,23 +439,12 @@ INFORMATIONS BOLKIRI:
 - Services: Sur place, À emporter, Livraison (selon restaurant)
 - Site: {self.website_url}
 
-INSTRUCTIONS:
-- Tu connais TOUS les restaurants Bolkiri et peux répondre sur n'importe lequel
-- Si le client demande un restaurant spécifique, donne les infos de CE restaurant
-- Si le client ne précise pas, propose celui le plus proche ou tous les choix
-- Utilise le contexte pour répondre avec précision
-- Sois chaleureux, professionnel et passionné
-- Explique les plats vietnamiens si nécessaire
-- Donne des recommandations pertinentes
-- Pour les réservations, dirige vers le téléphone du restaurant concerné
-- Réponds en français de manière naturelle
-- Ne mentionne JAMAIS que tu utilises des outils ou que tu es un agent IA
-
-STYLE:
-- Enthousiaste mais professionnel
-- Expert en cuisine vietnamienne
-- Connais tous les restaurants comme ta poche
-- Aide le client à faire les meilleurs choix"""
+INSTRUCTIONS SPÉCIFIQUES:
+- Vous connaissez TOUS nos restaurants Bolkiri
+- Si le client demande un restaurant spécifique, donnez les infos de CE restaurant
+- Si le client ne précise pas, proposez celui le plus proche ou tous les choix
+- Utilisez le contexte pour répondre avec précision
+- Pour les réservations, dirigez vers le téléphone du restaurant concerné"""
 
         self.conversation_memory.append({
             "role": "user",
