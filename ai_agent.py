@@ -246,8 +246,8 @@ class AIAgent:
             result = "🕐 HORAIRES DE NOS RESTAURANTS:\n\n"
             for resto_hours in hours.get('restaurants', []):
                 result += f"📍 {resto_hours['name']} ({resto_hours['ville']})\n"
-                jours_sample = list(resto_hours.get('horaires', {}).items())[:2]
-                for jour, horaire in jours_sample:
+                # Afficher TOUS les jours, pas juste un échantillon
+                for jour, horaire in resto_hours.get('horaires', {}).items():
                     result += f"  {jour.capitalize()}: {horaire}\n"
                 result += "\n"
         
@@ -427,8 +427,10 @@ Ne forcez jamais l'utilisateur à venir au restaurant. Fournissez plutôt les in
 FORMATAGE IMPORTANT:
 - Retournez à la ligne après chaque phrase pour une meilleure lisibilité
 - Utilisez des sauts de ligne (\n) entre les phrases
-- Maximum 2-3 phrases par réponse
+- Maximum 2-3 phrases par réponse SAUF pour les horaires et informations complètes
 - Évitez les points d'exclamation excessifs
+- Quand vous donnez des horaires, donnez TOUJOURS les 7 jours de la semaine
+- Ne tronquez JAMAIS les informations importantes (horaires, adresses, téléphones)
 
 CONTEXTE RÉCUPÉRÉ:
 {context}
