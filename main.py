@@ -1,5 +1,7 @@
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
 from pydantic import BaseModel
 from typing import Optional
 import os
@@ -52,11 +54,7 @@ class ChatResponse(BaseModel):
 
 @app.get("/")
 def read_root():
-    return {
-        "status": "online",
-        "service": "Bolkiri Chatbot API",
-        "version": "1.0"
-    }
+    return FileResponse("index.html")
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(chat_message: ChatMessage):
