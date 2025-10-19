@@ -3,7 +3,6 @@ import openai
 import json
 from datetime import datetime
 from knowledge_base_enriched import EnrichedKnowledgeBase
-from scraper import WebsiteScraper
 
 class AIAgent:
     
@@ -11,12 +10,10 @@ class AIAgent:
         openai.api_key = openai_api_key
         self.website_url = website_url
         self.kb = EnrichedKnowledgeBase()
-        self.scraper = WebsiteScraper(website_url)
         self.conversation_memory = []
         self.tools = self._define_tools()
         self.agent_state = {
-            'last_scrape': None,
-            'knowledge_ready': True,  # Déjà enrichie
+            'knowledge_ready': True,
             'total_interactions': 0
         }
     
