@@ -210,7 +210,7 @@
             <div class="message bot">
                 <div class="message-avatar">🍜</div>
                 <div class="message-content">
-                    Comment puis-je vous aider ?
+                    Bonjour et bienvenue chez Bolkiri.<br>Comment puis-je vous aider ?
                 </div>
             </div>
         </div>
@@ -247,7 +247,8 @@
             
             const content = document.createElement('div');
             content.className = 'message-content';
-            content.textContent = text;
+            // Convertir les \n en <br> pour afficher les sauts de ligne
+            content.innerHTML = text.replace(/\n/g, '<br>');
             
             messageDiv.appendChild(avatar);
             messageDiv.appendChild(content);
