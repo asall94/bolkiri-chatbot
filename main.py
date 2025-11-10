@@ -1,7 +1,7 @@
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from pydantic import BaseModel
 from typing import Optional
 import os
@@ -20,6 +20,10 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Monter le dossier static
+if os.path.exists("static"):
+    app.mount("/static", StaticFiles(directory="static"), name="static")
 
 agent = None
 
@@ -52,12 +56,20 @@ class ChatResponse(BaseModel):
     response: str
     conversation_id: str
 
-@app.get("/")
+@app.get("/", response_class=HTMLResponse)
+async def read_root():
+    """Root endpoint - serves the chat interface"""
+    try:
+        with open("static/index.html", "r", encoding="utf-8") as f:
+            return HTMLResponse(content=f.read())
+    except FileNotFoundError:
+        return {"status": "ok", "service": "Bolkiri Chatbot API", "version": "1.0.2"}
+
 @app.head("/")
 @app.options("/")
-async def read_root():
-    """Root endpoint - serves index.html or returns status for HEAD/OPTIONS requests"""
-    return {"status": "ok", "service": "Bolkiri Chatbot API", "version": "1.0.2"}
+async def root_options():
+    """HEAD and OPTIONS for monitoring"""
+    return {"status": "ok"}
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(chat_message: ChatMessage):
