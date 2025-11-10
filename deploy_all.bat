@@ -27,4 +27,3 @@ echo - Backend: https://bolkiri-chatbot.onrender.com/
 echo - Demo: https://asall94.github.io/bolkiri-demo/
 echo ========================================
 echo.
-pause
