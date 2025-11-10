@@ -499,7 +499,7 @@ INSTRUCTIONS:
             response = openai.ChatCompletion.create(
                 model="gpt-4o-mini",
                 messages=messages,
-                temperature=0,  # ZÉRO créativité pour éviter hallucinations
+                temperature=0.1,  # Minimal pour cohérence tout en gardant un peu de naturel
                 max_tokens=500
             )
             
