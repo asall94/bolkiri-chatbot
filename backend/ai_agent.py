@@ -438,6 +438,12 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         
         context = self.plan_and_execute(user_message)
         
+        # DEBUG: Logger le contexte récupéré
+        print(f"\n=== DEBUG CONTEXTE ===")
+        print(f"Question: {user_message}")
+        print(f"Contexte récupéré:\n{context[:500]}...")
+        print(f"======================\n")
+        
         # Charger dynamiquement les infos des restaurants
         restaurants = self.kb.get_all_restaurants()
         restaurants_info = []

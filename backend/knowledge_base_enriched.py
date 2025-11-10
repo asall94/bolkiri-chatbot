@@ -110,16 +110,16 @@ class EnrichedKnowledgeBase:
     
     def get_restaurant_by_ville(self, ville: str) -> Optional[Dict]:
         """Trouve un restaurant par ville, département ou code postal"""
-        # Mapping département → ville
+        # Mapping département → ville (version normalisée)
         dept_mapping = {
-            "91": "Corbeil-Essonnes",
-            "essonne": "Corbeil-Essonnes",
-            "94": "Ivry-sur-Seine",
-            "val-de-marne": "Ivry-sur-Seine",
-            "78": "Les Mureaux",
-            "yvelines": "Les Mureaux",
-            "77": "Lagny-sur-Marne",
-            "seine-et-marne": "Lagny-sur-Marne"
+            "91": "corbeil",  # Simplifié pour match partiel
+            "essonne": "corbeil",
+            "94": "ivry",
+            "val-de-marne": "ivry",
+            "78": "mureaux",
+            "yvelines": "mureaux",
+            "77": "lagny",
+            "seine-et-marne": "lagny"
         }
         
         ville_search = ville.lower().strip()
@@ -128,24 +128,28 @@ class EnrichedKnowledgeBase:
         if ville_search in dept_mapping:
             ville_search = dept_mapping[ville_search]
         
-        # Chercher par code postal (91xxx → Corbeil)
+        # Chercher par code postal (91xxx → corbeil)
         if ville_search.startswith("91"):
-            ville_search = "Corbeil-Essonnes"
+            ville_search = "corbeil"
         elif ville_search.startswith("94"):
-            ville_search = "Ivry-sur-Seine"
+            ville_search = "ivry"
         elif ville_search.startswith("78"):
-            ville_search = "Les Mureaux"
+            ville_search = "mureaux"
         elif ville_search.startswith("77"):
-            ville_search = "Lagny-sur-Marne"
+            ville_search = "lagny"
         
-        # Chercher le restaurant
+        # Chercher le restaurant (match partiel plus permissif)
         ville_lower = ville_search.lower()
         for resto in self.restaurants:
-            if ville_lower in resto.get('ville', '').lower():
+            resto_ville = resto.get('ville', '').lower()
+            resto_cp = resto.get('code_postal', '').lower()
+            
+            # Match partiel sur ville ou code postal
+            if ville_lower in resto_ville or resto_ville.startswith(ville_lower):
                 return resto
-            # Chercher aussi par code postal
-            if ville_lower in resto.get('code_postal', '').lower():
+            if ville_lower in resto_cp or resto_cp.startswith(ville_lower):
                 return resto
+        
         return None
     
     def get_all_menu_items(self, categorie: Optional[str] = None) -> List[Dict]:
