@@ -5,7 +5,7 @@ on:
     # Le 1er de chaque mois à 3h du matin (UTC)
     - cron: '0 3 1 * *'
   
-  # Permet aussi de déclencher manuellement depuis GitHub
+  # Permet aussi de déclencher manuellement depuis GitHub 
   workflow_dispatch:
 
 jobs:
