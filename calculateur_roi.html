@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculateur ROI - Agent IA Restaurant</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            text-align: center;
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 32px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+            padding: 25px;
+            background: #f9f9f9;
+            border-radius: 15px;
+            border-left: 4px solid #667eea;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .input-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+            font-size: 14px;
+        }
+
+        input[type="number"] {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 10px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus {
+            outline: none;
+            border-color: #667eea;
+        }
+
+        .result-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .result-title {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        .result-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .result-card {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .result-label {
+            font-size: 12px;
+            text-transform: uppercase;
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+
+        .result-value {
+            font-size: 28px;
+            font-weight: 700;
+        }
+
+        .big-result {
+            text-align: center;
+            padding: 25px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .big-result-label {
+            font-size: 14px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        .big-result-value {
+            font-size: 48px;
+            font-weight: 700;
+        }
+
+        .roi-percentage {
+            font-size: 36px;
+            font-weight: 700;
+            margin-top: 10px;
+        }
+
+        .details {
+            background: #f0f4ff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
+
+        .details h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+
+        .detail-line {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+        }
+
+        .detail-line:last-child {
+            border-bottom: none;
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 18px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 30px;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+        }
+
+        .note {
+            text-align: center;
+            color: #999;
+            font-size: 12px;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .result-value {
+                font-size: 22px;
+            }
+
+            .big-result-value {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>💰 Calculateur ROI</h1>
+        <p class="subtitle">Découvrez combien vous pouvez économiser avec un Agent IA</p>
+
+        <div class="section">
+            <div class="section-title">📞 Appels Téléphoniques</div>
+            
+            <div class="input-group">
+                <label>Nombre d'appels par jour pour infos basiques (horaires, menu, adresse)</label>
+                <input type="number" id="callsPerDay" value="30" min="0">
+            </div>
+
+            <div class="input-group">
+                <label>Durée moyenne d'un appel (minutes)</label>
+                <input type="number" id="callDuration" value="3" min="0" step="0.5">
+            </div>
+
+            <div class="input-group">
+                <label>Coût horaire d'un employé (€)</label>
+                <input type="number" id="hourlyCost" value="25" min="0">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">🚫 Clients Perdus</div>
+            
+            <div class="input-group">
+                <label>Clients qui partent sans réponse (hors horaires, site incomplet) par jour</label>
+                <input type="number" id="lostClients" value="3" min="0">
+            </div>
+
+            <div class="input-group">
+                <label>Ticket moyen par client (€)</label>
+                <input type="number" id="avgTicket" value="15" min="0">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">📈 Augmentation Panier Moyen</div>
+            
+            <div class="input-group">
+                <label>Nombre de commandes par jour</label>
+                <input type="number" id="ordersPerDay" value="50" min="0">
+            </div>
+
+            <div class="input-group">
+                <label>Augmentation estimée du panier moyen grâce aux recommandations IA (%)</label>
+                <input type="number" id="basketIncrease" value="5" min="0" max="100">
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">💸 Coût de l'Agent IA</div>
+            
+            <div class="input-group">
+                <label>Coût mensuel de l'agent IA (€)</label>
+                <input type="number" id="aiCost" value="70" min="0">
+            </div>
+        </div>
+
+        <div class="result-section">
+            <div class="result-title">🎯 Vos Résultats</div>
+
+            <div class="result-grid">
+                <div class="result-card">
+                    <div class="result-label">Économie Téléphone</div>
+                    <div class="result-value" id="phoneSavings">1,125€</div>
+                    <div class="result-label" style="margin-top: 5px">/mois</div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-label">Clients Récupérés</div>
+                    <div class="result-value" id="clientRevenue">1,350€</div>
+                    <div class="result-label" style="margin-top: 5px">/mois</div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-label">Panier Moyen</div>
+                    <div class="result-value" id="basketRevenue">1,125€</div>
+                    <div class="result-label" style="margin-top: 5px">/mois</div>
+                </div>
+
+                <div class="result-card">
+                    <div class="result-label">Coût Agent IA</div>
+                    <div class="result-value" id="costDisplay">-70€</div>
+                    <div class="result-label" style="margin-top: 5px">/mois</div>
+                </div>
+            </div>
+
+            <div class="big-result">
+                <div class="big-result-label">💎 Profit Net Mensuel</div>
+                <div class="big-result-value" id="netProfit">3,530€</div>
+                <div class="roi-percentage" id="roiPercent">5,043%</div>
+                <div class="result-label">de retour sur investissement</div>
+            </div>
+        </div>
+
+        <div class="details">
+            <h3>📊 Détails Annuels</h3>
+            <div class="detail-line">
+                <span>Économie téléphone (12 mois)</span>
+                <span id="yearPhone">13,500€</span>
+            </div>
+            <div class="detail-line">
+                <span>Revenus clients récupérés (12 mois)</span>
+                <span id="yearClients">16,200€</span>
+            </div>
+            <div class="detail-line">
+                <span>Revenus panier moyen (12 mois)</span>
+                <span id="yearBasket">13,500€</span>
+            </div>
+            <div class="detail-line">
+                <span>Coût total Agent IA (12 mois)</span>
+                <span id="yearCost">-840€</span>
+            </div>
+            <div class="detail-line">
+                <span>🎯 PROFIT NET ANNUEL</span>
+                <span id="yearProfit">42,360€</span>
+            </div>
+        </div>
+
+        <button class="cta-button" onclick="window.print()">
+            📄 Imprimer ce Rapport
+        </button>
+
+        <p class="note">
+            Les chiffres sont recalculés automatiquement à chaque modification.
+        </p>
+    </div>
+
+    <script>
+        function formatEuro(value) {
+            return new Intl.NumberFormat('fr-FR', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(value) + '€';
+        }
+
+        function formatPercent(value) {
+            return new Intl.NumberFormat('fr-FR', {
+                minimumFractionDigits: 0,
+                maximumFractionDigits: 0
+            }).format(value) + '%';
+        }
+
+        function calculate() {
+            // Récupérer les valeurs
+            const callsPerDay = parseFloat(document.getElementById('callsPerDay').value) || 0;
+            const callDuration = parseFloat(document.getElementById('callDuration').value) || 0;
+            const hourlyCost = parseFloat(document.getElementById('hourlyCost').value) || 0;
+            const lostClients = parseFloat(document.getElementById('lostClients').value) || 0;
+            const avgTicket = parseFloat(document.getElementById('avgTicket').value) || 0;
+            const ordersPerDay = parseFloat(document.getElementById('ordersPerDay').value) || 0;
+            const basketIncrease = parseFloat(document.getElementById('basketIncrease').value) || 0;
+            const aiCost = parseFloat(document.getElementById('aiCost').value) || 0;
+
+            // Calculs mensuels
+            const phoneSavings = (callsPerDay * callDuration / 60 * hourlyCost * 30);
+            const clientRevenue = (lostClients * avgTicket * 30);
+            const basketRevenue = (ordersPerDay * avgTicket * (basketIncrease / 100) * 30);
+            const netProfit = phoneSavings + clientRevenue + basketRevenue - aiCost;
+            const roi = aiCost > 0 ? (netProfit / aiCost * 100) : 0;
+
+            // Calculs annuels
+            const yearPhone = phoneSavings * 12;
+            const yearClients = clientRevenue * 12;
+            const yearBasket = basketRevenue * 12;
+            const yearCost = aiCost * 12;
+            const yearProfit = netProfit * 12;
+
+            // Mise à jour de l'affichage
+            document.getElementById('phoneSavings').textContent = formatEuro(phoneSavings);
+            document.getElementById('clientRevenue').textContent = formatEuro(clientRevenue);
+            document.getElementById('basketRevenue').textContent = formatEuro(basketRevenue);
+            document.getElementById('costDisplay').textContent = '-' + formatEuro(aiCost);
+            document.getElementById('netProfit').textContent = formatEuro(netProfit);
+            document.getElementById('roiPercent').textContent = formatPercent(roi);
+
+            document.getElementById('yearPhone').textContent = formatEuro(yearPhone);
+            document.getElementById('yearClients').textContent = formatEuro(yearClients);
+            document.getElementById('yearBasket').textContent = formatEuro(yearBasket);
+            document.getElementById('yearCost').textContent = '-' + formatEuro(yearCost);
+            document.getElementById('yearProfit').textContent = formatEuro(yearProfit);
+        }
+
+        // Calculer au chargement
+        calculate();
+
+        // Recalculer à chaque changement
+        const inputs = document.querySelectorAll('input[type="number"]');
+        inputs.forEach(input => {
+            input.addEventListener('input', calculate);
+        });
+    </script>
+</body>
+</html>
