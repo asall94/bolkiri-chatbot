@@ -54,9 +54,10 @@ class ChatResponse(BaseModel):
 
 @app.get("/")
 @app.head("/")
+@app.options("/")
 async def read_root():
-    """Root endpoint - serves index.html or returns status for HEAD requests"""
-    return {"status": "ok", "service": "Bolkiri Chatbot API", "version": "1.0"}
+    """Root endpoint - serves index.html or returns status for HEAD/OPTIONS requests"""
+    return {"status": "ok", "service": "Bolkiri Chatbot API", "version": "1.0.1"}
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(chat_message: ChatMessage):
@@ -88,8 +89,9 @@ async def refresh_knowledge(background_tasks: BackgroundTasks):
 
 @app.get("/health")
 @app.head("/health")
+@app.options("/health")
 async def health_check():
-    """Health check endpoint for monitoring services like Render"""
+    """Health check endpoint for monitoring services like Render (supports GET/HEAD/OPTIONS)"""
     return {
         "status": "healthy",
         "agent_ready": agent is not None,
