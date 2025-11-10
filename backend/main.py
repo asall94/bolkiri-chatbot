@@ -57,7 +57,7 @@ class ChatResponse(BaseModel):
 @app.options("/")
 async def read_root():
     """Root endpoint - serves index.html or returns status for HEAD/OPTIONS requests"""
-    return {"status": "ok", "service": "Bolkiri Chatbot API", "version": "1.0.1"}
+    return {"status": "ok", "service": "Bolkiri Chatbot API", "version": "1.0.2"}
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(chat_message: ChatMessage):
