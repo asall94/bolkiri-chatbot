@@ -109,10 +109,42 @@ class EnrichedKnowledgeBase:
         return self.restaurants
     
     def get_restaurant_by_ville(self, ville: str) -> Optional[Dict]:
-        """Trouve un restaurant par ville"""
-        ville_lower = ville.lower()
+        """Trouve un restaurant par ville, département ou code postal"""
+        # Mapping département → ville
+        dept_mapping = {
+            "91": "Corbeil-Essonnes",
+            "essonne": "Corbeil-Essonnes",
+            "94": "Ivry-sur-Seine",
+            "val-de-marne": "Ivry-sur-Seine",
+            "78": "Les Mureaux",
+            "yvelines": "Les Mureaux",
+            "77": "Lagny-sur-Marne",
+            "seine-et-marne": "Lagny-sur-Marne"
+        }
+        
+        ville_search = ville.lower().strip()
+        
+        # Chercher par mapping département
+        if ville_search in dept_mapping:
+            ville_search = dept_mapping[ville_search]
+        
+        # Chercher par code postal (91xxx → Corbeil)
+        if ville_search.startswith("91"):
+            ville_search = "Corbeil-Essonnes"
+        elif ville_search.startswith("94"):
+            ville_search = "Ivry-sur-Seine"
+        elif ville_search.startswith("78"):
+            ville_search = "Les Mureaux"
+        elif ville_search.startswith("77"):
+            ville_search = "Lagny-sur-Marne"
+        
+        # Chercher le restaurant
+        ville_lower = ville_search.lower()
         for resto in self.restaurants:
             if ville_lower in resto.get('ville', '').lower():
+                return resto
+            # Chercher aussi par code postal
+            if ville_lower in resto.get('code_postal', '').lower():
                 return resto
         return None
     

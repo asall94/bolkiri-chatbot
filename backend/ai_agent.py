@@ -122,40 +122,16 @@ class AIAgent:
     
     def get_restaurant_info(self, ville: str) -> str:
         """Infos détaillées d'un restaurant spécifique - supporte département et code postal"""
-        # Mapping département → ville
-        dept_mapping = {
-            "91": "Corbeil-Essonnes",
-            "essonne": "Corbeil-Essonnes",
-            "94": "Ivry-sur-Seine",
-            "val-de-marne": "Ivry-sur-Seine",
-            "78": "Les Mureaux",
-            "yvelines": "Les Mureaux",
-            "77": "Lagny-sur-Marne",
-            "seine-et-marne": "Lagny-sur-Marne"
-        }
-        
-        # Normaliser la recherche
-        ville_search = ville.lower().strip()
-        
-        # Chercher par mapping département
-        if ville_search in dept_mapping:
-            ville_search = dept_mapping[ville_search]
-        
-        # Chercher par code postal (91xxx → Corbeil)
-        if ville_search.startswith("91"):
-            ville_search = "Corbeil-Essonnes"
-        elif ville_search.startswith("94"):
-            ville_search = "Ivry-sur-Seine"
-        elif ville_search.startswith("78"):
-            ville_search = "Les Mureaux"
-        elif ville_search.startswith("77"):
-            ville_search = "Lagny-sur-Marne"
-        
-        resto = self.kb.get_restaurant_by_ville(ville_search)
+        # La knowledge base gère maintenant la normalisation département/code postal
+        resto = self.kb.get_restaurant_by_ville(ville)
         
         if not resto:
-            return f"Aucun restaurant Bolkiri trouvé pour '{ville}'. Nos restaurants sont à: " + \
-                   ", ".join([r['ville'] for r in self.kb.get_all_restaurants()])
+            # Si vraiment aucun restaurant trouvé, lister les options disponibles
+            all_restos = self.kb.get_all_restaurants()
+            villes = [f"{r['ville']} ({r['code_postal']})" for r in all_restos]
+            return f"Je n'ai pas trouvé de restaurant pour '{ville}'.\n\n" + \
+                   f"Nos {len(all_restos)} restaurants sont disponibles à:\n" + \
+                   "\n".join([f"• {v}" for v in villes])
         
         result = f"📍 {resto['name']}\n\n"
         result += f"Adresse: {resto['adresse']}\n"
@@ -468,6 +444,12 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         system_prompt = f"""Vous êtes un expert du service client pour BOLKIRI.
 
 Agissez comme l'assistant support de BOLKIRI qui est expert sur tout ce qui concerne BOLKIRI.
+
+⚠️ RÈGLE ABSOLUE - PRIORITÉ AU CONTEXTE:
+- Si le CONTEXTE RÉCUPÉRÉ mentionne un restaurant, utilisez-le TOUJOURS
+- Ne dites JAMAIS "nous n'avons pas de restaurant" si le contexte en mentionne un
+- Le contexte est la source de vérité - prioritaire sur votre connaissance générale
+- Si le contexte contient des infos sur un restaurant, présentez-les positivement
 
 Ajoutez des suggestions de plats ou d'adresses de restaurants lorsque des produits spécifiques sont mentionnés.
 
