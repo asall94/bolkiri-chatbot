@@ -11,15 +11,53 @@ class EnrichedKnowledgeBase:
         self.fallback_dir = "./data"
         self.data = self._load_complete_knowledge()
         
+        # Adapter la nouvelle structure
         self.restaurants = self.data.get('restaurants', [])
-        self.menu_complet = self.data.get('menu_complet', [])
-        self.infos_generales = self.data.get('infos_generales', {})
+        self.menu_complet = self._extract_menu_from_pages()
+        self.infos_generales = self.data.get('informations_generales', {})
         
         # Pour compatibilité avec l'ancien système
-        self.documents = []
+        self.documents = self._create_documents_from_pages()
         self.menu_items = self.menu_complet
         
-        print(f"✅ Base enrichie chargée: {len(self.restaurants)} restos, {len(self.menu_complet)} plats")
+        print(f"Base enrichie chargée: {len(self.restaurants)} restos, {len(self.menu_complet)} items menu")
+    
+    def _extract_menu_from_pages(self) -> List[Dict]:
+        """Extrait le menu depuis les pages scrapées"""
+        menu = []
+        pages_categorie = self.data.get('pages_par_categorie', {})
+        
+        # Chercher dans les pages menu
+        for page in pages_categorie.get('menu', []):
+            content = page.get('content', '')
+            # Parser le contenu pour extraire les plats
+            # Pour l'instant, retourner une structure basique
+            if content:
+                menu.append({
+                    'nom': 'Menu Bolkiri',
+                    'description': content[:500],
+                    'prix': 'Variable'
+                })
+        
+        return menu if menu else []
+    
+    def _create_documents_from_pages(self) -> List[Dict]:
+        """Crée des documents depuis toutes les pages scrapées"""
+        documents = []
+        pages_categorie = self.data.get('pages_par_categorie', {})
+        
+        # Convertir toutes les pages en documents
+        for category, pages in pages_categorie.items():
+            for page in pages:
+                if page.get('content'):
+                    documents.append({
+                        'url': page.get('url', ''),
+                        'title': page.get('title', ''),
+                        'text': page.get('content', ''),
+                        'category': category
+                    })
+        
+        return documents
     
     def _load_complete_knowledge(self) -> Dict:
         """Charge la base de connaissances complète"""
@@ -55,53 +93,67 @@ class EnrichedKnowledgeBase:
         query_lower = query.lower()
         results = []
         
+        # Si question sur les villes/localisations, augmenter limit pour montrer tous les restos
+        location_keywords = ['ville', 'où', 'localise', 'situe', 'adresse', 'implanté', 'trouvez-vous', 'présent']
+        is_location_query = any(word in query_lower for word in location_keywords)
+        
         # Recherche dans les restaurants
         for resto in self.restaurants:
             score = 0
-            if query_lower in resto.get('ville', '').lower():
+            name = resto.get('name', '')
+            adresse = resto.get('adresse', '')
+            
+            # Extraire la ville depuis l'adresse ou le nom
+            ville = ''
+            if 'name' in resto and resto['name']:
+                # Extraire après "BOLKIRI"
+                parts = name.split()
+                if len(parts) > 1:
+                    ville = ' '.join(parts[1:]).replace('Street Food Viêt', '').strip()
+            
+            if query_lower in ville.lower():
                 score += 10
-            if query_lower in resto.get('name', '').lower():
+            if query_lower in name.lower():
                 score += 10
-            if query_lower in resto.get('adresse', '').lower():
+            if query_lower in adresse.lower():
                 score += 5
+            
+            # Mots-clés recherche de villes
+            if is_location_query:
+                if ville or adresse:
+                    score += 5
             
             if score > 0:
                 results.append({
                     'type': 'restaurant',
-                    'content': resto,
-                    'score': score
+                    'content': f"Restaurant {name} situé à {adresse}. Tél: {resto.get('telephone', 'N/A')}",
+                    'score': score,
+                    'data': resto
                 })
         
-        # Recherche dans le menu
-        for plat in self.menu_complet:
+        # Recherche dans les documents (pages scrapées)
+        for doc in self.documents:
             score = 0
-            if query_lower in plat.get('nom', '').lower():
-                score += 10
-            if query_lower in plat.get('description', '').lower():
+            if query_lower in doc.get('text', '').lower():
                 score += 5
-            if query_lower in plat.get('categorie', '').lower():
+            if query_lower in doc.get('title', '').lower():
                 score += 3
-            
-            # Filtres spéciaux
-            if 'végétarien' in query_lower or 'vegetarien' in query_lower or 'veggie' in query_lower:
-                if plat.get('vegetarien'):
-                    score += 8
-            if 'épicé' in query_lower or 'epice' in query_lower or 'piquant' in query_lower:
-                if plat.get('epice') in ['Épicé', 'Moyen']:
-                    score += 8
-            if 'sans gluten' in query_lower or 'gluten' in query_lower:
-                if plat.get('sans_gluten'):
-                    score += 8
             
             if score > 0:
                 results.append({
-                    'type': 'plat',
-                    'content': plat,
-                    'score': score
+                    'type': 'document',
+                    'content': doc.get('text', '')[:500],
+                    'score': score,
+                    'data': doc
                 })
         
-        # Tri par score
+        # Trier par score et limiter
         results.sort(key=lambda x: x['score'], reverse=True)
+        
+        # Si question sur les villes, retourner tous les restaurants trouvés
+        if is_location_query:
+            return results
+        
         return results[:limit]
     
     def get_all_restaurants(self) -> List[Dict]:
