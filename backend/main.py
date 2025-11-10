@@ -37,8 +37,8 @@ async def startup_event():
     
     try:
         agent = AIAgent(openai_api_key=api_key, website_url=website_url)
-        agent.initialize_knowledge_base()
-        print("Agent initialized successfully")
+        # KB enrichie déjà chargée dans __init__, pas besoin de scraper
+        print(f"Agent initialized successfully with {len(agent.kb.get_all_restaurants())} restaurants")
     except Exception as e:
         print(f"Failed to initialize agent: {e}")
         import traceback
@@ -84,8 +84,8 @@ async def refresh_knowledge(background_tasks: BackgroundTasks):
     if agent is None:
         raise HTTPException(status_code=503, detail="Agent not initialized")
     
-    background_tasks.add_task(agent.initialize_knowledge_base)
-    return {"status": "refresh_started"}
+    # Pas de refresh dynamique - KB statique enrichie
+    return {"status": "knowledge_base_is_static", "restaurants": len(agent.kb.get_all_restaurants())}
 
 @app.get("/health")
 @app.head("/health")

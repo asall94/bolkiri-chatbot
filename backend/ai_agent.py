@@ -541,28 +541,6 @@ INSTRUCTIONS:
             import traceback
             traceback.print_exc()
             return f"Désolé, une erreur est survenue. Veuillez réessayer."
-    
-    def initialize_knowledge_base(self):
-        print(f"Initialisation de la base de connaissances depuis {self.website_url}...")
-        
-        scraped_data = self.scraper.scrape_full_website(max_pages=5)
-        
-        if scraped_data:
-            self.kb.add_documents(scraped_data)
-            
-            all_menu_items = []
-            for page in scraped_data:
-                all_menu_items.extend(page.get('menu_items', []))
-            
-            if all_menu_items:
-                self.kb.add_menu_items(all_menu_items)
-            
-            self.agent_state['knowledge_ready'] = True
-            self.agent_state['last_scrape'] = datetime.now().isoformat()
-            
-            print(f"Base de connaissances initialisée: {len(scraped_data)} pages, {len(all_menu_items)} plats")
-        else:
-            print("Échec de l'initialisation de la base de connaissances")
 
 if __name__ == "__main__":
     import os
@@ -575,16 +553,13 @@ if __name__ == "__main__":
         website_url="https://bolkiri.fr"
     )
     
-    print("Initializing AI Agent...")
-    agent.initialize_knowledge_base()
-    
-    print("\nAgent ready. Testing queries...\n")
+    print(f"\nAgent ready with {len(agent.kb.get_all_restaurants())} restaurants!\n")
     
     test_queries = [
+        "Où êtes-vous situés dans le 91 ?",
         "Quels sont vos plats végétariens ?",
         "Quel est le prix du Phở Bò ?",
-        "Quels sont vos horaires d'ouverture ?",
-        "Je cherche un plat épicé, que recommandez-vous ?"
+        "Quels sont vos horaires d'ouverture ?"
     ]
     
     for query in test_queries:
