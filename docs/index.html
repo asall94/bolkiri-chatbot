@@ -1,242 +1,482 @@
-<!DOCTYPE html><!DOCTYPE html>
+<!DOCTYPE html><!DOCTYPE html><!DOCTYPE html>
 
-<html lang="fr"><html lang="fr">
+<html lang="fr">
 
-<head><head>
+<head><html lang="fr"><html lang="fr">
 
-    <meta charset="UTF-8">    <meta charset="UTF-8">
+    <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><head><head>
 
-    <title>Bolkiri Assistant IA - Demo Interactive</title>    <title>Bolkiri Assistant IA - Démo Interactive</title>
+    <title>Bolkiri Assistant IA</title>
 
-    <meta name="description" content="Decouvrez l'assistant intelligent Bolkiri pour la restauration vietnamienne">    <meta name="description" content="Découvrez l'assistant intelligent Bolkiri pour la restauration vietnamienne">
+    <style>    <meta charset="UTF-8">    <meta charset="UTF-8">
 
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">
+        * {
 
-    <style>    <style>
+            margin: 0;    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {        * {
+            padding: 0;
 
-            margin: 0;            margin: 0;
+            box-sizing: border-box;    <title>Bolkiri Assistant IA - Demo Interactive</title>    <title>Bolkiri Assistant IA - Démo Interactive</title>
 
-            padding: 0;            padding: 0;
+        }
 
-            box-sizing: border-box;            box-sizing: border-box;
+        body {    <meta name="description" content="Decouvrez l'assistant intelligent Bolkiri pour la restauration vietnamienne">    <meta name="description" content="Découvrez l'assistant intelligent Bolkiri pour la restauration vietnamienne">
 
-        }        }
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">
+
+            min-height: 100vh;
+
+            display: flex;    <style>    <style>
+
+            flex-direction: column;
+
+        }        * {        * {
+
+        .header {
+
+            background: rgba(255, 255, 255, 0.95);            margin: 0;            margin: 0;
+
+            padding: 20px;
+
+            text-align: center;            padding: 0;            padding: 0;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        }            box-sizing: border-box;            box-sizing: border-box;
+
+        .header h1 {
+
+            color: #333;        }        }
+
+            font-size: 28px;
+
+            margin-bottom: 5px;
+
+        }
+
+        .header p {        body {        body {
+
+            color: #666;
+
+            font-size: 14px;            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+
+        }
+
+        .badge {            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+            display: inline-block;
+
+            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);            min-height: 100vh;            min-height: 100vh;
+
+            color: #333;
+
+            padding: 5px 15px;            display: flex;            display: flex;
+
+            border-radius: 20px;
+
+            font-size: 12px;            flex-direction: column;            flex-direction: column;
+
+            font-weight: 600;
+
+            margin-top: 10px;        }        }
+
+        }
+
+        .secure-badge {
+
+            display: inline-flex;
+
+            align-items: center;        .header {        .header {
+
+            gap: 5px;
+
+            background: #28a745;            background: rgba(255, 255, 255, 0.95);            background: rgba(255, 255, 255, 0.95);
+
+            color: white;
+
+            padding: 5px 12px;            padding: 20px;            padding: 20px;
+
+            border-radius: 15px;
+
+            font-size: 12px;            text-align: center;            text-align: center;
+
+            margin-top: 10px;
+
+        }            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        .container {
+
+            flex: 1;        }        }
+
+            display: flex;
+
+            padding: 20px;
+
+            gap: 20px;
+
+            max-width: 1400px;        .header h1 {        .header h1 {
+
+            width: 100%;
+
+            margin: 0 auto;            color: #333;            color: #333;
+
+        }
+
+        .info-panel {            font-size: 28px;            font-size: 28px;
+
+            flex: 0 0 300px;
+
+            background: rgba(255, 255, 255, 0.95);            margin-bottom: 5px;            margin-bottom: 5px;
+
+            border-radius: 15px;
+
+            padding: 25px;        }        }
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            overflow-y: auto;
+
+        }
+
+        .info-panel h2 {        .header p {        .header p {
+
+            color: #333;
+
+            font-size: 20px;            color: #666;            color: #666;
+
+            margin-bottom: 15px;
+
+            padding-bottom: 10px;            font-size: 14px;            font-size: 14px;
+
+            border-bottom: 2px solid #FFC107;
+
+        }        }        }
+
+        .info-panel h3 {
+
+            color: #555;
+
+            font-size: 16px;
+
+            margin: 20px 0 10px 0;        .badge {        .badge {
+
+        }
+
+        .info-panel ul {            display: inline-block;            display: inline-block;
+
+            list-style: none;
+
+            padding: 0;            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);
+
+        }
+
+        .info-panel li {            color: #333;            color: #333;
+
+            color: #666;
+
+            padding: 8px 0;            padding: 5px 15px;            padding: 5px 15px;
+
+            padding-left: 20px;
+
+            position: relative;            border-radius: 20px;            border-radius: 20px;
+
+            font-size: 14px;
+
+            line-height: 1.5;            font-size: 12px;            font-size: 12px;
+
+        }
+
+        .info-panel li:before {            font-weight: 600;            font-weight: 600;
+
+            content: "✓";
+
+            position: absolute;            margin-top: 10px;            margin-top: 10px;
+
+            left: 0;
+
+            color: #FFC107;        }        }
+
+            font-weight: bold;
+
+        }
+
+        .demo-note {
+
+            background: #fff3cd;        .container {        .container {
+
+            border-left: 4px solid #FFC107;
+
+            padding: 12px;            flex: 1;            flex: 1;
+
+            margin: 15px 0;
+
+            border-radius: 5px;            display: flex;            display: flex;
+
+            font-size: 13px;
+
+            color: #856404;            padding: 20px;            padding: 20px;
+
+        }
+
+        .chat-container {            gap: 20px;            gap: 20px;
+
+            flex: 1;
+
+            background: white;            max-width: 1400px;            max-width: 1400px;
+
+            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);            width: 100%;            width: 100%;
+
+            overflow: hidden;
+
+            display: flex;            margin: 0 auto;            margin: 0 auto;
+
+            flex-direction: column;
+
+        }        }        }
+
+        iframe {
+
+            width: 100%;
+
+            height: 100%;
+
+            border: none;        .info-panel {        .info-panel {
+
+        }
+
+        .loading {            flex: 0 0 300px;            flex: 0 0 300px;
+
+            display: flex;
+
+            align-items: center;            background: rgba(255, 255, 255, 0.95);            background: rgba(255, 255, 255, 0.95);
+
+            justify-content: center;
+
+            height: 100%;            border-radius: 15px;            border-radius: 15px;
+
+            font-size: 18px;
+
+            color: #666;            padding: 25px;            padding: 25px;
+
+        }
+
+        .footer {            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            background: rgba(255, 255, 255, 0.95);
+
+            padding: 15px;            overflow-y: auto;            overflow-y: auto;
+
+            text-align: center;
+
+            font-size: 13px;        }        }
+
+            color: #666;
+
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+
+        }
+
+        .footer a {        .info-panel h2 {        .info-panel h2 {
+
+            color: #667eea;
+
+            text-decoration: none;            color: #333;            color: #333;
+
+            font-weight: 600;
+
+        }            font-size: 20px;            font-size: 20px;
+
+        .footer a:hover {
+
+            text-decoration: underline;            margin-bottom: 15px;            margin-bottom: 15px;
+
+        }
+
+        @media (max-width: 768px) {            padding-bottom: 10px;            padding-bottom: 10px;
+
+            .container {
+
+                flex-direction: column;            border-bottom: 2px solid #FFC107;            border-bottom: 2px solid #FFC107;
+
+            }
+
+            .info-panel {        }        }
+
+                flex: 0 0 auto;
+
+                max-height: 300px;
+
+            }
+
+            .chat-container {        .info-panel h3 {        .info-panel h3 {
+
+                min-height: 500px;
+
+            }            color: #555;            color: #555;
+
+        }
+
+    </style>            font-size: 16px;            font-size: 16px;
+
+</head>
+
+<body>            margin: 20px 0 10px 0;            margin: 20px 0 10px 0;
+
+    <div class="header">
+
+        <h1>Bolkiri Assistant IA</h1>        }        }
+
+        <p>Assistant virtuel intelligent pour la restauration vietnamienne</p>
+
+        <span class="badge">Demo Interactive</span>
+
+        <span class="secure-badge">Securise SSL</span>
+
+    </div>        .info-panel ul {        .info-panel ul {
 
 
 
-        body {        body {
+    <div class="container">            list-style: none;            list-style: none;
 
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+        <div class="info-panel">
 
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            <h2>A propos</h2>            padding: 0;            padding: 0;
 
-            min-height: 100vh;            min-height: 100vh;
+            <p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
 
-            display: flex;            display: flex;
+                Decouvrez notre assistant IA capable de repondre a toutes vos questions sur Bolkiri.        }        }
 
-            flex-direction: column;            flex-direction: column;
-
-        }        }
+            </p>
 
 
 
-        .header {        .header {
+            <div class="demo-note">
 
-            background: rgba(255, 255, 255, 0.95);            background: rgba(255, 255, 255, 0.95);
+                <strong>Note :</strong> Demonstration hebergee sur plateforme cloud securisee. Deploiement final integre directement sur bolkiri.fr.        .info-panel li {        .info-panel li {
 
-            padding: 20px;            padding: 20px;
-
-            text-align: center;            text-align: center;
-
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-
-        }        }
-
-
-
-        .header h1 {        .header h1 {
-
-            color: #333;            color: #333;
-
-            font-size: 28px;            font-size: 28px;
-
-            margin-bottom: 5px;            margin-bottom: 5px;
-
-        }        }
-
-
-
-        .header p {        .header p {
+            </div>
 
             color: #666;            color: #666;
 
-            font-size: 14px;            font-size: 14px;
+            <h3>Pourquoi cet assistant</h3>
 
-        }        }
+            <ul>            padding: 8px 0;            padding: 8px 0;
 
+                <li>Accueillez vos clients 24/7</li>
 
+                <li>Transformez visiteurs en clients informes</li>            padding-left: 20px;            padding-left: 20px;
 
-        .badge {        .badge {
+                <li>Liberez equipe des questions repetitives</li>
 
-            display: inline-block;            display: inline-block;
+                <li>Guidez clients vers leur plat parfait</li>            position: relative;            position: relative;
 
-            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);
+                <li>Experience memorable avant visite</li>
 
-            color: #333;            color: #333;
+                <li>Boostez reservations sans effort</li>            font-size: 14px;            font-size: 14px;
 
-            padding: 5px 15px;            padding: 5px 15px;
-
-            border-radius: 20px;            border-radius: 20px;
-
-            font-size: 12px;            font-size: 12px;
-
-            font-weight: 600;            font-weight: 600;
-
-            margin-top: 10px;            margin-top: 10px;
-
-        }        }
-
-
-
-        .container {        .container {
-
-            flex: 1;            flex: 1;
-
-            display: flex;            display: flex;
-
-            padding: 20px;            padding: 20px;
-
-            gap: 20px;            gap: 20px;
-
-            max-width: 1400px;            max-width: 1400px;
-
-            width: 100%;            width: 100%;
-
-            margin: 0 auto;            margin: 0 auto;
-
-        }        }
-
-
-
-        .info-panel {        .info-panel {
-
-            flex: 0 0 300px;            flex: 0 0 300px;
-
-            background: rgba(255, 255, 255, 0.95);            background: rgba(255, 255, 255, 0.95);
-
-            border-radius: 15px;            border-radius: 15px;
-
-            padding: 25px;            padding: 25px;
-
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-
-            overflow-y: auto;            overflow-y: auto;
-
-        }        }
-
-
-
-        .info-panel h2 {        .info-panel h2 {
-
-            color: #333;            color: #333;
-
-            font-size: 20px;            font-size: 20px;
-
-            margin-bottom: 15px;            margin-bottom: 15px;
-
-            padding-bottom: 10px;            padding-bottom: 10px;
-
-            border-bottom: 2px solid #FFC107;            border-bottom: 2px solid #FFC107;
-
-        }        }
-
-
-
-        .info-panel h3 {        .info-panel h3 {
-
-            color: #555;            color: #555;
-
-            font-size: 16px;            font-size: 16px;
-
-            margin: 20px 0 10px 0;            margin: 20px 0 10px 0;
-
-        }        }
-
-
-
-        .info-panel ul {        .info-panel ul {
-
-            list-style: none;            list-style: none;
-
-            padding: 0;            padding: 0;
-
-        }        }
-
-
-
-        .info-panel li {        .info-panel li {
-
-            color: #666;            color: #666;
-
-            padding: 8px 0;            padding: 8px 0;
-
-            padding-left: 20px;            padding-left: 20px;
-
-            position: relative;            position: relative;
-
-            font-size: 14px;            font-size: 14px;
+            </ul>
 
             line-height: 1.5;            line-height: 1.5;
 
-        }        }
+            <h3>Fonctionnalites</h3>
 
+            <ul>        }        }
 
+                <li>Informations sur 4 restaurants</li>
 
-        .info-panel li:before {        .info-panel li:before {
+                <li>Menu complet 30+ plats</li>
 
-            content: "✓";            content: "✓";
+                <li>Horaires et contacts</li>
+
+                <li>Recommandations personnalisees</li>        .info-panel li:before {        .info-panel li:before {
+
+                <li>Reponses temps reel</li>
+
+                <li>Ton chaleureux professionnel</li>            content: "✓";            content: "✓";
+
+            </ul>
 
             position: absolute;            position: absolute;
 
-            left: 0;            left: 0;
+            <h3>Restaurants</h3>
 
-            color: #FFC107;            color: #FFC107;
+            <ul>            left: 0;            left: 0;
 
-            font-weight: bold;            font-weight: bold;
+                <li>Corbeil-Essonnes (91100)</li>
+
+                <li>Ivry-sur-Seine (94200)</li>            color: #FFC107;            color: #FFC107;
+
+                <li>Les Mureaux (78130)</li>
+
+                <li>Lagny-sur-Marne (77400)</li>            font-weight: bold;            font-weight: bold;
+
+            </ul>
 
         }        }
 
+            <h3>Questions a essayer</h3>
 
+            <ul>
 
-        .demo-note {        .demo-note {
+                <li>"Quels sont vos horaires ?"</li>
 
-            background: #fff3cd;            background: #fff3cd;
+                <li>"Ou etes-vous situes ?"</li>        .demo-note {        .demo-note {
 
-            border-left: 4px solid #FFC107;            border-left: 4px solid #FFC107;
+                <li>"Qu'est-ce que le Pho ?"</li>
+
+                <li>"Plats vegetariens ?"</li>            background: #fff3cd;            background: #fff3cd;
+
+                <li>"Reserver a Corbeil"</li>
+
+            </ul>            border-left: 4px solid #FFC107;            border-left: 4px solid #FFC107;
+
+        </div>
 
             padding: 12px;            padding: 12px;
 
-            margin: 15px 0;            margin: 15px 0;
+        <div class="chat-container">
 
-            border-radius: 5px;            border-radius: 5px;
+            <div class="loading" id="loading">            margin: 15px 0;            margin: 15px 0;
 
-            font-size: 13px;            font-size: 13px;
+                Chargement assistant...
 
-            color: #856404;            color: #856404;
+            </div>            border-radius: 5px;            border-radius: 5px;
 
-        }        }
+            <iframe 
 
+                src="https://bolkiri-chatbot.onrender.com/"             font-size: 13px;            font-size: 13px;
 
+                id="chatframe"
+
+                onload="document.getElementById('loading').style.display='none';"            color: #856404;            color: #856404;
+
+                title="Bolkiri Assistant IA"
+
+                allowfullscreen>        }        }
+
+            </iframe>
+
+        </div>
+
+    </div>
 
         .chat-container {        .chat-container {
 
-            flex: 1;            flex: 1;
+    <div class="footer">
 
-            background: white;            background: white;
+        Connexion securisee HTTPS - Propulse par <a href="https://render.com" target="_blank">Render</a> - Developpe pour Bolkiri - 2025            flex: 1;            flex: 1;
+
+    </div>
+
+</body>            background: white;            background: white;
+
+</html>
 
             border-radius: 20px;            border-radius: 20px;
 
