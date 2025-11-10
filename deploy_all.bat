@@ -10,7 +10,7 @@ git push origin main
 
 REM 2. Copier vers bolkiri-demo
 echo [2/3] Copie vers bolkiri-demo...
-copy "static\index.html" "..\bolkiri-demo\index.html" /Y
+copy "docs\index.html" "..\bolkiri-demo\index.html" /Y
 
 REM 3. Deploy demo
 echo [3/3] Deploy demo sur GitHub Pages...
