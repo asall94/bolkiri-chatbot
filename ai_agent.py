@@ -1,5 +1,5 @@
 from typing import List, Dict, Optional
-import openai
+from openai import OpenAI
 import json
 from datetime import datetime
 from knowledge_base_enriched import EnrichedKnowledgeBase
@@ -8,7 +8,7 @@ from advanced_scraper import BolkiriAdvancedScraper
 class AIAgent:
     
     def __init__(self, openai_api_key: str, website_url: str):
-        openai.api_key = openai_api_key
+        self.client = OpenAI(api_key=openai_api_key)
         self.website_url = website_url
         self.kb = EnrichedKnowledgeBase()
         self.scraper = BolkiriAdvancedScraper()  # Réactivé !
@@ -405,7 +405,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
 }}"""
 
         try:
-            response = openai.ChatCompletion.create(
+            response = self.client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "Tu es un planificateur d'actions. Réponds UNIQUEMENT en JSON valide."},
@@ -509,7 +509,7 @@ INSTRUCTIONS:
         ] + self.conversation_memory[-10:]
         
         try:
-            response = openai.ChatCompletion.create(
+            response = self.client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=messages,
                 temperature=0.1,  # Minimal pour cohérence tout en gardant un peu de naturel

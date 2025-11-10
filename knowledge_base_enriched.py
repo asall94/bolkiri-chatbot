@@ -3,6 +3,14 @@ import json
 import os
 from datetime import datetime
 
+# Import RAG Engine
+try:
+    from rag_engine import RAGEngine
+    RAG_AVAILABLE = True
+except ImportError:
+    RAG_AVAILABLE = False
+    print("⚠️ RAG Engine non disponible, utilisation du mode recherche classique")
+
 class EnrichedKnowledgeBase:
     """Base de connaissances enrichie pour TOUS les restaurants Bolkiri"""
     
@@ -19,6 +27,17 @@ class EnrichedKnowledgeBase:
         # Pour compatibilité avec l'ancien système
         self.documents = self._create_documents_from_pages()
         self.menu_items = self.menu_complet
+        
+        # Initialiser RAG Engine si disponible
+        self.rag_engine = None
+        if RAG_AVAILABLE:
+            try:
+                print("🚀 Initialisation RAG Engine...")
+                self.rag_engine = RAGEngine(self.complete_file)
+                print("✅ RAG Engine activé - Recherche sémantique disponible")
+            except Exception as e:
+                print(f"⚠️ Erreur initialisation RAG: {e}")
+                print("Utilisation du mode recherche classique")
         
         print(f"Base enrichie chargée: {len(self.restaurants)} restos, {len(self.menu_complet)} items menu")
     
@@ -89,7 +108,38 @@ class EnrichedKnowledgeBase:
         return data
     
     def search(self, query: str, limit: int = 5) -> List[Dict]:
-        """Recherche enrichie dans toute la base"""
+        """Recherche enrichie dans toute la base (RAG si disponible, sinon classique)"""
+        
+        # Utiliser RAG si disponible
+        if self.rag_engine:
+            return self._search_rag(query, limit)
+        
+        # Sinon fallback sur recherche classique
+        return self._search_classic(query, limit)
+    
+    def _search_rag(self, query: str, limit: int = 5) -> List[Dict]:
+        """Recherche sémantique avec RAG"""
+        try:
+            results = self.rag_engine.search(query, top_k=limit)
+            
+            # Formater pour compatibilité avec l'ancien format
+            formatted_results = []
+            for result in results:
+                formatted_results.append({
+                    'type': result['type'],
+                    'content': result['content'],
+                    'score': result['score'],
+                    'metadata': result.get('metadata', {}),
+                    'data': result.get('data', {})
+                })
+            
+            return formatted_results
+        except Exception as e:
+            print(f"⚠️ Erreur RAG search: {e}")
+            return self._search_classic(query, limit)
+    
+    def _search_classic(self, query: str, limit: int = 5) -> List[Dict]:
+        """Recherche classique par mots-clés (fallback)"""
         query_lower = query.lower()
         results = []
         
