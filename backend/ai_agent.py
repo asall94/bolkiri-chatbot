@@ -99,11 +99,40 @@ class AIAgent:
         return result
     
     def get_restaurant_info(self, ville: str) -> str:
-        """Infos détaillées d'un restaurant spécifique"""
-        resto = self.kb.get_restaurant_by_ville(ville)
+        """Infos détaillées d'un restaurant spécifique - supporte département et code postal"""
+        # Mapping département → ville
+        dept_mapping = {
+            "91": "Corbeil-Essonnes",
+            "essonne": "Corbeil-Essonnes",
+            "94": "Ivry-sur-Seine",
+            "val-de-marne": "Ivry-sur-Seine",
+            "78": "Les Mureaux",
+            "yvelines": "Les Mureaux",
+            "77": "Lagny-sur-Marne",
+            "seine-et-marne": "Lagny-sur-Marne"
+        }
+        
+        # Normaliser la recherche
+        ville_search = ville.lower().strip()
+        
+        # Chercher par mapping département
+        if ville_search in dept_mapping:
+            ville_search = dept_mapping[ville_search]
+        
+        # Chercher par code postal (91xxx → Corbeil)
+        if ville_search.startswith("91"):
+            ville_search = "Corbeil-Essonnes"
+        elif ville_search.startswith("94"):
+            ville_search = "Ivry-sur-Seine"
+        elif ville_search.startswith("78"):
+            ville_search = "Les Mureaux"
+        elif ville_search.startswith("77"):
+            ville_search = "Lagny-sur-Marne"
+        
+        resto = self.kb.get_restaurant_by_ville(ville_search)
         
         if not resto:
-            return f"Aucun restaurant Bolkiri trouvé à {ville}. Nos restaurants sont à: " + \
+            return f"Aucun restaurant Bolkiri trouvé pour '{ville}'. Nos restaurants sont à: " + \
                    ", ".join([r['ville'] for r in self.kb.get_all_restaurants()])
         
         result = f"📍 {resto['name']}\n\n"
@@ -432,6 +461,13 @@ FORMATAGE IMPORTANT:
 - Quand vous donnez des horaires, donnez TOUJOURS les 7 jours de la semaine
 - Ne tronquez JAMAIS les informations importantes (horaires, adresses, téléphones)
 
+CONTEXTE GÉOGRAPHIQUE (IMPORTANT):
+- 91 ou Essonne → Corbeil-Essonnes (91100)
+- 94 ou Val-de-Marne → Ivry-sur-Seine (94200)
+- 78 ou Yvelines → Les Mureaux (78130)
+- 77 ou Seine-et-Marne → Lagny-sur-Marne (77400)
+Si quelqu'un demande "dans le 91", "secteur 91", "Essonne", proposez TOUJOURS Corbeil-Essonnes.
+
 CONTEXTE RÉCUPÉRÉ:
 {context}
 
@@ -446,6 +482,7 @@ INFORMATIONS BOLKIRI:
 INSTRUCTIONS SPÉCIFIQUES:
 - Vous connaissez TOUS nos restaurants Bolkiri
 - Si le client demande un restaurant spécifique, donnez les infos de CE restaurant
+- Si le client demande par département (91, 94, 78, 77) ou nom de département, utilisez le CONTEXTE GÉOGRAPHIQUE
 - Si le client ne précise pas, proposez celui le plus proche ou tous les choix
 - Utilisez le contexte pour répondre avec précision
 - Pour les réservations, dirigez vers le téléphone du restaurant concerné
@@ -462,7 +499,7 @@ INSTRUCTIONS SPÉCIFIQUES:
         
         try:
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4o-mini",
                 messages=messages,
                 temperature=0.3,
                 max_tokens=500
