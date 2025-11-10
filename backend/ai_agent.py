@@ -63,7 +63,29 @@ class AIAgent:
         ]
     
     def search_knowledge(self, query: str) -> str:
-        """Recherche enrichie dans toute la base"""
+        """Recherche enrichie dans toute la base - détecte département automatiquement"""
+        import re
+        
+        # Détection département dans la query
+        query_lower = query.lower()
+        dept_mapping = {
+            "91": "Corbeil-Essonnes",
+            "essonne": "Corbeil-Essonnes",
+            "94": "Ivry-sur-Seine",
+            "val-de-marne": "Ivry-sur-Seine",
+            "78": "Les Mureaux",
+            "yvelines": "Les Mureaux",
+            "77": "Lagny-sur-Marne",
+            "seine-et-marne": "Lagny-sur-Marne"
+        }
+        
+        # Chercher si département mentionné
+        for dept, ville in dept_mapping.items():
+            if dept in query_lower or re.search(rf'\b{dept}\b', query_lower):
+                # Forcer recherche sur cette ville
+                query = f"{query} {ville}"
+                break
+        
         results = self.kb.search(query, limit=5)
         
         if not results:
@@ -73,7 +95,7 @@ class AIAgent:
         for result in results:
             if result['type'] == 'restaurant':
                 resto = result['content']
-                context.append(f"Restaurant: {resto['name']} à {resto['ville']} - {resto['adresse']} - Tél: {resto['telephone']}")
+                context.append(f"Restaurant: {resto['name']} à {resto['ville']} ({resto['code_postal']}) - {resto['adresse']} - Tél: {resto['telephone']}")
             elif result['type'] == 'plat':
                 plat = result['content']
                 context.append(f"Plat: {plat['nom']} ({plat['prix']}) - {plat['description']}")
@@ -384,6 +406,12 @@ Outils disponibles:
 
 Question client: "{user_query}"
 
+RÈGLE IMPORTANTE - DÉPARTEMENTS:
+Si la question mentionne "91", "Essonne" → utilise get_restaurant_info avec ville="91"
+Si la question mentionne "94", "Val-de-Marne" → utilise get_restaurant_info avec ville="94"
+Si la question mentionne "78", "Yvelines" → utilise get_restaurant_info avec ville="78"
+Si la question mentionne "77", "Seine-et-Marne" → utilise get_restaurant_info avec ville="77"
+
 Analyse la question et choisis les meilleurs outils à utiliser.
 
 Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
@@ -395,7 +423,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
 
         try:
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",
+                model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": "Tu es un planificateur d'actions. Réponds UNIQUEMENT en JSON valide."},
                     {"role": "user", "content": planning_prompt}
