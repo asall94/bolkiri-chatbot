@@ -830,14 +830,14 @@
     "nombre_restaurants": 4,
     "nombre_plats": 30,
     "categories": [
-      "Desserts",
-      "Menus",
       "Bún (Vermicelles)",
-      "Bánh Mì",
+      "Menus",
+      "Entrées",
+      "Desserts",
       "Soupes Phở",
       "Plats Sautés",
-      "Boissons",
-      "Entrées"
+      "Bánh Mì",
+      "Boissons"
     ]
   }
 }

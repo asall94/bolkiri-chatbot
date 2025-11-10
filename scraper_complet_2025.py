@@ -16,7 +16,7 @@ class BolkiriCompletScraper2025:
         
     def scrape_all_restaurants(self):
         """Scrape la liste complète des restaurants depuis la page officielle"""
-        print("🔍 Scraping de la liste complète des restaurants...")
+        print("Scraping de la liste complète des restaurants...")
         
         url = "https://restaurants.bolkiri.fr/street-food-vietnamienne/nos-restaurants/"
         
@@ -49,18 +49,18 @@ class BolkiriCompletScraper2025:
                 "https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-gare-flandres/"
             ]
             
-            print(f"✅ {len(restaurant_links)} restaurants détectés")
+            print(f"{len(restaurant_links)} restaurants détectés")
             
             # Scraper chaque restaurant individuellement
             for idx, resto_url in enumerate(restaurant_links, 1):
-                print(f"\n📍 [{idx}/{len(restaurant_links)}] Scraping {resto_url}...")
+                print(f"\n[{idx}/{len(restaurant_links)}] Scraping {resto_url}...")
                 resto_data = self.scrape_restaurant_detail(resto_url)
                 if resto_data:
                     self.restaurants.append(resto_data)
                 time.sleep(0.5)  # Pause pour ne pas surcharger le serveur
                 
         except Exception as e:
-            print(f"❌ Erreur lors du scraping de la liste: {e}")
+            print(f"Erreur lors du scraping de la liste: {e}")
     
     def scrape_restaurant_detail(self, url: str) -> Dict:
         """Scrape les détails complets d'un restaurant"""
@@ -138,11 +138,11 @@ class BolkiriCompletScraper2025:
                 "specialites": ["Phở", "Bún", "Bánh mì", "Bobun"]
             }
             
-            print(f"   ✅ {name} - {ville} ({statut})")
+            print(f"   {name} - {ville} ({statut})")
             return restaurant_data
             
         except Exception as e:
-            print(f"   ❌ Erreur: {e}")
+            print(f"   Erreur: {e}")
             return None
     
     def extract_horaires(self, soup) -> Dict:
@@ -174,7 +174,7 @@ class BolkiriCompletScraper2025:
     
     def scrape_menu(self):
         """Scrape le menu complet"""
-        print("\n🍜 Scraping du menu complet...")
+        print("\nScraping du menu complet...")
         
         menu_url = "https://bolkiri.fr/la-carte/"
         
@@ -214,16 +214,16 @@ class BolkiriCompletScraper2025:
                             "prix": prix if prix else "Variable"
                         })
             
-            print(f"✅ {len(menu)} plats récupérés")
+            print(f"{len(menu)} plats récupérés")
             return menu
             
         except Exception as e:
-            print(f"❌ Erreur menu: {e}")
+            print(f"Erreur menu: {e}")
             return []
     
     def scrape_actualites(self):
         """Scrape les actualités récentes"""
-        print("\n📰 Scraping des actualités...")
+        print("\nScraping des actualités...")
         
         actu_url = "https://bolkiri.fr/actualites/"
         
@@ -242,11 +242,11 @@ class BolkiriCompletScraper2025:
                 if titre and len(titre) > 5:
                     actualites.append(titre)
             
-            print(f"✅ {len(actualites)} actualités récupérées")
+            print(f"{len(actualites)} actualités récupérées")
             return actualites
             
         except Exception as e:
-            print(f"❌ Erreur actualités: {e}")
+            print(f"Erreur actualités: {e}")
             return []
     
     def save_to_json(self, menu, actualites):
@@ -278,18 +278,18 @@ class BolkiriCompletScraper2025:
         with open(filename, 'w', encoding='utf-8') as f:
             json.dump(data, f, ensure_ascii=False, indent=2)
         
-        print(f"\n💾 Sauvegarde dans {filename}")
-        print(f"   📊 {data['total_restaurants']} restaurants au total")
-        print(f"   ✅ {data['restaurants_ouverts']} ouverts")
-        print(f"   🔜 {data['restaurants_a_venir']} à venir")
-        print(f"   🍜 {len(menu)} plats au menu")
-        print(f"   📰 {len(actualites)} actualités")
+        print(f"\nSauvegarde dans {filename}")
+        print(f"   {data['total_restaurants']} restaurants au total")
+        print(f"   {data['restaurants_ouverts']} ouverts")
+        print(f"   {data['restaurants_a_venir']} à venir")
+        print(f"   {len(menu)} plats au menu")
+        print(f"   {len(actualites)} actualités")
         
         return filename
 
 def main():
     print("=" * 60)
-    print("🚀 SCRAPER COMPLET BOLKIRI 2025")
+    print("SCRAPER COMPLET BOLKIRI 2025")
     print("=" * 60)
     
     scraper = BolkiriCompletScraper2025()
@@ -307,7 +307,7 @@ def main():
     filename = scraper.save_to_json(menu, actualites)
     
     print("\n" + "=" * 60)
-    print("✨ SCRAPING TERMINÉ AVEC SUCCÈS !")
+    print("SCRAPING TERMINÉ AVEC SUCCÈS")
     print("=" * 60)
     print(f"\nFichier généré: {filename}")
     print("\nProchaines étapes:")

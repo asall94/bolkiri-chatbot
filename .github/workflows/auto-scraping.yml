@@ -1,0 +1,53 @@
+name: Auto Scraping Mensuel Bolkiri
+
+on:
+  # Scraping automatique le 1er de chaque mois à 2h du matin
+  schedule:
+    - cron: '0 2 1 * *'
+  
+  # Permet de lancer manuellement depuis GitHub
+  workflow_dispatch:
+
+jobs:
+  scrape-and-update:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install requests beautifulsoup4
+      
+      - name: Run scraper
+        run: |
+          python scraper_complet_2025.py
+      
+      - name: Check for changes
+        id: check_changes
+        run: |
+          if git diff --quiet bolkiri_knowledge_complete_2025.json; then
+            echo "changes=false" >> $GITHUB_OUTPUT
+          else
+            echo "changes=true" >> $GITHUB_OUTPUT
+          fi
+      
+      - name: Commit and push if changes
+        if: steps.check_changes.outputs.changes == 'true'
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add bolkiri_knowledge_complete_2025.json
+          git commit -m "Mise à jour automatique des données Bolkiri - $(date +'%Y-%m-%d')"
+          git push
+      
+      - name: Notify if no changes
+        if: steps.check_changes.outputs.changes == 'false'
+        run: |
+          echo "Aucun changement détecté dans les données Bolkiri"
