@@ -53,8 +53,10 @@ class ChatResponse(BaseModel):
     conversation_id: str
 
 @app.get("/")
-def read_root():
-    return FileResponse("index.html")
+@app.head("/")
+async def read_root():
+    """Root endpoint - serves index.html or returns status for HEAD requests"""
+    return {"status": "ok", "service": "Bolkiri Chatbot API", "version": "1.0"}
 
 @app.post("/chat", response_model=ChatResponse)
 async def chat(chat_message: ChatMessage):
@@ -85,8 +87,14 @@ async def refresh_knowledge(background_tasks: BackgroundTasks):
     return {"status": "refresh_started"}
 
 @app.get("/health")
-def health_check():
-    return {"status": "healthy"}
+@app.head("/health")
+async def health_check():
+    """Health check endpoint for monitoring services like Render"""
+    return {
+        "status": "healthy",
+        "agent_ready": agent is not None,
+        "timestamp": datetime.now().isoformat()
+    }
 
 if __name__ == "__main__":
     import uvicorn
