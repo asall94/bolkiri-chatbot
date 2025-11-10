@@ -1,268 +1,533 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolkiri Assistant IA - Démo Interactive</title>
-    <meta name="description" content="Découvrez l'assistant intelligent Bolkiri pour la restauration vietnamienne">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<!DOCTYPE html><!DOCTYPE html>
 
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
+<html lang="fr"><html lang="fr">
 
-        .header {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 20px;
-            text-align: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-        }
+<head><head>
 
-        .header h1 {
-            color: #333;
-            font-size: 28px;
-            margin-bottom: 5px;
-        }
+    <meta charset="UTF-8">    <meta charset="UTF-8">
 
-        .header p {
-            color: #666;
-            font-size: 14px;
-        }
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        .badge {
-            display: inline-block;
-            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);
-            color: #333;
-            padding: 5px 15px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-            margin-top: 10px;
-        }
+    <title>Bolkiri Assistant IA - Demo Interactive</title>    <title>Bolkiri Assistant IA - Démo Interactive</title>
 
-        .container {
-            flex: 1;
-            display: flex;
-            padding: 20px;
-            gap: 20px;
-            max-width: 1400px;
-            width: 100%;
-            margin: 0 auto;
-        }
+    <meta name="description" content="Decouvrez l'assistant intelligent Bolkiri pour la restauration vietnamienne">    <meta name="description" content="Découvrez l'assistant intelligent Bolkiri pour la restauration vietnamienne">
 
-        .info-panel {
-            flex: 0 0 300px;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 25px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            overflow-y: auto;
-        }
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍜</text></svg>">
 
-        .info-panel h2 {
-            color: #333;
-            font-size: 20px;
-            margin-bottom: 15px;
-            padding-bottom: 10px;
-            border-bottom: 2px solid #FFC107;
-        }
+    <style>    <style>
 
-        .info-panel h3 {
-            color: #555;
-            font-size: 16px;
-            margin: 20px 0 10px 0;
-        }
+        * {        * {
 
-        .info-panel ul {
-            list-style: none;
-            padding: 0;
-        }
+            margin: 0;            margin: 0;
 
-        .info-panel li {
-            color: #666;
-            padding: 8px 0;
-            padding-left: 20px;
-            position: relative;
-            font-size: 14px;
-            line-height: 1.5;
-        }
+            padding: 0;            padding: 0;
 
-        .info-panel li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #FFC107;
-            font-weight: bold;
-        }
+            box-sizing: border-box;            box-sizing: border-box;
 
-        .demo-note {
-            background: #fff3cd;
-            border-left: 4px solid #FFC107;
-            padding: 12px;
-            margin: 15px 0;
-            border-radius: 5px;
-            font-size: 13px;
-            color: #856404;
-        }
+        }        }
 
-        .chat-container {
-            flex: 1;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-        }
 
-        iframe {
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
 
-        .loading {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            font-size: 18px;
-            color: #666;
-        }
+        body {        body {
 
-        .footer {
-            background: rgba(255, 255, 255, 0.95);
-            padding: 15px;
-            text-align: center;
-            font-size: 13px;
-            color: #666;
-            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
-        }
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
 
-        .footer a {
-            color: #667eea;
-            text-decoration: none;
-            font-weight: 600;
-        }
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 
-        .footer a:hover {
-            text-decoration: underline;
-        }
+            min-height: 100vh;            min-height: 100vh;
 
-        @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
+            display: flex;            display: flex;
 
-            .info-panel {
-                flex: 0 0 auto;
-                max-height: 300px;
-            }
+            flex-direction: column;            flex-direction: column;
 
-            .chat-container {
-                min-height: 500px;
-            }
-        }
+        }        }
 
-        .secure-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 5px;
-            background: #28a745;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 15px;
-            font-size: 12px;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-    <div class="header">
-        <h1>
-            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FDB913'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white'%3E🍜%3C/text%3E%3C/svg%3E" alt="Bolkiri" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 10px;">
-            Bolkiri Assistant IA
-        </h1>
-        <p>Assistant virtuel intelligent pour la restauration vietnamienne</p>
+
+
+        .header {        .header {
+
+            background: rgba(255, 255, 255, 0.95);            background: rgba(255, 255, 255, 0.95);
+
+            padding: 20px;            padding: 20px;
+
+            text-align: center;            text-align: center;
+
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+        }        }
+
+
+
+        .header h1 {        .header h1 {
+
+            color: #333;            color: #333;
+
+            font-size: 28px;            font-size: 28px;
+
+            margin-bottom: 5px;            margin-bottom: 5px;
+
+        }        }
+
+
+
+        .header p {        .header p {
+
+            color: #666;            color: #666;
+
+            font-size: 14px;            font-size: 14px;
+
+        }        }
+
+
+
+        .badge {        .badge {
+
+            display: inline-block;            display: inline-block;
+
+            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);            background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%);
+
+            color: #333;            color: #333;
+
+            padding: 5px 15px;            padding: 5px 15px;
+
+            border-radius: 20px;            border-radius: 20px;
+
+            font-size: 12px;            font-size: 12px;
+
+            font-weight: 600;            font-weight: 600;
+
+            margin-top: 10px;            margin-top: 10px;
+
+        }        }
+
+
+
+        .container {        .container {
+
+            flex: 1;            flex: 1;
+
+            display: flex;            display: flex;
+
+            padding: 20px;            padding: 20px;
+
+            gap: 20px;            gap: 20px;
+
+            max-width: 1400px;            max-width: 1400px;
+
+            width: 100%;            width: 100%;
+
+            margin: 0 auto;            margin: 0 auto;
+
+        }        }
+
+
+
+        .info-panel {        .info-panel {
+
+            flex: 0 0 300px;            flex: 0 0 300px;
+
+            background: rgba(255, 255, 255, 0.95);            background: rgba(255, 255, 255, 0.95);
+
+            border-radius: 15px;            border-radius: 15px;
+
+            padding: 25px;            padding: 25px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            overflow-y: auto;            overflow-y: auto;
+
+        }        }
+
+
+
+        .info-panel h2 {        .info-panel h2 {
+
+            color: #333;            color: #333;
+
+            font-size: 20px;            font-size: 20px;
+
+            margin-bottom: 15px;            margin-bottom: 15px;
+
+            padding-bottom: 10px;            padding-bottom: 10px;
+
+            border-bottom: 2px solid #FFC107;            border-bottom: 2px solid #FFC107;
+
+        }        }
+
+
+
+        .info-panel h3 {        .info-panel h3 {
+
+            color: #555;            color: #555;
+
+            font-size: 16px;            font-size: 16px;
+
+            margin: 20px 0 10px 0;            margin: 20px 0 10px 0;
+
+        }        }
+
+
+
+        .info-panel ul {        .info-panel ul {
+
+            list-style: none;            list-style: none;
+
+            padding: 0;            padding: 0;
+
+        }        }
+
+
+
+        .info-panel li {        .info-panel li {
+
+            color: #666;            color: #666;
+
+            padding: 8px 0;            padding: 8px 0;
+
+            padding-left: 20px;            padding-left: 20px;
+
+            position: relative;            position: relative;
+
+            font-size: 14px;            font-size: 14px;
+
+            line-height: 1.5;            line-height: 1.5;
+
+        }        }
+
+
+
+        .info-panel li:before {        .info-panel li:before {
+
+            content: "✓";            content: "✓";
+
+            position: absolute;            position: absolute;
+
+            left: 0;            left: 0;
+
+            color: #FFC107;            color: #FFC107;
+
+            font-weight: bold;            font-weight: bold;
+
+        }        }
+
+
+
+        .demo-note {        .demo-note {
+
+            background: #fff3cd;            background: #fff3cd;
+
+            border-left: 4px solid #FFC107;            border-left: 4px solid #FFC107;
+
+            padding: 12px;            padding: 12px;
+
+            margin: 15px 0;            margin: 15px 0;
+
+            border-radius: 5px;            border-radius: 5px;
+
+            font-size: 13px;            font-size: 13px;
+
+            color: #856404;            color: #856404;
+
+        }        }
+
+
+
+        .chat-container {        .chat-container {
+
+            flex: 1;            flex: 1;
+
+            background: white;            background: white;
+
+            border-radius: 20px;            border-radius: 20px;
+
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+            overflow: hidden;            overflow: hidden;
+
+            display: flex;            display: flex;
+
+            flex-direction: column;            flex-direction: column;
+
+        }        }
+
+
+
+        iframe {        iframe {
+
+            width: 100%;            width: 100%;
+
+            height: 100%;            height: 100%;
+
+            border: none;            border: none;
+
+        }        }
+
+
+
+        .loading {        .loading {
+
+            display: flex;            display: flex;
+
+            align-items: center;            align-items: center;
+
+            justify-content: center;            justify-content: center;
+
+            height: 100%;            height: 100%;
+
+            font-size: 18px;            font-size: 18px;
+
+            color: #666;            color: #666;
+
+        }        }
+
+
+
+        .footer {        .footer {
+
+            background: rgba(255, 255, 255, 0.95);            background: rgba(255, 255, 255, 0.95);
+
+            padding: 15px;            padding: 15px;
+
+            text-align: center;            text-align: center;
+
+            font-size: 13px;            font-size: 13px;
+
+            color: #666;            color: #666;
+
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+
+        }        }
+
+
+
+        .footer a {        .footer a {
+
+            color: #667eea;            color: #667eea;
+
+            text-decoration: none;            text-decoration: none;
+
+            font-weight: 600;            font-weight: 600;
+
+        }        }
+
+
+
+        .footer a:hover {        .footer a:hover {
+
+            text-decoration: underline;            text-decoration: underline;
+
+        }        }
+
+
+
+        @media (max-width: 768px) {        @media (max-width: 768px) {
+
+            .container {            .container {
+
+                flex-direction: column;                flex-direction: column;
+
+            }            }
+
+
+
+            .info-panel {            .info-panel {
+
+                flex: 0 0 auto;                flex: 0 0 auto;
+
+                max-height: 300px;                max-height: 300px;
+
+            }            }
+
+
+
+            .chat-container {            .chat-container {
+
+                min-height: 500px;                min-height: 500px;
+
+            }            }
+
+        }        }
+
+
+
+        .secure-badge {        .secure-badge {
+
+            display: inline-flex;            display: inline-flex;
+
+            align-items: center;            align-items: center;
+
+            gap: 5px;            gap: 5px;
+
+            background: #28a745;            background: #28a745;
+
+            color: white;            color: white;
+
+            padding: 5px 12px;            padding: 5px 12px;
+
+            border-radius: 15px;            border-radius: 15px;
+
+            font-size: 12px;            font-size: 12px;
+
+            margin-top: 10px;            margin-top: 10px;
+
+        }        }
+
+    </style>    </style>
+
+</head></head>
+
+<body><body>
+
+    <div class="header">    <div class="header">
+
+        <h1>Bolkiri Assistant IA</h1>        <h1>
+
+        <p>Assistant virtuel intelligent pour la restauration vietnamienne</p>            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%23FDB913'/%3E%3Ctext x='50' y='65' font-size='50' text-anchor='middle' fill='white'%3E🍜%3C/text%3E%3C/svg%3E" alt="Bolkiri" style="width: 32px; height: 32px; vertical-align: middle; margin-right: 10px;">
+
+        <span class="badge">Demo Interactive</span>            Bolkiri Assistant IA
+
+        <span class="secure-badge">Securise SSL</span>        </h1>
+
+    </div>        <p>Assistant virtuel intelligent pour la restauration vietnamienne</p>
+
         <span class="badge">Démo Interactive</span>
-        <span class="secure-badge">Sécurisé SSL</span>
-    </div>
 
-    <div class="container">
-        <div class="info-panel">
-            <h2>À propos de la démo</h2>
+    <div class="container">        <span class="secure-badge">Sécurisé SSL</span>
+
+        <div class="info-panel">    </div>
+
+            <h2>A propos</h2>
+
+            <p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">    <div class="container">
+
+                Decouvrez notre assistant IA capable de repondre a toutes vos questions sur Bolkiri.        <div class="info-panel">
+
+            </p>            <h2>À propos de la démo</h2>
+
             <p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">
-                Découvrez notre assistant IA capable de répondre à toutes vos questions sur Bolkiri.
-            </p>
+
+            <div class="demo-note">                Découvrez notre assistant IA capable de répondre à toutes vos questions sur Bolkiri.
+
+                <strong>Note :</strong> Demonstration hebergee sur plateforme cloud securisee. Deploiement final integre directement sur bolkiri.fr.            </p>
+
+            </div>
 
             <div class="demo-note">
-                <strong>Note :</strong> Ceci est une démonstration hébergée sur notre plateforme cloud sécurisée. Le déploiement final sera intégré directement sur votre site bolkiri.fr.
-            </div>
 
-            <h3>Pourquoi cet assistant ?</h3>
-            <ul>
-                <li>Accueillez vos clients 24/7, même à 3h du matin</li>
-                <li>Transformez chaque visiteur en client informé et enthousiaste</li>
-                <li>Libérez votre équipe des questions répétitives</li>
-                <li>Guidez vos clients vers LEUR plat parfait</li>
+            <h3>Pourquoi cet assistant</h3>                <strong>Note :</strong> Ceci est une démonstration hébergée sur notre plateforme cloud sécurisée. Le déploiement final sera intégré directement sur votre site bolkiri.fr.
+
+            <ul>            </div>
+
+                <li>Accueillez vos clients 24/7</li>
+
+                <li>Transformez visiteurs en clients informes</li>            <h3>Pourquoi cet assistant ?</h3>
+
+                <li>Liberez equipe des questions repetitives</li>            <ul>
+
+                <li>Guidez clients vers leur plat parfait</li>                <li>Accueillez vos clients 24/7, même à 3h du matin</li>
+
+                <li>Experience memorable avant visite</li>                <li>Transformez chaque visiteur en client informé et enthousiaste</li>
+
+                <li>Boostez reservations sans effort</li>                <li>Libérez votre équipe des questions répétitives</li>
+
+            </ul>                <li>Guidez vos clients vers LEUR plat parfait</li>
+
                 <li>Créez une expérience mémorable avant même la visite</li>
-                <li>Boostez vos réservations sans effort supplémentaire</li>
-            </ul>
 
-            <h3>Fonctionnalités</h3>
-            <ul>
-                <li>Informations sur les 4 restaurants</li>
-                <li>Menu complet avec 30+ plats</li>
-                <li>Horaires et contacts</li>
-                <li>Recommandations personnalisées</li>
+            <h3>Fonctionnalites</h3>                <li>Boostez vos réservations sans effort supplémentaire</li>
+
+            <ul>            </ul>
+
+                <li>Informations sur 4 restaurants</li>
+
+                <li>Menu complet 30+ plats</li>            <h3>Fonctionnalités</h3>
+
+                <li>Horaires et contacts</li>            <ul>
+
+                <li>Recommandations personnalisees</li>                <li>Informations sur les 4 restaurants</li>
+
+                <li>Reponses temps reel</li>                <li>Menu complet avec 30+ plats</li>
+
+                <li>Ton chaleureux professionnel</li>                <li>Horaires et contacts</li>
+
+            </ul>                <li>Recommandations personnalisées</li>
+
                 <li>Réponses en temps réel</li>
-                <li>Ton chaleureux et professionnel</li>
-            </ul>
 
-            <h3>Restaurants couverts</h3>
-            <ul>
+            <h3>Restaurants</h3>                <li>Ton chaleureux et professionnel</li>
+
+            <ul>            </ul>
+
                 <li>Corbeil-Essonnes (91100)</li>
-                <li>Ivry-sur-Seine (94200)</li>
+
+                <li>Ivry-sur-Seine (94200)</li>            <h3>Restaurants couverts</h3>
+
+                <li>Les Mureaux (78130)</li>            <ul>
+
+                <li>Lagny-sur-Marne (77400)</li>                <li>Corbeil-Essonnes (91100)</li>
+
+            </ul>                <li>Ivry-sur-Seine (94200)</li>
+
                 <li>Les Mureaux (78130)</li>
-                <li>Lagny-sur-Marne (77400)</li>
-            </ul>
 
-            <h3>Questions à essayer</h3>
-            <ul>
+            <h3>Questions a essayer</h3>                <li>Lagny-sur-Marne (77400)</li>
+
+            <ul>            </ul>
+
                 <li>"Quels sont vos horaires ?"</li>
-                <li>"Où êtes-vous situés ?"</li>
-                <li>"Qu'est-ce que le Phở ?"</li>
-                <li>"Avez-vous des plats végétariens ?"</li>
-                <li>"Je veux réserver à Corbeil"</li>
-            </ul>
-        </div>
 
-        <div class="chat-container">
-            <div class="loading" id="loading">
-                Chargement de l'assistant...
-            </div>
-            <iframe 
-                src="https://bolkiri-chatbot.onrender.com/" 
-                id="chatframe"
-                onload="document.getElementById('loading').style.display='none';"
-                title="Bolkiri Assistant IA"
-                allowfullscreen>
+                <li>"Ou etes-vous situes ?"</li>            <h3>Questions à essayer</h3>
+
+                <li>"Qu'est-ce que le Pho ?"</li>            <ul>
+
+                <li>"Plats vegetariens ?"</li>                <li>"Quels sont vos horaires ?"</li>
+
+                <li>"Reserver a Corbeil"</li>                <li>"Où êtes-vous situés ?"</li>
+
+            </ul>                <li>"Qu'est-ce que le Phở ?"</li>
+
+        </div>                <li>"Avez-vous des plats végétariens ?"</li>
+
+                <li>"Je veux réserver à Corbeil"</li>
+
+        <div class="chat-container">            </ul>
+
+            <div class="loading" id="loading">        </div>
+
+                Chargement assistant...
+
+            </div>        <div class="chat-container">
+
+            <iframe             <div class="loading" id="loading">
+
+                src="https://bolkiri-chatbot.onrender.com/"                 Chargement de l'assistant...
+
+                id="chatframe"            </div>
+
+                onload="document.getElementById('loading').style.display='none';"            <iframe 
+
+                title="Bolkiri Assistant IA"                src="https://bolkiri-chatbot.onrender.com/" 
+
+                allowfullscreen>                id="chatframe"
+
+            </iframe>                onload="document.getElementById('loading').style.display='none';"
+
+        </div>                title="Bolkiri Assistant IA"
+
+    </div>                allowfullscreen>
+
             </iframe>
-        </div>
+
+    <div class="footer">        </div>
+
+        Connexion securisee HTTPS - Propulse par <a href="https://render.com" target="_blank">Render</a> - Developpe pour Bolkiri - 2025    </div>
+
     </div>
 
-    <div class="footer">
-        🔒 Connexion sécurisée HTTPS • 
+</body>    <div class="footer">
+
+</html>        🔒 Connexion sécurisée HTTPS • 
+
         Propulsé par <a href="https://render.com" target="_blank">Render</a> • 
         Développé pour <strong>Bolkiri</strong> • 
         © 2025
