@@ -1,0 +1,843 @@
+{
+  "version": "3.0_complet",
+  "date_scraping": "2025-11-10 22:59:01",
+  "total_restaurants": 20,
+  "restaurants_ouverts": 15,
+  "restaurants_a_venir": 5,
+  "restaurants": [
+    {
+      "name": "BOLKIRI Bondy Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Bondy Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Bondy, votre restaurant de street food vietnamienne. Savourez nos plats sur place, à emporter ou en livraison ! Commandez maintenant !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/bondy/\",\n      \"image\": \"/_astro/photo3_1gEX5e.png\",\n      \"telephone\": \"+33 1 48 47 00 05\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"10 Rue Louis Auguste Blanqui\",\n        \"addressLocality\": \"Bondy\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"93140\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.9001191,\n        \"longitude\": 2.4799102\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:30\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.6,\n        \"reviewCount\": 1400\n      },\n      \"paymentAccepted\": \"Cartes de crédit : American Express, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.9001191,2.4799102\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g1939775-d33022326-Reviews-Bolkiri_Bondy-Bondy_Seine_Saint_Denis_Ile_de_France.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/bondy/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Bondy Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Bondy Street Food Viêt est situé au 10 Rue Louis Auguste Blanqui à Bondy. Notre restaurant asiatique est facilement accessible et vous propose une cuisine vietnamienne authentique dans un cadre convivial.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Bondy Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez commander nos spécialités vietnamiennes pour les déguster chez vous ou les récupérer directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table chez BOLKIRI et venir avec mon chien ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI accepte les réservations pour vous garantir une table. De plus, nous accueillons vos chiens à l'intérieur du restaurant. Nous proposons des petites portions à partager, parfaites pour découvrir nos spécialités vietnamiennes entre amis !\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "99102",
+      "telephone": "+33 1 48 47 00 05",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Drive",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/bondy/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Bry-sur-Marne Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Bry-sur-Marne Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Bry-sur-Marne, votre restaurant asiatique spécialisé en cuisine vietnamienne. Savourez notre street food sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/bry-sur-marne/\",\n      \"image\": \"/_astro/photo3_A0qJ6.png\",\n      \"telephone\": \"+33 1 47 06 02 02\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"6 Pl. Carnot\",\n        \"addressLocality\": \"Bry-Sur-Marne\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"94360\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.8430442,\n        \"longitude\": 2.5236379\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:30\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:30\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.6,\n        \"reviewCount\": 3933\n      },\n      \"paymentAccepted\": \"Cartes de débit, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.8430442,2.5236379\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g675054-d32991876-Reviews-Bolkiri-Bry_sur_Marne_Val_de_Marne_Ile_de_France.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/bry-sur-marne/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Bry-sur-Marne Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Bry-sur-Marne Street Food Viêt est situé au 6 Place Carnot à Bry-sur-Marne. Notre restaurant asiatique est facilement accessible dans le centre-ville.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI propose à la fois la livraison et la vente à emporter pour que vous puissiez déguster notre délicieuse cuisine vietnamienne street food chez vous ou au bureau.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je venir avec mon chien chez BOLKIRI ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Absolument ! BOLKIRI accepte les chiens à l'intérieur du restaurant. Nous proposons également le wifi gratuit, les réservations sont acceptées et nous servons des petites portions parfaites à partager.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "36379",
+      "telephone": "+33 1 47 06 02 02",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/bry-sur-marne/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Corbeil-Essonnes Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Corbeil-Essonnes Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Corbeil-Essonnes, votre restaurant asiatique proposant une street food vietnamienne savoureuse. Commandez en ligne et régalez-vous !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/corbeil-essonnes/\",\n      \"image\": \"/_astro/photo3_8h5au.png\",\n      \"telephone\": \"+33 1 60 88 50 67\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"78 Bd Jean Jaurès\",\n        \"addressLocality\": \"Corbeil-Essonnes\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"91100\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.6104009,\n        \"longitude\": 2.4628841\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:30\",\n          \"closes\": \"14:30\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:30\",\n          \"closes\": \"22:30\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.7,\n        \"reviewCount\": 1454\n      },\n      \"paymentAccepted\": \"Cartes de crédit : American Express, Accepte les titres restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.6104009,2.4628841\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g736826-d32871902-Reviews-BOLKIRI_Corbeil_Essonnes-Ii_Northern_Ostrobothnia.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/corbeil-essonnes/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Corbeil-Essonnes Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Corbeil-Essonnes Street Food Viêt est situé au 78 Boulevard Jean Jaurès à Corbeil-Essonnes. Notre restaurant asiatique est facilement accessible en centre-ville.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Corbeil-Essonnes Street Food Viêt propose à la fois la livraison et la vente à emporter pour que vous puissiez déguster notre cuisine vietnamienne où vous le souhaitez.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Quelles sont les spécialités de BOLKIRI ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI se spécialise dans la street food vietnamienne avec des petites portions à partager. Notre restaurant asiatique vous propose une cuisine authentique dans une ambiance conviviale avec wifi gratuit.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "28841",
+      "telephone": "+33 1 60 88 50 67",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/corbeil-essonnes/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Ivry Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Ivry Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Ivry, votre restaurant de street food vietnamienne. Commandez maintenant et savourez des plats authentiques à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/ivry/\",\n      \"image\": \"/_astro/photo3_1XCa3X.png\",\n      \"telephone\": \"+33 1 80 91 18 38\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"Avenue Maurice Thorez\",\n        \"addressLocality\": \"Ivry-sur-Seine\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"94200\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.8169787,\n        \"longitude\": 2.3760377\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-12-25\",\n          \"validThrough\": \"2025-12-25\",\n          \"opens\": \"11:00\",\n          \"closes\": \"24:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:00\",\n          \"closes\": \"24:00\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.7,\n        \"reviewCount\": 641\n      },\n      \"paymentAccepted\": \"Cartes de débit, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.8169787,2.3760377\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/ivry/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Ivry Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Ivry Street Food Viêt est situé au 58 Ter Avenue Maurice Thorez à Ivry-sur-Seine. Le restaurant est facilement accessible et se trouve dans un quartier dynamique d'Ivry-sur-Seine.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Ivry Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez commander vos plats asiatiques préférés pour les déguster chez vous ou les récupérer directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Quelles sont les spécialités de BOLKIRI Ivry Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI est un restaurant asiatique spécialisé dans la street food vietnamienne. Le restaurant propose des petites portions à partager, parfaites pour découvrir différentes saveurs de la cuisine vietnamienne authentique.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "60377",
+      "telephone": "+33 1 80 91 18 38",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/ivry/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI La Plaine Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI La Plaine Saint-Denis Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri La Plaine, votre restaurant asiatique à Saint-Denis, pour savourer une cuisine vietnamienne authentique. Commandez maintenant !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-denis/\",\n      \"image\": \"/_astro/photo3_1K1FD4.png\",\n      \"telephone\": \"+33 1 55 99 17 74\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"111 Av. du Président Wilson\",\n        \"addressLocality\": \"Saint-Denis\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"93210\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.9068331,\n        \"longitude\": 2.3578834\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:30\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.6,\n        \"reviewCount\": 2285\n      },\n      \"paymentAccepted\": \"Cartes de crédit : American Express, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.9068331,2.3578834\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g1940665-d25153259-Reviews-Bolkiri-La_Plaine_Saint_Denis_Seine_Saint_Denis_Ile_de_France.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-denis/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI La Plaine Saint-Denis Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI La Plaine Saint-Denis Street Food Viêt est situé au 111 Avenue du Président Wilson à Saint-Denis. Le restaurant est facilement accessible et se trouve dans le quartier de La Plaine Saint-Denis.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI La Plaine Saint-Denis Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez donc déguster notre cuisine vietnamienne chez vous ou passer récupérer votre commande directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Quelles sont les spécialités de BOLKIRI La Plaine Saint-Denis Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI est spécialisé dans la cuisine asiatique et vietnamienne de type street food. Le restaurant propose des petites portions à partager, parfaites pour découvrir différentes saveurs authentiques de la cuisine vietnamienne dans une ambiance conviviale.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "78834",
+      "telephone": "+33 1 55 99 17 74",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-denis/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Lille Léon Gambetta Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Lille Léon Gambetta Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Lille, votre restaurant de street food vietnamienne. Savourez des plats authentiques sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-leon-gambetta/\",\n      \"image\": \"/_astro/photo3_XIEUm.png\",\n      \"telephone\": \"+33 3 62 27 71 81\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"203 Rue Léon Gambetta\",\n        \"addressLocality\": \"Lille\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"59000\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 50.6289078,\n        \"longitude\": 3.0537238\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Delivery, Restaurant, Asian, Chinese, Takeaway, Vietnamese, Pho, Thai, Asian, Wok, Fast Food, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:30\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:00\",\n          \"closes\": \"22:45\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.7,\n        \"reviewCount\": 805\n      },\n      \"paymentAccepted\": \"Paiement par carte de crédit, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/50.6289078,3.0537238\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g187178-d32974608-Reviews-Bolkiri-Lille_Nord_Hauts_de_France.html\",\n        \"https://ordering.bolkiri.fr/restaurants/bolkiri-lille\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Lille Léon Gambetta Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Lille Léon Gambetta Street Food Viêt est situé au 203 Rue Léon Gambetta à Lille. Le restaurant est facilement accessible dans le quartier et propose une cuisine asiatique authentique dans un cadre convivial.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI propose à la fois la livraison et la vente à emporter pour votre confort. Vous pouvez ainsi déguster notre cuisine vietnamienne chez vous ou récupérer votre commande directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table et venir avec mon chien chez BOLKIRI ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Absolument ! BOLKIRI accepte les réservations pour vous garantir une place. De plus, les chiens sont les bienvenus à l'intérieur du restaurant. Nous proposons également le wifi gratuit et des petites portions parfaites à partager.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "37238",
+      "telephone": "+33 3 62 27 71 81",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-leon-gambetta/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Malakoff Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Malakoff Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Malakoff, votre restaurant asiatique proposant une cuisine vietnamienne authentique. Commandez sur place ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/malakoff/\",\n      \"image\": \"/_astro/photo3_Z1oBfAd.png\",\n      \"telephone\": \"+33 1 46 89 24 63\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"50 Rue Avaulée\",\n        \"addressLocality\": \"Malakoff\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"92240\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.8152173,\n        \"longitude\": 2.289368\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:45\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.7,\n        \"reviewCount\": 3349\n      },\n      \"paymentAccepted\": \"Cartes de crédit : Visa & Mastercard, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.8152173,2.289368\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g947973-d33034095-Reviews-Bolkiri_Malakoff_Street_Food_Viet-Malakoff_Hauts_de_Seine_Ile_de_France.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/malakoff/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Malakoff Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Malakoff Street Food Viêt est situé au 50 Rue Avaulée à Malakoff. Le restaurant est facilement accessible et se trouve dans un quartier pratique pour vos repas de cuisine asiatique vietnamienne.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison ou la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Malakoff Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez donc déguster notre cuisine vietnamienne chez vous ou passer récupérer votre commande directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Comment faire une réservation chez BOLKIRI Malakoff Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI accepte les réservations. Vous pouvez nous contacter directement par téléphone pour réserver votre table. Le restaurant dispose également du wifi gratuit et accepte les chiens à l'intérieur.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "89368",
+      "telephone": "+33 1 46 89 24 63",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/malakoff/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Montreuil Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Montreuil Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Montreuil, votre restaurant asiatique spécialisé en cuisine vietnamienne. Savourez notre street food sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/montreuil/\",\n      \"image\": \"/_astro/photo3_Z33Pzz.png\",\n      \"telephone\": \"+33 1 48 58 44 00\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"7 Boulevard Rouget de Lisle\",\n        \"addressLocality\": \"Montreuil\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"93100\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.8613082,\n        \"longitude\": 2.4407285\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:45\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.6,\n        \"reviewCount\": 6206\n      },\n      \"paymentAccepted\": \"Cartes de débit, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.8613082,2.4407285\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g26530967-d32871965-Reviews-BOLKIRI_Montreuil-Montreuil_Vendee_Pays_de_la_Loire.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/montreuil/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Montreuil Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Montreuil Street Food Viêt est situé au 7 Boulevard Rouget de Lisle à Montreuil. Notre restaurant asiatique est facilement accessible et vous propose une cuisine vietnamienne authentique dans un cadre convivial.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI offre plusieurs options pratiques : vente à emporter, livraison à domicile et même un service drive pour récupérer votre commande rapidement. Vous pouvez ainsi déguster notre street food vietnamienne où vous le souhaitez.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table et venir avec mon chien chez BOLKIRI ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Absolument ! BOLKIRI accepte les réservations pour vous garantir une table. De plus, nous accueillons vos chiens à l'intérieur du restaurant. Nous proposons des petites portions à partager, parfaites pour découvrir plusieurs spécialités vietnamiennes.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "07285",
+      "telephone": "+33 1 48 58 44 00",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Drive",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/montreuil/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Montrouge Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Montrouge Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Montrouge, votre restaurant asiatique spécialisé en cuisine vietnamienne. Savourez notre street food sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/montrouge/\",\n      \"image\": \"/_astro/photo3_dCBvU.png\",\n      \"telephone\": \"+33 1 55 59 02 32\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"25 Av. de la République\",\n        \"addressLocality\": \"Montrouge\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"92120\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.8202022,\n        \"longitude\": 2.3208701\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:45\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.7,\n        \"reviewCount\": 826\n      },\n      \"paymentAccepted\": \"Cartes de débit, Accepte les titres restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.8202022,2.3208701\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g227893-d33026060-Reviews-Bolkiri_Montrouge-Montrouge_Hauts_de_Seine_Ile_de_France.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/montrouge/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Montrouge Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Montrouge Street Food Viêt est situé au 25 Avenue de la République à Montrouge. Le restaurant est facilement accessible en transport en commun et se trouve dans un quartier dynamique de Montrouge.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Montrouge Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez commander vos plats asiatiques préférés pour les déguster chez vous ou les récupérer directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Quelles sont les spécialités de BOLKIRI Montrouge Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI est spécialisé dans la cuisine asiatique vietnamienne avec un concept street food. Le restaurant propose des petites portions à partager, parfaites pour découvrir plusieurs saveurs authentiques de la cuisine vietnamienne.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "08701",
+      "telephone": "+33 1 55 59 02 32",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/montrouge/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Nanterre Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Nanterre Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Nanterre, votre restaurant asiatique de street food vietnamienne. Savourez des plats authentiques sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/nanterre/\",\n      \"image\": \"/_astro/photo3_Z28bQST.png\",\n      \"telephone\": \"+33 1 81 93 40 00\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"120 Rue du 8 Mai 1945\",\n        \"addressLocality\": \"Nanterre\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"92000\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.892895,\n        \"longitude\": 2.2073156\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Fast Food, Chinese, Hot Pot, Chinese, Mandarin, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:30\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.6,\n        \"reviewCount\": 491\n      },\n      \"paymentAccepted\": \"Cartes de crédit : Visa & Mastercard, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.892895,2.2073156\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.facebook.com/548346461994379\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g196579-d32871904-Reviews-Bolkiri_Nanterre-Nanterre_La_Defense_Hauts_de_Seine_Ile_de_France.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/nanterre/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Nanterre Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Nanterre Street Food Viêt est situé au 120 Rue du 8 Mai 1945 à Nanterre. Le restaurant est facilement accessible et propose un service drive pour plus de commodité.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Nanterre Street Food Viêt propose la vente à emporter et la livraison. Vous pouvez également profiter de notre service drive pour récupérer votre commande rapidement.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table et venir avec mon chien chez BOLKIRI ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Absolument ! BOLKIRI accepte les réservations et accueille les chiens à l'intérieur du restaurant. Nous proposons des petites portions à partager dans une ambiance conviviale avec wifi gratuit.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "73156",
+      "telephone": "+33 1 81 93 40 00",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Drive",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/nanterre/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Paris 11 Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Paris 11 Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Paris 11, votre restaurant asiatique spécialisé en cuisine vietnamienne. Savourez notre street food sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/paris-11-republique/\",\n      \"image\": \"/_astro/photo3_9sstC.png\",\n      \"telephone\": \"+33 1 82 83 00 56\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"22 Av. de la République\",\n        \"addressLocality\": \"Paris\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"75011\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.8662312,\n        \"longitude\": 2.3687361\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-12-25\",\n          \"validThrough\": \"2025-12-25\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:45\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.6,\n        \"reviewCount\": 3312\n      },\n      \"paymentAccepted\": \"Paiement par carte de crédit, Accepte les chèques déjeuner, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.8662312,2.3687361\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g187147-d33025756-Reviews-Bolkiri_Paris_11-Paris_Ile_de_France.html\",\n        \"https://ordering.bolkiri.fr/restaurants/bolkiri-paris11\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Paris 11 Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Paris 11 Street Food Viêt est situé au 22 Avenue de la République dans le 11ème arrondissement de Paris. Le restaurant est facilement accessible en transport en commun, notamment par les stations de métro République et Parmentier.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Paris 11 Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez commander vos plats vietnamiens préférés pour les déguster chez vous ou les récupérer directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table et venir avec mon chien ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI accepte les réservations pour garantir votre place. De plus, les chiens sont les bienvenus à l'intérieur du restaurant. N'hésitez pas à nous contacter pour réserver votre table et profiter de notre cuisine vietnamienne avec votre compagnon à quatre pattes.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "87361",
+      "telephone": "+33 1 82 83 00 56",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/paris-11-republique/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Saint-Denis (Pierrefitte) Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Street Food Viêt Saint-Denis (Pierrefitte) \",\n      \"description\": \"Découvrez Bolkiri Pierrefitte, votre restaurant asiatique proposant une street food vietnamienne savoureuse. Commandez maintenant pour une expérience unique !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/pierrefitte/\",\n      \"image\": \"/_astro/photo3_wEynQ.png\",\n      \"telephone\": \"+33 1 48 21 04 55\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"1 Boulevard Charles de Gaulle\",\n        \"addressLocality\": \"Pierrefitte-Sur-Seine\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"93380\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.9677143,\n        \"longitude\": 2.3622933\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:30\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"23:00\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.6,\n        \"reviewCount\": 1062\n      },\n      \"paymentAccepted\": \"Cartes de crédit : Visa & Mastercard, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.9677143,2.3622933\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g1937719-d33034111-Reviews-Bolkiri_Pierrefitte_Street_Food_Viet-Pierrefitte_sur_Seine_Seine_Saint_Denis_Il.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/pierrefitte/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Street Food Viêt Saint-Denis ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Street Food Viêt se situe au 1 Boulevard Charles de Gaulle à Pierrefitte-Sur-Seine. Le restaurant est facilement accessible et bien situé dans le centre de Pierrefitte.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Street Food Viêt propose à la fois la livraison et la vente à emporter pour que vous puissiez déguster notre cuisine asiatique vietnamienne chez vous ou au bureau.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Quelles sont les spécialités de BOLKIRI Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI est spécialisé dans la street food vietnamienne avec des petites portions à partager. Nous proposons une cuisine asiatique authentique dans une ambiance conviviale avec wifi gratuit et acceptons les chiens à l'intérieur.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "22933",
+      "telephone": "+33 1 48 21 04 55",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/pierrefitte/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Les Mureaux Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Les Mureaux Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Les Mureaux, votre restaurant de street food vietnamienne. Savourez nos plats sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/les-mureaux/\",\n      \"image\": \"/_astro/photo3_ZrfCGl.png\",\n      \"telephone\": \"+33 1 80 82 36 68\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"101 Rue Paul Doumer\",\n        \"addressLocality\": \"Les Mureaux\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"78130\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.9929856,\n        \"longitude\": 1.9104707\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Restaurant, Takeaway, Vietnamese, Pho, Asian, Wok, Thai, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-12-25\",\n          \"validThrough\": \"2025-12-25\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:30\",\n          \"closes\": \"15:00\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:30\",\n          \"closes\": \"23:00\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.7,\n        \"reviewCount\": 511\n      },\n      \"paymentAccepted\": \"Cartes de crédit : Visa & Mastercard, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.9929856,1.9104707\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g226953-d33336621-Reviews-Bolkiri_Les_Mureaux_Street_food_Viet-Les_Mureaux_Yvelines_Ile_de_France.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/les-mureaux/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Les Mureaux Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Les Mureaux Street Food Viêt est situé au 101 Rue Paul Doumer à Les Mureaux. Notre restaurant asiatique est facilement accessible et vous propose une expérience culinaire vietnamienne authentique.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Est-ce que BOLKIRI propose la livraison ou la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui ! BOLKIRI propose plusieurs options : la vente à emporter, la livraison, et même un service drive pour plus de praticité. Vous pouvez ainsi déguster notre street food vietnamienne chez vous ou passer récupérer votre commande directement.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table chez BOLKIRI et venir avec mon chien ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Absolument ! BOLKIRI accepte les réservations pour vous garantir une place. De plus, nous accueillons vos chiens à l'intérieur du restaurant. Nous proposons des petites portions à partager, parfaites pour découvrir notre cuisine vietnamienne en bonne compagnie.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "04707",
+      "telephone": "+33 1 80 82 36 68",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Drive",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/les-mureaux/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Boulogne Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Boulogne Street Food Viêt \",\n      \"description\": \"Découvrez Bolkiri Boulogne, votre restaurant de street food vietnamienne. Savourez nos plats sur place, à emporter ou en livraison ! Commandez maintenant !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/boulogne-billancourt/\",\n      \"image\": \"/_astro/photo3_Z1bx8jW.png\",\n      \"telephone\": \"+33 1 80 87 21 66\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"83 Rue Marcel Dassault\",\n        \"addressLocality\": \"Boulogne-Billancourt\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"92100\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.8339488,\n        \"longitude\": 2.249168\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:15\",\n          \"closes\": \"14:45\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:15\",\n          \"closes\": \"22:45\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.7,\n        \"reviewCount\": 308\n      },\n      \"paymentAccepted\": \"Paiement par carte de crédit, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.8339488,2.249168\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g196560-d33302667-Reviews-Bolkiri_Boulogne_Street_food_Viet-Boulogne_Billancourt_Hauts_de_Seine_Ile_de_Fra.html\",\n        \"https://ordering.bolkiri.fr/restaurants/boulogne\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Boulogne Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Boulogne Street Food Viêt est situé au 83 Rue Marcel Dassault à Boulogne-Billancourt. Notre restaurant asiatique est facilement accessible dans ce quartier dynamique de Boulogne-Billancourt.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison ou la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Boulogne Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez ainsi déguster notre cuisine vietnamienne chez vous ou passer récupérer votre commande directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table chez BOLKIRI et venir avec mon chien ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Absolument ! BOLKIRI accepte les réservations et nous accueillons également vos chiens à l'intérieur du restaurant. Nous disposons aussi du wifi gratuit et proposons des petites portions parfaites à partager.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "49168",
+      "telephone": "+33 1 80 87 21 66",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/boulogne-billancourt/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Lagny-sur-Marne Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Lagny-sur-Marne Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Lagny-sur-Marne, votre restaurant de street food vietnamienne. Savourez nos plats sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/lagny-sur-marne/\",\n      \"image\": \"/_astro/photo3_Z1W4cn6.png\",\n      \"telephone\": \"+33 1 60 31 21 31\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"21 Av. du Général Leclerc\",\n        \"addressLocality\": \"Lagny-sur-Marne\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"77400\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.87605929999999,\n        \"longitude\": 2.6981912\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Chinese, Fast Food, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-12-25\",\n          \"validThrough\": \"2025-12-25\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:30\",\n          \"closes\": \"14:30\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"18:30\",\n          \"closes\": \"22:30\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.8,\n        \"reviewCount\": 448\n      },\n      \"paymentAccepted\": \"Paiement par carte de crédit, Accepte les chèques déjeuner, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": \"https://ordering.bolkiri.fr/\",\n      \"hasMap\": \"https://www.google.com/maps/place/48.87605929999999,2.6981912\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g226868-d33336619-Reviews-Bolkiri_Lagny_Street_food_Viet-Lagny_sur_Marne_Marne_la_Vallee_Seine_et_Marne_Il.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/lagny-sur-marne/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Lagny-sur-Marne Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Lagny-sur-Marne Street Food Viêt est situé au 21 Avenue du Général Leclerc à Lagny-sur-Marne. Le restaurant est facilement accessible dans le centre-ville.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Lagny-sur-Marne Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez ainsi déguster notre cuisine vietnamienne chez vous ou l'emporter.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je venir avec mon chien chez BOLKIRI ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, les chiens sont acceptés à l'intérieur du restaurant BOLKIRI. Nous accueillons avec plaisir vos compagnons à quatre pattes lors de votre visite.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "81912",
+      "telephone": "+33 1 60 31 21 31",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lagny-sur-marne/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Sucy-en-brie Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Sucy-en-brie Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Sucy-en-brie, votre restauran de street food vietnamienne. Savourez nos plats sur place ou à emporter. Commandez dès maintenant !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/sucy-en-brie/\",\n      \"image\": \"/_astro/photo3_ZbrLY3.png\",\n      \"telephone\": \"+33 1 83 73 98 91\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"2 Pl. de la Gare\",\n        \"addressLocality\": \"Sucy-en-Brie\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"94370\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.77171999999999,\n        \"longitude\": 2.5080441\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Fast Food, Chinese, Delivery, Restaurant, Takeaway, Vietnamese, Pho, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-12-25\",\n          \"validThrough\": \"2025-12-25\"\n        },\n        {\n          \"@type\": \"OpeningHoursSpecification\",\n          \"validFrom\": \"2025-11-11\",\n          \"validThrough\": \"2025-11-11\",\n          \"opens\": \"11:00\",\n          \"closes\": \"22:30\"\n        }\n      ],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 4.8,\n        \"reviewCount\": 139\n      },\n      \"paymentAccepted\": \"Cartes de crédit : American Express, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.77171999999999,2.5080441\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://www.tripadvisor.fr/Restaurant_Review-g1158599-d33972273-Reviews-Bolkiri_Sucy_en_Brie_Street_Food_Viet-Sucy_en_Brie_Val_de_Marne_Ile_de_France.html\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/sucy-en-brie/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Sucy-en-brie Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Sucy-en-brie Street Food Viêt est situé au 2 Place de la Gare à Sucy-en-Brie. L'emplacement près de la gare facilite l'accès en transports en commun.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Sucy-en-brie Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez donc déguster notre cuisine asiatique chez vous ou l'emporter selon votre préférence.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table et venir avec mon chien chez BOLKIRI ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Absolument ! BOLKIRI accepte les réservations pour garantir votre place. De plus, les chiens sont les bienvenus à l'intérieur du restaurant, vous pouvez donc venir accompagné de votre animal de compagnie.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "80441",
+      "telephone": "+33 1 83 73 98 91",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/sucy-en-brie/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Saint-Michel-sur-Orge Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Saint-Michel-sur-Orge Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Saint-Michel-sur-Orge, votre restaurant asiatique de street food vietnamienne. Dégustez nos plats sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-michel-sur-orge/\",\n      \"image\": \"/_astro/photo3_1lwOas.png\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"112 Rue de Sainte-Geneviève\",\n        \"addressLocality\": \"Saint-Michel-sur-Orge\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"91240\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.6385937,\n        \"longitude\": 2.3187166\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Fast Food, Chinese, Hot Pot, Chinese, Mandarin, Delivery, Takeaway, Vietnamese, Pho, Restaurant, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 3,\n        \"reviewCount\": 2\n      },\n      \"paymentAccepted\": \"Cartes de crédit : American Express, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.6385937,2.3187166\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-michel-sur-orge/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Saint-Michel-sur-Orge Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Le restaurant BOLKIRI est situé au 112 Rue de Sainte-Geneviève à Saint-Michel-sur-Orge. C'est un restaurant de street food vietnamienne facilement accessible dans le centre de Saint-Michel-sur-Orge.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Saint-Michel-sur-Orge propose à la fois la livraison et la vente à emporter. Vous pouvez donc déguster notre cuisine vietnamienne chez vous ou emporter vos plats préférés.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Quelles sont les spécialités de BOLKIRI Saint-Michel-sur-Orge ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI est spécialisé dans la street food vietnamienne avec des petites portions à partager. Le restaurant propose une cuisine asiatique authentique dans une ambiance conviviale, parfaite pour découvrir les saveurs du Vietnam.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "87166",
+      "telephone": "",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-michel-sur-orge/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "BOLKIRI Versailles Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Versailles Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri Versailles, votre restaurant de street food vietnamienne. Savourez des plats authentiques sur place, à emporter ou en livraison !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/versailles/\",\n      \"image\": \"/_astro/photo3_VIGV4.png\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"45 Rue Albert Sarraut\",\n        \"addressLocality\": \"Versailles\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"78000\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.7943654,\n        \"longitude\": 2.1508793\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Delivery, Delivery, Takeaway, Chinese, Asian, Vietnamese, Pho, Thai, Asian, Wok, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [],\n      \"paymentAccepted\": \"Cartes de débit, Accepte les chèques déjeuner, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.7943654,2.1508793\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\",\n        \"https://restaurants.bolkiri.fr/street-food-vietnamienne/versailles/\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Versailles Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Versailles Street Food Viêt est situé au 45 Rue Albert Sarraut à Versailles. Le restaurant est facilement accessible et se trouve dans un quartier pratique de la ville.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Versailles Street Food Viêt propose plusieurs options : la vente à emporter, la livraison, et même un service drive pour récupérer votre commande rapidement sans sortir de votre véhicule.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Quelles sont les spécialités de BOLKIRI Versailles Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI est un restaurant asiatique spécialisé dans la street food vietnamienne. Le restaurant propose des petites portions à partager, parfaites pour découvrir plusieurs saveurs authentiques de la cuisine vietnamienne.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "08793",
+      "telephone": "",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Drive",
+        "Wifi"
+      ],
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/versailles/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "Bolkiri Saint-Gratien Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Saint-Gratien Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri, votre restaurant asiatique convivial à Saint-Gratien ! Savourez notre délicieux street food vietnamien. Réservez dès maintenant !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-gratien/\",\n      \"image\": \"/_astro/placeholder_ZIso40.png\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"Boulevard de la Gare\",\n        \"addressLocality\": \"Saint-Gratien\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"95210\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 48.9641412,\n        \"longitude\": 2.2853971\n      },\n      \"menu\": \"https://bolkiri.fr/la-carte/\",\n      \"servesCuisine\": \"Asian, Fast Food, Delivery, Chinese, Vietnamese, Pho, Delivery, Thai, Chinese, Takeaway, Restaurant, Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [],\n      \"aggregateRating\": {\n        \"@type\": \"AggregateRating\",\n        \"ratingValue\": 5,\n        \"reviewCount\": 1\n      },\n      \"paymentAccepted\": \"Cartes de débit, Tickets restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/48.9641412,2.2853971\",\n      \"sameAs\": [\n        \"https://www.instagram.com/bolkiri\",\n        \"https://www.tiktok.com/@bolkiri\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Saint-Gratien Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI Saint-Gratien Street Food Viêt est situé au 36 Boulevard de la Gare à Saint-Gratien. Le restaurant est facilement accessible et se trouve à proximité de la gare, ce qui en fait un emplacement pratique pour nos clients.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI Saint-Gratien Street Food Viêt propose à la fois la livraison et la vente à emporter. Vous pouvez donc déguster notre cuisine asiatique authentique chez vous ou emporter vos plats préférés selon votre convenance.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Quelles sont les spécialités de BOLKIRI Saint-Gratien Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI est spécialisé dans la cuisine asiatique de type street food vietnamienne. Nous proposons des petites portions à partager, parfaites pour découvrir différentes saveurs authentiques dans une ambiance conviviale et décontractée.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "53971",
+      "telephone": "",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "Sur place",
+        "À emporter",
+        "Livraison",
+        "Drive",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-gratien/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    },
+    {
+      "name": "Bolkiri Lille Gare Flandres Street Food Viêt",
+      "ville": "",
+      "adresse": "{\n  \"@context\": \"https://schema.org\",\n  \"@graph\": [\n    {\n      \"@type\": \"Restaurant\",\n      \"name\": \"BOLKIRI Lille Gare Flandres Street Food Viêt\",\n      \"description\": \"Découvrez Bolkiri, votre restaurant asiatique street food vietnamien près de la Gare de Lille ! Saveurs authentiques et ambiance conviviale. Venez déguster !\",\n      \"url\": \"https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-gare-flandres/\",\n      \"image\": \"/_astro/placeholder_ZIso40.png\",\n      \"address\": {\n        \"@type\": \"PostalAddress\",\n        \"streetAddress\": \"5 Rue du Priez\",\n        \"addressLocality\": \"Lille\",\n        \"addressRegion\": \"FR\",\n        \"postalCode\": \"59800\",\n        \"addressCountry\": \"France\"\n      },\n      \"geo\": {\n        \"@type\": \"GeoCoordinates\",\n        \"latitude\": 50.6363169,\n        \"longitude\": 3.0683824\n      },\n      \"servesCuisine\": \"Vietnamese\",\n      \"priceRange\": \"$$\",\n      \"openingHoursSpecification\": [],\n      \"paymentAccepted\": \"Cartes de crédit : Visa & Mastercard, Accepte les titres restaurant, Accepte les chèques Sodexo, Paiements mobiles NFC, Espèces\",\n      \"acceptsReservations\": true,\n      \"hasMap\": \"https://www.google.com/maps/place/50.6363169,3.0683824\",\n      \"sameAs\": [\n        \"https://ordering.bolkiri.fr/restaurants/lille-gare-flandres\"\n      ]\n    },\n    {\n      \"@type\": \"FAQPage\",\n      \"mainEntity\": [\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Où se trouve BOLKIRI Lille Gare Flandres Street Food Viêt ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"BOLKIRI se situe au 5 Rue du Priez à Lille, près de la Gare Lille Flandres. Le restaurant est facilement accessible en transport en commun grâce à sa proximité avec la gare.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"BOLKIRI propose-t-il la livraison et la vente à emporter ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Oui, BOLKIRI propose à la fois la livraison et la vente à emporter. Vous pouvez donc déguster notre cuisine vietnamienne street food chez vous ou récupérer votre commande directement au restaurant.\"\n          }\n        },\n        {\n          \"@type\": \"Question\",\n          \"name\": \"Puis-je réserver une table chez BOLKIRI et venir avec mon chien ?\",\n          \"acceptedAnswer\": {\n            \"@type\": \"Answer\",\n            \"text\": \"Absolument ! BOLKIRI accepte les réservations pour vous garantir une place. De plus, nous accueillons vos compagnons à quatre pattes à l'intérieur du restaurant. N'hésitez pas à nous contacter pour réserver.\"\n          }\n        }\n      ]\n    }\n  ]\n}",
+      "code_postal": "83824",
+      "telephone": "",
+      "email": "",
+      "horaires": {
+        "lundi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30",
+        "mercredi": "11h30-14h30, 18h30-22h30",
+        "jeudi": "11h30-14h30, 18h30-22h30",
+        "vendredi": "11h30-14h30, 18h30-22h30",
+        "samedi": "11h30-15h00, 18h30-22h30",
+        "dimanche": "11h30-15h00, 18h30-22h30"
+      },
+      "services": [
+        "À emporter",
+        "Livraison",
+        "Wifi",
+        "Chiens acceptés"
+      ],
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-gare-flandres/",
+      "specialites": [
+        "Phở",
+        "Bún",
+        "Bánh mì",
+        "Bobun"
+      ]
+    }
+  ],
+  "menu": [
+    {
+      "nom": "Formule Salade papaye",
+      "description": "entrée + salade papaye",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Formule Pad thaï",
+      "description": "entrée + pad thaï",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Curry Malaysia coco 🌶️",
+      "description": "tofu ou viande émincée ou crevettes, à la sauce curry et coco, légèrement épicée",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Boeuf Black Poivré",
+      "description": "bœuf sauté à la sauce au poivre avec ces poivrons rouges et verts",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Assortiment Dim Sum",
+      "description": "3 raviolis et 3 bouchées aux crevettes…",
+      "prix": "Variable"
+    },
+    {
+      "nom": "SALADE papaye",
+      "description": "base salade, carotte, haricot vert et papaye marinée",
+      "prix": "Variable"
+    },
+    {
+      "nom": "RIZ CANTONAIS jambon de dinde",
+      "description": "riz sauté jambon de dinde, petit pois et œuf",
+      "prix": "Variable"
+    },
+    {
+      "nom": "nouilles thaï",
+      "description": "nouilles sautées avec des morceaux de carotte et à l’oeuf",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Donut framboise",
+      "description": "donut fourré avec un colis et un nappage à la framboise",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Oasis tropical",
+      "description": "33cl.",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Fuze Tea pêche",
+      "description": "33cl.",
+      "prix": "Variable"
+    },
+    {
+      "nom": "evian",
+      "description": "50cl.",
+      "prix": "Variable"
+    },
+    {
+      "nom": "jus d'anans",
+      "description": "33cl.",
+      "prix": "Variable"
+    },
+    {
+      "nom": "jus de litchi",
+      "description": "33cl.",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Liste des allergènes",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Végétarian",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Épicé",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Alcool",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Fruits à coque",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Gluten",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Oeufs",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Moutarde",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Sésame",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Lait",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Arachide",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Mollusque",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Soja",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Poisson",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Crustacés",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Sulfite",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Lupin",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Fruits à coque",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    },
+    {
+      "nom": "Céleri",
+      "description": "TÉLÉCHARGEZ L’APPLICATION BOLKIRI",
+      "prix": "Variable"
+    }
+  ],
+  "actualites": [
+    "Actualités",
+    "EXPLORER",
+    "CONTACT",
+    "INFOS LÉGALES",
+    "SUIVEZ-NOUS"
+  ],
+  "informations_generales": {
+    "concept": "Street Food Vietnamienne Authentique",
+    "programme_fidelite": "1€ dépensé = 1 grain de riz (point)",
+    "reduction_premiere_commande": "-10% avec code BOLKIRI10",
+    "services_disponibles": [
+      "Sur place",
+      "À emporter",
+      "Livraison",
+      "Drive"
+    ],
+    "reseaux_sociaux": {
+      "instagram": "https://www.instagram.com/bolkiri/",
+      "facebook": "https://www.facebook.com/BolkiriParis/",
+      "tiktok": "https://www.tiktok.com/@bolkiri"
+    }
+  }
+}
