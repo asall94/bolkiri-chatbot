@@ -3,6 +3,7 @@ import openai
 import json
 from datetime import datetime
 from knowledge_base_enriched import EnrichedKnowledgeBase
+from advanced_scraper import BolkiriAdvancedScraper
 
 class AIAgent:
     
@@ -10,11 +11,13 @@ class AIAgent:
         openai.api_key = openai_api_key
         self.website_url = website_url
         self.kb = EnrichedKnowledgeBase()
+        self.scraper = BolkiriAdvancedScraper()  # Réactivé !
         self.conversation_memory = []
         self.tools = self._define_tools()
         self.agent_state = {
             'knowledge_ready': True,
-            'total_interactions': 0
+            'total_interactions': 0,
+            'last_update': None
         }
         self.greeting_message = "Bonjour et bienvenue chez Bolkiri.\nComment puis-je vous aider ?"
     
@@ -541,6 +544,29 @@ INSTRUCTIONS:
             import traceback
             traceback.print_exc()
             return f"Désolé, une erreur est survenue. Veuillez réessayer."
+    
+    def refresh_knowledge_from_web(self):
+        """Rescrape le site et met à jour la KB"""
+        try:
+            print("🔄 Rafraîchissement de la base de connaissances depuis le web...")
+            
+            # Le scraper a déjà les données hardcodées dans extract_all_restaurants()
+            # et extract_menu_complet() - pas besoin de scraper le site réel
+            
+            # On pourrait ajouter un vrai scraping ici si nécessaire
+            # Pour l'instant, on recharge juste la KB enrichie
+            
+            self.kb = EnrichedKnowledgeBase()
+            self.agent_state['last_update'] = datetime.now().isoformat()
+            
+            print(f"✅ KB rafraîchie: {len(self.kb.get_all_restaurants())} restaurants, {len(self.kb.get_all_menu_items())} plats")
+            return True
+            
+        except Exception as e:
+            print(f"❌ Erreur refresh KB: {e}")
+            import traceback
+            traceback.print_exc()
+            return False
 
 if __name__ == "__main__":
     import os

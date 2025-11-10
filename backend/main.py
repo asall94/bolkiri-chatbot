@@ -81,11 +81,18 @@ async def chat(chat_message: ChatMessage):
 
 @app.post("/refresh-knowledge")
 async def refresh_knowledge(background_tasks: BackgroundTasks):
+    """Endpoint pour rafraîchir la KB manuellement"""
     if agent is None:
         raise HTTPException(status_code=503, detail="Agent not initialized")
     
-    # Pas de refresh dynamique - KB statique enrichie
-    return {"status": "knowledge_base_is_static", "restaurants": len(agent.kb.get_all_restaurants())}
+    # Lancer le refresh en arrière-plan
+    background_tasks.add_task(agent.refresh_knowledge_from_web)
+    
+    return {
+        "status": "refresh_started",
+        "restaurants": len(agent.kb.get_all_restaurants()),
+        "last_update": agent.agent_state.get('last_update', 'never')
+    }
 
 @app.get("/health")
 @app.head("/health")
