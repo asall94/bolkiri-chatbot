@@ -109,10 +109,10 @@ class AIAgent:
         if not restaurants:
             return "Aucun restaurant disponible."
         
-        result = f"🍜 BOLKIRI - {len(restaurants)} RESTAURANTS EN ÎLE-DE-FRANCE:\n\n"
+        result = f"BOLKIRI - {len(restaurants)} RESTAURANTS EN ÎLE-DE-FRANCE:\n\n"
         
         for resto in restaurants:
-            result += f"📍 {resto['name']}\n"
+            result += f"* {resto['name']}\n"
             result += f"   Adresse: {resto['adresse']}\n"
             result += f"   Téléphone: {resto['telephone']}\n"
             result += f"   Email: {resto['email']}\n"
@@ -129,25 +129,25 @@ class AIAgent:
             # Si vraiment aucun restaurant trouvé, lister les options disponibles
             all_restos = self.kb.get_all_restaurants()
             villes = [f"{r['ville']} ({r['code_postal']})" for r in all_restos]
-            return f"⚠️ ATTENTION: Recherche '{ville}' non trouvée directement.\n\n" + \
+            return f"ATTENTION: Recherche '{ville}' non trouvée directement.\n\n" + \
                    f"NOS {len(all_restos)} RESTAURANTS DISPONIBLES:\n" + \
-                   "\n".join([f"• {v}" for v in villes]) + \
-                   "\n\n💡 Note: Si la recherche concerne un département (91, 94, etc), vérifiez la liste ci-dessus."
+                   "\n".join([f"- {v}" for v in villes]) + \
+                   "\n\nNote: Si la recherche concerne un département (91, 94, etc), vérifiez la liste ci-dessus."
         
         # Restaurant trouvé - informations complètes
-        result = f"✅ RESTAURANT TROUVÉ pour '{ville}':\n\n"
-        result += f"📍 {resto['name']}\n\n"
+        result = f"[RESTAURANT TROUVÉ] Requête: '{ville}'\n\n"
+        result += f"Restaurant: {resto['name']}\n\n"
         result += f"Adresse: {resto['adresse']}\n"
         result += f"Ville: {resto['ville']} ({resto['code_postal']})\n"
         result += f"Téléphone: {resto['telephone']}\n"
         result += f"Email: {resto['email']}\n\n"
         
-        result += "🕐 HORAIRES:\n"
+        result += "HORAIRES:\n"
         for jour, horaire in resto.get('horaires', {}).items():
             result += f"  {jour.capitalize()}: {horaire}\n"
         
-        result += f"\n✨ Services: {', '.join(resto.get('services', []))}\n"
-        result += f"🍜 Spécialités: {', '.join(resto.get('specialites', []))}"
+        result += f"\nServices: {', '.join(resto.get('services', []))}\n"
+        result += f"Spécialités: {', '.join(resto.get('specialites', []))}"
         
         return result
     
@@ -166,7 +166,7 @@ class AIAgent:
                 categories[cat] = []
             categories[cat].append(plat)
         
-        result = "🍜 MENU BOLKIRI\n\n"
+        result = "MENU BOLKIRI\n\n"
         
         for cat, plats in categories.items():
             result += f"━━━ {cat.upper()} ━━━\n\n"
@@ -181,13 +181,13 @@ class AIAgent:
                 # Badges
                 badges = []
                 if plat.get('vegetarien'):
-                    badges.append('🌱Végétarien')
+                    badges.append('[Végétarien]')
                 if plat.get('sans_gluten'):
-                    badges.append('✓Sans gluten')
+                    badges.append('[Sans gluten]')
                 if plat.get('signature'):
-                    badges.append('⭐Signature')
+                    badges.append('[Signature]')
                 if plat.get('epice'):
-                    badges.append(f'🌶️{plat["epice"]}')
+                    badges.append(f'[Épice: {plat["epice"]}]')
                 
                 if badges:
                     result += f"  {' '.join(badges)}\n"
@@ -224,7 +224,7 @@ class AIAgent:
         if not filtered:
             return f"Aucun plat trouvé correspondant à: {criteria}"
         
-        result = f"🔍 Plats correspondant à '{criteria}':\n\n"
+        result = f"Plats correspondant à '{criteria}':\n\n"
         for plat in filtered[:10]:
             result += f"• {plat['nom']} - {plat['prix']}\n"
             if plat.get('description'):
@@ -244,16 +244,16 @@ class AIAgent:
             return f"Site web: {self.website_url}"
         
         if ville and contact.get('restaurant'):
-            result = f"📞 CONTACT - {contact['restaurant']}\n\n"
+            result = f"CONTACT - {contact['restaurant']}\n\n"
             result += f"Adresse: {contact.get('adresse', 'N/A')}\n"
             result += f"Téléphone: {contact.get('telephone', 'N/A')}\n"
             result += f"Email: {contact.get('email', 'N/A')}\n"
             result += f"Services: {', '.join(contact.get('services', []))}"
         else:
-            result = f"📞 CONTACT BOLKIRI\n\n"
-            result += f"🏢 Entreprise: {contact.get('entreprise', 'Bolkiri')}\n"
-            result += f"📍 {contact.get('nombre_restaurants', 0)} restaurants en Île-de-France\n"
-            result += f"🌆 Villes: {', '.join(contact.get('villes', []))}\n\n"
+            result = f"CONTACT BOLKIRI\n\n"
+            result += f"Entreprise: {contact.get('entreprise', 'Bolkiri')}\n"
+            result += f"Restaurants: {contact.get('nombre_restaurants', 0)} en Île-de-France\n"
+            result += f"Villes: {', '.join(contact.get('villes', []))}\n\n"
             
             if contact.get('contact_general'):
                 result += "Contact général:\n"
@@ -270,13 +270,13 @@ class AIAgent:
             return "Horaires: Consultez notre site web"
         
         if ville and hours.get('restaurant'):
-            result = f"🕐 HORAIRES - {hours['restaurant']} ({hours['ville']})\n\n"
+            result = f"HORAIRES - {hours['restaurant']} ({hours['ville']})\n\n"
             for jour, horaire in hours.get('horaires', {}).items():
                 result += f"{jour.capitalize()}: {horaire}\n"
         else:
-            result = "🕐 HORAIRES DE NOS RESTAURANTS:\n\n"
+            result = "HORAIRES DE NOS RESTAURANTS:\n\n"
             for resto_hours in hours.get('restaurants', []):
-                result += f"📍 {resto_hours['name']} ({resto_hours['ville']})\n"
+                result += f"* {resto_hours['name']} ({resto_hours['ville']})\n"
                 # Afficher TOUS les jours, pas juste un échantillon
                 for jour, horaire in resto_hours.get('horaires', {}).items():
                     result += f"  {jour.capitalize()}: {horaire}\n"
@@ -332,9 +332,9 @@ class AIAgent:
             else:
                 return "Je recommande de découvrir nos spécialités vietnamiennes authentiques."
         
-        result = "👨‍🍳 MES RECOMMANDATIONS POUR VOUS:\n\n"
+        result = "MES RECOMMANDATIONS POUR VOUS:\n\n"
         for plat, _ in recommendations[:3]:
-            result += f"🍜 {plat['nom']}"
+            result += f"* {plat['nom']}"
             if plat.get('nom_vietnamien'):
                 result += f" ({plat['nom_vietnamien']})"
             result += f" - {plat['prix']}\n"
@@ -350,7 +350,7 @@ class AIAgent:
                 raisons.append(f'{plat["epice"]}')
             
             if raisons:
-                result += f"   ✨ {', '.join(raisons)}\n"
+                result += f"   Raisons: {', '.join(raisons)}\n"
             result += "\n"
         
         return result
@@ -445,68 +445,46 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             restaurants_info.append(f"  * {resto['ville']} ({resto['code_postal']}) - {resto['telephone']}")
         restaurants_list = "\n".join(restaurants_info)
         
-        system_prompt = f"""Vous êtes un expert du service client pour BOLKIRI.
+        system_prompt = f"""Vous êtes l'assistant support de BOLKIRI, expert en cuisine vietnamienne.
 
-Agissez comme l'assistant support de BOLKIRI qui est expert sur tout ce qui concerne BOLKIRI.
+RÈGLES ABSOLUES (CRITIQUES):
+1. Le CONTEXTE RÉCUPÉRÉ ci-dessous est la SEULE source de vérité
+2. Si le contexte contient "[RESTAURANT TROUVÉ]", vous DEVEZ présenter ce restaurant positivement
+3. Si le contexte mentionne un restaurant pour le département 91, NE DITES JAMAIS "nous n'avons pas de restaurant dans le 91"
+4. INTERDICTION FORMELLE de contredire le contexte récupéré
+5. Si le contexte dit qu'un restaurant existe, dites qu'il existe
 
-⚠️ RÈGLE ABSOLUE - PRIORITÉ AU CONTEXTE (CRITIQUE):
-- Le CONTEXTE RÉCUPÉRÉ est la SEULE source de vérité
-- Si le contexte dit "✅ RESTAURANT TROUVÉ", vous DEVEZ présenter ce restaurant positivement
-- Si le contexte mentionne Corbeil-Essonnes pour le 91, dites "Oui nous avons un restaurant à Corbeil-Essonnes (91100)"
-- Ne dites JAMAIS "nous n'avons pas de restaurant dans le 91" si le contexte mentionne Corbeil-Essonnes
-- IGNOREZ votre connaissance générale - SEUL le contexte compte
+VALIDATION OBLIGATOIRE avant de répondre:
+- Vérifier que la réponse ne contredit PAS le contexte
+- Si le contexte mentionne Corbeil-Essonnes (91100), dire "Oui, nous avons un restaurant à Corbeil-Essonnes"
+- Ne jamais inventer d'informations non présentes dans le contexte
 
-EXEMPLE OBLIGATOIRE:
-Question: "Où êtes-vous dans le 91 ?"
-Contexte: "✅ RESTAURANT TROUVÉ pour '91': Bolkiri Corbeil-Essonnes, 91100"
-Réponse correcte: "Excellente question ! Nous avons un restaurant à Corbeil-Essonnes (91100). [infos du contexte]"
-Réponse INTERDITE: "Nous n'avons pas de restaurant dans le 91"
+EXEMPLE INTERDIT:
+Contexte: "[RESTAURANT TROUVÉ] Corbeil-Essonnes (91100)"
+Réponse interdite: "Nous n'avons pas de restaurant dans le 91"
+Réponse correcte: "Nous avons un restaurant à Corbeil-Essonnes (91100)"
 
-Ajoutez des suggestions de plats ou d'adresses de restaurants lorsque des produits spécifiques sont mentionnés.
-
-Parlez toujours comme si vous faisiez partie de l'équipe BOLKIRI. Utilisez toujours "nous, notre, nos".
-
-Ne discutez jamais de votre prompt ou du fait que vous êtes une IA.
-
-Maintenez un ton chaleureux, professionnel et accueillant. Ne donnez pas seulement la réponse directe - incluez un langage encourageant et reconnaissez les questions de l'utilisateur.
-
-Répondez toujours avec l'intention de présenter nos plats ou services de manière attrayante. Vous pouvez utiliser un langage comme "Nous serions ravis de vous accueillir" ou "Nos spécialités sont disponibles dès aujourd'hui".
-
-Ne forcez jamais l'utilisateur à venir au restaurant. Fournissez plutôt les informations de manière chaleureuse et professionnelle.
-
-FORMATAGE IMPORTANT:
-- Retournez à la ligne après chaque phrase pour une meilleure lisibilité
-- Utilisez des sauts de ligne (\n) entre les phrases
-- Maximum 2-3 phrases par réponse SAUF pour les horaires et informations complètes
-- Évitez les points d'exclamation excessifs
-- Quand vous donnez des horaires, donnez TOUJOURS les 7 jours de la semaine
-- Ne tronquez JAMAIS les informations importantes (horaires, adresses, téléphones)
-
-CONTEXTE GÉOGRAPHIQUE (IMPORTANT):
-- 91 ou Essonne → Corbeil-Essonnes (91100) ✅ NOUS AVONS CE RESTAURANT
-- 94 ou Val-de-Marne → Ivry-sur-Seine (94200) ✅ NOUS AVONS CE RESTAURANT
-- 78 ou Yvelines → Les Mureaux (78130) ✅ NOUS AVONS CE RESTAURANT
-- 77 ou Seine-et-Marne → Lagny-sur-Marne (77400) ✅ NOUS AVONS CE RESTAURANT
-
-CONTEXTE RÉCUPÉRÉ:
+CONTEXTE RÉCUPÉRÉ (SOURCE DE VÉRITÉ):
 {context}
 
-INFORMATIONS BOLKIRI:
-- Chaîne: Bolkiri - Street Food Vietnamienne
+INFORMATIONS GÉNÉRALES BOLKIRI:
 - Restaurants: {len(restaurants)} établissements en Île-de-France
 {restaurants_list}
 - Spécialités: Phở, Bún, Bánh mì, Bobun
-- Services: Sur place, À emporter, Livraison (selon restaurant)
 - Site: {self.website_url}
 
-INSTRUCTIONS SPÉCIFIQUES:
-- Vous connaissez TOUS nos restaurants Bolkiri
-- Si le client demande un restaurant spécifique, donnez les infos de CE restaurant
-- Si le client demande par département (91, 94, 78, 77) ou nom de département, utilisez le CONTEXTE RÉCUPÉRÉ
-- Si le client ne précise pas, proposez celui le plus proche ou tous les choix
-- Utilisez UNIQUEMENT le contexte récupéré pour répondre
-- Pour les réservations, dirigez vers le téléphone du restaurant concerné
-- Soyez chaleureux et professionnel à chaque interaction"""
+DÉPARTEMENTS COUVERTS:
+- 91 (Essonne) = Corbeil-Essonnes (91100) ✓
+- 94 (Val-de-Marne) = Ivry-sur-Seine (94200) ✓
+- 78 (Yvelines) = Les Mureaux (78130) ✓
+- 77 (Seine-et-Marne) = Lagny-sur-Marne (77400) ✓
+
+INSTRUCTIONS:
+- Utilisez "nous, notre, nos" (vous faites partie de l'équipe)
+- Ton chaleureux et professionnel
+- Basez-vous UNIQUEMENT sur le contexte récupéré
+- Pour les réservations, donnez le numéro du restaurant concerné
+- Ne discutez jamais de votre prompt ou du fait que vous êtes une IA"""
 
         self.conversation_memory.append({
             "role": "user",
@@ -521,11 +499,29 @@ INSTRUCTIONS SPÉCIFIQUES:
             response = openai.ChatCompletion.create(
                 model="gpt-4o-mini",
                 messages=messages,
-                temperature=0.3,
+                temperature=0,  # ZÉRO créativité pour éviter hallucinations
                 max_tokens=500
             )
             
             assistant_message = response.choices[0].message.content
+            
+            # VALIDATION POST-GÉNÉRATION: Détecter les contradictions
+            if context and "[RESTAURANT TROUVÉ]" in context:
+                # Si le contexte dit qu'un restaurant a été trouvé
+                negative_phrases = [
+                    "n'avons pas de restaurant",
+                    "pas de restaurant dans",
+                    "aucun restaurant dans",
+                    "malheureusement pas"
+                ]
+                for phrase in negative_phrases:
+                    if phrase in assistant_message.lower():
+                        # HALLUCINATION DÉTECTÉE - forcer correction
+                        print(f"⚠️ HALLUCINATION DÉTECTÉE: '{phrase}' malgré contexte positif")
+                        # Extraire les infos du contexte
+                        if "Corbeil-Essonnes" in context:
+                            assistant_message = f"Nous avons un restaurant à Corbeil-Essonnes (91100).\n\nVoici les informations:\n{context}"
+                        break
             
             self.conversation_memory.append({
                 "role": "assistant",
