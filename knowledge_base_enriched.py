@@ -7,7 +7,7 @@ class EnrichedKnowledgeBase:
     """Base de connaissances enrichie pour TOUS les restaurants Bolkiri"""
     
     def __init__(self):
-        self.complete_file = "bolkiri_knowledge_complete_2025.json"
+        self.complete_file = "bolkiri_knowledge_industrial_2025.json"
         self.fallback_dir = "./data"
         self.data = self._load_complete_knowledge()
         

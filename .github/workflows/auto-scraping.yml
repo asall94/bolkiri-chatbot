@@ -27,12 +27,12 @@ jobs:
       
       - name: Run scraper
         run: |
-          python scraper_complet_2025.py
+          python scraper_industrial_2025.py
       
       - name: Check for changes
         id: check_changes
         run: |
-          if git diff --quiet bolkiri_knowledge_complete_2025.json; then
+          if git diff --quiet bolkiri_knowledge_industrial_2025.json; then
             echo "changes=false" >> $GITHUB_OUTPUT
           else
             echo "changes=true" >> $GITHUB_OUTPUT
@@ -43,7 +43,7 @@ jobs:
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add bolkiri_knowledge_complete_2025.json
+          git add bolkiri_knowledge_industrial_2025.json
           git commit -m "Mise à jour automatique des données Bolkiri - $(date +'%Y-%m-%d')"
           git push
       

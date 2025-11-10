@@ -1,0 +1,1455 @@
+{
+  "version": "4.0_industrial",
+  "date_scraping": "2025-11-10 23:31:26",
+  "total_pages_scrapees": 13,
+  "total_restaurants": 20,
+  "restaurants": [
+    {
+      "name": "BOLKIRI Bondy Street Food Viêt",
+      "telephone": "+33 1 48 47 00 05",
+      "adresse": "10 Rue Louis Auguste Blanqui, 93140 Bondy",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/bondy/"
+    },
+    {
+      "name": "BOLKIRI Bry-sur-Marne Street Food Viêt",
+      "telephone": "+33 1 47 06 02 02",
+      "adresse": "BOLKIRI Bry-sur-Marne Street Food Viêt est situé au 6 Place Carnot à Bry-sur-Marne. Notre restaurant asiatique est facilement accessible dans le centre-ville.",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/bry-sur-marne/"
+    },
+    {
+      "name": "BOLKIRI Corbeil-Essonnes Street Food Viêt",
+      "telephone": "+33 1 60 88 50 67",
+      "adresse": "BOLKIRI Corbeil-Essonnes Street Food Viêt est situé au 78 Boulevard Jean Jaurès à Corbeil-Essonnes. Notre restaurant asiatique est facilement accessible en centre-ville.",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/corbeil-essonnes/"
+    },
+    {
+      "name": "BOLKIRI Ivry Street Food Viêt",
+      "telephone": "+33 1 80 91 18 38",
+      "adresse": "58 Ter Avenue Maurice Thorez, 94200 Ivry-sur-Seine",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/ivry/"
+    },
+    {
+      "name": "BOLKIRI La Plaine Street Food Viêt",
+      "telephone": "+33 1 55 99 17 74",
+      "adresse": "BOLKIRI La Plaine Saint-Denis Street Food Viêt est situé au 111 Avenue du Président Wilson à Saint-Denis. Le restaurant est facilement accessible et se trouve dans le quartier de La Plaine Saint-Denis.",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-denis/"
+    },
+    {
+      "name": "BOLKIRI Lille Léon Gambetta Street Food Viêt",
+      "telephone": "+33 3 62 27 71 81",
+      "adresse": "203 Rue Léon Gambetta, 59000 Lille",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-leon-gambetta/"
+    },
+    {
+      "name": "BOLKIRI Malakoff Street Food Viêt",
+      "telephone": "+33 1 46 89 24 63",
+      "adresse": "50 Rue Avaulée, 92240 Malakoff",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/malakoff/"
+    },
+    {
+      "name": "BOLKIRI Montreuil Street Food Viêt",
+      "telephone": "+33 1 48 58 44 00",
+      "adresse": "7 Boulevard Rouget de Lisle, 93100 Montreuil",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/montreuil/"
+    },
+    {
+      "name": "BOLKIRI Montrouge Street Food Viêt",
+      "telephone": "+33 1 55 59 02 32",
+      "adresse": "BOLKIRI Montrouge Street Food Viêt est situé au 25 Avenue de la République à Montrouge. Le restaurant est facilement accessible en transport en commun et se trouve dans un quartier dynamique de Montrouge.",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/montrouge/"
+    },
+    {
+      "name": "BOLKIRI Nanterre Street Food Viêt",
+      "telephone": "+33 1 81 93 40 00",
+      "adresse": "120 Rue du 8 Mai 1945, 92000 Nanterre",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/nanterre/"
+    },
+    {
+      "name": "BOLKIRI Paris 11 Street Food Viêt",
+      "telephone": "+33 1 82 83 00 56",
+      "adresse": "BOLKIRI Paris 11 Street Food Viêt est situé au 22 Avenue de la République dans le 11ème arrondissement de Paris. Le restaurant est facilement accessible en transport en commun, notamment par les stations de métro République et Parmentier.",
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/paris-11-republique/"
+    },
+    {
+      "name": "BOLKIRI Saint-Denis (Pierrefitte) Street Food Viêt",
+      "telephone": "+33 1 48 21 04 55",
+      "adresse": "1 Boulevard Charles de Gaulle, 93380 Pierrefitte-Sur-Seine",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/pierrefitte/"
+    },
+    {
+      "name": "BOLKIRI Les Mureaux Street Food Viêt",
+      "telephone": "+33 1 80 82 36 68",
+      "adresse": "101 Rue Paul Doumer, 78130 Les Mureaux",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/les-mureaux/"
+    },
+    {
+      "name": "BOLKIRI Boulogne Street Food Viêt",
+      "telephone": "+33 1 80 87 21 66",
+      "adresse": "83 Rue Marcel Dassault, 92100 Boulogne-Billancourt",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/boulogne-billancourt/"
+    },
+    {
+      "name": "BOLKIRI Lagny-sur-Marne Street Food Viêt",
+      "telephone": "+33 1 60 31 21 31",
+      "adresse": "BOLKIRI Lagny-sur-Marne Street Food Viêt est situé au 21 Avenue du Général Leclerc à Lagny-sur-Marne. Le restaurant est facilement accessible dans le centre-ville.",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lagny-sur-marne/"
+    },
+    {
+      "name": "BOLKIRI Sucy-en-brie Street Food Viêt",
+      "telephone": "+33 1 83 73 98 91",
+      "adresse": "BOLKIRI Sucy-en-brie Street Food Viêt est situé au 2 Place de la Gare à Sucy-en-Brie. L'emplacement près de la gare facilite l'accès en transports en commun.",
+      "statut": "ouvert",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/sucy-en-brie/"
+    },
+    {
+      "name": "BOLKIRI Saint-Michel-sur-Orge Street Food Viêt",
+      "telephone": "",
+      "adresse": "112 Rue de Sainte-Geneviève, 91240 Saint-Michel-sur-Orge",
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-michel-sur-orge/"
+    },
+    {
+      "name": "BOLKIRI Versailles Street Food Viêt",
+      "telephone": "",
+      "adresse": "45 Rue Albert Sarraut, 78000 Versailles",
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/versailles/"
+    },
+    {
+      "name": "Bolkiri Saint-Gratien Street Food Viêt",
+      "telephone": "",
+      "adresse": "36 Boulevard de la Gare, 95210 Saint-Gratien",
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-gratien/"
+    },
+    {
+      "name": "Bolkiri Lille Gare Flandres Street Food Viêt",
+      "telephone": "",
+      "adresse": "5 Rue du Priez, 59800 Lille",
+      "statut": "ouverture_prochaine",
+      "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-gare-flandres/"
+    }
+  ],
+  "pages_par_categorie": {
+    "menu": [
+      {
+        "url": "https://bolkiri.fr/la-carte/",
+        "title": "Carte - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "FORMULESTREET BANH MI"
+          },
+          {
+            "level": "h2",
+            "text": "Formule Salade papaye"
+          },
+          {
+            "level": "h2",
+            "text": "FORMULE BÒ BÚN"
+          },
+          {
+            "level": "h2",
+            "text": "FORMULESTREET DIM SUM"
+          },
+          {
+            "level": "h2",
+            "text": "Formule Pad thaï"
+          },
+          {
+            "level": "h2",
+            "text": "BANH MI"
+          },
+          {
+            "level": "h2",
+            "text": "BO-BUNSIGNATURE"
+          },
+          {
+            "level": "h2",
+            "text": "SOUPE PHÔAROMATISÉE"
+          },
+          {
+            "level": "h2",
+            "text": "SUNNY COM"
+          },
+          {
+            "level": "h2",
+            "text": "BASILIC THAÏ 🌶"
+          },
+          {
+            "level": "h2",
+            "text": "CANARD LAQUÉ"
+          },
+          {
+            "level": "h2",
+            "text": "BOEUF LOC LAC"
+          },
+          {
+            "level": "h2",
+            "text": "POULET LOC LAC"
+          },
+          {
+            "level": "h2",
+            "text": "POULET CARAMEL"
+          },
+          {
+            "level": "h2",
+            "text": "CROUSTY POULET"
+          },
+          {
+            "level": "h2",
+            "text": "Curry Malaysia coco 🌶️"
+          },
+          {
+            "level": "h2",
+            "text": "Boeuf Black Poivré"
+          },
+          {
+            "level": "h2",
+            "text": "COM XAO"
+          },
+          {
+            "level": "h2",
+            "text": "PÂTES (PAD THAÏ)"
+          },
+          {
+            "level": "h2",
+            "text": "NÊMS POULET"
+          },
+          {
+            "level": "h2",
+            "text": "RAVIOLIS WONTON FRIT"
+          },
+          {
+            "level": "h2",
+            "text": "NÊMS VÉGÉTARIENS"
+          },
+          {
+            "level": "h2",
+            "text": "TEMPURA CREVETTES"
+          },
+          {
+            "level": "h2",
+            "text": "BANH BAO POULET LAQUÉ"
+          },
+          {
+            "level": "h2",
+            "text": "Assortiment Dim Sum"
+          },
+          {
+            "level": "h2",
+            "text": "ASSORTIMENT FRITURE"
+          },
+          {
+            "level": "h2",
+            "text": "SALADE papaye"
+          },
+          {
+            "level": "h2",
+            "text": "SALADE THAÏ ÉPICÉ​"
+          },
+          {
+            "level": "h2",
+            "text": "RIZ NATURE PARFUMÉ"
+          },
+          {
+            "level": "h2",
+            "text": "RIZ CANTONAIS jambon de dinde"
+          },
+          {
+            "level": "h2",
+            "text": "RIZ TOMATE"
+          },
+          {
+            "level": "h2",
+            "text": "nouilles thaï"
+          },
+          {
+            "level": "h2",
+            "text": "LÉGUMES SAUTÉES"
+          },
+          {
+            "level": "h2",
+            "text": "Donut framboise"
+          },
+          {
+            "level": "h2",
+            "text": "DÉLICE COCO"
+          },
+          {
+            "level": "h2",
+            "text": "PERLES DE COCO"
+          },
+          {
+            "level": "h2",
+            "text": "PERLE DE COCOCHOCOLAT"
+          },
+          {
+            "level": "h2",
+            "text": "COCA-COLA"
+          },
+          {
+            "level": "h2",
+            "text": "COCA-COLA ZÉRO"
+          },
+          {
+            "level": "h2",
+            "text": "Oasis tropical"
+          },
+          {
+            "level": "h2",
+            "text": "Fuze Tea pêche"
+          },
+          {
+            "level": "h2",
+            "text": "evian"
+          },
+          {
+            "level": "h2",
+            "text": "S.PELLEGRINO"
+          },
+          {
+            "level": "h2",
+            "text": "jus d'anans"
+          },
+          {
+            "level": "h2",
+            "text": "jus de litchi"
+          },
+          {
+            "level": "h2",
+            "text": "Liste des allergènes"
+          },
+          {
+            "level": "h3",
+            "text": "Végétarian"
+          },
+          {
+            "level": "h3",
+            "text": "Épicé"
+          },
+          {
+            "level": "h3",
+            "text": "Alcool"
+          },
+          {
+            "level": "h3",
+            "text": "Fruits à coque"
+          },
+          {
+            "level": "h3",
+            "text": "Gluten"
+          },
+          {
+            "level": "h3",
+            "text": "Oeufs"
+          },
+          {
+            "level": "h3",
+            "text": "Moutarde"
+          },
+          {
+            "level": "h3",
+            "text": "Sésame"
+          },
+          {
+            "level": "h3",
+            "text": "Lait"
+          },
+          {
+            "level": "h3",
+            "text": "Arachide"
+          },
+          {
+            "level": "h3",
+            "text": "Mollusque"
+          },
+          {
+            "level": "h3",
+            "text": "Soja"
+          },
+          {
+            "level": "h3",
+            "text": "Poisson"
+          },
+          {
+            "level": "h3",
+            "text": "Crustacés"
+          },
+          {
+            "level": "h3",
+            "text": "Sulfite"
+          },
+          {
+            "level": "h3",
+            "text": "Lupin"
+          },
+          {
+            "level": "h3",
+            "text": "Fruits à coque"
+          },
+          {
+            "level": "h3",
+            "text": "Céleri"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER FORMULE STREET BANH MI sandwich + boisson Plus 1/2 baguette, protéine au choix, citronnelle, carottes marinés, concombre, coriandre, mayonnais et sauce soja COMMANDER Formule Salade papaye entrée + salade papaye Plus salade de papaye : base salade, carotte, haricot vert et papaye marinée, saupoudrer d’oignons frits, cacahuètes et coriandre Plus TRACES ÉVENTUELLES : ARACHIDES, SOJA, CÉLERI, MOUTARDE, SULFITES, MOLLUSQUES COMMANDER FORMULE BÒ BÚN entrée + bobun Plus base de vermicelles avec viande ou végé sautée aux oignons, nems, et légumes, servi avec cacahuète, oignons frits, concombres, carottes et 1 grand sachet de sauce nuoc mam COMMANDER FORMULE STREET DIM SUM entrée + dim sum + boisson Plus entrée au choix + assortiment de dim sum + boisson Plus Traces éventuelles : oeuf, poisson, arachides, soja, céleri, lait, fruit à coque, moutarde, sésame, sulfites, mollusques COMMANDER Formule Pad thaï entrée + pad thaï Plus pad thaï : pâte de riz sautées au wok, protéine au choix, avec légumes croquants servi avec cacahuète, soja, oignons frits et la coriandre Plus TRACES ÉVENTUELLES : ARACHIDES, SOJA, CÉLERI, MOUTARDE, SULFITES, MOLLUSQUES COMMANDER BANH MI 1/2 baguette, avec une protéine au choix, citronnelle, carottes marinés, … Plus concombre, coriandre, mayonnaise et sauce soja COMMANDER BO-BUN SIGNATURE Mettez le grand sachet de sauce nuoc mam dans le bobun et mélangez !… Plus base de vermicelles avec viande ou végé sautée aux oignons, nems, et légumes, servi avec cacahuète, oignons frits, concombres, carottes et 1 grand sachet de sauce nuoc mam COMMANDER SOUPE PHÔ AROMATISÉE bouillon et pâte séparé, mélangez bien quand vous les recevez !… Plus servies avec soja, menthe, citron et une sauce BBQ asiatique COMMANDER SUNNY COM base de riz nature, avec viande ou végé sautée aux oignons, œuf et légumes Plus servi avec cacahuète, oignons frits, concombres et carottes. COMMANDER BASILIC THAÏ 🌶 tofu ou viande émincé ou crevettes sautées à la sauce thaï basilic épicé… Plus avec légumes croquants, servi avec du riz COMMANDER CANARD LAQUÉ servi avec du riz blanc parfumé et sauce BBQ asiatique COMMANDER BOEUF LOC LAC accompagement au choix (riz tomate recommandé) et bœuf coupé en dé accompagné… Plus de son œuf au plat COMMANDER POULET LOC LAC accompagement au choix (riz tomate recommandé) et poulet émincé Plus accompagné de son œuf au plat COMMANDER POULET CARAMEL assiette de poulet à la sauce caramélisé servi avec… Plus du riz COMMANDER CROUSTY POULET cuisse de poulet désossé façon frit à la sauce aigre douce… Plus servi avec du riz COMMANDER Curry Malaysia coco 🌶️ tofu ou viande émincée ou crevettes, à la sauce curry et coco, légèrement épicée Plus servi avec du riz COMMANDER Boeuf Black Poivré bœuf sauté à la sauce au poivre avec ces poivrons rouges et verts Plus servi avec du riz COMMANDER COM XAO riz sautés au wok, avec légumes croquants… Plus servi avec cacahuète, soja, oignons frits et la coriandre COMMANDER PÂTES (PAD THAÏ) pâte de riz sautées au wok, avec légumes croquants… Plus servi avec cacahuète, soja, oignons frits et la coriandre COMMANDER NÊMS POULET galette de riz, avec salade, menthe… Plus menthe et sauce nuoc mam Plus Traces éventuelles : gluten, oeuf, crustacés, arachides, soja, céleri, lait, fruit à la coque, moutarde, sulfite, mollusque COMMANDER RAVIOLIS WONTON FRIT raviolis aux crevettes frits… Plus servi avec une sauce piquante sriracha ou aigre douce Plus Traces éventuelles : oeuf, poisson, arachides, soja, céleri, lait, fruit à coque, moutarde, sésame, sulfites COMMANDER NÊMS VÉGÉTARIENS galette de riz, avec salade, menthe… Plus menthe et sauce nuoc mam COMMANDER TEMPURA CREVETTES servi avec une sauce Plus piquante sriracha ou aigre douce Plus Traces éventuelles : mollusque COMMANDER BANH BAO POULET LAQUÉ brioche vapeur farcies au poulet laqué Plus Traces éventuelles : arachides, soja, céleri, moutarde, sulfites, mollusques COMMANDER Assortiment Dim Sum 3 raviolis et 3 bouchées aux crevettes… Plus Servi avec une sauce piquante sriracha ou aigre douce Plus Traces éventuelles : oeuf, poisson, arachides, soja, céleri, lait, fruit à coque, moutarde, sésame, sulfites, mollusques COMMANDER ASSORTIMENT FRITURE incluant 2 nems poulet/végé, 2 raviolis wonton frit et 2 tempura crevettes Plus servis avec une sauce au choix Plus Traces éventuelles : oeuf, lait, arachides, soja, céleri, fruits à la coque, moutarde COMMANDER SALADE papaye base salade, carotte, haricot vert et papaye marinée Plus saupoudrer d’oignons frits, cacahuètes et coriandre Plus Traces éventuelles : sulfites COMMANDER SALADE THAÏ ÉPICÉ​ base de soja, avec protéine au choix, salade, carotte et concombre avec oignons sautés… Plus oignons frits, cacahuètes et une sauce nuoc mam COMMANDER RIZ NATURE PARFUMÉ bol de riz nature COMMANDER RIZ CANTONAIS jambon de dinde riz sauté jambon de dinde, petit pois et œuf COMMANDER RIZ TOMATE riz sauté à la sauce tomate et petit pois COMMANDER nouilles thaï nouilles sautées",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:43"
+      }
+    ],
+    "restaurants": [],
+    "fidelite": [
+      {
+        "url": "https://bolkiri.fr/fidelite/",
+        "title": "Fidélité - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Programme de fidélité"
+          },
+          {
+            "level": "h2",
+            "text": "Le Club Bolkiri, Pho pas rigoler"
+          },
+          {
+            "level": "h2",
+            "text": "Trois bonnes raisons de faire partie de la team Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Nouveau client ?"
+          },
+          {
+            "level": "h2",
+            "text": "CUMULE & ÉCHANGE PAR TES PRODUITS PREF !"
+          },
+          {
+            "level": "h2",
+            "text": "Tu peux échanger dès 25 grains de riz (point)"
+          },
+          {
+            "level": "h2",
+            "text": "Tu as cumulé assez de grains de riz ? Il est temps de te faire plaisir : choisis tes produits préférés et régale-toi !"
+          },
+          {
+            "level": "h2",
+            "text": "GAGNEZ DES PRODUITS"
+          },
+          {
+            "level": "h2",
+            "text": "téléchargez l’app !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER Programme de fidélité Le Club Bolkiri, Pho pas rigoler Trois bonnes raisons de faire partie de la team Bolkiri Nouveau client ? profite d'une réduction de -10%sur ta 1ere commande via notre site internet ou notre application avec notre code bolkiri10 . CUMULE & ÉCHANGE PAR TES PRODUITS PREF ! Tu peux échanger dès 25 grains de riz (point) Tu as cumulé assez de grains de riz ? Il est temps de te faire plaisir : choisis tes produits préférés et régale-toi ! Je m'inscris GAGNEZ DES PRODUITS téléchargez l’app ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:45"
+      }
+    ],
+    "service_client": [
+      {
+        "url": "https://bolkiri.fr/service-client/",
+        "title": "Service Client - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "SERVICE CLIENT"
+          },
+          {
+            "level": "h2",
+            "text": "Formulaire de contact"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER SERVICE CLIENT Formulaire de contact Cher client, vous avez passé commande via une plateforme de livraison (Uber eats ou Deliveroo) et avez une réclamation ? Contactez-les directement. Remplissez le formulaire ci-joint si vous avez passez commande sur notre site internet bolkiri.fr ou sur notre application mobile. Type de commande - Sélectionner un type de commande - Livraison Click & Collect Sur place S'il s'agit d'une livraison, sur quelle plateforme ? - Sélectionner un choix - Site internet Application mobile UberEats Deliveroo Restaurant où vous avez commandé Nom Prénom E-mail Téléphone Numéro de commande Nature du problème - Sélectionner - Commande non livrée Commande incomplète (article manquant) Erreur de commande (produit incorrect) Produit renversé ou endommagé Produit mal cuit Restriction alimentaire non respectée Délai dépassant 45 minutes Autre Description du problème Pièce jointe J'accepte la politique de données pour le traitement de ma demande. ENVOYER Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:46"
+      }
+    ],
+    "concept": [
+      {
+        "url": "https://bolkiri.fr/notre-concept/",
+        "title": "À propos - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "À PROPOS"
+          },
+          {
+            "level": "h2",
+            "text": "Une cuisine vietnamienne authentique"
+          },
+          {
+            "level": "h2",
+            "text": "Un savoir faire depuis 2007"
+          },
+          {
+            "level": "h2",
+            "text": "Des plats frais et cuisinés minute"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER À PROPOS Une cuisine vietnamienne authentique Bienvenue chez Bolkiri, où l’authenticité de la cuisine vietnamienne prend vie à chaque bouchée. Nos recettes sont imprégnées de saveurs traditionnelles, capturant l’essence même de la cuisine vietnamienne. Chaque plat est une fusion délicate d’épices exquises et d’ingrédients frais, offrant une expérience gustative qui transporte vos papilles directement au cœur du Vietnam. Un savoir faire depuis 2007 L’aventure Bolkiri a commencé en 2007 avec notre premier restaurant familial « Saigon », où la passion pour la cuisine vietnamienne a été transmise de génération en génération. Forts de cette histoire riche, nous avons créé Bolkiri en 2020 pour partager ces saveurs exceptionnelles avec une communauté plus vaste. Chaque bouchée chez Bolkiri est une invitation à découvrir l’héritage de notre cuisine familiale, évoluant au fil des années pour atteindre de nouveaux sommets de délicatesse et d’authenticité. Des plats frais et cuisinés minute Chez Bolkiri, la fraîcheur est notre engagement. Chacun de nos plats est préparé à la commande, garantissant une qualité exceptionnelle et des saveurs authentiques à chaque instant. Notre passion pour la cuisine se reflète dans la minutie avec laquelle nous sélectionnons et préparons nos ingrédients, créant ainsi une expérience culinaire unique et mémorable pour chaque client. Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:49"
+      },
+      {
+        "url": "https://bolkiri.fr/nos-engagements/",
+        "title": "Nos engagements - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Nos engagements"
+          },
+          {
+            "level": "h2",
+            "text": "Nos plats sont faits maison et préparés Minute"
+          },
+          {
+            "level": "h2",
+            "text": "Des produits et ingrédients ultras frais et de qualité"
+          },
+          {
+            "level": "h2",
+            "text": "Nous vous proposons les platspréférés de la cuisine asiatique"
+          },
+          {
+            "level": "h2",
+            "text": "Bò bún"
+          },
+          {
+            "level": "h2",
+            "text": "Nems"
+          },
+          {
+            "level": "h2",
+            "text": "Soupe Phô"
+          },
+          {
+            "level": "h2",
+            "text": "Pad thaï"
+          },
+          {
+            "level": "h2",
+            "text": "Des plats généreux à un prix imbattable"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER Nos engagements Nos plats sont faits maison et préparés Minute Chez Bolkiri, nous nous engageons à offrir des plats toujours frais et savoureux. Chaque plat est préparé à la minute, juste après ta commande, pour garantir une qualité et une fraîcheur optimales. Nous croyons que la meilleure cuisine est celle qui est faite avec des ingrédients frais et des recettes authentiques, pour une expérience culinaire qui ravit tes papilles à chaque bouchée. C’est notre promesse de t’apporter le meilleur de la street food vietnamienne, préparée avec soin et passion, juste pour toi. Des produits et ingrédients ultras frais et de qualité Chez Bolkiri, la fraîcheur et la qualité de nos produits sont au cœur de notre engagement. Nous sélectionnons avec soin les meilleurs ingrédients, en privilégiant les producteurs locaux pour garantir une fraîcheur incomparable. Chaque légume croquant, chaque morceau de viande tendre et chaque épice aromatique est choisi pour apporter une explosion de saveurs authentiques dans chaque plat. Nous vous proposons les plats préférés de la cuisine asiatique Bò bún Nems Soupe Phô Pad thaï Des plats généreux à un prix imbattable Chez Bolkiri, nous croyons que la qualité et la générosité ne devraient pas se faire au détriment du prix. C’est pourquoi nous nous engageons à offrir des portions généreuses à des tarifs abordables. Que vous optiez pour nos délicieuses soupes, nos plats de riz ou nos nouilles parfumées, vous profiterez d’une cuisine authentique et copieuse à un prix imbattable. Venez découvrir la générosité de nos plats et laissez-vous séduire par le rapport qualité-prix inégalé de Bolkiri. Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:50"
+      }
+    ],
+    "autres": [
+      {
+        "url": "https://bolkiri.fr/nos-restaurants/",
+        "title": "Bolkiri | Le meilleur de la Street food Vietnamienne",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Bienvenue chez"
+          },
+          {
+            "level": "h2",
+            "text": "LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "Les nems du moment"
+          },
+          {
+            "level": "h2",
+            "text": "LES STARS"
+          },
+          {
+            "level": "h2",
+            "text": "CHEZ BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "BOBUN SIGNATURE"
+          },
+          {
+            "level": "h2",
+            "text": "BŒUF LOC LAC"
+          },
+          {
+            "level": "h2",
+            "text": "CROUSTY POULET"
+          },
+          {
+            "level": "h2",
+            "text": "PAD THAÏ"
+          },
+          {
+            "level": "h2",
+            "text": "Nos Actualités"
+          },
+          {
+            "level": "h2",
+            "text": "@bolkiri"
+          },
+          {
+            "level": "h3",
+            "text": "TÉLÉCHARGE TON APPLI BOLKIRI !"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          }
+        ],
+        "content": "Bienvenue chez COMMANDER Commandez en Click & Collect ou en livraison TÉLÉCHARGE TON APPLI BOLKIRI ! 1 € dépensé = 1 grain de riz (point) LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI Fais partie du club ! ✓ Des offres exclusives ✓ Une fidélité récompensée ✓ Une livraison directement chez vous ✓ -10% sur ta 1ère commande avec le code BOLKIRI10 Découvrir la fidélité Les nems du moment Découvrez les actualités à ne pas manquer LES STARS CHEZ BOLKIRI Voir notre carte ⬈ BOBUN SIGNATURE Le bo bun est composé de vermicelles de riz, de bœuf mariné et sauté, de nems croustillants coupés en morceaux, de crudités (carottes râpées, concombre, germes de soja, salade), d’herbes fraîches, le tout garni de cacahuètes concassées et d’oignons frits, et accompagné d’une sauce nuoc-mâm légèrement sucrée et citronnée. BŒUF LOC LAC Le loc lac est composé de morceaux de bœuf marinés sautés à feu vif, servis sur un lit de riz sauté à la tomate, accompagnés de tranches de tomate, de concombre, d’un œuf au plat, et d’un morceau de citron pour relever le tout. CROUSTY POULET Le crousty poulet est composé de morceaux de poulet panés et frits jusqu’à obtenir une texture bien croustillante, servis avec du riz, des crudités (carottes râpées, concombre, salade), des herbes fraîches, et accompagnés d’une sauce sucrée-salée PAD THAÏ Le pad thaï est composé de nouilles de riz sautées au wok, des légumes croquants, des crevettes ou du poulet, boeuf ou tofu, des cacahuètes concassées, des herbes fraîches, et est accompagné avec sa sauce maison. Nos Actualités Tous nos articles ⬈ 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! @bolkiri À l’origine, les nems étaient réservés aux r On t’a mijoté un Black Friday bien relevé 🔥 Bolkiri débarque à Sucy-en-Brie ! Une nouvelle a Pourquoi il faudrait douter de Suwo ? 😅 16 restos déjà ! 💛 De Paris à Lille, chaque Pas qu’en Italie qu’on sait faire rêver avec Du croustillant et encore du croustillant !Notre Nouvelle arrivée à la carte chez Bolkiri !Le B Follow nous",
+        "lists": [
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:44"
+      },
+      {
+        "url": "https://bolkiri.fr/service-traiteur/",
+        "title": "Traiteur Cuisine Vietnamienne Événements Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Découvrez le service traiteur Bolkiri : Votre événement, notre saveur"
+          },
+          {
+            "level": "h2",
+            "text": "Une offre sur-mesure pour chaque occasion"
+          },
+          {
+            "level": "h2",
+            "text": "Pourquoi nous choisir comme traiteur ?"
+          },
+          {
+            "level": "h2",
+            "text": "Comment ça fonctionne ?"
+          },
+          {
+            "level": "h2",
+            "text": "Nos spécialités traiteur"
+          },
+          {
+            "level": "h2",
+            "text": "Demandez\nvotre devis"
+          }
+        ],
+        "content": "Découvrez le service traiteur Bolkiri : Votre événement, notre saveur C h e z B o l k i r i , n o u s v o u s o f f r o n s d é s o r m a i s l a p o s s i b i l i t é d e r e t r o u v e r l e m e i l l e u r d e l a c u i s i n e v i e t n a m i e n n e l o r s d e v o s é v é n e m e n t s p r i v é s e t p r o f e s s i o n n e l s g r â c e à n o t r e n o u v e a u s e r v i c e t r a i t e u r . Q u e v o u s o r g a n i s i e z u n m a r i a g e , u n a n n i v e r s a i r e , u n e r é c e p t i o n d ’ e n t r e p r i s e o u t o u t a u t r e é v é n e m e n t , n o t r e é q u i p e e s t à v o t r e d i s p o s i t i o n p o u r v o u s p r o p o s e r u n e e x p é r i e n c e c u l i n a i r e u n i q u e e t a u t h e n t i q u e . Une offre sur-mesure pour chaque occasion No s c h e f s , e x p e r t s d e l a g a s t r o n o m i e v i e t n a m i e n n e , v o u s c o n c o c t e r o n t d e s p l a t s f r a i s e t s a v o u r e u x , a d a p t é s à v o s b e s o i n s s p é c i f i q u e s . Chaque menu est entièrement personnalisable et peut être conçu selon vos goûts et les exigences de vos convives. • B u f f e t s , c o c k t a i l s d î n a t o i r e s o u d î n e r s a s s i s , n o u s n o u s a d a p t o n s à t o u t e s l e s c o n f i g u r a t i o n s p o u r s u b l i m e r v o t r e é v é n e m e n t . • M e n u s v é g é t a r i e n s , s a n s g l u t e n , v e g a n ? P a s d e p r o b l è m e ! N o u s p r o p o s o n s d e s o p t i o n s a d a p t é e s à t o u s l e s r é g i m e s a l i m e n t a i r e s , s a n s j a m a i s s a c r i f i e r l ’ a u t h e n t i c i t é d e s s a v e u r s v i e t n a m i e n n e s . Pourquoi nous choisir comme traiteur ? U n e c u i s i n e a u t h e n t i q u e e t r a f f i n é e : N o s p l a t s s o n t é l a b o r é s à p a r t i r d e r e c e t t e s t r a d i t i o n n e l l e s v i e t n a m i e n n e s , a v e c d e s i n g r é d i e n t s d e q u a l i t é , s o i g n e u s e m e n t s é l e c t i o n n é s p o u r l e u r f r a î c h e u r . U n s e r v i c e c o m p l e t B o l k i r i n e s e c o n t e n t e p a s d e v o u s l i v r e r d e s p l a t s . N o u s p r e n o n s é g a l e m e n t e n c h a r g e l a m i s e e n p l a c e , l e s e r v i c e e t m ê m e l e n e t t o y a g e , p o u r q u e v o u s p u i s s i e z p r o f i t e r p l e i n e m e n t d e v o t r e é v é n e m e n t . F l e x i b i l i t é e t p e r s o n n a l i s a t i o n : Q u e v o u s o r g a n i s i e z u n p e t i t é v é n e m e n t o u u n e g r a n d e r é c e p t i o n , n o u s a j u s t o n s n o s p r e s t a t i o n s e n f o n c t i o n d e v o s a t t e n t e s . Comment ça fonctionne ? 1. C o n t a c t e z – n o u s p o u r d i s c u t e r d e v o s b e s o i n s . N o u s v o u s a i d e r o n s à c h o i s i r l e m e n u i d é a l p o u r v o t r e é v é n e m e n t . 2. N o u s é l a b o r o n s u n d e v i s p e r s o n n a l i s é e n f o n c t i o n d u n o m b r e d e c o n v i v e s , d u t y p e d ’ é v é n e m e n t e t d e s p l a t s c h o i s i s . 3. L e j o u r J , n o u s n o u s o c c u p o n s d e t o u t : p r é p a r a t i o n , l i v r a i s o n , i n s t a l l a t i o n , e t , s i n é c e s s a i r e , s e r v i c e s u r p l a c e p a r n o t r e é q u i p e d é d i é e . Nos spécialités traiteur D é c o u v r e z l e s i n c o n t o u r n a b l e s d e n o t r e c a r t e , d i s p o n i b l e s e n f o r m a t t r a i t e u r : • B ò b ú n : l e f a m e u x p l a t d e v e r m i c e l l e s d e r i z a v e c b œ u f s a u t é e t l é g u m e s c r o q u a n t s . • P h ở : l a s o u p e t r a d i t i o n n e l l e v i e t n a m i e n n e , p l e i n e d e s a v e u r s . • B a n h m i : n o s s a n d w i c h s v i e t n a m i e n s r e v i s i t é s p o u r v o s b u f f e t s . • E t b i e n d ’ a u t r e s s p é c i a l i t é s c o m m e l e s r o u l e a u x d e p r i n t e m p s , l e b œ u f l o c l a c , e t n o s s a u t é s d e n o u i l l e s e t r i z . Demandez votre devis P r ê t s à f a i r e d e v o t r e é v é n e m e n t u n m o m e n t i n o u b l i a b l e a v e c l e s s a v e u r s a u t h e n t i q u e s d e B o l k i r i ? C o n t a c t e z – n o u s d è s a u j o u r d ’ h u i p o u r o b t e n i r u n d e v i s p e r s o n n a l i s é e t d é c o u v r i r c o m m e n t n o u s p o u v o n s s u b l i m e r v o t r e r é c e p t i o n . Nom E-mail Message Envoyer",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:48"
+      },
+      {
+        "url": "https://bolkiri.fr/actualites/",
+        "title": "Actualités - Bolkiri",
+        "headings": [
+          {
+            "level": "h1",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h1",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h1",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h1",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          },
+          {
+            "level": "h1",
+            "text": "BOLKIRI S’IMPLANTE À LAGNY-SUR-MARNE !​"
+          },
+          {
+            "level": "h1",
+            "text": "Bolkiri & le Vietnam"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER Actualités ACTUALITÉ 6 Nov Black Friday chez BOLKIRI BOLKIRI propose une offre exclusive pour le Black Friday 2025. Du 24 au 28 novembre,… Lire l’article ACTUALITÉ 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie Chez Bolkiri, chaque repas est un moment de partage, de plaisir et d’authenticité. Une street… Lire l’article ACTUALITÉ 27 Août BOLKIRI IVRY DÉMÉNAGE ! Chez Bolkiri, chaque repas est un moment de partage, de plaisir et d’authenticité. Une street… Lire l’article ACTUALITÉ 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Chez Bolkiri, chaque repas est un moment de partage, de plaisir et d’authenticité. Une street… Lire l’article ACTUALITÉ 10 Juil BOLKIRI S’IMPLANTE À LAGNY-SUR-MARNE !​ Chez Bolkiri, chaque repas est un moment de partage, de plaisir et d’authenticité. Une street… Lire l’article ACTUALITÉ 1 Juil Bolkiri & le Vietnam Chez Bolkiri, nous croyons que pour faire évoluer une cuisine, il faut avant tout la… Lire l’article Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "10"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "1"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:51"
+      },
+      {
+        "url": "https://bolkiri.fr/bolkiri-ouvre-aux-mureaux/",
+        "title": "BOLKIRI OUVRE AUX MUREAUX ! - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "BOLKIRI OUVRE AUX MUREAUX ! 🎉"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "UNE STREET FOOD VIETNAMIENNE GÉNÉREUSE ET MODERNE 🥢"
+          },
+          {
+            "level": "h2",
+            "text": "UN PROJET PORTÉ PAR DES FRANCHISÉS PASSIONNÉS"
+          },
+          {
+            "level": "h2",
+            "text": "DES OFFRES SPÉCIALES POUR CÉLÉBRER L’OUVERTURE"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri LES MUREAUX"
+          },
+          {
+            "level": "h2",
+            "text": "Envie de partager l’article ?"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Une nouvelle adresse de street food vietnamienne à découvrir dès le 27 juillet"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER ACTUALITÉS BOLKIRI OUVRE AUX MUREAUX ! 🎉 Une nouvelle adresse de street food vietnamienne à découvrir dès le 27 juillet Une nouvelle adresse de Street-Food vietnamienne à découvrir dès le 27 juillet 2025. Nous avons le plaisir de vous annoncer l’ouverture d’un tout nouveau restaurant Bolkiri à Les Mureaux , à 101 Rue Paul Doumer, 78130 Les Mureaux 📆 Ouverture officielle : dimanche 27 juillet 2025 VOIR LE SITE Bolkiri Publié le 23 juillet 2025 UNE STREET FOOD VIETNAMIENNE GÉNÉREUSE ET MODERNE 🥢 Chez Bolkiri, nous revisitons les grands classiques de la cuisine de rue vietnamienne avec des recettes savoureuses, préparées minute dans une cuisine ouverte , pour une expérience à la fois authentique et moderne. Des plats pensés pour tous les goûts, à déguster sur place, à emporter ou en livraison. UN PROJET PORTÉ PAR DES FRANCHISÉS PASSIONNÉS Ce nouveau Bolkiri est le fruit d’un projet porté avec énergie et enthousiasme par des franchisés engagés , désireux de faire découvrir à leur ville une cuisine à la fois rapide, saine et pleine de goût. Ils partagent les valeurs fortes de notre marque : exigence, accessibilité, et plaisir de bien manger. Un accompagnement par nos équipes et collaborateurs pour la bonne mise en place pour l’ouverture. DES OFFRES SPÉCIALES POUR CÉLÉBRER L’OUVERTURE À l’occasion de cette ouverture, plusieurs offres exclusives seront proposées sur place tout au long du mois d’août 2025. C’est le moment idéal pour découvrir notre univers de la street-food Viêt, ou revenir goûter et profiter vos plats préférés ! Bolkiri LES MUREAUX Adresse : 101 Rue Paul Doumer, 78130 Les Mureaux Horaires : Ouvert tous les jours, midi et soir Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Publié le23 juillet 2025"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:54"
+      },
+      {
+        "url": "https://bolkiri.fr",
+        "title": "Bolkiri | Le meilleur de la Street food Vietnamienne",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Bienvenue chez"
+          },
+          {
+            "level": "h2",
+            "text": "LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "Les nems du moment"
+          },
+          {
+            "level": "h2",
+            "text": "LES STARS"
+          },
+          {
+            "level": "h2",
+            "text": "CHEZ BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "BOBUN SIGNATURE"
+          },
+          {
+            "level": "h2",
+            "text": "BŒUF LOC LAC"
+          },
+          {
+            "level": "h2",
+            "text": "CROUSTY POULET"
+          },
+          {
+            "level": "h2",
+            "text": "PAD THAÏ"
+          },
+          {
+            "level": "h2",
+            "text": "Nos Actualités"
+          },
+          {
+            "level": "h2",
+            "text": "@bolkiri"
+          },
+          {
+            "level": "h3",
+            "text": "TÉLÉCHARGE TON APPLI BOLKIRI !"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          }
+        ],
+        "content": "Bienvenue chez COMMANDER Commandez en Click & Collect ou en livraison TÉLÉCHARGE TON APPLI BOLKIRI ! 1 € dépensé = 1 grain de riz (point) LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI Fais partie du club ! ✓ Des offres exclusives ✓ Une fidélité récompensée ✓ Une livraison directement chez vous ✓ -10% sur ta 1ère commande avec le code BOLKIRI10 Découvrir la fidélité Les nems du moment Découvrez les actualités à ne pas manquer LES STARS CHEZ BOLKIRI Voir notre carte ⬈ BOBUN SIGNATURE Le bo bun est composé de vermicelles de riz, de bœuf mariné et sauté, de nems croustillants coupés en morceaux, de crudités (carottes râpées, concombre, germes de soja, salade), d’herbes fraîches, le tout garni de cacahuètes concassées et d’oignons frits, et accompagné d’une sauce nuoc-mâm légèrement sucrée et citronnée. BŒUF LOC LAC Le loc lac est composé de morceaux de bœuf marinés sautés à feu vif, servis sur un lit de riz sauté à la tomate, accompagnés de tranches de tomate, de concombre, d’un œuf au plat, et d’un morceau de citron pour relever le tout. CROUSTY POULET Le crousty poulet est composé de morceaux de poulet panés et frits jusqu’à obtenir une texture bien croustillante, servis avec du riz, des crudités (carottes râpées, concombre, salade), des herbes fraîches, et accompagnés d’une sauce sucrée-salée PAD THAÏ Le pad thaï est composé de nouilles de riz sautées au wok, des légumes croquants, des crevettes ou du poulet, boeuf ou tofu, des cacahuètes concassées, des herbes fraîches, et est accompagné avec sa sauce maison. Nos Actualités Tous nos articles ⬈ 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! @bolkiri À l’origine, les nems étaient réservés aux r On t’a mijoté un Black Friday bien relevé 🔥 Bolkiri débarque à Sucy-en-Brie ! Une nouvelle a Pourquoi il faudrait douter de Suwo ? 😅 16 restos déjà ! 💛 De Paris à Lille, chaque Pas qu’en Italie qu’on sait faire rêver avec Du croustillant et encore du croustillant !Notre Nouvelle arrivée à la carte chez Bolkiri !Le B Follow nous",
+        "lists": [
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:55"
+      },
+      {
+        "url": "https://bolkiri.fr/ouverture-bolkiri-sucy-en-brie/",
+        "title": "C'est le jour-J pour BOLKIRI Sucy-En-Brie - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "C'est le Jour-J pour Sucy-En-Brie ! 🎉"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "🇻🇳 Une explosion de saveurs venues du Vietnam"
+          },
+          {
+            "level": "h2",
+            "text": "🔥 Une cuisine ouverte pour une expérience authentique"
+          },
+          {
+            "level": "h2",
+            "text": "💛 Une ouverture à ne pas manquer"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri Sucy-en-brie"
+          },
+          {
+            "level": "h2",
+            "text": "Envie de partager l’article ?"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER ACTUALITÉS C'est le Jour-J pour Sucy-En-Brie ! 🎉 C’est officiel : Bolkiri Sucy-en-Brie ouvre ses portes aujourd’hui 🎊 📍 2 Place de la Gare, 94370 Sucy-en-Brie Notre nouvelle adresse vous invite à découvrir toute la richesse de la street food vietnamienne , servie dans un cadre moderne, convivial et plein d’énergie. VOIR LE SITE Bolkiri Publié le 16 octobre 2025 🇻🇳 Une explosion de saveurs venues du Vietnam Chez BOLKIRI , chaque plat est cuisiné à la minute, sous vos yeux, pour garantir un goût incomparable et une texture parfaite. Notre carte s’inspire directement de la cuisine de rue vietnamienne, avec des recettes simples, généreuses et pleines de caractère : 🥢 Le Bo Bun , plat emblématique de Bolkiri, avec une protéine sautée (bœuf, poulet, tofu), vermicelles de riz, légumes croquants et herbes fraîches, le tout relevé d’une sauce nuoc-mâm équilibrée. 🥖 Le Banh Mi , sandwich vietnamien par excellence, combine pain baguette croustillant, pickles, coriandre, et viande marinée à la perfection. (Avec toujours la possibilité de commander du tofu à la place de la viande pour nos amis végétarien) 🍜 Le Pho , soupe traditionnelle au bouillon parfumé, mijotée longuement, réchauffe le corps et le cœur. (Parfait pour ce réchauffer avec le froid qui arrive) 🍛 Et bien sûr, notre Loc Lac , ce plat iconique au bœuf mariné et sauté, accompagné de riz parfumé et d’un œuf au plat — un incontournable chez BOLKIRI ! Chaque recette est pensée pour offrir un équilibre parfait entre tradition et modernité , dans un esprit de partage et de convivialité. 🔥 Une cuisine ouverte pour une expérience authentique Notre cuisine ouverte vous plonge dans l’ambiance vibrante des rues d’Hanoï : les effluves, les gestes précis des chefs, le crépitement du wok… tout est réuni pour une immersion totale ! 💛 Une ouverture à ne pas manquer Venez découvrir ce nouveau restaurant qui allie authenticité, convivialité et rapidité , idéal pour un déjeuner, un dîner ou une pause gourmande à emporter. Et pour fêter cette ouverture, des offres spéciales vous attendent dès le 3 novembre 2025 ! On vous attend nombreux ! 🎁 Bolkiri Sucy-en-brie Adresse : 2 Place de la Gare, 94370 Sucy-en-Brie Horaires : Du lundi au dimanche : 11h à 22h30 Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Publié le16 octobre 2025"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:56"
+      },
+      {
+        "url": "https://bolkiri.fr/bolkiri-ivry-demenage/",
+        "title": "BOLKIRI IVRY DÉMÉNAGE ! - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Bolkiri Ivry déménage et vous ouvre ses portes dans un tout nouveau décor !🔥"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Une nouvelle expérience à Ivry ✨"
+          },
+          {
+            "level": "h2",
+            "text": "Des horaires élargis pour encore plus de gourmandise 🕒"
+          },
+          {
+            "level": "h2",
+            "text": "Une carte emblématique, encore plus savoureuse 🍜🥢"
+          },
+          {
+            "level": "h2",
+            "text": "Des offres spéciales pour fêter cette ouverture 🎉"
+          },
+          {
+            "level": "h2",
+            "text": "Venez vivre l’expérience Bolkiri 💛"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri IVRY"
+          },
+          {
+            "level": "h2",
+            "text": "Envie de partager l’article ?"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER ACTUALITÉS Bolkiri Ivry déménage et vous ouvre ses portes dans un tout nouveau décor !🔥 📍 58 ter Avenue Maurice Thorez, 94200 Ivry-sur-Seine 📅 Rendez-vous le lundi 1 septembre 2025 ! Grande nouvelle ! Après avoir fait découvrir ses saveurs en tant que dark kitchen , Bolkiri Ivry franchit une nouvelle étape et vous accueille désormais dans son restaurant avec salle . Plus qu’un simple déménagement, c’est une véritable transformation : un espace chaleureux, moderne et convivial où vous pourrez enfin déguster vos plats préférés sur place. VOIR LE SITE Bolkiri Publié le 27 août 2025 Une nouvelle expérience à Ivry ✨ Si jusqu’à présent vous connaissiez Bolkiri Ivry uniquement en livraison ou à emporter, vous allez adorer découvrir cette nouvelle ambiance. Notre cuisine ouverte vous permet de voir vos plats préparés minute, sous vos yeux, dans la convivialité et le partage. C’est la fin du concept caché de la dark kitchen : ici, tout est transparent, vivant et accueillant ! Des horaires élargis pour encore plus de gourmandise 🕒 Autre grande nouveauté : Bolkiri Ivry passe en service continu ! Du lundi au jeudi : de 11h à 22h30 Du vendredi au dimanche : de 11h jusqu’à 2h du matin 🎉 Idéal pour une pause déjeuner, un dîner en famille, une soirée entre amis… ou même une fringale tardive ! Une carte emblématique, encore plus savoureuse 🍜🥢 Retrouvez tous nos grands classiques qui font le succès de Bolkiri : le bobun généreux , le banh mi croustillant , le pho réconfortant , sans oublier le fameux Loc Lac . Toujours préparés à la minute, avec des ingrédients de qualité, pour une explosion de saveurs à chaque bouchée. Des offres spéciales pour fêter cette ouverture 🎉 Pour célébrer cette nouvelle étape, Bolkiri Ivry vous propose trois semaines de promotions exclusives : 📅 Du 8 au 14 septembre : 1 bœuf Loc Lac acheté = 1 offert (à emporter uniquement) 📅 Du 15 au 21 septembre : -20 % sur toutes les assiettes parfumées 📅 Du 22 au 28 septembre : dès 15 € d’achat, 1 dessert ou 1 boisson offert Venez vivre l’expérience Bolkiri 💛 De la livraison discrète à la convivialité d’un vrai restaurant, Bolkiri Ivry vous propose désormais bien plus qu’un repas : une expérience complète où la street food vietnamienne prend vie devant vous. 👉 Rendez-vous dès le 1er septembre 2025 au 58 ter Avenue Maurice Thorez, à Ivry-sur-Seine pour découvrir ce nouvel écrin. Bolkiri IVRY Adresse : 58 ter Av. Maurice Thorez, 94200 Ivry-sur-Seine Horaires : Du lundi au dimanche : 11h à 00:00 Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Publié le27 août 2025"
+          ],
+          [
+            "Du lundi au jeudi: de 11h à 22h30",
+            "Du vendredi au dimanche: de 11h jusqu’à 2h du matin 🎉"
+          ],
+          [
+            "📅Du 8 au 14 septembre: 1bœuf Loc Lac acheté = 1 offert(à emporter uniquement)",
+            "📅Du 15 au 21 septembre:-20 % sur toutes les assiettes parfumées",
+            "📅Du 22 au 28 septembre: dès 15 € d’achat,1 dessert ou 1 boisson offert"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:57"
+      },
+      {
+        "url": "https://bolkiri.fr/black-friday-2025-bolkiri/",
+        "title": "Black Friday chez BOLKIRI - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "BLACK FRIDAY AVEC BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Du24 au 28 novembre, BOLKIRI vous fait un petit cadeau pour vos grandes envies !"
+          },
+          {
+            "level": "h3",
+            "text": "– Enregistrez vos commandes pour les refaire encore plus vite🥡"
+          },
+          {
+            "level": "h3",
+            "text": "👉Téléchargez l’application dès maintenantet laissez BOLKIRI s’occuper du reste."
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER Bolkiri Publié le 6 novembre 2025 BLACK FRIDAY AVEC BOLKIRI Du 24 au 28 novembre , BOLKIRI vous fait un petit cadeau pour vos grandes envies ! Pendant 5 jours seulement , profitez de 5€ offerts dès 20€ d’achat sur toutes vos commandes passées via notre application ou notre site web. Comment en profiter ? 🥢 C’est simple : 1 – Téléchargez l’application BOLKIRI (disponible gratuitement sur l’App Store et Google Play). 2 – Créez votre compte ou connectez-vous à votre espace client. 3 – Choisissez vos plats préférés parmi tous les produits à la carte et composez votre commande. 4 – Passez commande à emporter ou en livraison , directement depuis l’application ou le site internet. 5 – Votre réduction de 5€ sera automatiquement appliquée à partir de 20€ d’achat ! 💛 Pourquoi commander sur l’application BOLKIRI ? 📱 Notre application a été pensée pour vous simplifier la vie : – Commandez vos plats préférés en quelques clics 👉 – Suivez en temps réel la préparation et la livraison 🛵 – Suivre votre programme de fidélité BOLKIRI pour encore plus d’avantages ✨ – Accédez à des offres exclusives réservées aux utilisateurs de l’application 🔥 – Retrouvez facilement vos restaurants BOLKIRI favoris 📍 – Enregistrez vos commandes pour les refaire encore plus vite 🥡 Les conditions de l’offre ⚙️ • Offre valable du 24/11 au 28/11/2025 inclus. • Réduction immédiate de 5 € dès 20 € d’achat (hors frais de livraison). • Offre valable uniquement à emporter ou en livraison , pour toute commande effectuée via l’application BOLKIRI ou le site web. • Offre non cumulable avec d’autres promotions, bons de réduction, ou programmes de fidélité. • L’offre est limitée à une utilisation par compte client pendant la période de validité. • Valable dans tous les restaurants BOLKIRI . À ne pas manquer 💛 C’est le moment parfait pour tester la commande en ligne si vous ne l’avez pas encore fait ! Que ce soit pour un déjeuner sur le pouce, un dîner entre amis ou une envie gourmande à la maison, l’app BOLKIRI vous offre simplicité, rapidité et bons plans. 👉 Téléchargez l’application dès maintenant et laissez BOLKIRI s’occuper du reste. S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Publié le6 novembre 2025"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-10 23:30:59"
+      }
+    ]
+  },
+  "informations_generales": {
+    "concept": "Street Food Vietnamienne Authentique",
+    "programme_fidelite": "1€ dépensé = 1 grain de riz (point)",
+    "reduction_premiere_commande": "-10% avec code BOLKIRI10",
+    "services_disponibles": [
+      "Sur place",
+      "À emporter",
+      "Livraison",
+      "Drive"
+    ],
+    "reseaux_sociaux": {
+      "instagram": "https://www.instagram.com/bolkiri/",
+      "facebook": "https://www.facebook.com/BolkiriParis/",
+      "tiktok": "https://www.tiktok.com/@bolkiri"
+    }
+  }
+}
