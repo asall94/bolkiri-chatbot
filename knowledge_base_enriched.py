@@ -3,13 +3,8 @@ import json
 import os
 from datetime import datetime
 
-# Import RAG Engine
-try:
-    from rag_engine import RAGEngine
-    RAG_AVAILABLE = True
-except ImportError:
-    RAG_AVAILABLE = False
-    print("⚠️ RAG Engine non disponible, utilisation du mode recherche classique")
+# Import RAG Engine (OBLIGATOIRE)
+from rag_engine import RAGEngine
 
 class EnrichedKnowledgeBase:
     """Base de connaissances enrichie pour TOUS les restaurants Bolkiri"""
@@ -28,18 +23,12 @@ class EnrichedKnowledgeBase:
         self.documents = self._create_documents_from_pages()
         self.menu_items = self.menu_complet
         
-        # Initialiser RAG Engine si disponible
-        self.rag_engine = None
-        if RAG_AVAILABLE:
-            try:
-                print("🚀 Initialisation RAG Engine...")
-                self.rag_engine = RAGEngine(self.complete_file)
-                print("✅ RAG Engine activé - Recherche sémantique disponible")
-            except Exception as e:
-                print(f"⚠️ Erreur initialisation RAG: {e}")
-                print("Utilisation du mode recherche classique")
+        # Initialiser RAG Engine (OBLIGATOIRE)
+        print("Initialisation RAG Engine...")
+        self.rag_engine = RAGEngine(self.complete_file)
+        print("RAG Engine active - Recherche semantique disponible")
         
-        print(f"Base enrichie chargée: {len(self.restaurants)} restos, {len(self.menu_complet)} items menu")
+        print(f"Base enrichie chargee: {len(self.restaurants)} restos, {len(self.menu_complet)} items menu")
     
     def _extract_menu_from_pages(self) -> List[Dict]:
         """Extrait le menu depuis les pages scrapées"""
@@ -85,7 +74,7 @@ class EnrichedKnowledgeBase:
                 with open(self.complete_file, 'r', encoding='utf-8') as f:
                     return json.load(f)
             except Exception as e:
-                print(f"⚠️ Erreur chargement base complète: {e}")
+                print(f"Erreur chargement base complete: {e}")
         
         # Fallback ancien système
         return self._load_old_format()
@@ -108,103 +97,21 @@ class EnrichedKnowledgeBase:
         return data
     
     def search(self, query: str, limit: int = 5) -> List[Dict]:
-        """Recherche enrichie dans toute la base (RAG si disponible, sinon classique)"""
+        """Recherche sémantique avec RAG (obligatoire)"""
+        results = self.rag_engine.search(query, top_k=limit)
         
-        # Utiliser RAG si disponible
-        if self.rag_engine:
-            return self._search_rag(query, limit)
+        # Formater pour compatibilité avec l'ancien format
+        formatted_results = []
+        for result in results:
+            formatted_results.append({
+                'type': result['type'],
+                'content': result['content'],
+                'score': result['score'],
+                'metadata': result.get('metadata', {}),
+                'data': result.get('data', {})
+            })
         
-        # Sinon fallback sur recherche classique
-        return self._search_classic(query, limit)
-    
-    def _search_rag(self, query: str, limit: int = 5) -> List[Dict]:
-        """Recherche sémantique avec RAG"""
-        try:
-            results = self.rag_engine.search(query, top_k=limit)
-            
-            # Formater pour compatibilité avec l'ancien format
-            formatted_results = []
-            for result in results:
-                formatted_results.append({
-                    'type': result['type'],
-                    'content': result['content'],
-                    'score': result['score'],
-                    'metadata': result.get('metadata', {}),
-                    'data': result.get('data', {})
-                })
-            
-            return formatted_results
-        except Exception as e:
-            print(f"⚠️ Erreur RAG search: {e}")
-            return self._search_classic(query, limit)
-    
-    def _search_classic(self, query: str, limit: int = 5) -> List[Dict]:
-        """Recherche classique par mots-clés (fallback)"""
-        query_lower = query.lower()
-        results = []
-        
-        # Si question sur les villes/localisations, augmenter limit pour montrer tous les restos
-        location_keywords = ['ville', 'où', 'localise', 'situe', 'adresse', 'implanté', 'trouvez-vous', 'présent']
-        is_location_query = any(word in query_lower for word in location_keywords)
-        
-        # Recherche dans les restaurants
-        for resto in self.restaurants:
-            score = 0
-            name = resto.get('name', '')
-            adresse = resto.get('adresse', '')
-            
-            # Extraire la ville depuis l'adresse ou le nom
-            ville = ''
-            if 'name' in resto and resto['name']:
-                # Extraire après "BOLKIRI"
-                parts = name.split()
-                if len(parts) > 1:
-                    ville = ' '.join(parts[1:]).replace('Street Food Viêt', '').strip()
-            
-            if query_lower in ville.lower():
-                score += 10
-            if query_lower in name.lower():
-                score += 10
-            if query_lower in adresse.lower():
-                score += 5
-            
-            # Mots-clés recherche de villes
-            if is_location_query:
-                if ville or adresse:
-                    score += 5
-            
-            if score > 0:
-                results.append({
-                    'type': 'restaurant',
-                    'content': f"Restaurant {name} situé à {adresse}. Tél: {resto.get('telephone', 'N/A')}",
-                    'score': score,
-                    'data': resto
-                })
-        
-        # Recherche dans les documents (pages scrapées)
-        for doc in self.documents:
-            score = 0
-            if query_lower in doc.get('text', '').lower():
-                score += 5
-            if query_lower in doc.get('title', '').lower():
-                score += 3
-            
-            if score > 0:
-                results.append({
-                    'type': 'document',
-                    'content': doc.get('text', '')[:500],
-                    'score': score,
-                    'data': doc
-                })
-        
-        # Trier par score et limiter
-        results.sort(key=lambda x: x['score'], reverse=True)
-        
-        # Si question sur les villes, retourner tous les restaurants trouvés
-        if is_location_query:
-            return results
-        
-        return results[:limit]
+        return formatted_results
     
     def get_all_restaurants(self) -> List[Dict]:
         """Retourne tous les restaurants"""

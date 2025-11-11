@@ -441,12 +441,6 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         
         context = self.plan_and_execute(user_message)
         
-        # DEBUG: Logger le contexte récupéré
-        print(f"\n=== DEBUG CONTEXTE ===")
-        print(f"Question: {user_message}")
-        print(f"Contexte récupéré:\n{context[:500]}...")
-        print(f"======================\n")
-        
         # Charger dynamiquement les infos des restaurants
         restaurants = self.kb.get_all_restaurants()
         restaurants_info = []
@@ -529,8 +523,8 @@ INSTRUCTIONS:
                 ]
                 for phrase in negative_phrases:
                     if phrase in assistant_message.lower():
-                        # HALLUCINATION DÉTECTÉE - forcer correction
-                        print(f"⚠️ HALLUCINATION DÉTECTÉE: '{phrase}' malgré contexte positif")
+                        # HALLUCINATION DETECTEE - forcer correction
+                        print(f"HALLUCINATION DETECTEE: '{phrase}' malgre contexte positif")
                         # Extraire les infos du contexte
                         if "Corbeil-Essonnes" in context or "corbeil" in context.lower():
                             assistant_message = "Nous avons un restaurant à Corbeil-Essonnes dans l'Essonne (91100).\n\n" + \
@@ -545,7 +539,7 @@ INSTRUCTIONS:
                 negative_91 = ["pas de restaurant dans le 91", "n'avons pas de restaurant dans le 91"]
                 for neg in negative_91:
                     if neg in assistant_message.lower():
-                        print(f"⚠️ CONTRADICTION DÉTECTÉE: Dit 'pas de 91' mais mentionne Corbeil (qui est dans le 91)")
+                        print(f"CONTRADICTION DETECTEE: Dit 'pas de 91' mais mentionne Corbeil (qui est dans le 91)")
                         # Corriger en enlevant la négation
                         assistant_message = "Nous avons un restaurant dans l'Essonne (département 91) à Corbeil-Essonnes.\n\n" + \
                                           "Adresse: 78 Boulevard Jean Jaurès, 91100 Corbeil-Essonnes\n" + \
@@ -580,11 +574,11 @@ INSTRUCTIONS:
             self.kb = EnrichedKnowledgeBase()
             self.agent_state['last_update'] = datetime.now().isoformat()
             
-            print(f"✅ KB rafraîchie: {len(self.kb.get_all_restaurants())} restaurants, {len(self.kb.get_all_menu_items())} plats")
+            print(f"KB rafraichie: {len(self.kb.get_all_restaurants())} restaurants, {len(self.kb.get_all_menu_items())} plats")
             return True
             
         except Exception as e:
-            print(f"❌ Erreur refresh KB: {e}")
+            print(f"Erreur refresh KB: {e}")
             import traceback
             traceback.print_exc()
             return False

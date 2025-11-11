@@ -25,3 +25,6 @@ Thumbs.db
 
 # Logs
 *.log
+
+# Ne PAS ignorer le cache embeddings (optimisation Render)
+# !embeddings_cache.pkl
