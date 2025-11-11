@@ -216,34 +216,80 @@ class BolkiriIndustrialScraper:
             time.sleep(0.5)
     
     def extract_restaurant_data(self, url: str) -> Dict:
-        """Extrait les données structurées d'un restaurant"""
+        """Extrait les données structurées d'un restaurant depuis JSON-LD Schema.org"""
         try:
             response = requests.get(url, headers=self.headers, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Extraire nom
-            name = ""
-            h1 = soup.find('h1')
-            if h1:
-                name = h1.get_text(strip=True)
+            # Extraire les données structurées JSON-LD
+            json_ld_data = None
+            scripts = soup.find_all('script', type='application/ld+json')
             
-            # Extraire téléphone
-            telephone = ""
-            tel_pattern = r'\+33\s?\d{1}\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2}'
-            page_text = soup.get_text()
-            tel_match = re.search(tel_pattern, page_text)
-            if tel_match:
-                telephone = tel_match.group(0)
+            for script in scripts:
+                try:
+                    data = json.loads(script.string)
+                    if isinstance(data, dict):
+                        if '@graph' in data:
+                            for item in data['@graph']:
+                                if item.get('@type') == 'Restaurant':
+                                    json_ld_data = item
+                                    break
+                        elif data.get('@type') == 'Restaurant':
+                            json_ld_data = data
+                            
+                    if json_ld_data:
+                        break
+                except (json.JSONDecodeError, KeyError):
+                    continue
             
-            # Extraire adresse
-            adresse = ""
-            for string in soup.stripped_strings:
-                if re.search(r'\d+.*(?:Rue|Avenue|Boulevard|Place)', string):
-                    adresse = string
-                    break
+            # Si pas de JSON-LD, fallback sur extraction HTML
+            if not json_ld_data:
+                page_text = soup.get_text()
+                h1 = soup.find('h1')
+                
+                # Extraire téléphone
+                telephone = ""
+                tel_pattern = r'\+33\s?\d{1}\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2}'
+                tel_match = re.search(tel_pattern, page_text)
+                if tel_match:
+                    telephone = tel_match.group(0)
+                
+                # Extraire adresse
+                adresse = ""
+                for string in soup.stripped_strings:
+                    if re.search(r'\d+.*(?:Rue|Avenue|Boulevard|Place)', string):
+                        adresse = string
+                        break
+                
+                # Statut
+                statut = "ouvert"
+                if "prochaine" in page_text.lower():
+                    statut = "ouverture_prochaine"
+                
+                return {
+                    "name": h1.get_text(strip=True) if h1 else "",
+                    "telephone": telephone,
+                    "adresse": adresse,
+                    "statut": statut,
+                    "url": url
+                }
+            
+            # Extraire depuis JSON-LD
+            name = json_ld_data.get('name', '')
+            telephone = json_ld_data.get('telephone', '')
+            
+            # Extraire l'adresse structurée
+            address_data = json_ld_data.get('address', {})
+            adresse = f"{address_data.get('streetAddress', '')}, {address_data.get('postalCode', '')} {address_data.get('addressLocality', '')}"
+            
+            # Extraire et parser les horaires depuis openingHoursSpecification
+            horaires = {}
+            if 'openingHoursSpecification' in json_ld_data:
+                horaires = self.parse_opening_hours(json_ld_data['openingHoursSpecification'])
             
             # Statut
+            page_text = soup.get_text()
             statut = "ouvert"
             if "prochaine" in page_text.lower():
                 statut = "ouverture_prochaine"
@@ -252,6 +298,7 @@ class BolkiriIndustrialScraper:
                 "name": name,
                 "telephone": telephone,
                 "adresse": adresse,
+                "horaires": horaires,
                 "statut": statut,
                 "url": url
             }
@@ -259,6 +306,54 @@ class BolkiriIndustrialScraper:
         except Exception as e:
             print(f"    Erreur: {e}")
             return None
+    
+    def parse_opening_hours(self, specs: List[Dict]) -> Dict:
+        """Parse les openingHoursSpecification de Schema.org"""
+        horaires = {
+            "lundi": "",
+            "mardi": "",
+            "mercredi": "",
+            "jeudi": "",
+            "vendredi": "",
+            "samedi": "",
+            "dimanche": ""
+        }
+        
+        # Mapper les jours anglais vers français
+        day_map = {
+            "Monday": "lundi",
+            "Tuesday": "mardi",
+            "Wednesday": "mercredi",
+            "Thursday": "jeudi",
+            "Friday": "vendredi",
+            "Saturday": "samedi",
+            "Sunday": "dimanche"
+        }
+        
+        # Grouper par jour
+        day_hours = {}
+        for spec in specs:
+            days = spec.get('dayOfWeek', [])
+            if isinstance(days, str):
+                days = [days]
+            
+            opens = spec.get('opens', '')
+            closes = spec.get('closes', '')
+            
+            if opens and closes:
+                time_range = f"{opens}-{closes}"
+                for day in days:
+                    day_fr = day_map.get(day.replace('http://schema.org/', '').replace('https://schema.org/', ''), '')
+                    if day_fr:
+                        if day_fr not in day_hours:
+                            day_hours[day_fr] = []
+                        day_hours[day_fr].append(time_range)
+        
+        # Construire les horaires
+        for jour_fr, times in day_hours.items():
+            horaires[jour_fr] = ", ".join(times)
+        
+        return horaires
     
     def save_complete_knowledge_base(self):
         """Sauvegarde la base de connaissances complète"""

@@ -104,12 +104,12 @@
       "email": "corbeil@bolkiri.fr",
       "horaires": {
         "lundi": "11h30-14h30, 18h30-22h30",
-        "mardi": "11h30-14h30, 18h30-22h30",
+        "mardi": "11h30-14h30, 18h30-22h30 (ouvert maintenant - 22h30*)",
         "mercredi": "11h30-14h30, 18h30-22h30",
         "jeudi": "11h30-14h30, 18h30-22h30",
         "vendredi": "11h30-14h30, 18h30-22h30",
-        "samedi": "11h30-15h00, 18h30-22h30",
-        "dimanche": "11h30-15h00, 18h30-22h30"
+        "samedi": "11h30-14h30, 18h30-22h30",
+        "dimanche": "11h30-14h30, 18h30-22h30"
       },
       "services": [
         "Sur place",

@@ -146,31 +146,79 @@ class BolkiriCompletScraper2025:
             return None
     
     def extract_horaires(self, soup) -> Dict:
-        """Extraction intelligente des horaires"""
-        horaires_default = {
-            "lundi": "11h30-14h30, 18h30-22h30",
-            "mardi": "11h30-14h30, 18h30-22h30",
-            "mercredi": "11h30-14h30, 18h30-22h30",
-            "jeudi": "11h30-14h30, 18h30-22h30",
-            "vendredi": "11h30-14h30, 18h30-22h30",
-            "samedi": "11h30-15h00, 18h30-22h30",
-            "dimanche": "11h30-15h00, 18h30-22h30"
-        }
-        
-        # Chercher les horaires dans le texte
-        text = soup.get_text()
-        jours = ['lundi', 'mardi', 'mercredi', 'jeudi', 'vendredi', 'samedi', 'dimanche']
+        """Extraction intelligente des horaires depuis JSON-LD Schema.org"""
         horaires = {}
         
-        for jour in jours:
-            pattern = f"{jour}[:\s]*(\d{{1,2}}h?\d{{0,2}}\s*-\s*\d{{1,2}}h?\d{{0,2}})"
-            match = re.search(pattern, text, re.IGNORECASE)
-            if match:
-                horaires[jour] = match.group(1)
-            else:
-                horaires[jour] = horaires_default[jour]
+        # Chercher le script JSON-LD avec les horaires
+        scripts = soup.find_all('script', type='application/ld+json')
         
-        return horaires if horaires else horaires_default
+        for script in scripts:
+            try:
+                data = json.loads(script.string)
+                
+                # Gérer les cas où c'est un graph ou un objet direct
+                if isinstance(data, dict):
+                    if '@graph' in data:
+                        for item in data['@graph']:
+                            if item.get('@type') == 'Restaurant' and 'openingHoursSpecification' in item:
+                                horaires = self.parse_opening_hours(item['openingHoursSpecification'])
+                                break
+                    elif data.get('@type') == 'Restaurant' and 'openingHoursSpecification' in data:
+                        horaires = self.parse_opening_hours(data['openingHoursSpecification'])
+                        
+            except (json.JSONDecodeError, KeyError):
+                continue
+        
+        # Si aucune donnée structurée, retourner dict vide plutôt que des données incorrectes
+        return horaires
+    
+    def parse_opening_hours(self, specs: List[Dict]) -> Dict:
+        """Parse les openingHoursSpecification de Schema.org"""
+        horaires = {
+            "lundi": "",
+            "mardi": "",
+            "mercredi": "",
+            "jeudi": "",
+            "vendredi": "",
+            "samedi": "",
+            "dimanche": ""
+        }
+        
+        # Mapper les jours anglais vers français
+        day_map = {
+            "Monday": "lundi",
+            "Tuesday": "mardi", 
+            "Wednesday": "mercredi",
+            "Thursday": "jeudi",
+            "Friday": "vendredi",
+            "Saturday": "samedi",
+            "Sunday": "dimanche"
+        }
+        
+        # Grouper par jour
+        day_hours = {}
+        for spec in specs:
+            days = spec.get('dayOfWeek', [])
+            if isinstance(days, str):
+                days = [days]
+            
+            opens = spec.get('opens', '')
+            closes = spec.get('closes', '')
+            
+            if opens and closes:
+                time_range = f"{opens}-{closes}"
+                for day in days:
+                    day_fr = day_map.get(day.replace('http://schema.org/', '').replace('https://schema.org/', ''), '')
+                    if day_fr:
+                        if day_fr not in day_hours:
+                            day_hours[day_fr] = []
+                        day_hours[day_fr].append(time_range)
+        
+        # Construire les horaires
+        for jour_fr, times in day_hours.items():
+            horaires[jour_fr] = ", ".join(times)
+        
+        return horaires
     
     def scrape_menu(self):
         """Scrape le menu complet"""
