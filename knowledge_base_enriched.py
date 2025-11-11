@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from typing import List, Dict, Optional
 import json
 import os
@@ -26,7 +25,9 @@ class EnrichedKnowledgeBase:
         
         # Initialiser RAG Engine (OBLIGATOIRE)
         print("Initialisation RAG Engine...")
-        self.rag_engine = RAGEngine(self.complete_file)
+        # force_rebuild depuis variable env (défaut: True en production)
+        force_rebuild = os.getenv('REBUILD_EMBEDDINGS', 'true').lower() == 'true'
+        self.rag_engine = RAGEngine(self.complete_file, force_rebuild=force_rebuild)
         print("RAG Engine active - Recherche semantique disponible")
         
         print(f"Base enrichie chargee: {len(self.restaurants)} restos, {len(self.menu_complet)} items menu")

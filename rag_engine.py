@@ -20,10 +20,15 @@ client = OpenAI(api_key=os.getenv('OPENAI_API_KEY'))
 class RAGEngine:
     """Moteur de recherche sémantique avec embeddings et FAISS"""
     
-    def __init__(self, knowledge_file: str = "bolkiri_knowledge_industrial_2025.json"):
+    def __init__(self, knowledge_file: str = "bolkiri_knowledge_industrial_2025.json", force_rebuild: bool = False):
         self.knowledge_file = knowledge_file
         self.embedding_dim = 1536  # Dimension OpenAI embeddings text-embedding-ada-002
         self.cache_file = "embeddings_cache.pkl"
+        
+        # Supprimer le cache si force_rebuild
+        if force_rebuild and os.path.exists(self.cache_file):
+            os.remove(self.cache_file)
+            print("Cache embeddings supprimé (force_rebuild=True)")
         
         # Chargement des données
         self.data = self._load_knowledge()
