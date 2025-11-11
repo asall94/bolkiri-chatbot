@@ -345,7 +345,7 @@ class BolkiriIndustrialScraper:
             if "prochaine" in page_text.lower():
                 statut = "ouverture_prochaine"
             
-            return {
+            restaurant_data = {
                 "name": name,
                 "telephone": telephone,
                 "adresse": adresse,
@@ -353,6 +353,12 @@ class BolkiriIndustrialScraper:
                 "statut": statut,
                 "url": url
             }
+            
+            # Ajouter l'URL au contenu texte du restaurant
+            if restaurant_data:
+                restaurant_data['description'] = f"Restaurant {name}\nAdresse: {adresse}\nTéléphone: {telephone}\n\nPour réserver ou en savoir plus: {url}"
+            
+            return restaurant_data
             
         except Exception as e:
             print(f"    Erreur: {e}")
@@ -416,16 +422,20 @@ class BolkiriIndustrialScraper:
                     categorized_pages['menu'].append({
                         'url': url,
                         'title': f"Plat: {dish['nom']}",
-                        'content': f"{dish['nom']}\n{dish['description']}\nPrix: {dish['prix']}\nTags: {', '.join(dish['tags'])}\n\n{dish['raw_content']}",
+                        'content': f"{dish['nom']}\n{dish['description']}\nPrix: {dish['prix']}\nTags: {', '.join(dish['tags'])}\n\nPour commander ce plat: {url}\n\n{dish['raw_content']}",
                         'dish_data': dish
                     })
             elif '/fidelite/' in url or 'fidélité' in content['title'].lower():
+                content['content'] = f"{content['content']}\n\nPour en savoir plus sur le programme de fidélité: {url}"
                 categorized_pages['fidelite'].append(content)
             elif '/service-client/' in url or 'faq' in url.lower():
+                content['content'] = f"{content['content']}\n\nPour contacter le service client: {url}"
                 categorized_pages['service_client'].append(content)
             elif '/notre-concept/' in url or '/nos-engagements/' in url:
+                content['content'] = f"{content['content']}\n\nPour découvrir notre concept: {url}"
                 categorized_pages['concept'].append(content)
             else:
+                content['content'] = f"{content['content']}\n\nPour plus d'informations: {url}"
                 categorized_pages['autres'].append(content)
         
         data = {
