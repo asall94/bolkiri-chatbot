@@ -119,6 +119,12 @@ class EnrichedKnowledgeBase:
         """Retourne tous les restaurants"""
         return self.restaurants
     
+    def _extract_ville_from_name(self, name: str) -> str:
+        """Extrait la ville depuis le nom 'BOLKIRI Ville Street Food Viêt'"""
+        # Retirer 'BOLKIRI' et 'Street Food Viêt'
+        ville = name.replace('BOLKIRI', '').replace('Street Food Viêt', '').strip()
+        return ville
+    
     def get_restaurant_by_ville(self, ville: str) -> Optional[Dict]:
         """Trouve un restaurant par ville, département ou code postal"""
         # Mapping département → ville (version normalisée)
@@ -152,13 +158,14 @@ class EnrichedKnowledgeBase:
         # Chercher le restaurant (match partiel plus permissif)
         ville_lower = ville_search.lower()
         for resto in self.restaurants:
-            resto_ville = resto.get('ville', '').lower()
-            resto_cp = resto.get('code_postal', '').lower()
+            # Extraire ville du nom
+            resto_ville = self._extract_ville_from_name(resto.get('name', '')).lower()
+            resto_adresse = resto.get('adresse', '').lower()
             
-            # Match partiel sur ville ou code postal
+            # Match partiel sur ville ou adresse
             if ville_lower in resto_ville or resto_ville.startswith(ville_lower):
                 return resto
-            if ville_lower in resto_cp or resto_cp.startswith(ville_lower):
+            if ville_lower in resto_adresse:
                 return resto
         
         return None
@@ -211,9 +218,10 @@ class EnrichedKnowledgeBase:
             if resto:
                 return {
                     'restaurant': resto['name'],
+                    'ville': self._extract_ville_from_name(resto['name']),
                     'adresse': resto['adresse'],
                     'telephone': resto['telephone'],
-                    'email': resto['email'],
+                    'email': resto.get('email', 'N/A'),
                     'services': resto.get('services', [])
                 }
         
@@ -221,7 +229,7 @@ class EnrichedKnowledgeBase:
         return {
             'entreprise': 'Bolkiri',
             'nombre_restaurants': len(self.restaurants),
-            'villes': [r['ville'] for r in self.restaurants],
+            'villes': [self._extract_ville_from_name(r['name']) for r in self.restaurants],
             'contact_general': self.infos_generales.get('contact_general', {}),
             'restaurants': self.restaurants
         }
@@ -233,7 +241,7 @@ class EnrichedKnowledgeBase:
             if resto:
                 return {
                     'restaurant': resto['name'],
-                    'ville': resto['ville'],
+                    'ville': self._extract_ville_from_name(resto['name']),
                     'horaires': resto.get('horaires', {})
                 }
         
@@ -242,7 +250,7 @@ class EnrichedKnowledgeBase:
             'restaurants': [
                 {
                     'name': r['name'],
-                    'ville': r['ville'],
+                    'ville': self._extract_ville_from_name(r['name']),
                     'horaires': r.get('horaires', {})
                 } for r in self.restaurants
             ]

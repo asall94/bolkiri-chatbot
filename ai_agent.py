@@ -1,4 +1,4 @@
-from typing import List, Dict, Optional
+from typing import List, Dict, Optional, Tuple
 from openai import OpenAI
 import json
 from datetime import datetime
@@ -418,7 +418,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         except Exception as e:
             return self.search_knowledge(user_query)
     
-    def _validate_response(self, response: str, context: str, user_query: str) -> tuple[str, bool]:
+    def _validate_response(self, response: str, context: str, user_query: str) -> Tuple[str, bool]:
         """Valide la réponse générée contre le contexte et détecte les hallucinations
         
         Returns:
@@ -454,7 +454,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             # Normaliser pour comparaison
             def normalize_hour(h):
                 # "11:30" ou "11h30" → "1130"
-                return re.sub(r'[:\s-h]', '', h)
+                return re.sub(r'[:\sh-]', '', h)
             
             context_normalized = set(normalize_hour(h) for h in context_hours)
             response_normalized = set(normalize_hour(h) for h in response_hours)
@@ -596,13 +596,17 @@ Question EN: "Where are you?" → Réponse EN: "We have 20 restaurants..."
             assistant_message = response.choices[0].message.content
             
             # VALIDATION AUTOMATIQUE de la réponse
-            validated_message, is_valid = self._validate_response(assistant_message, context, user_message)
-            
-            if not is_valid:
-                print(f"❌ Réponse invalidée, utilisation du contexte brut")
-                assistant_message = validated_message
-            else:
-                print(f"✅ Réponse validée")
+            try:
+                validated_message, is_valid = self._validate_response(assistant_message, context, user_message)
+                
+                if not is_valid:
+                    print(f"❌ Réponse invalidée, utilisation du contexte brut")
+                    assistant_message = validated_message
+                else:
+                    print(f"✅ Réponse validée")
+            except Exception as e:
+                print(f"⚠️ Erreur validation: {e}")
+                # En cas d'erreur validation, garder la réponse originale
             
             self.conversation_memory.append({
                 "role": "assistant",
