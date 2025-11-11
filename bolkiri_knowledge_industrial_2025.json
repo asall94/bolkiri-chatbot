@@ -1,6 +1,6 @@
 {
   "version": "4.0_industrial",
-  "date_scraping": "2025-11-10 23:31:26",
+  "date_scraping": "2025-11-11 19:39:20",
   "total_pages_scrapees": 13,
   "total_restaurants": 20,
   "restaurants": [
@@ -8,34 +8,79 @@
       "name": "BOLKIRI Bondy Street Food Viêt",
       "telephone": "+33 1 48 47 00 05",
       "adresse": "10 Rue Louis Auguste Blanqui, 93140 Bondy",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/bondy/"
     },
     {
       "name": "BOLKIRI Bry-sur-Marne Street Food Viêt",
       "telephone": "+33 1 47 06 02 02",
-      "adresse": "BOLKIRI Bry-sur-Marne Street Food Viêt est situé au 6 Place Carnot à Bry-sur-Marne. Notre restaurant asiatique est facilement accessible dans le centre-ville.",
+      "adresse": "6 Pl. Carnot, 94360 Bry-Sur-Marne",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/bry-sur-marne/"
     },
     {
       "name": "BOLKIRI Corbeil-Essonnes Street Food Viêt",
       "telephone": "+33 1 60 88 50 67",
-      "adresse": "BOLKIRI Corbeil-Essonnes Street Food Viêt est situé au 78 Boulevard Jean Jaurès à Corbeil-Essonnes. Notre restaurant asiatique est facilement accessible en centre-ville.",
+      "adresse": "78 Bd Jean Jaurès, 91100 Corbeil-Essonnes",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/corbeil-essonnes/"
     },
     {
       "name": "BOLKIRI Ivry Street Food Viêt",
       "telephone": "+33 1 80 91 18 38",
-      "adresse": "58 Ter Avenue Maurice Thorez, 94200 Ivry-sur-Seine",
+      "adresse": "Avenue Maurice Thorez, 94200 Ivry-sur-Seine",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/ivry/"
     },
     {
-      "name": "BOLKIRI La Plaine Street Food Viêt",
+      "name": "BOLKIRI La Plaine Saint-Denis Street Food Viêt",
       "telephone": "+33 1 55 99 17 74",
-      "adresse": "BOLKIRI La Plaine Saint-Denis Street Food Viêt est situé au 111 Avenue du Président Wilson à Saint-Denis. Le restaurant est facilement accessible et se trouve dans le quartier de La Plaine Saint-Denis.",
+      "adresse": "111 Av. du Président Wilson, 93210 Saint-Denis",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-denis/"
     },
@@ -43,6 +88,15 @@
       "name": "BOLKIRI Lille Léon Gambetta Street Food Viêt",
       "telephone": "+33 3 62 27 71 81",
       "adresse": "203 Rue Léon Gambetta, 59000 Lille",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-leon-gambetta/"
     },
@@ -50,6 +104,15 @@
       "name": "BOLKIRI Malakoff Street Food Viêt",
       "telephone": "+33 1 46 89 24 63",
       "adresse": "50 Rue Avaulée, 92240 Malakoff",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/malakoff/"
     },
@@ -57,13 +120,31 @@
       "name": "BOLKIRI Montreuil Street Food Viêt",
       "telephone": "+33 1 48 58 44 00",
       "adresse": "7 Boulevard Rouget de Lisle, 93100 Montreuil",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/montreuil/"
     },
     {
       "name": "BOLKIRI Montrouge Street Food Viêt",
       "telephone": "+33 1 55 59 02 32",
-      "adresse": "BOLKIRI Montrouge Street Food Viêt est situé au 25 Avenue de la République à Montrouge. Le restaurant est facilement accessible en transport en commun et se trouve dans un quartier dynamique de Montrouge.",
+      "adresse": "25 Av. de la République, 92120 Montrouge",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/montrouge/"
     },
@@ -71,20 +152,47 @@
       "name": "BOLKIRI Nanterre Street Food Viêt",
       "telephone": "+33 1 81 93 40 00",
       "adresse": "120 Rue du 8 Mai 1945, 92000 Nanterre",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/nanterre/"
     },
     {
       "name": "BOLKIRI Paris 11 Street Food Viêt",
       "telephone": "+33 1 82 83 00 56",
-      "adresse": "BOLKIRI Paris 11 Street Food Viêt est situé au 22 Avenue de la République dans le 11ème arrondissement de Paris. Le restaurant est facilement accessible en transport en commun, notamment par les stations de métro République et Parmentier.",
+      "adresse": "22 Av. de la République, 75011 Paris",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouverture_prochaine",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/paris-11-republique/"
     },
     {
-      "name": "BOLKIRI Saint-Denis (Pierrefitte) Street Food Viêt",
+      "name": "BOLKIRI Street Food Viêt Saint-Denis (Pierrefitte) ",
       "telephone": "+33 1 48 21 04 55",
       "adresse": "1 Boulevard Charles de Gaulle, 93380 Pierrefitte-Sur-Seine",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/pierrefitte/"
     },
@@ -92,27 +200,63 @@
       "name": "BOLKIRI Les Mureaux Street Food Viêt",
       "telephone": "+33 1 80 82 36 68",
       "adresse": "101 Rue Paul Doumer, 78130 Les Mureaux",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/les-mureaux/"
     },
     {
-      "name": "BOLKIRI Boulogne Street Food Viêt",
+      "name": "BOLKIRI Boulogne Street Food Viêt ",
       "telephone": "+33 1 80 87 21 66",
       "adresse": "83 Rue Marcel Dassault, 92100 Boulogne-Billancourt",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/boulogne-billancourt/"
     },
     {
       "name": "BOLKIRI Lagny-sur-Marne Street Food Viêt",
       "telephone": "+33 1 60 31 21 31",
-      "adresse": "BOLKIRI Lagny-sur-Marne Street Food Viêt est situé au 21 Avenue du Général Leclerc à Lagny-sur-Marne. Le restaurant est facilement accessible dans le centre-ville.",
+      "adresse": "21 Av. du Général Leclerc, 77400 Lagny-sur-Marne",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lagny-sur-marne/"
     },
     {
       "name": "BOLKIRI Sucy-en-brie Street Food Viêt",
       "telephone": "+33 1 83 73 98 91",
-      "adresse": "BOLKIRI Sucy-en-brie Street Food Viêt est situé au 2 Place de la Gare à Sucy-en-Brie. L'emplacement près de la gare facilite l'accès en transports en commun.",
+      "adresse": "2 Pl. de la Gare, 94370 Sucy-en-Brie",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/sucy-en-brie/"
     },
@@ -120,6 +264,15 @@
       "name": "BOLKIRI Saint-Michel-sur-Orge Street Food Viêt",
       "telephone": "",
       "adresse": "112 Rue de Sainte-Geneviève, 91240 Saint-Michel-sur-Orge",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouverture_prochaine",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-michel-sur-orge/"
     },
@@ -127,20 +280,47 @@
       "name": "BOLKIRI Versailles Street Food Viêt",
       "telephone": "",
       "adresse": "45 Rue Albert Sarraut, 78000 Versailles",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouverture_prochaine",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/versailles/"
     },
     {
-      "name": "Bolkiri Saint-Gratien Street Food Viêt",
+      "name": "BOLKIRI Saint-Gratien Street Food Viêt",
       "telephone": "",
-      "adresse": "36 Boulevard de la Gare, 95210 Saint-Gratien",
+      "adresse": "Boulevard de la Gare, 95210 Saint-Gratien",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouverture_prochaine",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-gratien/"
     },
     {
-      "name": "Bolkiri Lille Gare Flandres Street Food Viêt",
+      "name": "BOLKIRI Lille Gare Flandres Street Food Viêt",
       "telephone": "",
       "adresse": "5 Rue du Priez, 59800 Lille",
+      "horaires": {
+        "lundi": "",
+        "mardi": "",
+        "mercredi": "",
+        "jeudi": "",
+        "vendredi": "",
+        "samedi": "",
+        "dimanche": ""
+      },
       "statut": "ouverture_prochaine",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-gare-flandres/"
     }
@@ -422,7 +602,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:43"
+        "scraped_at": "2025-11-11 19:38:38"
       }
     ],
     "restaurants": [],
@@ -482,7 +662,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:45"
+        "scraped_at": "2025-11-11 19:38:40"
       }
     ],
     "service_client": [
@@ -513,7 +693,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:46"
+        "scraped_at": "2025-11-11 19:38:41"
       }
     ],
     "concept": [
@@ -552,7 +732,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:49"
+        "scraped_at": "2025-11-11 19:38:44"
       },
       {
         "url": "https://bolkiri.fr/nos-engagements/",
@@ -609,7 +789,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:50"
+        "scraped_at": "2025-11-11 19:38:46"
       }
     ],
     "autres": [
@@ -750,7 +930,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:44"
+        "scraped_at": "2025-11-11 19:38:39"
       },
       {
         "url": "https://bolkiri.fr/service-traiteur/",
@@ -795,7 +975,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:48"
+        "scraped_at": "2025-11-11 19:38:43"
       },
       {
         "url": "https://bolkiri.fr/actualites/",
@@ -880,7 +1060,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:51"
+        "scraped_at": "2025-11-11 19:38:47"
       },
       {
         "url": "https://bolkiri.fr/bolkiri-ouvre-aux-mureaux/",
@@ -984,7 +1164,224 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:54"
+        "scraped_at": "2025-11-11 19:38:49"
+      },
+      {
+        "url": "https://bolkiri.fr/bolkiri-ivry-demenage/",
+        "title": "BOLKIRI IVRY DÉMÉNAGE ! - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Bolkiri Ivry déménage et vous ouvre ses portes dans un tout nouveau décor !🔥"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Une nouvelle expérience à Ivry ✨"
+          },
+          {
+            "level": "h2",
+            "text": "Des horaires élargis pour encore plus de gourmandise 🕒"
+          },
+          {
+            "level": "h2",
+            "text": "Une carte emblématique, encore plus savoureuse 🍜🥢"
+          },
+          {
+            "level": "h2",
+            "text": "Des offres spéciales pour fêter cette ouverture 🎉"
+          },
+          {
+            "level": "h2",
+            "text": "Venez vivre l’expérience Bolkiri 💛"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri IVRY"
+          },
+          {
+            "level": "h2",
+            "text": "Envie de partager l’article ?"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER ACTUALITÉS Bolkiri Ivry déménage et vous ouvre ses portes dans un tout nouveau décor !🔥 📍 58 ter Avenue Maurice Thorez, 94200 Ivry-sur-Seine 📅 Rendez-vous le lundi 1 septembre 2025 ! Grande nouvelle ! Après avoir fait découvrir ses saveurs en tant que dark kitchen , Bolkiri Ivry franchit une nouvelle étape et vous accueille désormais dans son restaurant avec salle . Plus qu’un simple déménagement, c’est une véritable transformation : un espace chaleureux, moderne et convivial où vous pourrez enfin déguster vos plats préférés sur place. VOIR LE SITE Bolkiri Publié le 27 août 2025 Une nouvelle expérience à Ivry ✨ Si jusqu’à présent vous connaissiez Bolkiri Ivry uniquement en livraison ou à emporter, vous allez adorer découvrir cette nouvelle ambiance. Notre cuisine ouverte vous permet de voir vos plats préparés minute, sous vos yeux, dans la convivialité et le partage. C’est la fin du concept caché de la dark kitchen : ici, tout est transparent, vivant et accueillant ! Des horaires élargis pour encore plus de gourmandise 🕒 Autre grande nouveauté : Bolkiri Ivry passe en service continu ! Du lundi au jeudi : de 11h à 22h30 Du vendredi au dimanche : de 11h jusqu’à 2h du matin 🎉 Idéal pour une pause déjeuner, un dîner en famille, une soirée entre amis… ou même une fringale tardive ! Une carte emblématique, encore plus savoureuse 🍜🥢 Retrouvez tous nos grands classiques qui font le succès de Bolkiri : le bobun généreux , le banh mi croustillant , le pho réconfortant , sans oublier le fameux Loc Lac . Toujours préparés à la minute, avec des ingrédients de qualité, pour une explosion de saveurs à chaque bouchée. Des offres spéciales pour fêter cette ouverture 🎉 Pour célébrer cette nouvelle étape, Bolkiri Ivry vous propose trois semaines de promotions exclusives : 📅 Du 8 au 14 septembre : 1 bœuf Loc Lac acheté = 1 offert (à emporter uniquement) 📅 Du 15 au 21 septembre : -20 % sur toutes les assiettes parfumées 📅 Du 22 au 28 septembre : dès 15 € d’achat, 1 dessert ou 1 boisson offert Venez vivre l’expérience Bolkiri 💛 De la livraison discrète à la convivialité d’un vrai restaurant, Bolkiri Ivry vous propose désormais bien plus qu’un repas : une expérience complète où la street food vietnamienne prend vie devant vous. 👉 Rendez-vous dès le 1er septembre 2025 au 58 ter Avenue Maurice Thorez, à Ivry-sur-Seine pour découvrir ce nouvel écrin. Bolkiri IVRY Adresse : 58 ter Av. Maurice Thorez, 94200 Ivry-sur-Seine Horaires : Du lundi au dimanche : 11h à 00:00 Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Publié le27 août 2025"
+          ],
+          [
+            "Du lundi au jeudi: de 11h à 22h30",
+            "Du vendredi au dimanche: de 11h jusqu’à 2h du matin 🎉"
+          ],
+          [
+            "📅Du 8 au 14 septembre: 1bœuf Loc Lac acheté = 1 offert(à emporter uniquement)",
+            "📅Du 15 au 21 septembre:-20 % sur toutes les assiettes parfumées",
+            "📅Du 22 au 28 septembre: dès 15 € d’achat,1 dessert ou 1 boisson offert"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-11 19:38:50"
+      },
+      {
+        "url": "https://bolkiri.fr/ouverture-bolkiri-sucy-en-brie/",
+        "title": "C'est le jour-J pour BOLKIRI Sucy-En-Brie - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "C'est le Jour-J pour Sucy-En-Brie ! 🎉"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "🇻🇳 Une explosion de saveurs venues du Vietnam"
+          },
+          {
+            "level": "h2",
+            "text": "🔥 Une cuisine ouverte pour une expérience authentique"
+          },
+          {
+            "level": "h2",
+            "text": "💛 Une ouverture à ne pas manquer"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri Sucy-en-brie"
+          },
+          {
+            "level": "h2",
+            "text": "Envie de partager l’article ?"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER ACTUALITÉS C'est le Jour-J pour Sucy-En-Brie ! 🎉 C’est officiel : Bolkiri Sucy-en-Brie ouvre ses portes aujourd’hui 🎊 📍 2 Place de la Gare, 94370 Sucy-en-Brie Notre nouvelle adresse vous invite à découvrir toute la richesse de la street food vietnamienne , servie dans un cadre moderne, convivial et plein d’énergie. VOIR LE SITE Bolkiri Publié le 16 octobre 2025 🇻🇳 Une explosion de saveurs venues du Vietnam Chez BOLKIRI , chaque plat est cuisiné à la minute, sous vos yeux, pour garantir un goût incomparable et une texture parfaite. Notre carte s’inspire directement de la cuisine de rue vietnamienne, avec des recettes simples, généreuses et pleines de caractère : 🥢 Le Bo Bun , plat emblématique de Bolkiri, avec une protéine sautée (bœuf, poulet, tofu), vermicelles de riz, légumes croquants et herbes fraîches, le tout relevé d’une sauce nuoc-mâm équilibrée. 🥖 Le Banh Mi , sandwich vietnamien par excellence, combine pain baguette croustillant, pickles, coriandre, et viande marinée à la perfection. (Avec toujours la possibilité de commander du tofu à la place de la viande pour nos amis végétarien) 🍜 Le Pho , soupe traditionnelle au bouillon parfumé, mijotée longuement, réchauffe le corps et le cœur. (Parfait pour ce réchauffer avec le froid qui arrive) 🍛 Et bien sûr, notre Loc Lac , ce plat iconique au bœuf mariné et sauté, accompagné de riz parfumé et d’un œuf au plat — un incontournable chez BOLKIRI ! Chaque recette est pensée pour offrir un équilibre parfait entre tradition et modernité , dans un esprit de partage et de convivialité. 🔥 Une cuisine ouverte pour une expérience authentique Notre cuisine ouverte vous plonge dans l’ambiance vibrante des rues d’Hanoï : les effluves, les gestes précis des chefs, le crépitement du wok… tout est réuni pour une immersion totale ! 💛 Une ouverture à ne pas manquer Venez découvrir ce nouveau restaurant qui allie authenticité, convivialité et rapidité , idéal pour un déjeuner, un dîner ou une pause gourmande à emporter. Et pour fêter cette ouverture, des offres spéciales vous attendent dès le 3 novembre 2025 ! On vous attend nombreux ! 🎁 Bolkiri Sucy-en-brie Adresse : 2 Place de la Gare, 94370 Sucy-en-Brie Horaires : Du lundi au dimanche : 11h à 22h30 Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Publié le16 octobre 2025"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-11 19:38:51"
       },
       {
         "url": "https://bolkiri.fr",
@@ -1123,224 +1520,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:55"
-      },
-      {
-        "url": "https://bolkiri.fr/ouverture-bolkiri-sucy-en-brie/",
-        "title": "C'est le jour-J pour BOLKIRI Sucy-En-Brie - Bolkiri",
-        "headings": [
-          {
-            "level": "h2",
-            "text": "C'est le Jour-J pour Sucy-En-Brie ! 🎉"
-          },
-          {
-            "level": "h2",
-            "text": "Bolkiri"
-          },
-          {
-            "level": "h2",
-            "text": "🇻🇳 Une explosion de saveurs venues du Vietnam"
-          },
-          {
-            "level": "h2",
-            "text": "🔥 Une cuisine ouverte pour une expérience authentique"
-          },
-          {
-            "level": "h2",
-            "text": "💛 Une ouverture à ne pas manquer"
-          },
-          {
-            "level": "h2",
-            "text": "Bolkiri Sucy-en-brie"
-          },
-          {
-            "level": "h2",
-            "text": "Envie de partager l’article ?"
-          },
-          {
-            "level": "h2",
-            "text": "S’abonner à\nla newsletter Bolkiri"
-          },
-          {
-            "level": "h2",
-            "text": "Actualités"
-          },
-          {
-            "level": "h3",
-            "text": "Black Friday chez BOLKIRI"
-          },
-          {
-            "level": "h3",
-            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI IVRY DÉMÉNAGE !"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI OUVRE AUX MUREAUX !"
-          }
-        ],
-        "content": "Aller au contenu COMMANDER ACTUALITÉS C'est le Jour-J pour Sucy-En-Brie ! 🎉 C’est officiel : Bolkiri Sucy-en-Brie ouvre ses portes aujourd’hui 🎊 📍 2 Place de la Gare, 94370 Sucy-en-Brie Notre nouvelle adresse vous invite à découvrir toute la richesse de la street food vietnamienne , servie dans un cadre moderne, convivial et plein d’énergie. VOIR LE SITE Bolkiri Publié le 16 octobre 2025 🇻🇳 Une explosion de saveurs venues du Vietnam Chez BOLKIRI , chaque plat est cuisiné à la minute, sous vos yeux, pour garantir un goût incomparable et une texture parfaite. Notre carte s’inspire directement de la cuisine de rue vietnamienne, avec des recettes simples, généreuses et pleines de caractère : 🥢 Le Bo Bun , plat emblématique de Bolkiri, avec une protéine sautée (bœuf, poulet, tofu), vermicelles de riz, légumes croquants et herbes fraîches, le tout relevé d’une sauce nuoc-mâm équilibrée. 🥖 Le Banh Mi , sandwich vietnamien par excellence, combine pain baguette croustillant, pickles, coriandre, et viande marinée à la perfection. (Avec toujours la possibilité de commander du tofu à la place de la viande pour nos amis végétarien) 🍜 Le Pho , soupe traditionnelle au bouillon parfumé, mijotée longuement, réchauffe le corps et le cœur. (Parfait pour ce réchauffer avec le froid qui arrive) 🍛 Et bien sûr, notre Loc Lac , ce plat iconique au bœuf mariné et sauté, accompagné de riz parfumé et d’un œuf au plat — un incontournable chez BOLKIRI ! Chaque recette est pensée pour offrir un équilibre parfait entre tradition et modernité , dans un esprit de partage et de convivialité. 🔥 Une cuisine ouverte pour une expérience authentique Notre cuisine ouverte vous plonge dans l’ambiance vibrante des rues d’Hanoï : les effluves, les gestes précis des chefs, le crépitement du wok… tout est réuni pour une immersion totale ! 💛 Une ouverture à ne pas manquer Venez découvrir ce nouveau restaurant qui allie authenticité, convivialité et rapidité , idéal pour un déjeuner, un dîner ou une pause gourmande à emporter. Et pour fêter cette ouverture, des offres spéciales vous attendent dès le 3 novembre 2025 ! On vous attend nombreux ! 🎁 Bolkiri Sucy-en-brie Adresse : 2 Place de la Gare, 94370 Sucy-en-Brie Horaires : Du lundi au dimanche : 11h à 22h30 Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
-        "lists": [
-          [
-            "Publié le16 octobre 2025"
-          ],
-          [
-            "6"
-          ],
-          [
-            "Nov"
-          ],
-          [
-            "16"
-          ],
-          [
-            "Oct"
-          ],
-          [
-            "27"
-          ],
-          [
-            "Août"
-          ],
-          [
-            "23"
-          ],
-          [
-            "Juil"
-          ],
-          [
-            "Gérer les options",
-            "Gérer les services",
-            "Gérer {vendor_count} fournisseurs",
-            "En savoir plus sur ces finalités"
-          ],
-          [
-            "{title}",
-            "{title}",
-            "{title}"
-          ]
-        ],
-        "scraped_at": "2025-11-10 23:30:56"
-      },
-      {
-        "url": "https://bolkiri.fr/bolkiri-ivry-demenage/",
-        "title": "BOLKIRI IVRY DÉMÉNAGE ! - Bolkiri",
-        "headings": [
-          {
-            "level": "h2",
-            "text": "Bolkiri Ivry déménage et vous ouvre ses portes dans un tout nouveau décor !🔥"
-          },
-          {
-            "level": "h2",
-            "text": "Bolkiri"
-          },
-          {
-            "level": "h2",
-            "text": "Une nouvelle expérience à Ivry ✨"
-          },
-          {
-            "level": "h2",
-            "text": "Des horaires élargis pour encore plus de gourmandise 🕒"
-          },
-          {
-            "level": "h2",
-            "text": "Une carte emblématique, encore plus savoureuse 🍜🥢"
-          },
-          {
-            "level": "h2",
-            "text": "Des offres spéciales pour fêter cette ouverture 🎉"
-          },
-          {
-            "level": "h2",
-            "text": "Venez vivre l’expérience Bolkiri 💛"
-          },
-          {
-            "level": "h2",
-            "text": "Bolkiri IVRY"
-          },
-          {
-            "level": "h2",
-            "text": "Envie de partager l’article ?"
-          },
-          {
-            "level": "h2",
-            "text": "S’abonner à\nla newsletter Bolkiri"
-          },
-          {
-            "level": "h2",
-            "text": "Actualités"
-          },
-          {
-            "level": "h3",
-            "text": "Black Friday chez BOLKIRI"
-          },
-          {
-            "level": "h3",
-            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI IVRY DÉMÉNAGE !"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI OUVRE AUX MUREAUX !"
-          }
-        ],
-        "content": "Aller au contenu COMMANDER ACTUALITÉS Bolkiri Ivry déménage et vous ouvre ses portes dans un tout nouveau décor !🔥 📍 58 ter Avenue Maurice Thorez, 94200 Ivry-sur-Seine 📅 Rendez-vous le lundi 1 septembre 2025 ! Grande nouvelle ! Après avoir fait découvrir ses saveurs en tant que dark kitchen , Bolkiri Ivry franchit une nouvelle étape et vous accueille désormais dans son restaurant avec salle . Plus qu’un simple déménagement, c’est une véritable transformation : un espace chaleureux, moderne et convivial où vous pourrez enfin déguster vos plats préférés sur place. VOIR LE SITE Bolkiri Publié le 27 août 2025 Une nouvelle expérience à Ivry ✨ Si jusqu’à présent vous connaissiez Bolkiri Ivry uniquement en livraison ou à emporter, vous allez adorer découvrir cette nouvelle ambiance. Notre cuisine ouverte vous permet de voir vos plats préparés minute, sous vos yeux, dans la convivialité et le partage. C’est la fin du concept caché de la dark kitchen : ici, tout est transparent, vivant et accueillant ! Des horaires élargis pour encore plus de gourmandise 🕒 Autre grande nouveauté : Bolkiri Ivry passe en service continu ! Du lundi au jeudi : de 11h à 22h30 Du vendredi au dimanche : de 11h jusqu’à 2h du matin 🎉 Idéal pour une pause déjeuner, un dîner en famille, une soirée entre amis… ou même une fringale tardive ! Une carte emblématique, encore plus savoureuse 🍜🥢 Retrouvez tous nos grands classiques qui font le succès de Bolkiri : le bobun généreux , le banh mi croustillant , le pho réconfortant , sans oublier le fameux Loc Lac . Toujours préparés à la minute, avec des ingrédients de qualité, pour une explosion de saveurs à chaque bouchée. Des offres spéciales pour fêter cette ouverture 🎉 Pour célébrer cette nouvelle étape, Bolkiri Ivry vous propose trois semaines de promotions exclusives : 📅 Du 8 au 14 septembre : 1 bœuf Loc Lac acheté = 1 offert (à emporter uniquement) 📅 Du 15 au 21 septembre : -20 % sur toutes les assiettes parfumées 📅 Du 22 au 28 septembre : dès 15 € d’achat, 1 dessert ou 1 boisson offert Venez vivre l’expérience Bolkiri 💛 De la livraison discrète à la convivialité d’un vrai restaurant, Bolkiri Ivry vous propose désormais bien plus qu’un repas : une expérience complète où la street food vietnamienne prend vie devant vous. 👉 Rendez-vous dès le 1er septembre 2025 au 58 ter Avenue Maurice Thorez, à Ivry-sur-Seine pour découvrir ce nouvel écrin. Bolkiri IVRY Adresse : 58 ter Av. Maurice Thorez, 94200 Ivry-sur-Seine Horaires : Du lundi au dimanche : 11h à 00:00 Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
-        "lists": [
-          [
-            "Publié le27 août 2025"
-          ],
-          [
-            "Du lundi au jeudi: de 11h à 22h30",
-            "Du vendredi au dimanche: de 11h jusqu’à 2h du matin 🎉"
-          ],
-          [
-            "📅Du 8 au 14 septembre: 1bœuf Loc Lac acheté = 1 offert(à emporter uniquement)",
-            "📅Du 15 au 21 septembre:-20 % sur toutes les assiettes parfumées",
-            "📅Du 22 au 28 septembre: dès 15 € d’achat,1 dessert ou 1 boisson offert"
-          ],
-          [
-            "6"
-          ],
-          [
-            "Nov"
-          ],
-          [
-            "16"
-          ],
-          [
-            "Oct"
-          ],
-          [
-            "27"
-          ],
-          [
-            "Août"
-          ],
-          [
-            "23"
-          ],
-          [
-            "Juil"
-          ],
-          [
-            "Gérer les options",
-            "Gérer les services",
-            "Gérer {vendor_count} fournisseurs",
-            "En savoir plus sur ces finalités"
-          ],
-          [
-            "{title}",
-            "{title}",
-            "{title}"
-          ]
-        ],
-        "scraped_at": "2025-11-10 23:30:57"
+        "scraped_at": "2025-11-11 19:38:53"
       },
       {
         "url": "https://bolkiri.fr/black-friday-2025-bolkiri/",
@@ -1432,7 +1612,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-10 23:30:59"
+        "scraped_at": "2025-11-11 19:38:54"
       }
     ]
   },

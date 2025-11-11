@@ -173,52 +173,40 @@ class BolkiriCompletScraper2025:
         return horaires
     
     def parse_opening_hours(self, specs: List[Dict]) -> Dict:
-        """Parse les openingHoursSpecification de Schema.org"""
-        horaires = {
-            "lundi": "",
-            "mardi": "",
-            "mercredi": "",
-            "jeudi": "",
-            "vendredi": "",
-            "samedi": "",
-            "dimanche": ""
-        }
+        """Parse les openingHoursSpecification de Schema.org
         
-        # Mapper les jours anglais vers français
-        day_map = {
-            "Monday": "lundi",
-            "Tuesday": "mardi", 
-            "Wednesday": "mercredi",
-            "Thursday": "jeudi",
-            "Friday": "vendredi",
-            "Saturday": "samedi",
-            "Sunday": "dimanche"
-        }
+        Ce site utilise le format validFrom/validThrough sans dayOfWeek.
+        On regroupe les plages horaires identiques.
+        """
+        if not specs:
+            return {}
         
-        # Grouper par jour
-        day_hours = {}
+        # Collecter toutes les plages horaires uniques
+        time_ranges = []
         for spec in specs:
-            days = spec.get('dayOfWeek', [])
-            if isinstance(days, str):
-                days = [days]
-            
             opens = spec.get('opens', '')
             closes = spec.get('closes', '')
             
             if opens and closes:
                 time_range = f"{opens}-{closes}"
-                for day in days:
-                    day_fr = day_map.get(day.replace('http://schema.org/', '').replace('https://schema.org/', ''), '')
-                    if day_fr:
-                        if day_fr not in day_hours:
-                            day_hours[day_fr] = []
-                        day_hours[day_fr].append(time_range)
+                if time_range not in time_ranges:
+                    time_ranges.append(time_range)
         
-        # Construire les horaires
-        for jour_fr, times in day_hours.items():
-            horaires[jour_fr] = ", ".join(times)
+        # Si on a des plages horaires, les appliquer à tous les jours
+        # (le site ne spécifie pas les jours individuellement dans openingHoursSpecification)
+        if time_ranges:
+            combined = ", ".join(time_ranges)
+            return {
+                "lundi": combined,
+                "mardi": combined,
+                "mercredi": combined,
+                "jeudi": combined,
+                "vendredi": combined,
+                "samedi": combined,
+                "dimanche": combined
+            }
         
-        return horaires
+        return {}
     
     def scrape_menu(self):
         """Scrape le menu complet"""

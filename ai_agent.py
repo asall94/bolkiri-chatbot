@@ -527,14 +527,10 @@ Question EN: "Where are you?" → Réponse EN: "We have 20 restaurants..."
                 ]
                 for phrase in negative_phrases:
                     if phrase in assistant_message.lower():
-                        # HALLUCINATION DETECTEE - forcer correction
+                        # HALLUCINATION DETECTEE - renvoyer le contexte brut
                         print(f"HALLUCINATION DETECTEE: '{phrase}' malgre contexte positif")
-                        # Extraire les infos du contexte
-                        if "Corbeil-Essonnes" in context or "corbeil" in context.lower():
-                            assistant_message = "Nous avons un restaurant à Corbeil-Essonnes dans l'Essonne (91100).\n\n" + \
-                                              "Adresse : 78 Boulevard Jean Jaurès, 91100 Corbeil-Essonnes\n" + \
-                                              "Téléphone : +33 1 60 88 89 89\n\n" + \
-                                              "Nous serions ravis de vous accueillir pour découvrir nos spécialités vietnamiennes!"
+                        # Ne pas inventer de données - renvoyer le contexte récupéré
+                        assistant_message = "Voici les informations de notre restaurant:\n\n" + context
                         break
             
             # VALIDATION SUPPLÉMENTAIRE: Détecter contradiction logique
@@ -544,11 +540,8 @@ Question EN: "Where are you?" → Réponse EN: "We have 20 restaurants..."
                 for neg in negative_91:
                     if neg in assistant_message.lower():
                         print(f"CONTRADICTION DETECTEE: Dit 'pas de 91' mais mentionne Corbeil (qui est dans le 91)")
-                        # Corriger en enlevant la négation
-                        assistant_message = "Nous avons un restaurant dans l'Essonne (département 91) à Corbeil-Essonnes.\n\n" + \
-                                          "Adresse: 78 Boulevard Jean Jaurès, 91100 Corbeil-Essonnes\n" + \
-                                          "Téléphone: +33 1 60 88 89 89\n\n" + \
-                                          "Nous serions ravis de vous accueillir!"
+                        # Corriger en renvoyant le contexte brut
+                        assistant_message = "Voici les informations de notre restaurant:\n\n" + context
                         break
             
             self.conversation_memory.append({
