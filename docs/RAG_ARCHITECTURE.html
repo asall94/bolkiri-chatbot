@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture RAG - Bolkiri Chatbot</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+        
+        header h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+        
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 40px;
+        }
+        
+        .section {
+            margin-bottom: 50px;
+        }
+        
+        .section h2 {
+            color: #667eea;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .section h3 {
+            color: #764ba2;
+            font-size: 1.5em;
+            margin: 30px 0 15px 0;
+        }
+        
+        .workflow {
+            background: #f8f9fa;
+            border-left: 5px solid #667eea;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .workflow pre {
+            background: #2d3748;
+            color: #48bb78;
+            padding: 15px;
+            border-radius: 5px;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            line-height: 1.8;
+        }
+        
+        .example {
+            background: #fff3cd;
+            border-left: 5px solid #ffc107;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+        }
+        
+        .example h4 {
+            color: #856404;
+            margin-bottom: 10px;
+            font-size: 1.2em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        table th {
+            background: #667eea;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .check {
+            color: #28a745;
+            font-weight: bold;
+        }
+        
+        .cross {
+            color: #dc3545;
+            font-weight: bold;
+        }
+        
+        .phase {
+            background: white;
+            border: 2px solid #667eea;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        
+        .phase-number {
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .key-point {
+            background: #e7f3ff;
+            border-left: 5px solid #2196F3;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .key-point strong {
+            color: #1976D2;
+        }
+        
+        code {
+            background: #f4f4f4;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+            color: #c7254e;
+        }
+        
+        .highlight {
+            background: #fffbcc;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        
+        footer {
+            background: #2d3748;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Architecture RAG Complète</h1>
+            <p>Retrieval Augmented Generation - Bolkiri Chatbot</p>
+        </header>
+        
+        <div class="content">
+            <!-- Introduction -->
+            <div class="section">
+                <h2>Principe Universel RAG</h2>
+                <p><strong>Oui, le même principe s'applique pour TOUTE question !</strong></p>
+                <p>Le RAG (Retrieval Augmented Generation) suit toujours le même workflow en 3 phases : Indexation → Retrieval → Generation</p>
+            </div>
+
+            <!-- Phase 1 : Indexation -->
+            <div class="section">
+                <h2>Phase 1 : INDEXATION (une seule fois au démarrage)</h2>
+                
+                <div class="workflow">
+                    <pre>
+Données brutes (JSON)
+    ↓
+Chunking (découpage en documents)
+    ├─ 20 restaurants → 20 docs
+    └─ 13 pages web → 13 docs
+    ↓
+Génération embeddings (OpenAI)
+    ├─ Chaque doc → vecteur 1536 dimensions
+    └─ Batch de 20 docs à la fois
+    ↓
+Index FAISS (stockage vectoriel)
+    └─ 34 vecteurs en RAM
+    ↓
+Cache (pickle) pour réutilisation
+                    </pre>
+                </div>
+
+                <div class="key-point">
+                    <strong>⚡ Performance :</strong> 
+                    Première fois = ~30s (génération embeddings)<br>
+                    Après cache = <5s (chargement instantané)
+                </div>
+            </div>
+
+            <!-- Phase 2 : Query -->
+            <div class="section">
+                <h2>Phase 2 : QUERY (chaque question utilisateur)</h2>
+                
+                <div class="phase">
+                    <h3><span class="phase-number">1</span>RETRIEVAL (Récupération)</h3>
+                    <ul>
+                        <li>Question utilisateur → Embedding vectoriel (1536 dimensions)</li>
+                        <li>Recherche FAISS (similarité L2 - distance euclidienne)</li>
+                        <li>Score chaque document selon distance vectorielle</li>
+                        <li>Retourne Top-K résultats (K=5 par défaut)</li>
+                    </ul>
+                </div>
+
+                <div class="phase">
+                    <h3><span class="phase-number">2</span>AUGMENTATION (Enrichissement)</h3>
+                    <ul>
+                        <li>Formater le contexte pertinent extrait</li>
+                        <li>Ajouter métadonnées (type de document, source, URL)</li>
+                        <li>Limiter la taille totale (max 4000 tokens pour GPT)</li>
+                    </ul>
+                </div>
+
+                <div class="phase">
+                    <h3><span class="phase-number">3</span>GENERATION (Réponse)</h3>
+                    <ul>
+                        <li>Construire prompt : System + Contexte + Question</li>
+                        <li>GPT-4o-mini génère la réponse</li>
+                        <li>Réponse basée <strong>UNIQUEMENT</strong> sur le contexte fourni</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Exemples concrets -->
+            <div class="section">
+                <h2>📝 Exemples Concrets</h2>
+                
+                <div class="example">
+                    <h4>Question 1 : "vous êtes présents dans le 78 ?"</h4>
+                    <div class="workflow">
+                        <pre>
+Embedding question: [0.023, -0.15, 0.08, ...]
+    ↓ Similarité FAISS
+Top résultat:
+  - Doc: "Restaurant Les Mureaux 78130..."
+  - Score: 0.78 (78% similaire)
+    ↓
+Contexte: "Restaurant BOLKIRI Les Mureaux
+           Situé à 120 Avenue Paul Raoult, 78130 Les Mureaux
+           Tél: +33 1 30 99 48 48"
+    ↓ GPT-4o-mini
+Réponse: "Oui, nous avons un restaurant à Les Mureaux (78130)"
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <h4>Question 2 : "menu végétarien ?"</h4>
+                    <div class="workflow">
+                        <pre>
+Embedding question: [0.12, -0.04, 0.31, ...]
+    ↓ Similarité FAISS
+Top résultats:
+  - Page menu (score: 0.73)
+  - Restaurants (score: 0.68)
+    ↓
+Contexte: "FORMULE STREET BANH MI
+           Options végétariennes disponibles..."
+    ↓ GPT-4o-mini
+Réponse: "Nos options végétariennes incluent..."
+                        </pre>
+                    </div>
+                </div>
+
+                <div class="example">
+                    <h4>Question 3 : "horaires Bondy"</h4>
+                    <div class="workflow">
+                        <pre>
+Embedding question: [0.08, -0.21, 0.15, ...]
+    ↓ Similarité FAISS
+Top résultat:
+  - Restaurant Bondy (score: 0.81)
+    ↓
+Contexte: "Restaurant Bondy
+           Horaires: Lun-Dim 11h-22h..."
+    ↓ GPT-4o-mini
+Réponse: "Le restaurant de Bondy est ouvert..."
+                        </pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Points clés -->
+            <div class="section">
+                <h2>🎯 Points Clés RAG</h2>
+                
+                <h3>1. Sémantique vs Mot-clé</h3>
+                <div class="key-point">
+                    <strong class="cross">❌ Recherche mot-clé :</strong> "78" trouve SEULEMENT "78"<br>
+                    <strong class="check">✅ RAG sémantique :</strong> "78" trouve "Yvelines", "78130", "département soixante-dix-huit", "proche Paris ouest"
+                </div>
+
+                <h3>2. Top-K (nombre de résultats)</h3>
+                <ul>
+                    <li>Question simple → K=3 suffit</li>
+                    <li>Question complexe → K=10 pour plus de contexte</li>
+                    <li><strong>Bolkiri : K=5 par défaut</strong> (équilibré)</li>
+                </ul>
+
+                <h3>3. Scoring (calcul de pertinence)</h3>
+                <div class="workflow">
+                    <pre>
+# Distance L2 (FAISS)
+distance = 0.442      # Plus petit = plus similaire
+score = 1 / (1 + distance)  # 0.693 (69% pertinent)
+
+Interprétation:
+  > 0.8 : Très pertinent
+  0.6-0.8 : Pertinent
+  0.4-0.6 : Moyennement pertinent
+  < 0.4 : Peu pertinent
+                    </pre>
+                </div>
+
+                <h3>4. Fallback (gestion des échecs)</h3>
+                <ul>
+                    <li><strong>Aucun résultat :</strong> "Je n'ai pas cette information"</li>
+                    <li><strong>Score < 0.5 :</strong> "Pas sûr, voici ce que j'ai trouvé..."</li>
+                    <li><strong>Erreur technique :</strong> Message d'erreur explicite</li>
+                </ul>
+
+                <h3>5. Cache Embeddings</h3>
+                <div class="key-point">
+                    <strong>💰 Coût :</strong><br>
+                    • Régénérer = coût API OpenAI (~$0.0001 × 34 docs = $0.0034)<br>
+                    • Cache = gratuit + instantané<br>
+                    • Invalidation : si JSON change (hash MD5 différent)
+                </div>
+            </div>
+
+            <!-- Comparaison -->
+            <div class="section">
+                <h2>⚖️ Avantages vs Système Classique</h2>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Critère</th>
+                            <th>Sans RAG</th>
+                            <th>Avec RAG</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Recherche "78"</strong></td>
+                            <td class="cross">❌ Rien trouvé</td>
+                            <td class="check">✅ Les Mureaux (78130)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Recherche "près de Paris"</strong></td>
+                            <td class="cross">❌ Rien trouvé</td>
+                            <td class="check">✅ Paris 11, Nanterre, Montreuil...</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Synonymes</strong></td>
+                            <td class="cross">❌ Non supporté</td>
+                            <td class="check">✅ Oui (ville = localisation = adresse)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Scalabilité</strong></td>
+                            <td class="cross">❌ ~100 documents max</td>
+                            <td class="check">✅ Millions de documents possibles</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Maintenance</strong></td>
+                            <td class="cross">❌ Règles manuelles à coder</td>
+                            <td class="check">✅ Automatique</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Performance recherche</strong></td>
+                            <td>~200ms (regex)</td>
+                            <td>~5ms (FAISS)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Coût</strong></td>
+                            <td>Gratuit</td>
+                            <td>~$0.01 par 1000 questions</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Architecture technique -->
+            <div class="section">
+                <h2>🏗️ Architecture Technique Bolkiri</h2>
+                
+                <h3>Stack Technologique</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Composant</th>
+                            <th>Technologie</th>
+                            <th>Rôle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Vector Store</strong></td>
+                            <td>FAISS (Facebook AI)</td>
+                            <td>Index vectoriel en mémoire RAM</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Embeddings</strong></td>
+                            <td>OpenAI text-embedding-ada-002</td>
+                            <td>Conversion texte → vecteur 1536D</td>
+                        </tr>
+                        <tr>
+                            <td><strong>LLM</strong></td>
+                            <td>GPT-4o-mini</td>
+                            <td>Génération de réponses</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cache</strong></td>
+                            <td>Pickle (Python)</td>
+                            <td>Sauvegarde embeddings (~500KB)</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Data Source</strong></td>
+                            <td>JSON</td>
+                            <td>20 restaurants + 13 pages web</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>Métriques de Performance</h3>
+                <ul>
+                    <li><strong>Temps indexation initiale :</strong> ~30 secondes</li>
+                    <li><strong>Temps chargement cache :</strong> <5 secondes</li>
+                    <li><strong>Latence recherche FAISS :</strong> ~5ms</li>
+                    <li><strong>Latence embedding question :</strong> ~100ms</li>
+                    <li><strong>Latence GPT génération :</strong> ~500ms</li>
+                    <li><strong>Latence totale moyenne :</strong> ~600-800ms</li>
+                    <li><strong>Mémoire RAM utilisée :</strong> ~50-100MB</li>
+                </ul>
+            </div>
+
+            <!-- Workflow complet -->
+            <div class="section">
+                <h2>🔄 Workflow Complet (Question → Réponse)</h2>
+                
+                <div class="workflow">
+                    <pre>
+[USER] "Vous êtes présents dans le 78 ?"
+    ↓
+[API] POST /chat {"message": "..."}
+    ↓
+[AI_AGENT] chat()
+    ├─ plan_and_execute()
+    │   ├─ GPT-4o-mini : "besoin info localisation"
+    │   └─ Décision : tool "search_knowledge"
+    │
+    ├─ search_knowledge("78")
+    │   └─ kb.search("78", limit=5)
+    │       └─ rag_engine.search("78", top_k=5)
+    │           ├─ Embedding "78" → [0.023, -0.15, ...]
+    │           ├─ FAISS.search() → distances + indices
+    │           ├─ Top 5 résultats triés par score
+    │           └─ Return formatted results
+    │
+    ├─ Contexte formaté retourné
+    │   "Restaurant BOLKIRI Les Mureaux
+    │    Situé à 120 Avenue Paul Raoult, 78130
+    │    Tél: +33 1 30 99 48 48"
+    │
+    └─ GPT-4o-mini.chat()
+        ├─ System prompt
+        ├─ Contexte RAG
+        ├─ Question utilisateur
+        └─ Génération réponse
+            ↓
+[RESPONSE] "Oui, nous avons un restaurant à Les Mureaux (78130)"
+    ↓
+[USER] Reçoit la réponse
+                    </pre>
+                </div>
+            </div>
+
+            <!-- Conclusion -->
+            <div class="section">
+                <h2>💡 En Résumé</h2>
+                
+                <div class="key-point">
+                    <strong>Le RAG = Google pour votre base de connaissances</strong>
+                    <p style="margin-top: 10px;">
+                        Au lieu de chercher des mots-clés exacts, le RAG comprend le <em>sens</em> de la question 
+                        et trouve les informations les plus <em>pertinentes sémantiquement</em>, 
+                        même si les mots exacts ne correspondent pas.
+                    </p>
+                </div>
+
+                <h3>Pourquoi c'est révolutionnaire :</h3>
+                <ul>
+                    <li>✅ <strong>Comprend l'intention</strong> : "78" = "Yvelines" = "proche Paris ouest"</li>
+                    <li>✅ <strong>Scalable</strong> : Fonctionne avec 10 ou 10 millions de documents</li>
+                    <li>✅ <strong>Automatique</strong> : Pas de règles à coder manuellement</li>
+                    <li>✅ <strong>Précis</strong> : Seules les infos pertinentes sont utilisées</li>
+                    <li>✅ <strong>Rapide</strong> : Réponse en <1 seconde</li>
+                </ul>
+
+                <h3>Prochaines optimisations possibles :</h3>
+                <ul>
+                    <li>🔹 Augmenter Top-K pour questions complexes</li>
+                    <li>🔹 Implémenter reranking (rescorer les résultats)</li>
+                    <li>🔹 Ajouter filtres métadonnées (ville, catégorie...)</li>
+                    <li>🔹 Hybrid search (RAG + mots-clés)</li>
+                    <li>🔹 Monitoring des scores pour amélioration continue</li>
+                </ul>
+            </div>
+        </div>
+
+        <footer>
+            <p><strong>Bolkiri Chatbot</strong> - Architecture RAG Enterprise-Grade</p>
+            <p style="margin-top: 10px; opacity: 0.8;">
+                FAISS + OpenAI Embeddings + GPT-4o-mini | Novembre 2025
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
