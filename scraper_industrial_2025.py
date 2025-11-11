@@ -220,26 +220,44 @@ class BolkiriIndustrialScraper:
             block = block.strip()
             if not block or len(block) < 20:
                 continue
-                
-            # Extraire le nom du plat (généralement en majuscules au début)
-            lines = [l.strip() for l in block.split('\n') if l.strip()]
-            if not lines:
-                continue
             
-            # Le premier élément non-vide est souvent le nom
-            dish_name = lines[0]
-            
-            # Ignorer les éléments de navigation/système
+            # Ignorer les éléments de navigation/système dès le début
             skip_words = ['aller au contenu', 'gérer', 'accepter', 'refuser', 'cookies']
-            if any(skip in dish_name.lower() for skip in skip_words):
+            if any(skip in block.lower() for skip in skip_words):
                 continue
             
-            # Ignorer si trop court (fragments)
-            if len(dish_name) < 3:
+            # Nettoyer : garder jusqu'à "Plus" pour séparer nom du reste
+            # Format: "NOM DU PLAT Plus description Plus traces..."
+            parts = block.split('Plus')
+            
+            if not parts or len(parts[0].strip()) < 3:
                 continue
             
-            # Extraire la description (lignes suivantes)
-            description = ' '.join(lines[1:5]) if len(lines) > 1 else ''
+            # Extraire le nom (première partie avant "Plus")
+            dish_name = parts[0].strip()
+            
+            # Si le nom contient plusieurs lignes, prendre seulement la première ligne majuscule
+            name_lines = [l.strip() for l in dish_name.split('\n') if l.strip()]
+            if name_lines:
+                # Garder la première ligne non-vide comme nom principal
+                main_name = name_lines[0]
+                
+                # Si nom trop long (> 150 chars), c'est probablement une formule mal découpée
+                if len(main_name) > 150:
+                    # Prendre jusqu'au premier mot en minuscules ou ponctuation
+                    words = main_name.split()
+                    clean_name_parts = []
+                    for word in words:
+                        if word.isupper() or word[0].isupper():
+                            clean_name_parts.append(word)
+                        else:
+                            break
+                    main_name = ' '.join(clean_name_parts) if clean_name_parts else words[0]
+                
+                dish_name = main_name
+            
+            # Extraire la description (deuxième partie après premier "Plus")
+            description = parts[1].strip() if len(parts) > 1 else ''
             
             # Chercher le prix (pattern €)
             price_match = re.search(r'(\d+[,.]?\d*)\s*€', block)
