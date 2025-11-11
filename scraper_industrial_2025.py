@@ -209,6 +209,63 @@ class BolkiriIndustrialScraper:
                 self.restaurants.append(resto_data)
             time.sleep(0.5)
     
+    def parse_menu_into_dishes(self, menu_content: str) -> List[Dict]:
+        """Parse le contenu du menu pour extraire chaque plat individuellement"""
+        dishes = []
+        
+        # Découper par "COMMANDER" qui sépare chaque plat
+        dish_blocks = menu_content.split('COMMANDER')
+        
+        for block in dish_blocks:
+            block = block.strip()
+            if not block or len(block) < 20:
+                continue
+                
+            # Extraire le nom du plat (généralement en majuscules au début)
+            lines = [l.strip() for l in block.split('\n') if l.strip()]
+            if not lines:
+                continue
+            
+            # Le premier élément non-vide est souvent le nom
+            dish_name = lines[0]
+            
+            # Ignorer les éléments de navigation/système
+            skip_words = ['aller au contenu', 'gérer', 'accepter', 'refuser', 'cookies']
+            if any(skip in dish_name.lower() for skip in skip_words):
+                continue
+            
+            # Ignorer si trop court (fragments)
+            if len(dish_name) < 3:
+                continue
+            
+            # Extraire la description (lignes suivantes)
+            description = ' '.join(lines[1:5]) if len(lines) > 1 else ''
+            
+            # Chercher le prix (pattern €)
+            price_match = re.search(r'(\d+[,.]?\d*)\s*€', block)
+            price = price_match.group(0) if price_match else ''
+            
+            # Détecter les tags (végétarien, épicé, etc.)
+            tags = []
+            if 'végé' in block.lower() or 'végétarien' in block.lower():
+                tags.append('vegetarien')
+            if 'épicé' in block.lower() or '🌶' in block:
+                tags.append('epice')
+            if 'signature' in block.lower():
+                tags.append('signature')
+            if 'nem' in block.lower():
+                tags.append('nems')
+            
+            dishes.append({
+                'nom': dish_name,
+                'description': description[:300],  # Limiter la longueur
+                'prix': price,
+                'tags': tags,
+                'raw_content': block[:500]  # Garder le contenu brut pour RAG
+            })
+        
+        return dishes
+    
     def extract_restaurant_data(self, url: str) -> Dict:
         """Extrait les données structurées d'un restaurant depuis JSON-LD Schema.org"""
         try:
@@ -352,7 +409,16 @@ class BolkiriIndustrialScraper:
         
         for url, content in self.all_pages_content.items():
             if '/la-carte/' in url:
-                categorized_pages['menu'].append(content)
+                # Parser le menu en plats individuels
+                menu_dishes = self.parse_menu_into_dishes(content['content'])
+                # Créer un document par plat
+                for dish in menu_dishes:
+                    categorized_pages['menu'].append({
+                        'url': url,
+                        'title': f"Plat: {dish['nom']}",
+                        'content': f"{dish['nom']}\n{dish['description']}\nPrix: {dish['prix']}\nTags: {', '.join(dish['tags'])}\n\n{dish['raw_content']}",
+                        'dish_data': dish
+                    })
             elif '/fidelite/' in url or 'fidélité' in content['title'].lower():
                 categorized_pages['fidelite'].append(content)
             elif '/service-client/' in url or 'faq' in url.lower():
