@@ -3,7 +3,6 @@ from openai import OpenAI
 import json
 from datetime import datetime
 from knowledge_base_enriched import EnrichedKnowledgeBase
-from advanced_scraper import BolkiriAdvancedScraper
 
 class AIAgent:
     
@@ -11,7 +10,6 @@ class AIAgent:
         self.client = OpenAI(api_key=openai_api_key)
         self.website_url = website_url
         self.kb = EnrichedKnowledgeBase()
-        self.scraper = BolkiriAdvancedScraper()  # Réactivé !
         self.conversation_memory = []
         self.tools = self._define_tools()
         self.agent_state = {
