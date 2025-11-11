@@ -28,20 +28,14 @@ class BolkiriIndustrialScraper:
             '/service-traiteur/',
             '/notre-concept/',
             '/nos-engagements/',
-            '/actualites/'
+            '/actualites/',
+            '/devenir-franchise/',
+            '/nous-rejoindre/'
         ]
         
-        # Pages à ignorer (légal, admin, etc.)
-        self.ignored_patterns = [
-            '/mentions-legales/',
-            '/cgv/',
-            '/cgu/',
-            '/politique-confidentialite/',
-            '/cookies/',
-            '/devenir-franchise/',
-            '/nous-rejoindre/',
-            '/presse/'
-        ]
+        # Pages à ignorer - AUCUNE (on scrappe tout)
+        # Le RAG ne retournera que ce qui est pertinent
+        self.ignored_patterns = []
     
     def should_scrape_url(self, url: str) -> bool:
         """Détermine si une URL doit être scrapée"""

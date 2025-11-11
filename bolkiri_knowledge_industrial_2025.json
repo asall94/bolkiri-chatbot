@@ -1,7 +1,7 @@
 {
   "version": "4.0_industrial",
-  "date_scraping": "2025-11-11 19:43:19",
-  "total_pages_scrapees": 13,
+  "date_scraping": "2025-11-11 22:24:47",
+  "total_pages_scrapees": 19,
   "total_restaurants": 20,
   "restaurants": [
     {
@@ -570,7 +570,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:37"
+        "scraped_at": "2025-11-11 22:23:50"
       }
     ],
     "restaurants": [],
@@ -630,7 +630,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:40"
+        "scraped_at": "2025-11-11 22:23:53"
       }
     ],
     "service_client": [
@@ -661,7 +661,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:41"
+        "scraped_at": "2025-11-11 22:23:55"
       }
     ],
     "concept": [
@@ -700,7 +700,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:44"
+        "scraped_at": "2025-11-11 22:23:58"
       },
       {
         "url": "https://bolkiri.fr/nos-engagements/",
@@ -757,7 +757,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:45"
+        "scraped_at": "2025-11-11 22:23:59"
       }
     ],
     "autres": [
@@ -898,7 +898,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:38"
+        "scraped_at": "2025-11-11 22:23:52"
       },
       {
         "url": "https://bolkiri.fr/service-traiteur/",
@@ -943,7 +943,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:42"
+        "scraped_at": "2025-11-11 22:23:56"
       },
       {
         "url": "https://bolkiri.fr/actualites/",
@@ -1028,86 +1028,135 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:46"
+        "scraped_at": "2025-11-11 22:24:01"
       },
       {
-        "url": "https://bolkiri.fr/black-friday-2025-bolkiri/",
-        "title": "Black Friday chez BOLKIRI - Bolkiri",
+        "url": "https://bolkiri.fr/devenir-franchise/",
+        "title": "Devenir franchisé - Bolkiri",
         "headings": [
           {
             "level": "h2",
-            "text": "Bolkiri"
+            "text": "DEVENIR FRANCHISÉ"
           },
           {
             "level": "h2",
-            "text": "BLACK FRIDAY AVEC BOLKIRI"
+            "text": "En quelques chiffres c'est ..."
           },
           {
             "level": "h2",
-            "text": "S’abonner à\nla newsletter Bolkiri"
+            "text": "DEVENEZ FRANCHISÉ·E BOLKIRI :\nUN CONCEPT CLÉ EN MAIN QUI A FAIT SES PREUVES"
           },
           {
             "level": "h2",
-            "text": "Actualités"
+            "text": "Rejoignez l’aventure Bolkiri et lancez-vous dans l’entrepreneuriat avec un concept clé en main.\nNous vous accompagnons à chaque étape grâce à une formation complète et un suivi personnalisé.\nBénéficiez de notre savoir-faire éprouvé pour ouvrir votre restaurant en toute confiance, avec les meilleures chances de réussite."
+          },
+          {
+            "level": "h2",
+            "text": "Pourquoi nous rejoindre ?"
+          },
+          {
+            "level": "h2",
+            "text": "Recettes saines\net équilibrées"
+          },
+          {
+            "level": "h2",
+            "text": "Les plats sont préparés\navec des ingrédients de qualité"
+          },
+          {
+            "level": "h2",
+            "text": "Cuisines ouvertes"
+          },
+          {
+            "level": "h2",
+            "text": "Concept qui crée\nune expérience visuelle,\nrenforce la confiance\net la fidélité des clients"
+          },
+          {
+            "level": "h2",
+            "text": "Une Grande famille"
+          },
+          {
+            "level": "h2",
+            "text": "Un réseau de franchises\nsolidaires avec des\npartenariats avantageux\net un soutien continu"
+          },
+          {
+            "level": "h2",
+            "text": "Un Partenariat Gagnant-Gagnant"
+          },
+          {
+            "level": "h2",
+            "text": "Chez Bolkiri, nous croyons à la force du partenariat. En devenant franchisé·e, vous rejoignez un réseau où la réussite se construit ensemble — celle de nos franchisés fait grandir toute la marque.Nous mettons à votre disposition des outils de gestion performants, des campagnes marketing efficaces et un accompagnement opérationnel au quotidien pour maximiser votre rentabilité.Notre ambition ? Vous voir réussir durablement. Ensemble, bâtissons une marque forte, fondée sur la confiance, la collaboration… et le succès partagé."
+          },
+          {
+            "level": "h2",
+            "text": "SÉLECTION DES INGRÉDIENTS​"
+          },
+          {
+            "level": "h2",
+            "text": "La qualité de nos produits est notre priorité absolue. Nous sélectionnons avec soin chaque ingrédient pour garantir la fraîcheur et la saveur authentique de nos plats. Cette exigence de qualité est au cœur de notre engagement envers nos franchisés, qui bénéficient d'une offre de produits de première qualité pour leur propre entreprise.​"
+          },
+          {
+            "level": "h2",
+            "text": "Préparation Artisanale"
+          },
+          {
+            "level": "h2",
+            "text": "Notre processus de préparation combine habilement tradition et innovation. Chaque plat est préparé avec soin par nos chefs qualifiés, maîtrisant les techniques culinaires traditionnelles vietnamiennes. Cet engagement envers l'artisanat culinaire se reflète dans chaque plat servi dans nos franchises, offrant une expérience authentique à chaque client.​"
+          },
+          {
+            "level": "h2",
+            "text": "CONTRÔLE QUALITÉ RIGOUREUX​"
+          },
+          {
+            "level": "h2",
+            "text": "Nous sommes fiers de nos recettes authentiques vietnamiennes, transmises de génération en génération. En devenant franchisé, tu auras accès à notre répertoire exclusif de recettes traditionnelles, ainsi qu'à notre savoir-faire culinaire unique. Rejoins-nous et découvre le secret de notre succès : des plats délicieux et authentiques qui séduisent les papilles du monde entier.​"
+          },
+          {
+            "level": "h2",
+            "text": "RECETTES AUTHENTIQUES"
+          },
+          {
+            "level": "h2",
+            "text": "Nous sommes fiers de nos recettes authentiques vietnamiennes, transmises de génération en génération. En devenant franchisé, tu auras accès à notre répertoire exclusif de recettes traditionnelles, ainsi qu'à notre savoir-faire culinaire unique. Rejoins-nous et découvre le secret de notre succès : des plats délicieux et authentiques qui séduisent les papilles du monde entier.​"
+          },
+          {
+            "level": "h2",
+            "text": "Les étapes pour rejoindre l’aventure"
+          },
+          {
+            "level": "h2",
+            "text": "1. Contact Initial"
+          },
+          {
+            "level": "h2",
+            "text": "Le premier pas pour devenir franchisé Bolkiri est de prendre contact avec notre équipe. Tu peux remplir notre formulaire en ligne ou nous appeler directement. Nous serons ravis de discuter avec toi de cette opportunité excitante et de répondre à toutes tes questions."
+          },
+          {
+            "level": "h2",
+            "text": "2. Rencontre et Présentation"
+          },
+          {
+            "level": "h2",
+            "text": "Une fois que nous avons reçu ta demande, nous organiserons une rencontre pour mieux te connaître et te présenter notre concept de franchise en détail. Tu découvriras notre histoire, nos valeurs et nos attentes en tant que franchisé Bolkiri."
+          },
+          {
+            "level": "h2",
+            "text": "3. Signature du Contrat"
+          },
+          {
+            "level": "h2",
+            "text": "Si après notre rencontre tu es toujours intéressé par notre programme de franchise, nous passerons à l'étape finale : la signature du contrat. Celui-ci établira les termes et conditions de notre partenariat et officialisera ton statut de franchisé Bolkiri. Une fois le contrat signé, tu seras prêt à démarrer ton aventure entrepreneuriale avec nous !"
+          },
+          {
+            "level": "h2",
+            "text": "Rejoignez l'aventure Bolkiri"
           },
           {
             "level": "h3",
-            "text": "Du24 au 28 novembre, BOLKIRI vous fait un petit cadeau pour vos grandes envies !"
-          },
-          {
-            "level": "h3",
-            "text": "– Enregistrez vos commandes pour les refaire encore plus vite🥡"
-          },
-          {
-            "level": "h3",
-            "text": "👉Téléchargez l’application dès maintenantet laissez BOLKIRI s’occuper du reste."
-          },
-          {
-            "level": "h3",
-            "text": "Black Friday chez BOLKIRI"
-          },
-          {
-            "level": "h3",
-            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI IVRY DÉMÉNAGE !"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+            "text": "Rejoignez un conceptclé en main"
           }
         ],
-        "content": "Aller au contenu COMMANDER Bolkiri Publié le 6 novembre 2025 BLACK FRIDAY AVEC BOLKIRI Du 24 au 28 novembre , BOLKIRI vous fait un petit cadeau pour vos grandes envies ! Pendant 5 jours seulement , profitez de 5€ offerts dès 20€ d’achat sur toutes vos commandes passées via notre application ou notre site web. Comment en profiter ? 🥢 C’est simple : 1 – Téléchargez l’application BOLKIRI (disponible gratuitement sur l’App Store et Google Play). 2 – Créez votre compte ou connectez-vous à votre espace client. 3 – Choisissez vos plats préférés parmi tous les produits à la carte et composez votre commande. 4 – Passez commande à emporter ou en livraison , directement depuis l’application ou le site internet. 5 – Votre réduction de 5€ sera automatiquement appliquée à partir de 20€ d’achat ! 💛 Pourquoi commander sur l’application BOLKIRI ? 📱 Notre application a été pensée pour vous simplifier la vie : – Commandez vos plats préférés en quelques clics 👉 – Suivez en temps réel la préparation et la livraison 🛵 – Suivre votre programme de fidélité BOLKIRI pour encore plus d’avantages ✨ – Accédez à des offres exclusives réservées aux utilisateurs de l’application 🔥 – Retrouvez facilement vos restaurants BOLKIRI favoris 📍 – Enregistrez vos commandes pour les refaire encore plus vite 🥡 Les conditions de l’offre ⚙️ • Offre valable du 24/11 au 28/11/2025 inclus. • Réduction immédiate de 5 € dès 20 € d’achat (hors frais de livraison). • Offre valable uniquement à emporter ou en livraison , pour toute commande effectuée via l’application BOLKIRI ou le site web. • Offre non cumulable avec d’autres promotions, bons de réduction, ou programmes de fidélité. • L’offre est limitée à une utilisation par compte client pendant la période de validité. • Valable dans tous les restaurants BOLKIRI . À ne pas manquer 💛 C’est le moment parfait pour tester la commande en ligne si vous ne l’avez pas encore fait ! Que ce soit pour un déjeuner sur le pouce, un dîner entre amis ou une envie gourmande à la maison, l’app BOLKIRI vous offre simplicité, rapidité et bons plans. 👉 Téléchargez l’application dès maintenant et laissez BOLKIRI s’occuper du reste. S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "content": "Aller au contenu COMMANDER DEVENIR FRANCHISÉ En quelques chiffres c'est ... CA / AN EN MOYENNE + 0 M € CROISSANCE EN 2024 + 0 % NET DE RENTABILITÉ 0 % Droit d'entrée 0 € Vente en ligne / physique + 0 % redevance seulement 0 % DEVENEZ FRANCHISÉ·E BOLKIRI : UN CONCEPT CLÉ EN MAIN QUI A FAIT SES PREUVES Rejoignez l’aventure Bolkiri et lancez-vous dans l’entrepreneuriat avec un concept clé en main. Nous vous accompagnons à chaque étape grâce à une formation complète et un suivi personnalisé. Bénéficiez de notre savoir-faire éprouvé pour ouvrir votre restaurant en toute confiance, avec les meilleures chances de réussite. Pourquoi nous rejoindre ? Recettes saines et équilibrées Les plats sont préparés avec des ingrédients de qualité Cuisines ouvertes Concept qui crée une expérience visuelle, renforce la confiance et la fidélité des clients Une Grande famille Un réseau de franchises solidaires avec des partenariats avantageux et un soutien continu Un Partenariat Gagnant-Gagnant Chez Bolkiri, nous croyons à la force du partenariat. En devenant franchisé·e, vous rejoignez un réseau où la réussite se construit ensemble — celle de nos franchisés fait grandir toute la marque.Nous mettons à votre disposition des outils de gestion performants, des campagnes marketing efficaces et un accompagnement opérationnel au quotidien pour maximiser votre rentabilité.Notre ambition ? Vous voir réussir durablement. Ensemble, bâtissons une marque forte, fondée sur la confiance, la collaboration… et le succès partagé. Rejoignez un concept clé en main SÉLECTION DES INGRÉDIENTS​ La qualité de nos produits est notre priorité absolue. Nous sélectionnons avec soin chaque ingrédient pour garantir la fraîcheur et la saveur authentique de nos plats. Cette exigence de qualité est au cœur de notre engagement envers nos franchisés, qui bénéficient d'une offre de produits de première qualité pour leur propre entreprise.​ Préparation Artisanale Notre processus de préparation combine habilement tradition et innovation. Chaque plat est préparé avec soin par nos chefs qualifiés, maîtrisant les techniques culinaires traditionnelles vietnamiennes. Cet engagement envers l'artisanat culinaire se reflète dans chaque plat servi dans nos franchises, offrant une expérience authentique à chaque client.​ CONTRÔLE QUALITÉ RIGOUREUX​ Nous sommes fiers de nos recettes authentiques vietnamiennes, transmises de génération en génération. En devenant franchisé, tu auras accès à notre répertoire exclusif de recettes traditionnelles, ainsi qu'à notre savoir-faire culinaire unique. Rejoins-nous et découvre le secret de notre succès : des plats délicieux et authentiques qui séduisent les papilles du monde entier.​ RECETTES AUTHENTIQUES Nous sommes fiers de nos recettes authentiques vietnamiennes, transmises de génération en génération. En devenant franchisé, tu auras accès à notre répertoire exclusif de recettes traditionnelles, ainsi qu'à notre savoir-faire culinaire unique. Rejoins-nous et découvre le secret de notre succès : des plats délicieux et authentiques qui séduisent les papilles du monde entier.​ Les étapes pour rejoindre l’aventure 1. Contact Initial Le premier pas pour devenir franchisé Bolkiri est de prendre contact avec notre équipe. Tu peux remplir notre formulaire en ligne ou nous appeler directement. Nous serons ravis de discuter avec toi de cette opportunité excitante et de répondre à toutes tes questions. 2. Rencontre et Présentation Une fois que nous avons reçu ta demande, nous organiserons une rencontre pour mieux te connaître et te présenter notre concept de franchise en détail. Tu découvriras notre histoire, nos valeurs et nos attentes en tant que franchisé Bolkiri. 3. Signature du Contrat Si après notre rencontre tu es toujours intéressé par notre programme de franchise, nous passerons à l'étape finale : la signature du contrat. Celui-ci établira les termes et conditions de notre partenariat et officialisera ton statut de franchisé Bolkiri. Une fois le contrat signé, tu seras prêt à démarrer ton aventure entrepreneuriale avec nous ! Rejoignez l'aventure Bolkiri Rejoignez une aventure entrepreneuriale pleine de saveurs avec Bolkiri. Bien plus qu’un restaurant, Bolkiri est un concept de street food vietnamienne moderne, pensé pour allier authenticité culinaire , expérience client forte , et modèle économique performant . En franchise, vous portez une marque audacieuse, dans l’air du temps, et soutenue à chaque étape de votre réussite. Votre apport personnel de 25 à 50 k € de 50 à 75k € de 75 à 100k € de 100 à 150k € de 150 à 200k € +200k € Avez-vous un local commercial ? Oui Non Dans quel département souhaitez-vous vous implanter ? Êtes-vous un multi-franchisé ? Oui Non Si oui, quelle(s) franchise(s) ? Pièce(s) jointe(s) J’accepte que les informations saisies soient exploitées dans le cadre de la demande de contact ENVOYER Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies",
         "lists": [
-          [
-            "Publié le6 novembre 2025"
-          ],
-          [
-            "6"
-          ],
-          [
-            "Nov"
-          ],
-          [
-            "16"
-          ],
-          [
-            "Oct"
-          ],
-          [
-            "27"
-          ],
-          [
-            "Août"
-          ],
-          [
-            "23"
-          ],
-          [
-            "Juil"
-          ],
           [
             "Gérer les options",
             "Gérer les services",
@@ -1120,7 +1169,48 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:48"
+        "scraped_at": "2025-11-11 22:24:02"
+      },
+      {
+        "url": "https://bolkiri.fr/nous-rejoindre/",
+        "title": "Nous rejoindre - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Nous rejoindre"
+          },
+          {
+            "level": "h2",
+            "text": "UNE AVENTURE QUI VOUS FERA GRANDIR"
+          },
+          {
+            "level": "h2",
+            "text": "SOYEZ ACCOMPAGNÉS PAR NOS ÉQUIPES"
+          },
+          {
+            "level": "h2",
+            "text": "UNE OPPORTUNITÉ DE POSTE À SAISIR"
+          },
+          {
+            "level": "h2",
+            "text": "Rejoignez l'aventure"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER Nous rejoindre UNE AVENTURE QUI VOUS FERA GRANDIR Chez Bolkiri, nous offrons bien plus qu’un emploi – nous offrons une opportunité d’évolution rapide. Depuis notre création en 2007, notre entreprise a connu une croissance exceptionnelle, créant des opportunités pour ceux qui cherchent à faire progresser leur carrière dans l’industrie de la restauration. Joignez-vous à nous pour une aventure où vos talents sont reconnus et récompensés. SOYEZ ACCOMPAGNÉS PAR NOS ÉQUIPES Bolkiri s’engage à investir dans ses employés. En nous rejoignant, vous aurez accès à une formation complète, vous permettant d’acquérir les compétences nécessaires pour exceller dans votre rôle. Que vous soyez passionné par la cuisine, le service à la clientèle, ou la gestion, nous avons des programmes de formation adaptés à chaque poste. UNE OPPORTUNITÉ DE POSTE À SAISIR Bolkiri offre une variété de postes, des cuisiniers aux gestionnaires, des serveurs aux spécialistes du marketing. Peu importe votre domaine d’expertise, nous avons une place pour vous dans notre équipe dynamique de plus de 100 collaborateurs. Rejoignez-nous pour une carrière où la diversité des talents est célébrée. Rejoignez l'aventure Vous souhaitez devenir franchisé et ouvrir votre Bolkiri ? Déposez votre candidature ! Nom Prénom E-mail Téléphone Motivation J’accepte que les informations saisies soient exploitées dans le cadre de la demande de contact ENVOYER Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-11 22:24:04"
       },
       {
         "url": "https://bolkiri.fr",
@@ -1259,94 +1349,59 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:50"
+        "scraped_at": "2025-11-11 22:24:06"
       },
       {
-        "url": "https://bolkiri.fr/ouverture-bolkiri-sucy-en-brie/",
-        "title": "C'est le jour-J pour BOLKIRI Sucy-En-Brie - Bolkiri",
+        "url": "https://bolkiri.fr/presse/",
+        "title": "Presse - Bolkiri",
         "headings": [
           {
             "level": "h2",
-            "text": "C'est le Jour-J pour Sucy-En-Brie ! 🎉"
+            "text": "On parle de nous !​"
           },
           {
             "level": "h2",
-            "text": "Bolkiri"
+            "text": "BFM BUSINESS\nAvec Vous"
           },
           {
             "level": "h2",
-            "text": "🇻🇳 Une explosion de saveurs venues du Vietnam"
+            "text": "MES INFOS"
           },
           {
             "level": "h2",
-            "text": "🔥 Une cuisine ouverte pour une expérience authentique"
+            "text": "Affiches Parisiennes"
           },
           {
             "level": "h2",
-            "text": "💛 Une ouverture à ne pas manquer"
+            "text": "Bolkiri propose de la street–food vietnamienne avec des plats frais, sains et authentiques. ZoéJin raconte l’histoire denotreenseigne et vous parle de notre offre à destination des clients."
           },
           {
             "level": "h2",
-            "text": "Bolkiri Sucy-en-brie"
+            "text": "NEO RESTAURATION"
           },
           {
             "level": "h2",
-            "text": "Envie de partager l’article ?"
+            "text": "FRANCE SNACKING"
           },
           {
             "level": "h2",
-            "text": "S’abonner à\nla newsletter Bolkiri"
+            "text": "FRANCHISE MAGAZINE"
           },
           {
             "level": "h2",
-            "text": "Actualités"
+            "text": "OUTGOMAG"
           },
           {
-            "level": "h3",
-            "text": "Black Friday chez BOLKIRI"
+            "level": "h2",
+            "text": "21/10/2025"
           },
           {
-            "level": "h3",
-            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI IVRY DÉMÉNAGE !"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+            "level": "h2",
+            "text": "NOS FRANCHISÉS SUR CRAZY RADIO"
           }
         ],
-        "content": "Aller au contenu COMMANDER ACTUALITÉS C'est le Jour-J pour Sucy-En-Brie ! 🎉 C’est officiel : Bolkiri Sucy-en-Brie ouvre ses portes aujourd’hui 🎊 📍 2 Place de la Gare, 94370 Sucy-en-Brie Notre nouvelle adresse vous invite à découvrir toute la richesse de la street food vietnamienne , servie dans un cadre moderne, convivial et plein d’énergie. VOIR LE SITE Bolkiri Publié le 16 octobre 2025 🇻🇳 Une explosion de saveurs venues du Vietnam Chez BOLKIRI , chaque plat est cuisiné à la minute, sous vos yeux, pour garantir un goût incomparable et une texture parfaite. Notre carte s’inspire directement de la cuisine de rue vietnamienne, avec des recettes simples, généreuses et pleines de caractère : 🥢 Le Bo Bun , plat emblématique de Bolkiri, avec une protéine sautée (bœuf, poulet, tofu), vermicelles de riz, légumes croquants et herbes fraîches, le tout relevé d’une sauce nuoc-mâm équilibrée. 🥖 Le Banh Mi , sandwich vietnamien par excellence, combine pain baguette croustillant, pickles, coriandre, et viande marinée à la perfection. (Avec toujours la possibilité de commander du tofu à la place de la viande pour nos amis végétarien) 🍜 Le Pho , soupe traditionnelle au bouillon parfumé, mijotée longuement, réchauffe le corps et le cœur. (Parfait pour ce réchauffer avec le froid qui arrive) 🍛 Et bien sûr, notre Loc Lac , ce plat iconique au bœuf mariné et sauté, accompagné de riz parfumé et d’un œuf au plat — un incontournable chez BOLKIRI ! Chaque recette est pensée pour offrir un équilibre parfait entre tradition et modernité , dans un esprit de partage et de convivialité. 🔥 Une cuisine ouverte pour une expérience authentique Notre cuisine ouverte vous plonge dans l’ambiance vibrante des rues d’Hanoï : les effluves, les gestes précis des chefs, le crépitement du wok… tout est réuni pour une immersion totale ! 💛 Une ouverture à ne pas manquer Venez découvrir ce nouveau restaurant qui allie authenticité, convivialité et rapidité , idéal pour un déjeuner, un dîner ou une pause gourmande à emporter. Et pour fêter cette ouverture, des offres spéciales vous attendent dès le 3 novembre 2025 ! On vous attend nombreux ! 🎁 Bolkiri Sucy-en-brie Adresse : 2 Place de la Gare, 94370 Sucy-en-Brie Horaires : Du lundi au dimanche : 11h à 22h30 Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "content": "On parle de nous !​ Chez Bolkiri, nous sommes fiers de partager notre passion pour la cuisine vietnamienne à travers nos restaurants et nos services traiteur. Notre approche unique et notre engagement env ers la qualité ont attiré l’attention des médias. Découvrez ci – dessous les articles, interviews, et reportages qui parlent de notre aventure culinaire. BFM BUSINESS Avec Vous Ce lundi 7 octobre, Kevin Jin, fondateur de Bolkiri et trois experts du secteur de la restauration étaient les invités dans l’émission Avec vous, présentée par Sandra Gandoin sur le thème de l ’ouverture d ’un restaurant. Regarder le replay MES INFOS Affiches Parisiennes Bolkiri propose de la street – food vietnamienne avec des plats frais, sains et authentiques. Zoé Jin raconte l’histoire de notre enseigne et vous parle de notre offre à destination des clients. Regarder le replay NEO RESTAURATION Bolkiri s’ouvre à la franchise Notre enseig ne de street food vietnamienne choisit ce modèle pour se développer au – delà de la région parisienne. Retrouvez toutes les informations concernant le développement professionnel de Bolkiri Lire l'article FRANCE SNACKING Avec 9 restaurants déjà ouverts en 4 ans, un 10e programmé avant la fin du mois et 3 premières franchises prévues à la rentrée, la marque de street food Viêt, créée par Kevin Jin compte bien jouer l a carte de la différence. Avec son identité singulière et ses recettes fabriquées « maison » à base de produits frais, elle devrait vite marquer son territoire en s’ouvrant à la franchise. Lire l'article FRANCHISE MAGAZINE Interview de Kevin Jin, fondateur de Bolkiri, qui partage les valeurs et le concept de la marque. Lire l'article OUTGOMAG Bolkiri est présent dans la liste des meilleurs bo bùn de paris en 2024 dans le classement d’outgomag Lire l'article 21/10/2025 NOS FRANCHISÉS SUR CRAZY RADIO Notre franchisé Quentin Viglione de Lagny-sur-Marne a été mis en lumière par Crazy Radio, la radio locale de Seine-et-Marne. Le reportage souligne le concept Bolkiri , l’ ambiance conviviale du restaurant et nos plats signatures comme le bò bún ou le loc lac . Lire l'article Reportage audio",
         "lists": [
-          [
-            "Publié le16 octobre 2025"
-          ],
-          [
-            "6"
-          ],
-          [
-            "Nov"
-          ],
-          [
-            "16"
-          ],
-          [
-            "Oct"
-          ],
-          [
-            "27"
-          ],
-          [
-            "Août"
-          ],
-          [
-            "23"
-          ],
-          [
-            "Juil"
-          ],
           [
             "Gérer les options",
             "Gérer les services",
@@ -1359,7 +1414,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:51"
+        "scraped_at": "2025-11-11 22:24:08"
       },
       {
         "url": "https://bolkiri.fr/bolkiri-ouvre-aux-mureaux/",
@@ -1463,7 +1518,274 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:52"
+        "scraped_at": "2025-11-11 22:24:09"
+      },
+      {
+        "url": "https://bolkiri.fr/ouverture-bolkiri-sucy-en-brie/",
+        "title": "C'est le jour-J pour BOLKIRI Sucy-En-Brie - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "C'est le Jour-J pour Sucy-En-Brie ! 🎉"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "🇻🇳 Une explosion de saveurs venues du Vietnam"
+          },
+          {
+            "level": "h2",
+            "text": "🔥 Une cuisine ouverte pour une expérience authentique"
+          },
+          {
+            "level": "h2",
+            "text": "💛 Une ouverture à ne pas manquer"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri Sucy-en-brie"
+          },
+          {
+            "level": "h2",
+            "text": "Envie de partager l’article ?"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER ACTUALITÉS C'est le Jour-J pour Sucy-En-Brie ! 🎉 C’est officiel : Bolkiri Sucy-en-Brie ouvre ses portes aujourd’hui 🎊 📍 2 Place de la Gare, 94370 Sucy-en-Brie Notre nouvelle adresse vous invite à découvrir toute la richesse de la street food vietnamienne , servie dans un cadre moderne, convivial et plein d’énergie. VOIR LE SITE Bolkiri Publié le 16 octobre 2025 🇻🇳 Une explosion de saveurs venues du Vietnam Chez BOLKIRI , chaque plat est cuisiné à la minute, sous vos yeux, pour garantir un goût incomparable et une texture parfaite. Notre carte s’inspire directement de la cuisine de rue vietnamienne, avec des recettes simples, généreuses et pleines de caractère : 🥢 Le Bo Bun , plat emblématique de Bolkiri, avec une protéine sautée (bœuf, poulet, tofu), vermicelles de riz, légumes croquants et herbes fraîches, le tout relevé d’une sauce nuoc-mâm équilibrée. 🥖 Le Banh Mi , sandwich vietnamien par excellence, combine pain baguette croustillant, pickles, coriandre, et viande marinée à la perfection. (Avec toujours la possibilité de commander du tofu à la place de la viande pour nos amis végétarien) 🍜 Le Pho , soupe traditionnelle au bouillon parfumé, mijotée longuement, réchauffe le corps et le cœur. (Parfait pour ce réchauffer avec le froid qui arrive) 🍛 Et bien sûr, notre Loc Lac , ce plat iconique au bœuf mariné et sauté, accompagné de riz parfumé et d’un œuf au plat — un incontournable chez BOLKIRI ! Chaque recette est pensée pour offrir un équilibre parfait entre tradition et modernité , dans un esprit de partage et de convivialité. 🔥 Une cuisine ouverte pour une expérience authentique Notre cuisine ouverte vous plonge dans l’ambiance vibrante des rues d’Hanoï : les effluves, les gestes précis des chefs, le crépitement du wok… tout est réuni pour une immersion totale ! 💛 Une ouverture à ne pas manquer Venez découvrir ce nouveau restaurant qui allie authenticité, convivialité et rapidité , idéal pour un déjeuner, un dîner ou une pause gourmande à emporter. Et pour fêter cette ouverture, des offres spéciales vous attendent dès le 3 novembre 2025 ! On vous attend nombreux ! 🎁 Bolkiri Sucy-en-brie Adresse : 2 Place de la Gare, 94370 Sucy-en-Brie Horaires : Du lundi au dimanche : 11h à 22h30 Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Publié le16 octobre 2025"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-11 22:24:10"
+      },
+      {
+        "url": "https://bolkiri.fr/mentions-legales/",
+        "title": "Mentions légales - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Mentions légales"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER Mentions légales 1. ÉDITEUR DU SITE Le site bolkiri.com est édité par Groupe Bolkiri, société SASU au capital de 100 000 euros, immatriculée au Registre du Commerce et des Sociétés de Bobigny sous le numéro 919 765 776. Siège social : 33 rue Victor Hugo, 93100 Montreuil Directeur de la publication : Groupe Bolkiri 2. CONCEPTION ET RÉALISATION DU SITE Conception et réalisation : BELORDER 3. HÉBERGEUR DU SITE Le site bolkiri.com est hébergé par Hostinger Siège social : HOSTINGER INTERNATIONAL LTD, 61 Lordou Vironos Street, 6023 Larnaca, Chypre 4. PROPRIÉTÉ INTELLECTUELLE Le contenu du site bolkiri.fr (textes, images, vidéos, etc.) est la propriété exclusive de BOLKIRI GROUPE et est protégé par les lois en vigueur sur la propriété intellectuelle. Toute reproduction, distribution, modification ou utilisation du contenu sans l’autorisation écrite de BOLKIRI est strictement interdite. 5. COLLECTE DE DONNÉES PERSONNELLES Conformément à la réglementation en vigueur, Groupe Bolkiri collecte des données personnelles sur les utilisateurs du site bolkiri.com uniquement dans le cadre de la fourniture des services proposés. Ces données sont traitées de manière confidentielle et ne seront en aucun cas cédées ou vendues à des tiers. Pour plus d’informations, veuillez consulter notre politique de confidentialité. 6. COOKIES Le site bolkiri.com utilise des cookies pour améliorer l’expérience de navigation des utilisateurs. En continuant à naviguer sur le site, vous acceptez l’utilisation de ces cookies. Pour plus d’informations sur l’utilisation des cookies, veuillez consulter notre politique de cookies. 7. LIMITATION DE RESPONSABILITÉ Bolkiri décline toute responsabilité quant à l’utilisation du contenu du site bolkiri.com. L’entreprise ne saurait être tenue responsable des éventuels dommages directs ou indirects résultant de l’accès ou de l’utilisation du site. 8. DROIT APPLICABLE ET JURIDICTION COMPÉTENTE Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux compétents seront ceux du ressort de Bobigny. Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-11 22:24:12"
+      },
+      {
+        "url": "https://bolkiri.fr/cgv/",
+        "title": "CGV - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "CONDITIONS GÉNÉRALES DE VENTE (CGV)"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER CONDITIONS GÉNÉRALES DE VENTE (CGV) CONDITIONS GÉNÉRALES DE VENTE ARTICLE 1 – DEFINITIONS Client : désigne toute personne physique commandant des Produits sur le Site. Cette dernière reconnaît être majeure et avoir la pleine capacité juridique pour s’engager au titre des présentes. Commande : désigne toute commande de Produits à emporter réalisée sur le Site ou sur l’application auprès d’un Point de Vente. Compte : désigne l’espace personnel que le Client peut créer sur le Site, pour accéder au service de Commande de Produits, associé à un identifiant et à un mot de passe. Données personnelles : informations à caractère personnel définies à l’article 4 du Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 sur la protection des données, qui sont fournies par le Client au Vendeur et à Bolkiri ou qui sont recueillies par Bolkiri à l’occasion de l’utilisation du Site. Groupe Bolkiri : SAS au capital de 100 000.00 €, dont le siège social est situé 62 AV DE LA REPUBLIQUE, 93110 ROSNY-SOUS-BOIS immatriculé au greffe de Bobigny sous le n°919 765 776 Point de Vente : désigne un local commercial, dans lequel est exploité un fonds de commerce sous enseigne Bolkiri Produits : désigne l’ensemble des produits proposés à la vente sur le Site et l’application par un Point de Vente. Service d’intermédiation : désigne le service d’intermédiation entre les Vendeurs et les Clients proposé par Bolkiri au moyen du Site. Site : désigne le site internet accessible à l’adresse URL suivante : https://bolkiri.fr Utilisateur : désigne toute personne physique naviguant sur le Site. Vendeur : désigne la personne morale qui commercialise des Produits au sein d’un Point de Vente sous enseigne, franchisé indépendant ou filiale de Bolkiri, sélectionné au sein du réseau de Points de Vente Bolkiri en fonction de l’adresse de retrait choisie par le Client et auprès duquel la Commande sera enregistrée. ARTICLE 2 – PRÉAMBULE ET OPPOSABILITE DES CGV Les présentes conditions générales de vente (ci-après les « CGV ») ont pour objet de définir et régir les droits et obligations des Parties dans le cadre de la vente en ligne des Produits par le Vendeur au Client. Toute Commande de Produits par le Client emporte de plein droit l’acceptation entière et sans réserve par celui-ci des présentes CGV. En cas de conflit entre les dispositions des CGV et tous autres documents contractuels afférents aux Services d’intermédiation et aux Commandes de Produits, les présentes CGV prévaudront sauf accord contraire écrit des Parties. Aucune tolérance sur l’application des dispositions des CGV ne peut être interprétée comme valant renonciation de Pokawa ou du Vendeur à s’en prévaloir ultérieurement. Si l’une quelconque des dispositions des présentes était ou devenait nulle au regard d’une disposition légale présente ou à venir, elle serait réputée non écrite sans affecter la validité des autres stipulations des présentes. L’entreprise se réserve la faculté de modifier ces CGV à tout moment. En cas de modification des CGV, les CGV applicables sont celles en vigueur à la date du règlement de la Commande. ARTICLE 3 – UTILISATION DU SITE L’utilisation du Site est régie par les conditions générales d’utilisation du Site (ci-après les « CGU ») figurant sur celui-ci, que le Client accepte entièrement et sans réserve lorsqu’il navigue sur le Site et passe ses Commandes. ARTICLE 4 – INFORMATION SUR LES PRODUITS Les Produits dont la vente est encadrée par les présentes CGV sont ceux qui figurent sur le Site et qui sont indiqués comme offerts à la vente par le Vendeur. Ces Produits sont proposés dans la limite des stocks disponibles, étant précisé que le Vendeur se réserve la possibilité de modifier à tout moment ou d’interrompre l’offre de certains Produits sans en informer au préalable le Client et sans préjudice des Commandes passées par le Client. Les Produits sont décrits et présentés avec la plus grande sincérité. Toutefois, Pokawa et le Vendeur ne garantissent pas l’exactitude des photos ou les informations liés aux Produits qui n’ont qu’une finalité illustrative sans avoir une valeur contractuelle. Il résulte de ce qui précède que dans l’hypothèse où des erreurs ou omissions se seraient produites dans la présentation des Produits, la responsabilité du Vendeur et/ou de l’entreprise ne pourrait être engagée. Il appartient au Client de se renseigner sur ses allergies ou intolérance à certains ingrédients des Produits et à en rechercher les traces auprès des services du Vendeur. Le Vendeur ne pourront être tenus responsables des conséquences de la non prise en compte de ces informations par le Client lors de sa Commande. Le Client s’engage après le retrait des Produits à en assurer la bonne conservation et à les consommer avant la date indiquée sur l’emballage. En cas de non-étiquetage de la Date Limite de Consommation, le Client s’engage à recueillir l’information auprès du Vendeur et par défaut à consommer les Produits ",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-11 22:24:13"
+      },
+      {
+        "url": "https://bolkiri.fr/cgu/",
+        "title": "CGU - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "CONDITIONS GÉNÉRALES D'UTILISATION (CGU)"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER CONDITIONS GÉNÉRALES D'UTILISATION (CGU) 1. ACCEPTATION DES CGU L’utilisation du site internet bolkiri.fr, ci-après dénommé le « Site », est soumise à l’acceptation des présentes Conditions Générales d’Utilisation. En accédant au Site, l’utilisateur, ci-après dénommé « l’Utilisateur », reconnaît avoir pris connaissance des CGU et s’engage à les respecter. 2. ACCÈS AU SITE L’accès au Site est libre et gratuit. L’Utilisateur reconnaît disposer de la compétence et des moyens nécessaires pour accéder et utiliser ce Site. L’éditeur se réserve le droit de modifier, suspendre ou interrompre l’accès au Site pour des raisons techniques ou de maintenance. 3. CONTENU DU SITE Le contenu du Site, incluant les textes, images, vidéos, logos, etc., est la propriété exclusive de [Nom de l’entreprise] et est protégé par les lois en vigueur sur la propriété intellectuelle. Toute reproduction, distribution, modification ou utilisation du contenu sans l’autorisation écrite de [Nom de l’entreprise] est strictement interdite. 4. UTILISATION DU SITE L’Utilisateur s’engage à utiliser le Site conformément aux lois en vigueur et aux présentes CGU. Il est notamment interdit de diffuser des contenus illicites, diffamatoires, obscènes, violents ou portant atteinte à la vie privée. L’Utilisateur s’engage également à ne pas perturber le fonctionnement du Site. 5. DONNÉES PERSONNELLES La collecte et le traitement des données personnelles de l’Utilisateur sont régis par la politique de confidentialité disponible sur le Site. En utilisant le Site, l’Utilisateur consent à la collecte et au traitement de ses données personnelles conformément à ladite politique. 6. LIENS HYPERTEXTES Le Site peut contenir des liens hypertextes vers d’autres sites internet. [Nom de l’entreprise] décline toute responsabilité quant au contenu de ces sites et aux éventuels dommages résultant de leur consultation. 7. RESPONSABILITÉ L’Utilisateur reconnaît utiliser le Site à ses propres risques. [Nom de l’entreprise] ne saurait être tenue responsable des dommages directs ou indirects résultant de l’utilisation du Site, y compris les pertes de données ou de profits. 8. MODIFICATION DES CGU Les présentes CGU peuvent être modifiées à tout moment par Groupe Bolkiri. Les Utilisateurs sont invités à consulter régulièrement les CGU pour prendre connaissance des éventuelles modifications. 9. LOI APPLICABLE ET JURIDICTION COMPÉTENTE Les présentes CGU sont soumises au droit français. En cas de litige, les tribunaux compétents seront ceux du ressort de [ville du siège social de l’entreprise]. Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-11 22:24:14"
+      },
+      {
+        "url": "https://bolkiri.fr/black-friday-2025-bolkiri/",
+        "title": "Black Friday chez BOLKIRI - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "BLACK FRIDAY AVEC BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Du24 au 28 novembre, BOLKIRI vous fait un petit cadeau pour vos grandes envies !"
+          },
+          {
+            "level": "h3",
+            "text": "– Enregistrez vos commandes pour les refaire encore plus vite🥡"
+          },
+          {
+            "level": "h3",
+            "text": "👉Téléchargez l’application dès maintenantet laissez BOLKIRI s’occuper du reste."
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER Bolkiri Publié le 6 novembre 2025 BLACK FRIDAY AVEC BOLKIRI Du 24 au 28 novembre , BOLKIRI vous fait un petit cadeau pour vos grandes envies ! Pendant 5 jours seulement , profitez de 5€ offerts dès 20€ d’achat sur toutes vos commandes passées via notre application ou notre site web. Comment en profiter ? 🥢 C’est simple : 1 – Téléchargez l’application BOLKIRI (disponible gratuitement sur l’App Store et Google Play). 2 – Créez votre compte ou connectez-vous à votre espace client. 3 – Choisissez vos plats préférés parmi tous les produits à la carte et composez votre commande. 4 – Passez commande à emporter ou en livraison , directement depuis l’application ou le site internet. 5 – Votre réduction de 5€ sera automatiquement appliquée à partir de 20€ d’achat ! 💛 Pourquoi commander sur l’application BOLKIRI ? 📱 Notre application a été pensée pour vous simplifier la vie : – Commandez vos plats préférés en quelques clics 👉 – Suivez en temps réel la préparation et la livraison 🛵 – Suivre votre programme de fidélité BOLKIRI pour encore plus d’avantages ✨ – Accédez à des offres exclusives réservées aux utilisateurs de l’application 🔥 – Retrouvez facilement vos restaurants BOLKIRI favoris 📍 – Enregistrez vos commandes pour les refaire encore plus vite 🥡 Les conditions de l’offre ⚙️ • Offre valable du 24/11 au 28/11/2025 inclus. • Réduction immédiate de 5 € dès 20 € d’achat (hors frais de livraison). • Offre valable uniquement à emporter ou en livraison , pour toute commande effectuée via l’application BOLKIRI ou le site web. • Offre non cumulable avec d’autres promotions, bons de réduction, ou programmes de fidélité. • L’offre est limitée à une utilisation par compte client pendant la période de validité. • Valable dans tous les restaurants BOLKIRI . À ne pas manquer 💛 C’est le moment parfait pour tester la commande en ligne si vous ne l’avez pas encore fait ! Que ce soit pour un déjeuner sur le pouce, un dîner entre amis ou une envie gourmande à la maison, l’app BOLKIRI vous offre simplicité, rapidité et bons plans. 👉 Téléchargez l’application dès maintenant et laissez BOLKIRI s’occuper du reste. S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?",
+        "lists": [
+          [
+            "Publié le6 novembre 2025"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-11 22:24:15"
       },
       {
         "url": "https://bolkiri.fr/bolkiri-ivry-demenage/",
@@ -1580,7 +1902,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-11 19:42:53"
+        "scraped_at": "2025-11-11 22:24:17"
       }
     ]
   },
