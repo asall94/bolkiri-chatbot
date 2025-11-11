@@ -1,9 +1,9 @@
 name: Auto Scraping Mensuel Bolkiri
 
 on:
-  # Scraping automatique le 1er de chaque mois à 2h du matin
+  # Scraping automatique tous les jeudis à 2h du matin
   schedule:
-    - cron: '0 2 1 * *'
+    - cron: '0 2 * * 4'
   
   # Permet de lancer manuellement depuis GitHub
   workflow_dispatch:

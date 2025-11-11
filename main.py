@@ -1,21 +1,13 @@
-# -*- coding: utf-8 -*-
 from fastapi import FastAPI, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import FileResponse, HTMLResponse, JSONResponse
+from fastapi.responses import FileResponse, HTMLResponse
 from pydantic import BaseModel
 from typing import Optional
 import os
-import sys
 from datetime import datetime
 from dotenv import load_dotenv
 from ai_agent import AIAgent
-
-# Forcer UTF-8 pour stdout/stderr (fix encodage Windows)
-if sys.platform == 'win32':
-    import codecs
-    sys.stdout = codecs.getwriter('utf-8')(sys.stdout.buffer, 'strict')
-    sys.stderr = codecs.getwriter('utf-8')(sys.stderr.buffer, 'strict')
 
 load_dotenv()
 
@@ -79,7 +71,7 @@ async def root_options():
     """HEAD and OPTIONS for monitoring"""
     return {"status": "ok"}
 
-@app.post("/chat")
+@app.post("/chat", response_model=ChatResponse)
 async def chat(chat_message: ChatMessage):
     global agent
     
@@ -91,13 +83,9 @@ async def chat(chat_message: ChatMessage):
         
         response_text = agent.chat(chat_message.message, conversation_id)
         
-        # Retour JSON avec UTF-8 explicite
-        return JSONResponse(
-            content={
-                "response": response_text,
-                "conversation_id": conversation_id
-            },
-            media_type="application/json; charset=utf-8"
+        return ChatResponse(
+            response=response_text,
+            conversation_id=conversation_id
         )
         
     except Exception as e:
