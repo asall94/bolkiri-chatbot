@@ -18,7 +18,7 @@ Bolkiri Chatbot est une application composée des éléments suivants :
 - Informations sur le menu et recommandations
 - Gestion des horaires et localisations des restaurants
 - Gestion des réservations
-- Informations sur les allergènes
+- Informations sur les allergènes 
 - Base de connaissances enrichie et mise à jour dynamique
 
 ## Installation Locale

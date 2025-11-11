@@ -1,6 +1,6 @@
 {
   "version": "3.0_complet",
-  "date_scraping": "2025-11-11 19:36:45",
+  "date_scraping": "2025-11-11 19:41:50",
   "total_restaurants": 20,
   "restaurants_ouverts": 15,
   "restaurants_a_venir": 5,
@@ -13,13 +13,13 @@
       "telephone": "+33 1 48 47 00 05",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:45, 18:15-22:30",
+        "mardi": "11:15-14:45, 18:15-22:30",
+        "mercredi": "11:15-14:45, 18:15-22:30",
+        "jeudi": "11:15-14:45, 18:15-22:30",
+        "vendredi": "11:15-14:45, 18:15-22:30",
+        "samedi": "11:15-14:45, 18:15-22:30",
+        "dimanche": "11:15-14:45, 18:15-22:30"
       },
       "services": [
         "Sur place",
@@ -46,13 +46,13 @@
       "telephone": "+33 1 47 06 02 02",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:30, 18:15-22:30",
+        "mardi": "11:15-14:30, 18:15-22:30",
+        "mercredi": "11:15-14:30, 18:15-22:30",
+        "jeudi": "11:15-14:30, 18:15-22:30",
+        "vendredi": "11:15-14:30, 18:15-22:30",
+        "samedi": "11:15-14:30, 18:15-22:30",
+        "dimanche": "11:15-14:30, 18:15-22:30"
       },
       "services": [
         "Sur place",
@@ -78,13 +78,13 @@
       "telephone": "+33 1 60 88 50 67",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:30-14:30, 18:30-22:30",
+        "mardi": "11:30-14:30, 18:30-22:30",
+        "mercredi": "11:30-14:30, 18:30-22:30",
+        "jeudi": "11:30-14:30, 18:30-22:30",
+        "vendredi": "11:30-14:30, 18:30-22:30",
+        "samedi": "11:30-14:30, 18:30-22:30",
+        "dimanche": "11:30-14:30, 18:30-22:30"
       },
       "services": [
         "Sur place",
@@ -110,13 +110,13 @@
       "telephone": "+33 1 80 91 18 38",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:00-24:00",
+        "mardi": "11:00-24:00",
+        "mercredi": "11:00-24:00",
+        "jeudi": "11:00-24:00",
+        "vendredi": "11:00-24:00",
+        "samedi": "11:00-24:00",
+        "dimanche": "11:00-24:00"
       },
       "services": [
         "Sur place",
@@ -142,13 +142,13 @@
       "telephone": "+33 1 55 99 17 74",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:45, 18:15-22:30",
+        "mardi": "11:15-14:45, 18:15-22:30",
+        "mercredi": "11:15-14:45, 18:15-22:30",
+        "jeudi": "11:15-14:45, 18:15-22:30",
+        "vendredi": "11:15-14:45, 18:15-22:30",
+        "samedi": "11:15-14:45, 18:15-22:30",
+        "dimanche": "11:15-14:45, 18:15-22:30"
       },
       "services": [
         "Sur place",
@@ -174,13 +174,13 @@
       "telephone": "+33 3 62 27 71 81",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:30-14:45, 18:00-22:45",
+        "mardi": "11:30-14:45, 18:00-22:45",
+        "mercredi": "11:30-14:45, 18:00-22:45",
+        "jeudi": "11:30-14:45, 18:00-22:45",
+        "vendredi": "11:30-14:45, 18:00-22:45",
+        "samedi": "11:30-14:45, 18:00-22:45",
+        "dimanche": "11:30-14:45, 18:00-22:45"
       },
       "services": [
         "Sur place",
@@ -206,13 +206,13 @@
       "telephone": "+33 1 46 89 24 63",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
       },
       "services": [
         "Sur place",
@@ -238,13 +238,13 @@
       "telephone": "+33 1 48 58 44 00",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
       },
       "services": [
         "Sur place",
@@ -271,13 +271,13 @@
       "telephone": "+33 1 55 59 02 32",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
       },
       "services": [
         "Sur place",
@@ -303,13 +303,13 @@
       "telephone": "+33 1 81 93 40 00",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:45, 18:15-22:30",
+        "mardi": "11:15-14:45, 18:15-22:30",
+        "mercredi": "11:15-14:45, 18:15-22:30",
+        "jeudi": "11:15-14:45, 18:15-22:30",
+        "vendredi": "11:15-14:45, 18:15-22:30",
+        "samedi": "11:15-14:45, 18:15-22:30",
+        "dimanche": "11:15-14:45, 18:15-22:30"
       },
       "services": [
         "Sur place",
@@ -336,13 +336,13 @@
       "telephone": "+33 1 82 83 00 56",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
       },
       "services": [
         "Sur place",
@@ -368,13 +368,13 @@
       "telephone": "+33 1 48 21 04 55",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:30, 18:15-23:00",
+        "mardi": "11:15-14:30, 18:15-23:00",
+        "mercredi": "11:15-14:30, 18:15-23:00",
+        "jeudi": "11:15-14:30, 18:15-23:00",
+        "vendredi": "11:15-14:30, 18:15-23:00",
+        "samedi": "11:15-14:30, 18:15-23:00",
+        "dimanche": "11:15-14:30, 18:15-23:00"
       },
       "services": [
         "Sur place",
@@ -400,13 +400,13 @@
       "telephone": "+33 1 80 82 36 68",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:30-15:00, 18:30-23:00",
+        "mardi": "11:30-15:00, 18:30-23:00",
+        "mercredi": "11:30-15:00, 18:30-23:00",
+        "jeudi": "11:30-15:00, 18:30-23:00",
+        "vendredi": "11:30-15:00, 18:30-23:00",
+        "samedi": "11:30-15:00, 18:30-23:00",
+        "dimanche": "11:30-15:00, 18:30-23:00"
       },
       "services": [
         "Sur place",
@@ -433,13 +433,13 @@
       "telephone": "+33 1 80 87 21 66",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
       },
       "services": [
         "Sur place",
@@ -465,13 +465,13 @@
       "telephone": "+33 1 60 31 21 31",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:30-14:30, 18:30-22:30",
+        "mardi": "11:30-14:30, 18:30-22:30",
+        "mercredi": "11:30-14:30, 18:30-22:30",
+        "jeudi": "11:30-14:30, 18:30-22:30",
+        "vendredi": "11:30-14:30, 18:30-22:30",
+        "samedi": "11:30-14:30, 18:30-22:30",
+        "dimanche": "11:30-14:30, 18:30-22:30"
       },
       "services": [
         "Sur place",
@@ -497,13 +497,13 @@
       "telephone": "+33 1 83 73 98 91",
       "email": "",
       "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
+        "lundi": "11:00-22:30",
+        "mardi": "11:00-22:30",
+        "mercredi": "11:00-22:30",
+        "jeudi": "11:00-22:30",
+        "vendredi": "11:00-22:30",
+        "samedi": "11:00-22:30",
+        "dimanche": "11:00-22:30"
       },
       "services": [
         "Sur place",
@@ -528,15 +528,7 @@
       "code_postal": "87166",
       "telephone": "",
       "email": "",
-      "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
-      },
+      "horaires": {},
       "services": [
         "Sur place",
         "À emporter",
@@ -560,15 +552,7 @@
       "code_postal": "08793",
       "telephone": "",
       "email": "",
-      "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
-      },
+      "horaires": {},
       "services": [
         "Sur place",
         "À emporter",
@@ -592,15 +576,7 @@
       "code_postal": "53971",
       "telephone": "",
       "email": "",
-      "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
-      },
+      "horaires": {},
       "services": [
         "Sur place",
         "À emporter",
@@ -625,15 +601,7 @@
       "code_postal": "83824",
       "telephone": "",
       "email": "",
-      "horaires": {
-        "lundi": "",
-        "mardi": "",
-        "mercredi": "",
-        "jeudi": "",
-        "vendredi": "",
-        "samedi": "",
-        "dimanche": ""
-      },
+      "horaires": {},
       "services": [
         "À emporter",
         "Livraison",
