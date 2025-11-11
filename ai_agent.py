@@ -418,6 +418,85 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         except Exception as e:
             return self.search_knowledge(user_query)
     
+    def _validate_response(self, response: str, context: str, user_query: str) -> tuple[str, bool]:
+        """Valide la réponse générée contre le contexte et détecte les hallucinations
+        
+        Returns:
+            (response_corrigee, is_valid)
+        """
+        response_lower = response.lower()
+        context_lower = context.lower()
+        
+        # 1. Vérifier contradictions restaurants
+        if "[restaurant trouvé]" in context_lower or "restaurant" in context_lower:
+            # Détecter phrases négatives alors que restaurant existe
+            negative_phrases = [
+                "n'avons pas de restaurant",
+                "pas de restaurant dans",
+                "aucun restaurant dans",
+                "malheureusement pas",
+                "ne disposons pas"
+            ]
+            
+            for phrase in negative_phrases:
+                if phrase in response_lower:
+                    print(f"⚠️ HALLUCINATION: '{phrase}' malgré contexte positif")
+                    # Retourner contexte brut au lieu de la réponse hallucinée
+                    return f"Voici les informations de notre restaurant :\n\n{context}", False
+        
+        # 2. Vérifier incohérences horaires
+        import re
+        # Extraire horaires du contexte (format HH:MM-HH:MM)
+        context_hours = re.findall(r'\d{1,2}:\d{2}-\d{1,2}:\d{2}', context)
+        response_hours = re.findall(r'\d{1,2}h?\d{0,2}\s?-\s?\d{1,2}h?\d{0,2}', response)
+        
+        if context_hours and response_hours:
+            # Normaliser pour comparaison
+            def normalize_hour(h):
+                # "11:30" ou "11h30" → "1130"
+                return re.sub(r'[:\s-h]', '', h)
+            
+            context_normalized = set(normalize_hour(h) for h in context_hours)
+            response_normalized = set(normalize_hour(h) for h in response_hours)
+            
+            # Si horaires complètement différents
+            if not any(rh in context_normalized for rh in response_normalized):
+                print(f"⚠️ HALLUCINATION HORAIRES: Contexte={context_hours} vs Réponse={response_hours}")
+                # Forcer utilisation exacte du contexte
+                return f"Voici les horaires exacts de nos restaurants :\n\n{context}", False
+        
+        # 3. Vérifier cohérence département/ville
+        dept_ville = {
+            "91": "corbeil",
+            "94": "ivry", 
+            "78": "mureaux",
+            "77": "lagny"
+        }
+        
+        for dept, ville in dept_ville.items():
+            # Si question mentionne département
+            if dept in user_query.lower():
+                # Mais réponse dit "pas de restaurant" ET contexte mentionne la ville
+                if ville in context_lower and any(neg in response_lower for neg in ["pas de restaurant", "aucun restaurant"]):
+                    print(f"⚠️ CONTRADICTION: Dit 'pas de resto' pour {dept} mais contexte contient {ville}")
+                    return f"Oui, nous avons un restaurant dans le {dept}. Voici les détails :\n\n{context}", False
+        
+        # 4. Vérifier prix aberrants
+        context_prices = re.findall(r'(\d+[,.]?\d*)\s*€', context)
+        response_prices = re.findall(r'(\d+[,.]?\d*)\s*€', response)
+        
+        if context_prices and response_prices:
+            context_nums = [float(p.replace(',', '.')) for p in context_prices]
+            response_nums = [float(p.replace(',', '.')) for p in response_prices]
+            
+            # Si prix dans réponse > 2x max du contexte
+            if max(response_nums) > max(context_nums) * 2:
+                print(f"⚠️ PRIX ABERRANT: Contexte max={max(context_nums)}€ vs Réponse max={max(response_nums)}€")
+                return f"Voici les prix exacts de notre menu :\n\n{context}", False
+        
+        # Réponse valide
+        return response, True
+    
     def chat(self, user_message: str, conversation_id: Optional[str] = None) -> str:
         self.agent_state['total_interactions'] += 1
         
@@ -451,6 +530,8 @@ RÈGLES ABSOLUES (CRITIQUES):
 3. Si le contexte mentionne un restaurant pour le département 91, NE DITES JAMAIS "nous n'avons pas de restaurant dans le 91"
 4. INTERDICTION FORMELLE de contredire le contexte récupéré
 5. Si le contexte dit qu'un restaurant existe, dites qu'il existe
+6. HORAIRES : COPIEZ EXACTEMENT les horaires du contexte SANS MODIFICATION (pas d'arrondi, pas de reformulation)
+7. Si le contexte dit "11:30-14:30, 18:30-22:30", vous DEVEZ écrire "11:30-14:30, 18:30-22:30" (PAS "11h30-14h30" ou "11h15-23h00")
 
 VALIDATION OBLIGATOIRE avant de répondre:
 - Vérifier que la réponse ne contredit PAS le contexte
@@ -514,33 +595,14 @@ Question EN: "Where are you?" → Réponse EN: "We have 20 restaurants..."
             
             assistant_message = response.choices[0].message.content
             
-            # VALIDATION POST-GÉNÉRATION: Détecter les contradictions
-            if context and "[RESTAURANT TROUVÉ]" in context:
-                # Si le contexte dit qu'un restaurant a été trouvé
-                negative_phrases = [
-                    "n'avons pas de restaurant",
-                    "pas de restaurant dans",
-                    "aucun restaurant dans",
-                    "malheureusement pas"
-                ]
-                for phrase in negative_phrases:
-                    if phrase in assistant_message.lower():
-                        # HALLUCINATION DETECTEE - renvoyer le contexte brut
-                        print(f"HALLUCINATION DETECTEE: '{phrase}' malgre contexte positif")
-                        # Ne pas inventer de données - renvoyer le contexte récupéré
-                        assistant_message = "Voici les informations de notre restaurant:\n\n" + context
-                        break
+            # VALIDATION AUTOMATIQUE de la réponse
+            validated_message, is_valid = self._validate_response(assistant_message, context, user_message)
             
-            # VALIDATION SUPPLÉMENTAIRE: Détecter contradiction logique
-            # Si le message contient à la fois "pas de restaurant dans le 91" ET "Corbeil-Essonnes"
-            if "corbeil" in assistant_message.lower():
-                negative_91 = ["pas de restaurant dans le 91", "n'avons pas de restaurant dans le 91"]
-                for neg in negative_91:
-                    if neg in assistant_message.lower():
-                        print(f"CONTRADICTION DETECTEE: Dit 'pas de 91' mais mentionne Corbeil (qui est dans le 91)")
-                        # Corriger en renvoyant le contexte brut
-                        assistant_message = "Voici les informations de notre restaurant:\n\n" + context
-                        break
+            if not is_valid:
+                print(f"❌ Réponse invalidée, utilisation du contexte brut")
+                assistant_message = validated_message
+            else:
+                print(f"✅ Réponse validée")
             
             self.conversation_memory.append({
                 "role": "assistant",
