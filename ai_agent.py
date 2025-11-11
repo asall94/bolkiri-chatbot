@@ -440,15 +440,25 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             
             for phrase in negative_phrases:
                 if phrase in response_lower:
-                    print(f"⚠️ HALLUCINATION: '{phrase}' malgré contexte positif")
-                    # Retourner contexte brut au lieu de la réponse hallucinée
-                    return f"Voici les informations de notre restaurant :\n\n{context}", False
+                    print(f"[WARN] HALLUCINATION: '{phrase}' malgre contexte positif")
+                    # Retourner réponse corrigée simple et directe
+                    # Extraire ville/département de la query
+                    import re
+                    dept_match = re.search(r'\b(91|94|78|77)\b', user_query)
+                    if dept_match or any(d in user_query.lower() for d in ['91', '94', '78', '77', 'essonne', 'val-de-marne', 'yvelines', 'seine-et-marne']):
+                        # Utiliser get_restaurant_info pour réponse structurée
+                        dept = dept_match.group(1) if dept_match else user_query
+                        corrected = self.get_restaurant_info(dept)
+                        return corrected, False
+                    # Sinon retourner message générique basé sur contexte
+                    return "Oui, nous avons plusieurs restaurants en Île-de-France. Pour plus de détails sur un restaurant spécifique, précisez la ville ou le département.", False
         
         # 2. Vérifier incohérences horaires
         import re
         # Extraire horaires du contexte (format HH:MM-HH:MM)
         context_hours = re.findall(r'\d{1,2}:\d{2}-\d{1,2}:\d{2}', context)
-        response_hours = re.findall(r'\d{1,2}h?\d{0,2}\s?-\s?\d{1,2}h?\d{0,2}', response)
+        # Extraire horaires de la réponse (format HH:MM-HH:MM ou HHhMM-HHhMM)
+        response_hours = re.findall(r'\d{1,2}[h:]?\d{2}\s?-\s?\d{1,2}[h:]?\d{2}', response)
         
         if context_hours and response_hours:
             # Normaliser pour comparaison
@@ -460,10 +470,15 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             response_normalized = set(normalize_hour(h) for h in response_hours)
             
             # Si horaires complètement différents
-            if not any(rh in context_normalized for rh in response_normalized):
-                print(f"⚠️ HALLUCINATION HORAIRES: Contexte={context_hours} vs Réponse={response_hours}")
-                # Forcer utilisation exacte du contexte
-                return f"Voici les horaires exacts de nos restaurants :\n\n{context}", False
+            if context_normalized and not any(rh in ' '.join(context_normalized) for rh in response_normalized):
+                print(f"[WARN] HALLUCINATION HORAIRES: Contexte={context_hours} vs Reponse={response_hours}")
+                # Remplacer les horaires dans la réponse par ceux du contexte
+                corrected = response
+                for wrong_hour in response_hours:
+                    # Remplacer par les vrais horaires du contexte
+                    if context_hours:
+                        corrected = corrected.replace(wrong_hour, context_hours[0])
+                return corrected, False
         
         # 3. Vérifier cohérence département/ville
         dept_ville = {
@@ -478,8 +493,10 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             if dept in user_query.lower():
                 # Mais réponse dit "pas de restaurant" ET contexte mentionne la ville
                 if ville in context_lower and any(neg in response_lower for neg in ["pas de restaurant", "aucun restaurant"]):
-                    print(f"⚠️ CONTRADICTION: Dit 'pas de resto' pour {dept} mais contexte contient {ville}")
-                    return f"Oui, nous avons un restaurant dans le {dept}. Voici les détails :\n\n{context}", False
+                    print(f"[WARN] CONTRADICTION: Dit 'pas de resto' pour {dept} mais contexte contient {ville}")
+                    # Utiliser get_restaurant_info pour réponse propre
+                    corrected = self.get_restaurant_info(dept)
+                    return corrected, False
         
         # 4. Vérifier prix aberrants
         context_prices = re.findall(r'(\d+[,.]?\d*)\s*€', context)
@@ -491,8 +508,13 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             
             # Si prix dans réponse > 2x max du contexte
             if max(response_nums) > max(context_nums) * 2:
-                print(f"⚠️ PRIX ABERRANT: Contexte max={max(context_nums)}€ vs Réponse max={max(response_nums)}€")
-                return f"Voici les prix exacts de notre menu :\n\n{context}", False
+                print(f"[WARN] PRIX ABERRANT: Contexte max={max(context_nums)}€ vs Reponse max={max(response_nums)}€")
+                # Corriger en remplaçant les prix aberrants
+                corrected = response
+                for i, wrong_price in enumerate(response_prices):
+                    if i < len(context_prices):
+                        corrected = corrected.replace(f"{wrong_price}€", f"{context_prices[i]}€")
+                return corrected, False
         
         # Réponse valide
         return response, True
@@ -600,12 +622,12 @@ Question EN: "Where are you?" → Réponse EN: "We have 20 restaurants..."
                 validated_message, is_valid = self._validate_response(assistant_message, context, user_message)
                 
                 if not is_valid:
-                    print(f"❌ Réponse invalidée, utilisation du contexte brut")
+                    print(f"[INVALID] Reponse invalidee, correction appliquee")
                     assistant_message = validated_message
                 else:
-                    print(f"✅ Réponse validée")
+                    print(f"[OK] Reponse validee")
             except Exception as e:
-                print(f"⚠️ Erreur validation: {e}")
+                print(f"[ERROR] Erreur validation: {e}")
                 # En cas d'erreur validation, garder la réponse originale
             
             self.conversation_memory.append({
