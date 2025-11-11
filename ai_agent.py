@@ -96,12 +96,10 @@ class AIAgent:
         
         context = []
         for result in results:
-            if result['type'] == 'restaurant':
-                resto = result['content']
-                context.append(f"Restaurant: {resto['name']} à {resto['ville']} ({resto['code_postal']}) - {resto['adresse']} - Tél: {resto['telephone']}")
-            elif result['type'] == 'plat':
-                plat = result['content']
-                context.append(f"Plat: {plat['nom']} ({plat['prix']}) - {plat['description']}")
+            # RAG retourne déjà du contenu formaté en string
+            content = result.get('content', '')
+            if content:
+                context.append(content)
         
         return "\n\n".join(context)
     
@@ -125,34 +123,20 @@ class AIAgent:
     
     def get_restaurant_info(self, ville: str) -> str:
         """Infos détaillées d'un restaurant spécifique - supporte département et code postal"""
-        # La knowledge base gère maintenant la normalisation département/code postal
-        resto = self.kb.get_restaurant_by_ville(ville)
+        # Utiliser RAG pour recherche intelligente
+        results = self.kb.search(f"restaurant {ville}", limit=3)
         
-        if not resto:
-            # Si vraiment aucun restaurant trouvé, lister les options disponibles
+        if not results:
+            # Lister tous les restaurants disponibles
             all_restos = self.kb.get_all_restaurants()
-            villes = [f"{r['ville']} ({r['code_postal']})" for r in all_restos]
-            return f"ATTENTION: Recherche '{ville}' non trouvée directement.\n\n" + \
+            return f"Restaurant non trouvé pour '{ville}'.\n\n" + \
                    f"NOS {len(all_restos)} RESTAURANTS DISPONIBLES:\n" + \
-                   "\n".join([f"- {v}" for v in villes]) + \
-                   "\n\nNote: Si la recherche concerne un département (91, 94, etc), vérifiez la liste ci-dessus."
+                   "\n".join([f"- {r.get('name', 'N/A')}" for r in all_restos[:10]]) + \
+                   "\n\n(10 premiers restaurants affichés)"
         
-        # Restaurant trouvé - informations complètes
-        result = f"[RESTAURANT TROUVÉ] Requête: '{ville}'\n\n"
-        result += f"Restaurant : {resto['name']}\n\n"
-        result += f"Adresse : {resto['adresse']}\n"
-        result += f"Ville : {resto['ville']} ({resto['code_postal']})\n"
-        result += f"Téléphone : {resto['telephone']}\n"
-        result += f"Email : {resto['email']}\n\n"
-        
-        result += "HORAIRES :\n"
-        for jour, horaire in resto.get('horaires', {}).items():
-            result += f"  {jour.capitalize()} : {horaire}\n"
-        
-        result += f"\nServices : {', '.join(resto.get('services', []))}\n"
-        result += f"Spécialités : {', '.join(resto.get('specialites', []))}"
-        
-        return result
+        # Prendre le meilleur résultat
+        best_result = results[0]
+        return f"[RESTAURANT TROUVE]\n\n{best_result.get('content', 'Information non disponible')}"
     
     def get_menu(self) -> str:
         """Menu complet avec catégories"""
@@ -445,7 +429,12 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         restaurants = self.kb.get_all_restaurants()
         restaurants_info = []
         for resto in restaurants:
-            restaurants_info.append(f"  * {resto['ville']} ({resto['code_postal']}) - {resto['telephone']}")
+            # Extraire ville du nom "BOLKIRI {ville} Street Food Viêt"
+            name = resto.get('name', '')
+            ville = name.replace('BOLKIRI', '').replace('Street Food Viêt', '').strip()
+            telephone = resto.get('telephone', 'N/A')
+            adresse = resto.get('adresse', 'N/A')
+            restaurants_info.append(f"  * {ville} - {adresse} - Tel: {telephone}")
         restaurants_list = "\n".join(restaurants_info)
         
         system_prompt = f"""Vous êtes l'assistant support de BOLKIRI, expert en cuisine vietnamienne.
