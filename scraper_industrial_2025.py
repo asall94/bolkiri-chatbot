@@ -369,12 +369,9 @@ class BolkiriIndustrialScraper:
                 "adresse": adresse,
                 "horaires": horaires,
                 "statut": statut,
-                "url": url
+                "url": url,
+                "description": f"Restaurant {name}\nAdresse: {adresse}\nTéléphone: {telephone}\n\nPour réserver ou commander: <a href=\"{url}\" target=\"_blank\">Page du restaurant</a>"
             }
-            
-            # Ajouter l'URL au contenu texte du restaurant
-            if restaurant_data:
-                restaurant_data['description'] = f"Restaurant {name}\nAdresse: {adresse}\nTéléphone: {telephone}\n\nPour réserver ou en savoir plus: {url}"
             
             return restaurant_data
             
@@ -440,20 +437,32 @@ class BolkiriIndustrialScraper:
                     categorized_pages['menu'].append({
                         'url': url,
                         'title': f"Plat: {dish['nom']}",
-                        'content': f"{dish['nom']}\n{dish['description']}\nPrix: {dish['prix']}\nTags: {', '.join(dish['tags'])}\n\nPour commander ce plat: {url}\n\n{dish['raw_content']}",
+                        'content': f"{dish['nom']}\n{dish['description']}\nPrix: {dish['prix']}\nTags: {', '.join(dish['tags'])}\n\nPour commander ce plat, cliquez ici: <a href=\"{url}\" target=\"_blank\">Menu Bolkiri</a>\n\n{dish['raw_content']}",
                         'dish_data': dish
                     })
             elif '/fidelite/' in url or 'fidélité' in content['title'].lower():
-                content['content'] = f"{content['content']}\n\nPour en savoir plus sur le programme de fidélité: {url}"
+                content['content'] = f"{content['content']}\n\nPour en savoir plus: <a href=\"{url}\" target=\"_blank\">Programme de fidélité</a>"
                 categorized_pages['fidelite'].append(content)
             elif '/service-client/' in url or 'faq' in url.lower():
-                content['content'] = f"{content['content']}\n\nPour contacter le service client: {url}"
+                content['content'] = f"{content['content']}\n\nContactez-nous: <a href=\"{url}\" target=\"_blank\">Service client</a>"
                 categorized_pages['service_client'].append(content)
             elif '/notre-concept/' in url or '/nos-engagements/' in url:
-                content['content'] = f"{content['content']}\n\nPour découvrir notre concept: {url}"
+                content['content'] = f"{content['content']}\n\nDécouvrez-en plus: <a href=\"{url}\" target=\"_blank\">Notre concept</a>"
                 categorized_pages['concept'].append(content)
+            elif '/devenir-franchise/' in url:
+                content['content'] = f"{content['content']}\n\nRejoignez notre réseau: <a href=\"{url}\" target=\"_blank\">Devenir franchisé</a>"
+                categorized_pages['autres'].append(content)
+            elif '/nous-rejoindre/' in url:
+                content['content'] = f"{content['content']}\n\nPostulez maintenant: <a href=\"{url}\" target=\"_blank\">Nous rejoindre</a>"
+                categorized_pages['autres'].append(content)
+            elif '/service-traiteur/' in url:
+                content['content'] = f"{content['content']}\n\nDemandez un devis: <a href=\"{url}\" target=\"_blank\">Service traiteur</a>"
+                categorized_pages['autres'].append(content)
+            elif '/nos-restaurants/' in url:
+                content['content'] = f"{content['content']}\n\nTrouvez votre restaurant: <a href=\"{url}\" target=\"_blank\">Nos restaurants</a>"
+                categorized_pages['autres'].append(content)
             else:
-                content['content'] = f"{content['content']}\n\nPour plus d'informations: {url}"
+                content['content'] = f"{content['content']}\n\nPlus d'infos: <a href=\"{url}\" target=\"_blank\">En savoir plus</a>"
                 categorized_pages['autres'].append(content)
         
         data = {
