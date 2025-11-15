@@ -543,7 +543,7 @@ LANGUAGE DETECTION: Detect query language (French/English/Vietnamese) → Respon
 AGENT CAPABILITIES:
 - Tool calling: 8 available tools (search_knowledge, get_restaurants, get_menu, filter_menu, etc.)
 - Multi-step reasoning: query decomposition → planning → tool execution → synthesis
-- Conversational state: context memory (last 10 exchanges)
+- Conversational state: context memory (last 10 exchanges) - USE PREVIOUS CONTEXT FOR FOLLOW-UP QUERIES
 
 EXECUTION PIPELINE:
 1. Query analysis → Tool selection
@@ -551,6 +551,11 @@ EXECUTION PIPELINE:
 3. Multi-source context aggregation
 4. Context-based response generation
 5. Anti-hallucination validation (4 types: restaurants/schedules/prices/departments)
+
+CONVERSATIONAL RULES:
+- If user says "yes"/"oui"/"okay" after a question → Execute the action they confirmed
+- If previous message asked "would you like details?" and user says "yes" → Provide full details with tool execution
+- Track conversation flow: user confirmation = execute promised action
 
 RETRIEVED CONTEXT (RAG via tools)
 {context}
@@ -564,6 +569,7 @@ GENERATION RULES:
 AGENTIC EXAMPLES:
 Query "menu végé restaurant 91" → Tool 1: filter_menu(végétarien=True) + Tool 2: get_restaurant_info("91")
 Query "do you have nems?" → English response + include HTML links from context
+Query "yes" after asking "would you like details?" → Execute filter_menu or get_menu to list specific dishes
 
 STYLE: First person plural, concise, LANGUAGE = detected query language.
 """
@@ -599,6 +605,15 @@ STYLE: First person plural, concise, LANGUAGE = detected query language.
             except Exception as e:
                 print(f"[ERROR] Erreur validation: {e}")
                 # En cas d'erreur validation, garder la réponse originale
+            
+            # POST-PROCESSING: Strip markdown syntax (bold, italic, underline)
+            import re
+            # Remove **bold**, __bold__
+            assistant_message = re.sub(r'\*\*([^*]+)\*\*', r'\1', assistant_message)
+            assistant_message = re.sub(r'__([^_]+)__', r'\1', assistant_message)
+            # Remove *italic*, _italic_
+            assistant_message = re.sub(r'(?<!\*)\*(?!\*)([^*]+)(?<!\*)\*(?!\*)', r'\1', assistant_message)
+            assistant_message = re.sub(r'(?<!_)_(?!_)([^_]+)(?<!_)_(?!_)', r'\1', assistant_message)
             
             self.conversation_memory.append({
                 "role": "assistant",
