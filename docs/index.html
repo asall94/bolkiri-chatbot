@@ -44,21 +44,27 @@
             <h2>About This Demo</h2>
             <p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Production-ready agentic AI system built with RAG architecture, tool calling, and hallucination prevention.</p>
             <div class="demo-note"><strong>Tech Stack:</strong> FastAPI + OpenAI GPT-4o-mini + FAISS + 8 agentic tools. Deployed on Render.com with auto-scaling.</div>
-            <h3>Agentic Capabilities</h3>
+            <h3>Agentic AI System</h3>
             <ul>
-                <li>Multi-step reasoning & planning</li>
-                <li>8 specialized tools (search, filter, recommend)</li>
-                <li>Context aggregation from multiple sources</li>
-                <li>4-type hallucination validator</li>
-                <li>Semantic search via FAISS (20 restaurants, 32 menu items)</li>
+                <li><strong>Tool Calling:</strong> 8 specialized tools (search, filter, recommend, hours, contact...)</li>
+                <li><strong>Multi-step Planning:</strong> Decomposes complex queries → executes tools in parallel</li>
+                <li><strong>Context Aggregation:</strong> Combines results from multiple tool executions</li>
+                <li><strong>Conversational Memory:</strong> Tracks last 10 exchanges for follow-up questions</li>
+                <li><strong>Auto-Validation:</strong> 4-type hallucination prevention (restaurants/schedules/prices/departments)</li>
             </ul>
-            <h3>Key Features</h3>
+            <h3>RAG Architecture</h3>
             <ul>
-                <li>100% RAG architecture (zero hardcoded data)</li>
-                <li>Multilingual (French/Vietnamese/English)</li>
-                <li>Real-time responses (&lt;500ms)</li>
-                <li>Weekly auto-refresh (GitHub Actions)</li>
-                <li>Production validation pipeline</li>
+                <li><strong>FAISS Semantic Search:</strong> Vector similarity on 20 restaurants + 32 menu items</li>
+                <li><strong>Zero Hardcoded Data:</strong> Single source of truth (knowledge base)</li>
+                <li><strong>Weekly Auto-Refresh:</strong> GitHub Actions scrapes website + rebuilds embeddings</li>
+                <li><strong>Real-time Responses:</strong> &lt;500ms end-to-end (embedding + retrieval + LLM)</li>
+            </ul>
+            <h3>Production Features</h3>
+            <ul>
+                <li><strong>Multilingual:</strong> Auto-detects French/Vietnamese/English</li>
+                <li><strong>Clickable Links:</strong> Preserved HTML from scraped content</li>
+                <li><strong>Markdown-Free:</strong> Plain text responses (no formatting artifacts)</li>
+                <li><strong>Deployment:</strong> Render.com auto-scaling, production-grade</li>
             </ul>
             <h3>Try These Queries (French or Any language)</h3>
             <ul>
