@@ -306,7 +306,13 @@
             
             const contentDiv = document.createElement('div');
             contentDiv.className = 'message-content';
-            contentDiv.textContent = content;
+            
+            // Support HTML links in bot responses
+            if (isUser) {
+                contentDiv.textContent = content;
+            } else {
+                contentDiv.innerHTML = content;
+            }
             
             messageDiv.appendChild(contentDiv);
             chatMessages.appendChild(messageDiv);
