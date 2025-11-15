@@ -559,7 +559,7 @@ GENERATION RULES:
 - Context = absolute truth (never contradict)
 - Schedules: exact format (11:30-14:30)
 - LINKS: If context contains <a href="URL">text</a> → COPY EXACTLY (keep HTML tags)
-- FORMAT: Plain text WITHOUT markdown (**bold**, *italic* forbidden)
+- FORMAT: Plain text ONLY. NEVER use markdown syntax (**bold**, *italic*, __underline__). Write text directly without any formatting markers.
 
 AGENTIC EXAMPLES:
 Query "menu végé restaurant 91" → Tool 1: filter_menu(végétarien=True) + Tool 2: get_restaurant_info("91")
