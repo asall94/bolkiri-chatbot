@@ -1,76 +1,98 @@
-# Bolkiri Chatbot
+# Bolkiri Chatbot - AI-Powered Customer Support
 
-Assistant IA pour le restaurant Bolkiri, spécialisé en cuisine vietnamienne.
+Production-ready AI assistant for Bolkiri Vietnamese restaurant chain, built with RAG architecture and agentic AI patterns.
 
-## Architecture
+## Tech Stack
 
-Bolkiri Chatbot est une application composée des éléments suivants :
+- **Backend**: FastAPI (Python 3.12)
+- **AI**: OpenAI GPT-4o-mini + FAISS semantic search
+- **RAG**: Custom retrieval-augmented generation pipeline
+- **KB**: Automated web scraping (BeautifulSoup, JSON-LD Schema.org)
+- **Deployment**: Render.com with auto-scaling
+- **CI/CD**: GitHub Actions (weekly KB updates)
 
-- **Backend** : FastAPI (Python)
-- **Frontend** : Widget React
-- **AI** : OpenAI GPT-4
-- **Base de données** : ChromaDB pour la gestion des connaissances
-- **Déploiement** : Render.com
+## Key Features
 
-## Fonctionnalités
+- **100% RAG/Agentic Architecture**: Zero hardcoded data, single source of truth
+- **Multilingual Support**: Auto-detects French/Vietnamese/English
+- **Hallucination Prevention**: Built-in response validator (4 validation types)
+- **Semantic Search**: FAISS vector similarity for context retrieval
+- **Auto-Refresh KB**: Weekly scraping + embeddings rebuild
+- **Production Scale**: 20 restaurants, 32 menu items, 19 pages indexed
 
-- Support client 24/7
-- Informations sur le menu et recommandations
-- Gestion des horaires et localisations des restaurants
-- Gestion des réservations
-- Informations sur les allergènes 
-- Base de connaissances enrichie et mise à jour dynamique
+## Quick Start
 
-## Installation Locale
+### Live Demo
+
+**[Try the chatbot here →](https://asall94.github.io/bolkiri-chatbot/)**
 
 ### Backend
 
-1. Installer les dépendances :
-   ```bash
-   pip install -r requirements.txt
-   ```
-2. Créer un fichier `.env` avec les variables suivantes :
-   ```
-   OPENAI_API_KEY=votre_clé_api
-   WEBSITE_URL=https://bolkiri.fr
-   ```
-3. Démarrer le serveur backend :
-   ```bash
-   python main.py
-   ```
+```bash
+pip install -r requirements.txt
+echo "OPENAI_API_KEY=your_key" > .env
+python main.py
+```
 
 ### Frontend
 
-1. Naviguer dans le dossier `frontend` :
-   ```bash
-   cd frontend
-   ```
-2. Installer les dépendances :
-   ```bash
-   npm install
-   ```
-3. Démarrer le serveur frontend :
-   ```bash
-   npm start
-   ```
+```bash
+cd frontend
+npm install && npm start
+```
 
-## Déploiement
+## Architecture Highlights
 
-Le projet est configuré pour un déploiement sur Render.com. Consultez `docs/DEPLOYMENT.md` pour des instructions détaillées.
+**RAG Flow:**
+```
+User Query → Semantic Search (FAISS) → Context Retrieval → LLM → Validated Response
+```
 
-## Configuration
+**Key Components:**
+- `ai_agent.py`: Agentic AI with tool calling + validation
+- `rag_engine.py`: FAISS semantic search engine
+- `scraper_industrial_2025.py`: JSON-LD + HTML parser
+- `knowledge_base_enriched.py`: RAG wrapper with domain methods
 
-### Variables d'environnement
+**Hallucination Prevention:**
+- Restaurant existence validation
+- Schedule accuracy checks (regex-based)
+- Price consistency verification
+- Department/city coherence
 
-- `OPENAI_API_KEY` : Clé API OpenAI (obligatoire)
-- `WEBSITE_URL` : URL du site à scraper (par défaut : https://bolkiri.fr)
+## Deployment
 
-## Scripts Utiles
+Configured for Render.com with:
+- Python 3.12 runtime
+- Auto-rebuild embeddings on deploy
+- Weekly scraping via GitHub Actions (Thursday 2am)
 
-- `start_backend.bat` : Démarre le serveur backend
-- `deploy_all.bat` : Script pour déployer l'application complète
-- `regenerate_kb.bat` : Met à jour la base de connaissances
+See `DEPLOYMENT.md` for complete guide.
 
-## Support
+## Documentation
 
-Pour toute question ou problème, consultez la documentation dans le dossier `docs/`.
+- **[ARCHITECTURE.md](ARCHITECTURE.md)**: RAG system design, data flow, performance metrics
+- **[DEPLOYMENT.md](DEPLOYMENT.md)**: Production deployment guide for Render.com
+- **[.github/copilot-instructions.md](.github/copilot-instructions.md)**: AI agent development guidelines
+
+
+## Author & Copyright
+
+**Developer:** Abdoulaye SALL  
+**LinkedIn:** [linkedin.com/in/abdoulaye-sall](https://www.linkedin.com/in/abdoulaye-sall/)  
+**Year:** 2025
+
+**Skills Demonstrated:**
+- RAG (Retrieval-Augmented Generation) architecture
+- Agentic AI systems with tool calling
+- Production FastAPI deployment
+- FAISS semantic search optimization
+- OpenAI GPT-4 integration
+- Web scraping (JSON-LD Schema.org)
+- Hallucination detection & prevention
+
+**License:** All rights reserved. Portfolio demonstration.
+
+**Client:** Bolkiri - Vietnamese Street Food Restaurant Chain  
+**Website:** [bolkiri.fr](https://bolkiri.fr)
+

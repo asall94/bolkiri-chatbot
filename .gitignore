@@ -26,8 +26,5 @@ Thumbs.db
 # Logs
 *.log
 
-# Copilot
-copilot-instructions.md
-
-# Ne PAS ignorer le cache embeddings (optimisation Render)
-# !embeddings_cache.pkl
+# Cache local
+embeddings_cache.pkl
