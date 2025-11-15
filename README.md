@@ -111,7 +111,7 @@ See `DEPLOYMENT.md` for complete guide.
 - Web scraping (JSON-LD Schema.org)
 - Hallucination detection & prevention
 
-**License:** All rights reserved. Portfolio demonstration.
+**License:** Proprietary - See [LICENSE](LICENSE) for details.
 
 **Client:** Bolkiri - Vietnamese Street Food Restaurant Chain  
 **Website:** [bolkiri.fr](https://bolkiri.fr)
