@@ -1,9 +1,9 @@
 ﻿<!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bolkiri AI Assistant</title>
+    <title>Bolkiri AI Assistant - Live Demo</title>
     <link rel="icon" type="image/png" href="./logo_bolkiri.png">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -12,7 +12,7 @@
         .logo { width: 80px; height: 80px; border-radius: 50%; margin-bottom: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
         .header h1 { color: #333; font-size: 28px; margin-bottom: 5px; }
         .header p { color: #666; font-size: 14px; }
-        .badge { display: inline-block; background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%); color: #333; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-top: 10px; }
+        .badge { display: inline-block; background: linear-gradient(135deg, #FFC107 0%, #FF9800 100%); color: #333; padding: 5px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-top: 10px; margin-right: 8px; }
         .secure-badge { display: inline-flex; align-items: center; gap: 5px; background: #28a745; color: white; padding: 5px 12px; border-radius: 15px; font-size: 12px; margin-top: 10px; }
         .container { flex: 1; display: flex; padding: 20px; gap: 20px; max-width: 1400px; width: 100%; margin: 0 auto; }
         .info-panel { flex: 0 0 350px; background: rgba(255, 255, 255, 0.95); border-radius: 15px; padding: 25px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); overflow-y: auto; }
@@ -20,8 +20,8 @@
         .info-panel h3 { color: #555; font-size: 16px; margin: 20px 0 10px 0; }
         .info-panel ul { list-style: none; padding: 0; }
         .info-panel li { color: #666; padding: 8px 0; padding-left: 20px; position: relative; font-size: 14px; line-height: 1.5; }
-        .info-panel li:before { content: ""; position: absolute; left: 0; color: #FFC107; font-weight: bold; }
-        .demo-note { background: #fff3cd; border-left: 4px solid #FFC107; padding: 12px; margin: 15px 0; border-radius: 5px; font-size: 13px; color: #856404; }
+        .info-panel li:before { content: "▸"; position: absolute; left: 0; color: #FFC107; font-weight: bold; }
+        .demo-note { background: #e7f3ff; border-left: 4px solid #2196F3; padding: 12px; margin: 15px 0; border-radius: 5px; font-size: 13px; color: #1565C0; }
         .chat-container { flex: 1; background: white; border-radius: 20px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); overflow: hidden; display: flex; flex-direction: column; }
         iframe { width: 100%; height: 100%; border: none; }
         .loading { display: flex; align-items: center; justify-content: center; height: 100%; font-size: 18px; color: #666; }
@@ -33,47 +33,49 @@
 </head>
 <body>
     <div class="header">
-        <h1>Bolkiri AI Assistant</h1>
-        <p>Assistant virtuel intelligent pour la restauration vietnamienne</p>
-        <span class="badge">Démo Intéractive</span>
-        <span class="secure-badge">Sécurisé SSL</span>
+        <h1>Bolkiri Agentic AI Assistant</h1>
+        <p>RAG-powered intelligent chatbot for Vietnamese restaurant chain</p>
+        <span class="badge">Live Demo</span>
+        <span class="badge">Agentic AI</span>
+        <span class="secure-badge">Production-Ready</span>
     </div>
     <div class="container">
         <div class="info-panel">
-            <h2>Démo</h2>
-            <p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Découvrez notre assistant IA capable de répondre à toutes vos questions sur Bolkiri.</p>
-            <div class="demo-note"><strong>Note :</strong> Démonstration hébergée sur plateforme cloud sécurisée. Déploiement final intégré directement sur bolkiri.fr.</div>
-            <h3>Pourquoi cet assistant</h3>
+            <h2>About This Demo</h2>
+            <p style="color: #666; font-size: 14px; line-height: 1.6; margin-bottom: 15px;">Production-ready agentic AI system built with RAG architecture, tool calling, and hallucination prevention.</p>
+            <div class="demo-note"><strong>Tech Stack:</strong> FastAPI + OpenAI GPT-4o-mini + FAISS + 8 agentic tools. Deployed on Render.com with auto-scaling.</div>
+            <h3>Agentic Capabilities</h3>
             <ul>
-                <li>Accueillez vos clients 24/7</li>
-                <li>Transformez vos visiteurs en clients informés</li>
-                <li>Libérez vos équipes des questions répétitives</li>
-                <li>Guidez vos clients vers leur plat parfait</li>
-                <li>Expérience mémorable avant visite</li>
-                <li>Boostez vos réservations sans effort</li>
+                <li>Multi-step reasoning & planning</li>
+                <li>8 specialized tools (search, filter, recommend)</li>
+                <li>Context aggregation from multiple sources</li>
+                <li>4-type hallucination validator</li>
+                <li>Semantic search via FAISS (20 restaurants, 32 menu items)</li>
             </ul>
-            <h3>Fonctionnalités</h3>
+            <h3>Key Features</h3>
             <ul>
-                <li>Connaissance de tous les restaurants</li>
-                <li>Menus complets 30+ plats</li>
-                <li>Horaires et contacts</li>
-                <li>Recommandations personnalisées</li>
-                <li>Réponses en temps réel</li>
-                <li>Ton chaleureux professionnel</li>
+                <li>100% RAG architecture (zero hardcoded data)</li>
+                <li>Multilingual (French/Vietnamese/English)</li>
+                <li>Real-time responses (&lt;500ms)</li>
+                <li>Weekly auto-refresh (GitHub Actions)</li>
+                <li>Production validation pipeline</li>
             </ul>
-            <h3>Exemples de questions pour tester</h3>
+            <h3>Try These Queries (French)</h3>
             <ul>
                 <li>"Quels sont vos horaires ?"</li>
-                <li>"Où êtes-vous situés ?"</li>
-                <li>"Qu'est-ce que le Pho ?"</li>
-                <li>"Plats végétariens ?"</li>
-                <li>"Réserver à Corbeil"</li>
+                <li>"Où êtes-vous situés dans le 91 ?"</li>
+                <li>"Avez-vous des plats végétariens ?"</li>
+                <li>"Qu'est-ce que le Phở ?"</li>
+                <li>"Recommandez-moi un plat épicé"</li>
             </ul>
         </div>
         <div class="chat-container">
-            <div class="loading" id="loading">Chargement assistant...</div>
+            <div class="loading" id="loading">Loading AI assistant...</div>
             <iframe src="https://bolkiri-chatbot.onrender.com/" id="chatframe" onload="document.getElementById('loading').style.display='none';" title="Bolkiri AI Assistant" allowfullscreen></iframe>
         </div>
+    </div>
+    <div class="footer">
+        <p>Built by <a href="https://www.linkedin.com/in/abdoulaye-sall/" target="_blank">Abdoulaye SALL</a> | <a href="https://github.com/asall94/bolkiri-chatbot" target="_blank">View Source on GitHub</a> | Portfolio Project 2025</p>
     </div>
 </body>
 </html>

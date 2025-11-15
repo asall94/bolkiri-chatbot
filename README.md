@@ -1,21 +1,22 @@
-# Bolkiri Chatbot - AI-Powered Customer Support
+# Bolkiri Chatbot - Agentic AI Assistant
 
-Production-ready AI assistant for Bolkiri Vietnamese restaurant chain, built with RAG architecture and agentic AI patterns.
+Production-ready **agentic AI system** for Bolkiri Vietnamese restaurant chain. Built with RAG architecture, tool calling, and multi-step reasoning.
 
 ## Tech Stack
 
 - **Backend**: FastAPI (Python 3.12)
-- **AI**: OpenAI GPT-4o-mini + FAISS semantic search
-- **RAG**: Custom retrieval-augmented generation pipeline
+- **AI**: OpenAI GPT-4o-mini + **Agentic tool calling** (8 tools)
+- **RAG**: FAISS semantic search + custom retrieval pipeline
 - **KB**: Automated web scraping (BeautifulSoup, JSON-LD Schema.org)
 - **Deployment**: Render.com with auto-scaling
 - **CI/CD**: GitHub Actions (weekly KB updates)
 
 ## Key Features
 
-- **100% RAG/Agentic Architecture**: Zero hardcoded data, single source of truth
-- **Multilingual Support**: Auto-detects French/Vietnamese/English
-- **Hallucination Prevention**: Built-in response validator (4 validation types)
+- **Agentic AI**: Multi-step reasoning, tool calling, context planning
+- **100% RAG Architecture**: Zero hardcoded data, single source of truth
+- **Hallucination Prevention**: 4-type validator (restaurants/schedules/prices/departments)
+- **Multilingual**: Auto-detects French/Vietnamese/English (responses match query language)
 - **Semantic Search**: FAISS vector similarity for context retrieval
 - **Auto-Refresh KB**: Weekly scraping + embeddings rebuild
 - **Production Scale**: 20 restaurants, 32 menu items, 19 pages indexed
@@ -43,13 +44,23 @@ npm install && npm start
 
 ## Architecture Highlights
 
-**RAG Flow:**
+**Agentic Pipeline:**
 ```
-User Query → Semantic Search (FAISS) → Context Retrieval → LLM → Validated Response
+User Query → Tool Planning → Multi-tool Execution → Context Aggregation → LLM → Validation → Response
 ```
 
+**8 Available Tools:**
+- `search_knowledge`: RAG semantic search
+- `get_restaurants`: List all 20 locations
+- `get_restaurant_info`: Query by city/department
+- `get_menu`: Full menu retrieval
+- `filter_menu`: Criteria-based filtering
+- `get_contact`: Contact information
+- `get_hours`: Opening schedules
+- `recommend_dish`: Personalized suggestions
+
 **Key Components:**
-- `ai_agent.py`: Agentic AI with tool calling + validation
+- `ai_agent.py`: **Agentic core** (tool calling, planning, validation)
 - `rag_engine.py`: FAISS semantic search engine
 - `scraper_industrial_2025.py`: JSON-LD + HTML parser
 - `knowledge_base_enriched.py`: RAG wrapper with domain methods
@@ -65,7 +76,7 @@ User Query → Semantic Search (FAISS) → Context Retrieval → LLM → Validat
 Configured for Render.com with:
 - Python 3.12 runtime
 - Auto-rebuild embeddings on deploy
-- Weekly scraping via GitHub Actions (Thursday 2am)
+- Weekly scraping via GitHub Actions (Every Thursday at 2am)
 
 See `DEPLOYMENT.md` for complete guide.
 
@@ -74,6 +85,15 @@ See `DEPLOYMENT.md` for complete guide.
 - **[ARCHITECTURE.md](ARCHITECTURE.md)**: RAG system design, data flow, performance metrics
 - **[DEPLOYMENT.md](DEPLOYMENT.md)**: Production deployment guide for Render.com
 - **[.github/copilot-instructions.md](.github/copilot-instructions.md)**: AI agent development guidelines
+
+## Language Notes
+
+**Code & Docs:** 
+- English (industry standard, portfolio-ready)
+- Chatbot responds in user's language (French/Vietnamese/English auto-detected)
+
+**French Elements** (client-specific for bolkiri.fr):
+- Knowledge base content in `bolkiri_knowledge_industrial_2025.json` (scraped from French website)
 
 
 ## Author & Copyright
