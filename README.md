@@ -9,7 +9,7 @@ Production-ready **agentic AI system** for Bolkiri Vietnamese restaurant chain. 
 - **RAG**: FAISS semantic search + custom retrieval pipeline
 - **KB**: Automated web scraping (BeautifulSoup, JSON-LD Schema.org)
 - **Deployment**: Render.com with auto-scaling
-- **CI/CD**: GitHub Actions (weekly KB updates)
+- **CI/CD**: Automated pipeline (weekly KB updates)
 
 ## Key Features
 
@@ -76,7 +76,7 @@ User Query → Tool Planning → Multi-tool Execution → Context Aggregation �
 Configured for Render.com with:
 - Python 3.12 runtime
 - Auto-rebuild embeddings on deploy
-- Weekly scraping via GitHub Actions (Every Thursday at 2am)
+- Weekly scraping via automated CI/CD (Every Thursday at 2am)
 
 See `DEPLOYMENT.md` for complete guide.
 
@@ -108,6 +108,7 @@ See `DEPLOYMENT.md` for complete guide.
 - Production FastAPI deployment
 - FAISS semantic search optimization
 - OpenAI GPT-4 integration
+- Automated CI/CD pipelines
 - Web scraping (JSON-LD Schema.org)
 - Hallucination detection & prevention
 
@@ -115,5 +116,4 @@ See `DEPLOYMENT.md` for complete guide.
 
 **Business Context:** Bolkiri - Vietnamese Street Food Restaurant Chain  
 **Website:** [bolkiri.fr](https://bolkiri.fr)
-
- 
+  
