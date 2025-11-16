@@ -28,3 +28,6 @@ Thumbs.db
 
 # Cache local
 embeddings_cache.pkl
+
+# Internal docs
+.github/copilot-instructions.md
