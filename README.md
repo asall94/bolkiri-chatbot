@@ -92,7 +92,7 @@ See `DEPLOYMENT.md` for complete guide.
 - English (industry standard, portfolio-ready)
 - Chatbot responds in user's language (French/Vietnamese/English auto-detected)
 
-**French Elements** (client-specific for bolkiri.fr):
+**French Elements** (business context - bolkiri.fr):
 - Knowledge base content in `bolkiri_knowledge_industrial_2025.json` (scraped from French website)
 
 
@@ -113,6 +113,6 @@ See `DEPLOYMENT.md` for complete guide.
 
 **License:** Proprietary - See [LICENSE](LICENSE) for details.
 
-**Client:** Bolkiri - Vietnamese Street Food Restaurant Chain  
+**Business Context:** Bolkiri - Vietnamese Street Food Restaurant Chain  
 **Website:** [bolkiri.fr](https://bolkiri.fr)
 
