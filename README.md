@@ -108,7 +108,7 @@ See `DEPLOYMENT.md` for complete guide.
 - Production FastAPI deployment
 - FAISS semantic search optimization
 - OpenAI GPT-4 integration
-- Automated CI/CD pipelines
+- Automated CI/CD pipelines 
 - Web scraping (JSON-LD Schema.org)
 - Hallucination detection & prevention
 
