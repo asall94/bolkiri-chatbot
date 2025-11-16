@@ -84,7 +84,6 @@ See `DEPLOYMENT.md` for complete guide.
 
 - **[ARCHITECTURE.md](ARCHITECTURE.md)**: RAG system design, data flow, performance metrics
 - **[DEPLOYMENT.md](DEPLOYMENT.md)**: Production deployment guide for Render.com
-- **[.github/copilot-instructions.md](.github/copilot-instructions.md)**: AI agent development guidelines
 
 ## Language Notes
 

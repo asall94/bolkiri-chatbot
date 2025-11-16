@@ -28,7 +28,7 @@ Technical documentation for Bolkiri Chatbot's Retrieval-Augmented Generation sys
                            ▼
 ┌─────────────────────────────────────────────────────────────────┐
 │                LLM Generation (GPT-4o-mini)                      │
-│  - System prompt: French language expert                         │
+│  - System prompt: Multilingual agentic AI expert                 │
 │  - Context injection (retrieved docs)                            │
 │  - Temperature: 0.1 (deterministic)                              │
 │  - Max tokens: 500                                               │
@@ -60,7 +60,7 @@ Technical documentation for Bolkiri Chatbot's Retrieval-Augmented Generation sys
   "total_restaurants": 20,
   "restaurants": [...],
   "pages_par_categorie": {
-    "menu": [31 items],
+    "menu": [32 items],
     "fidelite": [1 page],
     "service_client": [1 page],
     "concept": [2 pages],
@@ -268,4 +268,4 @@ Return validated response with clickable menu link
 2. **Reranking:** Add cross-encoder for better top-k
 3. **Streaming:** Implement SSE for incremental responses
 4. **A/B Testing:** Track validation accuracy metrics
-5. **Multilingual Embeddings:** Use `multilingual-e5` for better Vietnamese support
+5. **Caching Layer:** Redis for frequently asked questions
