@@ -17,7 +17,7 @@
         .container { flex: 1; display: flex; padding: 20px; gap: 20px; max-width: 1400px; width: 100%; margin: 0 auto; }
         .info-panel { flex: 0 0 350px; background: rgba(255, 255, 255, 0.95); border-radius: 15px; padding: 25px; box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); overflow-y: auto; }
         .info-panel h2 { color: #333; font-size: 20px; margin-bottom: 15px; padding-bottom: 10px; border-bottom: 2px solid #FFC107; }
-        .info-panel h3 { color: #555; font-size: 16px; margin: 20px 0 10px 0; }
+        .info-panel h3 { color: #555; font-size: 16px; margin: 20px 0 10px 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         .info-panel ul { list-style: none; padding: 0; }
         .info-panel li { color: #666; padding: 8px 0; padding-left: 20px; position: relative; font-size: 14px; line-height: 1.5; }
         .info-panel li:before { content: "▸"; position: absolute; left: 0; color: #FFC107; font-weight: bold; }
@@ -61,7 +61,7 @@
             </ul>
             <h3>Production Features</h3>
             <ul>
-                <li><strong>Multilingual:</strong> Auto-detects French/Vietnamese/English</li>
+                <li><strong>Multilingual:</strong> Auto-detects and responds in query language</li>
                 <li><strong>Clickable Links:</strong> Preserved HTML from scraped content</li>
                 <li><strong>Markdown-Free:</strong> Plain text responses (no formatting artifacts)</li>
                 <li><strong>Deployment:</strong> Render.com auto-scaling, production-grade</li>

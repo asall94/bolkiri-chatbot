@@ -16,7 +16,7 @@ Production-ready **agentic AI system** for Bolkiri Vietnamese restaurant chain. 
 - **Agentic AI**: Multi-step reasoning, tool calling, context planning
 - **100% RAG Architecture**: Zero hardcoded data, single source of truth
 - **Hallucination Prevention**: 4-type validator (restaurants/schedules/prices/departments)
-- **Multilingual**: Auto-detects French/Vietnamese/English (responses match query language)
+- **Multilingual**: Auto-detects and responds in query language
 - **Semantic Search**: FAISS vector similarity for context retrieval
 - **Auto-Refresh KB**: Weekly scraping + embeddings rebuild
 - **Production Scale**: 20 restaurants, 32 menu items, 19 pages indexed
@@ -90,7 +90,7 @@ See `DEPLOYMENT.md` for complete guide.
 
 **Code & Docs:** 
 - English (industry standard, portfolio-ready)
-- Chatbot responds in user's language (French/Vietnamese/English auto-detected)
+- Chatbot responds in user's language (French/Vietnamese/English/Others auto-detected)
 
 **French Elements** (business context - bolkiri.fr):
 - Knowledge base content in `bolkiri_knowledge_industrial_2025.json` (scraped from French website)
@@ -116,4 +116,3 @@ See `DEPLOYMENT.md` for complete guide.
 
 **Business Context:** Bolkiri - Vietnamese Street Food Restaurant Chain  
 **Website:** [bolkiri.fr](https://bolkiri.fr)
-  

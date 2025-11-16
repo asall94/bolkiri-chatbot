@@ -538,7 +538,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         
         system_prompt = f"""Bolkiri Agentic AI Agent - RAG Architecture
 
-LANGUAGE DETECTION: Detect query language (French/English/Vietnamese) → Respond in SAME language.
+LANGUAGE DETECTION: Detect query language → Respond in SAME language (French/English/Vietnamese/Spanish/any language).
 
 AGENT CAPABILITIES:
 - Tool calling: 8 available tools (search_knowledge, get_restaurants, get_menu, filter_menu, etc.)
