@@ -98,7 +98,7 @@ See `DEPLOYMENT.md` for complete guide.
 
 ## Author & Copyright
 
-**Developer:** Abdoulaye SALL  
+**AI Engineer:** Abdoulaye SALL  
 **LinkedIn:** [linkedin.com/in/abdoulaye-sall](https://www.linkedin.com/in/abdoulaye-sall/)  
 **Year:** 2025
 
@@ -116,3 +116,4 @@ See `DEPLOYMENT.md` for complete guide.
 **Business Context:** Bolkiri - Vietnamese Street Food Restaurant Chain  
 **Website:** [bolkiri.fr](https://bolkiri.fr)
 
+ 
