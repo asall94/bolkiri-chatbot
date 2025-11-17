@@ -7,25 +7,25 @@ from datetime import datetime
 from rag_engine import RAGEngine
 
 class EnrichedKnowledgeBase:
-    """Base de connaissances enrichie pour TOUS les restaurants Bolkiri"""
+    """Enriched knowledge base for ALL Bolkiri restaurants"""
     
     def __init__(self):
         self.complete_file = "bolkiri_knowledge_industrial_2025.json"
         self.fallback_dir = "./data"
         self.data = self._load_complete_knowledge()
         
-        # Adapter la nouvelle structure
+        # Adapt new structure
         self.restaurants = self.data.get('restaurants', [])
         self.menu_complet = self._extract_menu_from_pages()
         self.infos_generales = self.data.get('informations_generales', {})
         
-        # Pour compatibilité avec l'ancien système
+        # For compatibility with old system
         self.documents = self._create_documents_from_pages()
         self.menu_items = self.menu_complet
         
-        # Initialiser RAG Engine (OBLIGATOIRE)
+        # Initialize RAG Engine (MANDATORY)
         print("Initialisation RAG Engine...")
-        # force_rebuild depuis variable env (défaut: True en production)
+        # force_rebuild from env variable (default: True in production)
         force_rebuild = os.getenv('REBUILD_EMBEDDINGS', 'true').lower() == 'true'
         self.rag_engine = RAGEngine(self.complete_file, force_rebuild=force_rebuild)
         print("RAG Engine active - Recherche semantique disponible")
@@ -33,15 +33,15 @@ class EnrichedKnowledgeBase:
         print(f"Base enrichie chargee: {len(self.restaurants)} restos, {len(self.menu_complet)} items menu")
     
     def _extract_menu_from_pages(self) -> List[Dict]:
-        """Extrait le menu depuis les pages scrapées"""
+        """Extract menu from scraped pages"""
         menu = []
         pages_categorie = self.data.get('pages_par_categorie', {})
         
-        # Chercher dans les pages menu
+        # Search in menu pages
         for page in pages_categorie.get('menu', []):
             content = page.get('content', '')
-            # Parser le contenu pour extraire les plats
-            # Pour l'instant, retourner une structure basique
+            # Parse content to extract dishes
+            # For now, return basic structure
             if content:
                 menu.append({
                     'nom': 'Menu Bolkiri',
@@ -52,11 +52,11 @@ class EnrichedKnowledgeBase:
         return menu if menu else []
     
     def _create_documents_from_pages(self) -> List[Dict]:
-        """Crée des documents depuis toutes les pages scrapées"""
+        """Create documents from all scraped pages"""
         documents = []
         pages_categorie = self.data.get('pages_par_categorie', {})
         
-        # Convertir toutes les pages en documents
+        # Convert all pages to documents
         for category, pages in pages_categorie.items():
             for page in pages:
                 if page.get('content'):
@@ -70,7 +70,7 @@ class EnrichedKnowledgeBase:
         return documents
     
     def _load_complete_knowledge(self) -> Dict:
-        """Charge la base de connaissances complète"""
+        """Load complete knowledge base"""
         if os.path.exists(self.complete_file):
             try:
                 with open(self.complete_file, 'r', encoding='utf-8') as f:
@@ -78,11 +78,11 @@ class EnrichedKnowledgeBase:
             except Exception as e:
                 print(f"Erreur chargement base complete: {e}")
         
-        # Fallback ancien système
+        # Old system fallback
         return self._load_old_format()
     
     def _load_old_format(self) -> Dict:
-        """Charge l'ancien format pour compatibilité"""
+        """Load old format for compatibility"""
         data = {'restaurants': [], 'menu_complet': [], 'infos_generales': {}}
         
         docs_file = os.path.join(self.fallback_dir, "documents.json")
@@ -99,10 +99,10 @@ class EnrichedKnowledgeBase:
         return data
     
     def search(self, query: str, limit: int = 5) -> List[Dict]:
-        """Recherche sémantique avec RAG (obligatoire)"""
+        """Semantic search with RAG (mandatory)"""
         results = self.rag_engine.search(query, top_k=limit)
         
-        # Formater pour compatibilité avec l'ancien format
+        # Format for compatibility with old format
         formatted_results = []
         for result in results:
             formatted_results.append({
@@ -116,20 +116,20 @@ class EnrichedKnowledgeBase:
         return formatted_results
     
     def get_all_restaurants(self) -> List[Dict]:
-        """Retourne tous les restaurants"""
+        """Return all restaurants"""
         return self.restaurants
     
     def _extract_ville_from_name(self, name: str) -> str:
-        """Extrait la ville depuis le nom 'BOLKIRI Ville Street Food Viêt'"""
-        # Retirer 'BOLKIRI' et 'Street Food Viêt'
+        """Extract city from name 'BOLKIRI City Street Food Viêt'"""
+        # Remove 'BOLKIRI' and 'Street Food Viêt'
         ville = name.replace('BOLKIRI', '').replace('Street Food Viêt', '').strip()
         return ville
     
     def get_restaurant_by_ville(self, ville: str) -> Optional[Dict]:
-        """Trouve un restaurant par ville, département ou code postal"""
-        # Mapping département → ville (version normalisée)
+        """Find restaurant by city, department or postal code"""
+        # Department → city mapping (normalized version)
         dept_mapping = {
-            "91": "corbeil",  # Simplifié pour match partiel
+            "91": "corbeil",  # Simplified for partial match
             "essonne": "corbeil",
             "94": "ivry",
             "val-de-marne": "ivry",
@@ -141,11 +141,11 @@ class EnrichedKnowledgeBase:
         
         ville_search = ville.lower().strip()
         
-        # Chercher par mapping département
+        # Search by department mapping
         if ville_search in dept_mapping:
             ville_search = dept_mapping[ville_search]
         
-        # Chercher par code postal (91xxx → corbeil)
+        # Search by postal code (91xxx → corbeil)
         if ville_search.startswith("91"):
             ville_search = "corbeil"
         elif ville_search.startswith("94"):
@@ -155,14 +155,14 @@ class EnrichedKnowledgeBase:
         elif ville_search.startswith("77"):
             ville_search = "lagny"
         
-        # Chercher le restaurant (match partiel plus permissif)
+        # Search restaurant (more permissive partial match)
         ville_lower = ville_search.lower()
         for resto in self.restaurants:
-            # Extraire ville du nom
+            # Extract city from name
             resto_ville = self._extract_ville_from_name(resto.get('name', '')).lower()
             resto_adresse = resto.get('adresse', '').lower()
             
-            # Match partiel sur ville ou adresse
+            # Partial match on city or address
             if ville_lower in resto_ville or resto_ville.startswith(ville_lower):
                 return resto
             if ville_lower in resto_adresse:
@@ -212,7 +212,7 @@ class EnrichedKnowledgeBase:
         return results
     
     def get_contact_info(self, ville: Optional[str] = None) -> Dict:
-        """Retourne les infos de contact (d'un restaurant ou général)"""
+        """Return contact info (for restaurant or general)"""
         if ville:
             resto = self.get_restaurant_by_ville(ville)
             if resto:
@@ -225,7 +225,7 @@ class EnrichedKnowledgeBase:
                     'services': resto.get('services', [])
                 }
         
-        # Info générale
+        # General info
         return {
             'entreprise': 'Bolkiri',
             'nombre_restaurants': len(self.restaurants),
@@ -235,7 +235,7 @@ class EnrichedKnowledgeBase:
         }
     
     def get_hours(self, ville: Optional[str] = None) -> Dict:
-        """Retourne les horaires (d'un restaurant ou tous)"""
+        """Return hours (for restaurant or all)"""
         if ville:
             resto = self.get_restaurant_by_ville(ville)
             if resto:
@@ -245,7 +245,7 @@ class EnrichedKnowledgeBase:
                     'horaires': resto.get('horaires', {})
                 }
         
-        # Tous les horaires
+        # All hours
         return {
             'restaurants': [
                 {
@@ -257,28 +257,28 @@ class EnrichedKnowledgeBase:
         }
     
     def get_plats_signatures(self) -> List[Dict]:
-        """Retourne les plats signatures"""
+        """Return signature dishes"""
         return [p for p in self.menu_complet if p.get('signature', False)]
     
     def get_info_generale(self, key: Optional[str] = None):
-        """Retourne les infos générales"""
+        """Return general info"""
         if key:
             return self.infos_generales.get(key)
         return self.infos_generales
     
-    # Méthodes de compatibilité avec l'ancien système
+    # Compatibility methods with old system
     def add_documents(self, documents: List[Dict]):
-        """Pour compatibilité - ne fait rien car base enrichie statique"""
+        """For compatibility - does nothing since enriched base is static"""
         pass
     
     def add_menu_items(self, menu_items: List[Dict]):
-        """Pour compatibilité - ne fait rien car base enrichie statique"""
+        """For compatibility - does nothing since enriched base is static"""
         pass
     
     def clear(self):
-        """Pour compatibilité - ne fait rien"""
+        """For compatibility - does nothing"""
         pass
 
 
-# Alias pour compatibilité
+# Alias for compatibility
 KnowledgeBase = EnrichedKnowledgeBase

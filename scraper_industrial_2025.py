@@ -7,7 +7,7 @@ import re
 from urllib.parse import urljoin, urlparse
 
 class BolkiriIndustrialScraper:
-    """Scraper industriel complet - Scrappe automatiquement TOUTES les pages pertinentes"""
+    """Complete industrial scraper - Automatically scrapes ALL relevant pages"""
     
     def __init__(self, base_url: str = "https://bolkiri.fr"):
         self.base_url = base_url
@@ -19,7 +19,7 @@ class BolkiriIndustrialScraper:
         self.restaurants = []
         self.menu = []
         
-        # Pages à scraper (prioritaires)
+        # Priority pages to scrape
         self.priority_pages = [
             '/la-carte/',
             '/nos-restaurants/',
@@ -33,56 +33,56 @@ class BolkiriIndustrialScraper:
             '/nous-rejoindre/'
         ]
         
-        # Pages à ignorer - AUCUNE (on scrappe tout)
-        # Le RAG ne retournera que ce qui est pertinent
+        # Pages to ignore - NONE (we scrape everything)
+        # RAG will only return what's relevant
         self.ignored_patterns = []
     
     def should_scrape_url(self, url: str) -> bool:
-        """Détermine si une URL doit être scrapée"""
-        # Ignorer les URLs externes
+        """Determine if URL should be scraped"""
+        # Ignore external URLs
         if not url.startswith(self.base_url):
             return False
         
-        # Ignorer les fichiers
+        # Ignore files
         if any(ext in url for ext in ['.pdf', '.jpg', '.png', '.zip', '.doc']):
             return False
         
-        # Ignorer les pages blacklistées
+        # Ignore blacklisted pages
         for pattern in self.ignored_patterns:
             if pattern in url:
                 return False
         
-        # Déjà visitée
+        # Already visited
         if url in self.visited_urls:
             return False
         
         return True
     
     def clean_text(self, text: str) -> str:
-        """Nettoie le texte extrait"""
-        # Supprimer les espaces multiples
+        """Clean extracted text"""
+        # Remove multiple spaces
         text = re.sub(r'\s+', ' ', text)
-        # Supprimer les lignes vides
+        # Remove empty lines
         lines = [line.strip() for line in text.split('\n') if line.strip()]
         return '\n'.join(lines)
     
     def scrape_page(self, url: str) -> Dict:
-        """Scrape une page complète et extrait son contenu"""
+        """Scrape complete page and extract content"""
         try:
             print(f"Scraping: {url}")
             response = requests.get(url, headers=self.headers, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Nettoyer les éléments inutiles
+            # Remove unnecessary elements
             for element in soup(['script', 'style', 'nav', 'footer', 'iframe', 'noscript']):
                 element.decompose()
             
-            # Extraire le titre
+            # Extract title
             title = soup.find('title')
             title_text = title.get_text(strip=True) if title else ""
             
-            # Extraire les headings (structure)
+            # Extract headings (structure)
             headings = []
             for tag in ['h1', 'h2', 'h3']:
                 for heading in soup.find_all(tag):
@@ -93,12 +93,12 @@ class BolkiriIndustrialScraper:
                             'text': text
                         })
             
-            # Extraire le contenu principal
+            # Extract main content
             main_content = soup.find('main') or soup.find('article') or soup.find('body')
             text_content = main_content.get_text(separator='\n', strip=True) if main_content else ""
             text_content = self.clean_text(text_content)
             
-            # Extraire les listes (FAQ, points clés)
+            # Extract lists (FAQ, key points)
             lists = []
             for ul in soup.find_all(['ul', 'ol']):
                 items = [li.get_text(strip=True) for li in ul.find_all('li')]
@@ -111,7 +111,7 @@ class BolkiriIndustrialScraper:
                 'url': url,
                 'title': title_text,
                 'headings': headings,
-                'content': text_content[:5000],  # Limiter à 5000 chars
+                'content': text_content[:5000],  # Limit to 5000 chars
                 'lists': lists,
                 'scraped_at': time.strftime("%Y-%m-%d %H:%M:%S")
             }
@@ -121,7 +121,7 @@ class BolkiriIndustrialScraper:
             return None
     
     def discover_pages(self, start_url: str) -> List[str]:
-        """Découvre automatiquement toutes les pages du site"""
+        """Automatically discover all site pages"""
         discovered_urls = set()
         
         try:
@@ -129,12 +129,12 @@ class BolkiriIndustrialScraper:
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Trouver tous les liens
+            # Find all links
             for link in soup.find_all('a', href=True):
                 href = link['href']
                 full_url = urljoin(self.base_url, href)
                 
-                # Normaliser l'URL
+                # Normalize URL
                 parsed = urlparse(full_url)
                 normalized_url = f"{parsed.scheme}://{parsed.netloc}{parsed.path}"
                 
@@ -147,13 +147,13 @@ class BolkiriIndustrialScraper:
         return list(discovered_urls)
     
     def scrape_all_content(self):
-        """Scrape tout le contenu pertinent du site"""
+        """Scrape all relevant site content"""
         print("\n" + "=" * 60)
-        print("SCRAPING INDUSTRIEL COMPLET")
+        print("COMPLETE INDUSTRIAL SCRAPING")
         print("=" * 60)
         
-        # 1. Scraper les pages prioritaires
-        print("\n[1/3] Pages prioritaires...")
+        # 1. Scrape priority pages
+        print("\n[1/3] Priority pages...")
         for page_path in self.priority_pages:
             url = self.base_url + page_path
             page_data = self.scrape_page(url)
@@ -161,20 +161,20 @@ class BolkiriIndustrialScraper:
                 self.all_pages_content[url] = page_data
             time.sleep(0.5)
         
-        # 2. Découvrir et scraper les autres pages
-        print("\n[2/3] Découverte automatique...")
+        # 2. Discover and scrape other pages
+        print("\n[2/3] Automatic discovery...")
         discovered = self.discover_pages(self.base_url)
-        print(f"  {len(discovered)} pages découvertes")
+        print(f"  {len(discovered)} pages discovered")
         
-        for url in discovered[:20]:  # Limiter à 20 pages découvertes
+        for url in discovered[:20]:  # Limit to 20 discovered pages
             if url not in self.all_pages_content:
                 page_data = self.scrape_page(url)
                 if page_data:
                     self.all_pages_content[url] = page_data
                 time.sleep(0.5)
         
-        # 3. Scraper les restaurants (liste hardcodée pour fiabilité)
-        print("\n[3/3] Restaurants détaillés...")
+        # 3. Scrape restaurants (hardcoded list for reliability)
+        print("\n[3/3] Detailed restaurants...")
         self.scrape_restaurants()
     
     def scrape_restaurants(self):
@@ -210,10 +210,10 @@ class BolkiriIndustrialScraper:
             time.sleep(0.5)
     
     def parse_menu_into_dishes(self, menu_content: str) -> List[Dict]:
-        """Parse le contenu du menu pour extraire chaque plat individuellement"""
+        """Parse menu content to extract each dish individually"""
         dishes = []
         
-        # Découper par "COMMANDER" qui sépare chaque plat
+        # Split by "COMMANDER" which separates each dish
         dish_blocks = menu_content.split('COMMANDER')
         
         for block in dish_blocks:
@@ -221,30 +221,30 @@ class BolkiriIndustrialScraper:
             if not block or len(block) < 20:
                 continue
             
-            # Ignorer les éléments de navigation/système dès le début
+            # Ignore navigation/system elements from the start
             skip_words = ['aller au contenu', 'gérer', 'accepter', 'refuser', 'cookies']
             if any(skip in block.lower() for skip in skip_words):
                 continue
             
-            # Nettoyer : garder jusqu'à "Plus" pour séparer nom du reste
-            # Format: "NOM DU PLAT Plus description Plus traces..."
+            # Clean: keep until "Plus" to separate name from rest
+            # Format: "DISH NAME Plus description Plus traces..."
             parts = block.split('Plus')
             
             if not parts or len(parts[0].strip()) < 3:
                 continue
             
-            # Extraire le nom (première partie avant "Plus")
+            # Extract name (first part before "Plus")
             dish_name = parts[0].strip()
             
-            # Si le nom contient plusieurs lignes, prendre seulement la première ligne majuscule
+            # If name contains multiple lines, take only first uppercase line
             name_lines = [l.strip() for l in dish_name.split('\n') if l.strip()]
             if name_lines:
-                # Garder la première ligne non-vide comme nom principal
+                # Keep first non-empty line as main name
                 main_name = name_lines[0]
                 
-                # Si nom trop long (> 150 chars), c'est probablement une formule mal découpée
+                # If name too long (> 150 chars), it's probably a badly split formula
                 if len(main_name) > 150:
-                    # Prendre jusqu'au premier mot en minuscules ou ponctuation
+                    # Take until first lowercase word or punctuation
                     words = main_name.split()
                     clean_name_parts = []
                     for word in words:
@@ -256,14 +256,14 @@ class BolkiriIndustrialScraper:
                 
                 dish_name = main_name
             
-            # Extraire la description (deuxième partie après premier "Plus")
+            # Extract description (second part after first "Plus")
             description = parts[1].strip() if len(parts) > 1 else ''
             
-            # Chercher le prix (pattern €)
+            # Find price (€ pattern)
             price_match = re.search(r'(\d+[,.]?\d*)\s*€', block)
             price = price_match.group(0) if price_match else ''
             
-            # Détecter les tags (végétarien, épicé, etc.)
+            # Detect tags (vegetarian, spicy, etc.)
             tags = []
             if 'végé' in block.lower() or 'végétarien' in block.lower():
                 tags.append('vegetarien')
@@ -276,22 +276,22 @@ class BolkiriIndustrialScraper:
             
             dishes.append({
                 'nom': dish_name,
-                'description': description[:300],  # Limiter la longueur
+                'description': description[:300],  # Limit length
                 'prix': price,
                 'tags': tags,
-                'raw_content': block[:500]  # Garder le contenu brut pour RAG
+                'raw_content': block[:500]  # Keep raw content for RAG
             })
         
         return dishes
     
     def extract_restaurant_data(self, url: str) -> Dict:
-        """Extrait les données structurées d'un restaurant depuis JSON-LD Schema.org"""
+        """Extract structured restaurant data from JSON-LD Schema.org"""
         try:
             response = requests.get(url, headers=self.headers, timeout=15)
             response.raise_for_status()
             soup = BeautifulSoup(response.content, 'html.parser')
             
-            # Extraire les données structurées JSON-LD
+            # Extract JSON-LD structured data
             json_ld_data = None
             scripts = soup.find_all('script', type='application/ld+json')
             
@@ -312,26 +312,26 @@ class BolkiriIndustrialScraper:
                 except (json.JSONDecodeError, KeyError):
                     continue
             
-            # Si pas de JSON-LD, fallback sur extraction HTML
+            # If no JSON-LD, fallback on HTML extraction
             if not json_ld_data:
                 page_text = soup.get_text()
                 h1 = soup.find('h1')
                 
-                # Extraire téléphone
+                # Extract phone
                 telephone = ""
                 tel_pattern = r'\+33\s?\d{1}\s?\d{2}\s?\d{2}\s?\d{2}\s?\d{2}'
                 tel_match = re.search(tel_pattern, page_text)
                 if tel_match:
                     telephone = tel_match.group(0)
                 
-                # Extraire adresse
+                # Extract address
                 adresse = ""
                 for string in soup.stripped_strings:
                     if re.search(r'\d+.*(?:Rue|Avenue|Boulevard|Place)', string):
                         adresse = string
                         break
                 
-                # Statut
+                # Status
                 statut = "ouvert"
                 if "prochaine" in page_text.lower():
                     statut = "ouverture_prochaine"
@@ -344,20 +344,20 @@ class BolkiriIndustrialScraper:
                     "url": url
                 }
             
-            # Extraire depuis JSON-LD
+            # Extract from JSON-LD
             name = json_ld_data.get('name', '')
             telephone = json_ld_data.get('telephone', '')
             
-            # Extraire l'adresse structurée
+            # Extract structured address
             address_data = json_ld_data.get('address', {})
             adresse = f"{address_data.get('streetAddress', '')}, {address_data.get('postalCode', '')} {address_data.get('addressLocality', '')}"
             
-            # Extraire et parser les horaires depuis openingHoursSpecification
+            # Extract and parse hours from openingHoursSpecification
             horaires = {}
             if 'openingHoursSpecification' in json_ld_data:
                 horaires = self.parse_opening_hours(json_ld_data['openingHoursSpecification'])
             
-            # Statut
+            # Status
             page_text = soup.get_text()
             statut = "ouvert"
             if "prochaine" in page_text.lower():
@@ -380,15 +380,15 @@ class BolkiriIndustrialScraper:
             return None
     
     def parse_opening_hours(self, specs: List[Dict]) -> Dict:
-        """Parse les openingHoursSpecification de Schema.org
+        """Parse openingHoursSpecification from Schema.org
         
-        Ce site utilise le format validFrom/validThrough sans dayOfWeek.
-        On regroupe les plages horaires identiques.
+        This site uses validFrom/validThrough format without dayOfWeek.
+        We group identical time ranges.
         """
         if not specs:
             return {}
         
-        # Collecter toutes les plages horaires uniques
+        # Collect all unique time ranges
         time_ranges = []
         for spec in specs:
             opens = spec.get('opens', '')
@@ -399,8 +399,8 @@ class BolkiriIndustrialScraper:
                 if time_range not in time_ranges:
                     time_ranges.append(time_range)
         
-        # Si on a des plages horaires, les appliquer à tous les jours
-        # (le site ne spécifie pas les jours individuellement dans openingHoursSpecification)
+        # If we have time ranges, apply to all days
+        # (site doesn't specify individual days in openingHoursSpecification)
         if time_ranges:
             combined = ", ".join(time_ranges)
             return {
@@ -416,9 +416,9 @@ class BolkiriIndustrialScraper:
         return {}
     
     def save_complete_knowledge_base(self):
-        """Sauvegarde la base de connaissances complète"""
+        """Save complete knowledge base"""
         
-        # Organiser les pages par catégorie
+        # Organize pages by category
         categorized_pages = {
             'menu': [],
             'restaurants': [],
@@ -430,9 +430,9 @@ class BolkiriIndustrialScraper:
         
         for url, content in self.all_pages_content.items():
             if '/la-carte/' in url:
-                # Parser le menu en plats individuels
+                # Parse menu into individual dishes
                 menu_dishes = self.parse_menu_into_dishes(content['content'])
-                # Créer un document par plat
+                # Create document per dish
                 for dish in menu_dishes:
                     categorized_pages['menu'].append({
                         'url': url,
@@ -490,31 +490,31 @@ class BolkiriIndustrialScraper:
             json.dump(data, f, ensure_ascii=False, indent=2)
         
         print("\n" + "=" * 60)
-        print("SCRAPING TERMINÉ")
+        print("SCRAPING COMPLETE")
         print("=" * 60)
-        print(f"\nFichier: {filename}")
-        print(f"  Pages scrapées: {len(self.all_pages_content)}")
+        print(f"\nFile: {filename}")
+        print(f"  Scraped pages: {len(self.all_pages_content)}")
         print(f"  Restaurants: {len(self.restaurants)}")
         print(f"  Menu: {len(categorized_pages['menu'])} pages")
-        print(f"  Fidélité: {len(categorized_pages['fidelite'])} pages")
-        print(f"  Service client: {len(categorized_pages['service_client'])} pages")
+        print(f"  Fidelity: {len(categorized_pages['fidelite'])} pages")
+        print(f"  Customer service: {len(categorized_pages['service_client'])} pages")
         print(f"  Concept: {len(categorized_pages['concept'])} pages")
-        print(f"  Autres: {len(categorized_pages['autres'])} pages")
+        print(f"  Other: {len(categorized_pages['autres'])} pages")
         
         return filename
 
 def main():
     print("=" * 60)
-    print("SCRAPER INDUSTRIEL BOLKIRI 2025")
-    print("Scraping automatique de TOUTES les pages pertinentes")
+    print("BOLKIRI INDUSTRIAL SCRAPER 2025")
+    print("Automatic scraping of ALL relevant pages")
     print("=" * 60)
     
     scraper = BolkiriIndustrialScraper()
     scraper.scrape_all_content()
     filename = scraper.save_complete_knowledge_base()
     
-    print("\nBase de connaissances complète prête !")
-    print(f"Fichier: {filename}")
+    print("\nComplete knowledge base ready!")
+    print(f"File: {filename}")
 
 if __name__ == "__main__":
     main()

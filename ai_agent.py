@@ -64,10 +64,10 @@ class AIAgent:
         ]
     
     def search_knowledge(self, query: str) -> str:
-        """Recherche enrichie dans toute la base - détecte département automatiquement"""
+        """Enriched search across entire knowledge base - auto-detects department"""
         import re
         
-        # Détection département dans la query
+        # Department detection in query
         query_lower = query.lower()
         dept_mapping = {
             "91": "Corbeil-Essonnes",
@@ -80,10 +80,10 @@ class AIAgent:
             "seine-et-marne": "Lagny-sur-Marne"
         }
         
-        # Chercher si département mentionné
+        # Check if department mentioned
         for dept, ville in dept_mapping.items():
             if dept in query_lower or re.search(rf'\b{dept}\b', query_lower):
-                # Forcer recherche sur cette ville
+                # Force search on this city
                 query = f"{query} {ville}"
                 break
         
@@ -94,7 +94,7 @@ class AIAgent:
         
         context = []
         for result in results:
-            # RAG retourne déjà du contenu formaté en string
+            # RAG already returns formatted content as string
             content = result.get('content', '')
             if content:
                 context.append(content)
@@ -120,30 +120,30 @@ class AIAgent:
         return result
     
     def get_restaurant_info(self, ville: str) -> str:
-        """Infos détaillées d'un restaurant spécifique - supporte département et code postal"""
-        # Utiliser RAG pour recherche intelligente
+        """Detailed info for specific restaurant - supports department and postal code"""
+        # Use RAG for intelligent search
         results = self.kb.search(f"restaurant {ville}", limit=3)
         
         if not results:
-            # Lister tous les restaurants disponibles
+            # List all available restaurants
             all_restos = self.kb.get_all_restaurants()
             return f"Restaurant non trouvé pour '{ville}'.\n\n" + \
                    f"NOS {len(all_restos)} RESTAURANTS DISPONIBLES:\n" + \
                    "\n".join([f"- {r.get('name', 'N/A')}" for r in all_restos[:10]]) + \
                    "\n\n(10 premiers restaurants affichés)"
         
-        # Prendre le meilleur résultat
+        # Take best result
         best_result = results[0]
         return f"[RESTAURANT TROUVE]\n\n{best_result.get('content', 'Information non disponible')}"
     
     def get_menu(self) -> str:
-        """Menu complet avec catégories"""
+        """Complete menu with categories"""
         menu = self.kb.get_all_menu_items()
         
         if not menu:
             return "Menu non disponible pour le moment."
         
-        # Grouper par catégorie
+        # Group by category
         categories = {}
         for plat in menu:
             cat = plat.get('categorie', 'Autres')
@@ -155,7 +155,7 @@ class AIAgent:
         
         for cat, plats in categories.items():
             result += f"━━━ {cat.upper()} ━━━\n\n"
-            for plat in plats[:5]:  # Limiter pour ne pas surcharger
+            for plat in plats[:5]:  # Limit to avoid overload
                 result += f"• {plat['nom']}"
                 if plat.get('nom_vietnamien'):
                     result += f" ({plat['nom_vietnamien']})"
@@ -184,21 +184,42 @@ class AIAgent:
         return result
     
     def filter_menu(self, criteria: str) -> str:
-        """Filtre intelligent du menu"""
+        """Intelligent menu filtering"""
         criteria_lower = criteria.lower()
         
-        # Détecter les filtres
+        # Detect filters
         vegetarien = 'végétarien' in criteria_lower or 'vegetarien' in criteria_lower or 'veggie' in criteria_lower
         vegan = 'vegan' in criteria_lower
         sans_gluten = 'sans gluten' in criteria_lower or 'gluten' in criteria_lower
         epice = 'épicé' in criteria_lower or 'epice' in criteria_lower or 'piquant' in criteria_lower
         
-        # Extraire prix max
+        # Extract max price
         import re
         prix_match = re.search(r'(\d+)\s*€', criteria)
         prix_max = float(prix_match.group(1)) if prix_match else None
         
-        # Filtrer
+        # For vegetarian/vegan, use RAG search (KB has tags, not structured fields)
+        if vegetarien or vegan:
+            search_term = "végétarien" if vegetarien else "vegan"
+            results = self.kb.search(f"plat {search_term} menu", limit=10)
+            
+            if not results:
+                return f"Aucun plat trouvé correspondant à: {criteria}"
+            
+            result = f"Plats correspondant à '{criteria}':\n\n"
+            for item in results[:10]:
+                content = item.get('content', '')
+                # Extract dish name from content (first line usually)
+                lines = content.split('\n')
+                dish_name = lines[0] if lines else content[:50]
+                result += f"• {dish_name}\n"
+                if len(content) > 100:
+                    result += f"  {content[50:150]}...\n"
+                result += "\n"
+            
+            return result
+        
+        # For other filters, use structured filtering
         filtered = self.kb.filter_menu(
             vegetarien=vegetarien if vegetarien else None,
             vegan=vegan if vegan else None,
@@ -262,7 +283,7 @@ class AIAgent:
             result = "HORAIRES DE NOS RESTAURANTS :\n\n"
             for resto_hours in hours.get('restaurants', []):
                 result += f"• {resto_hours['name']} ({resto_hours['ville']})\n"
-                # Afficher TOUS les jours, pas juste un échantillon
+                # Display ALL days, not just a sample
                 for jour, horaire in resto_hours.get('horaires', {}).items():
                     result += f"  {jour.capitalize()} : {horaire}\n"
                 result += "\n"
@@ -270,52 +291,52 @@ class AIAgent:
         return result
     
     def recommend_dish(self, preferences: str) -> str:
-        """Recommandations intelligentes"""
+        """Intelligent recommendations"""
         preferences_lower = preferences.lower()
         
-        # Détecter végétarien, épicé, etc.
+        # Detect vegetarian, spicy, etc.
         vegetarien = 'végétarien' in preferences_lower or 'vegetarien' in preferences_lower
         epice = 'épicé' in preferences_lower or 'epice' in preferences_lower
         
-        # Filtrer
+        # Filter
         menu = self.kb.filter_menu(vegetarien=vegetarien if vegetarien else None)
         
-        # Scorer selon préférences
+        # Score according to preferences
         recommendations = []
         for plat in menu:
             score = 0
             plat_text = (plat.get('nom', '') + ' ' + plat.get('description', '')).lower()
             
-            # Score selon mots-clés
+            # Score based on keywords
             for word in preferences_lower.split():
                 if len(word) > 2 and word in plat_text:
                     score += 2
             
-            # Bonus plats signatures
+            # Bonus for signature dishes
             if plat.get('signature'):
                 score += 5
             
-            # Bonus épicé si demandé
+            # Bonus if spicy requested
             if epice and plat.get('epice') in ['Épicé', 'Moyen']:
                 score += 5
             
             if score > 0:
                 recommendations.append((plat, score))
         
-        # Trier
+        # Sort
         recommendations.sort(key=lambda x: x[1], reverse=True)
         
         if not recommendations:
-            # Recommander les signatures par défaut
+            # Recommend signatures by default
             signatures = self.kb.get_plats_signatures()
             if signatures:
-                result = "🌟 Je vous recommande nos PLATS SIGNATURES:\n\n"
+                result = "I recommend our SIGNATURE DISHES:\n\n"
                 for plat in signatures[:3]:
                     result += f"• {plat['nom']} - {plat['prix']}\n"
                     result += f"  {plat.get('description', '')}\n\n"
                 return result
             else:
-                return "Je recommande de découvrir nos spécialités vietnamiennes authentiques."
+                return "I recommend discovering our authentic Vietnamese specialties."
         
         result = "MES RECOMMANDATIONS POUR VOUS :\n\n"
         for plat, _ in recommendations[:3]:
@@ -325,7 +346,7 @@ class AIAgent:
             result += f" - {plat['prix']}\n"
             result += f"   {plat.get('description', '')}\n"
             
-            # Pourquoi recommandé
+            # Why recommended
             raisons = []
             if plat.get('signature'):
                 raisons.append('Plat signature')
@@ -343,7 +364,7 @@ class AIAgent:
         return result
     
     def execute_tool(self, tool_name: str, parameters: Dict) -> str:
-        """Exécute un outil avec les nouveaux outils enrichis"""
+        """Execute tool with enriched tool set"""
         if tool_name == "search_knowledge":
             return self.search_knowledge(parameters.get("query", ""))
         elif tool_name == "get_restaurants":
@@ -419,17 +440,17 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             return self.search_knowledge(user_query)
     
     def _validate_response(self, response: str, context: str, user_query: str) -> Tuple[str, bool]:
-        """Valide la réponse générée contre le contexte et détecte les hallucinations
+        """Validate generated response against context and detect hallucinations
         
         Returns:
-            (response_corrigee, is_valid)
+            (corrected_response, is_valid)
         """
         response_lower = response.lower()
         context_lower = context.lower()
         
-        # 1. Vérifier contradictions restaurants
+        # 1. Check restaurant contradictions
         if "[restaurant trouvé]" in context_lower or "restaurant" in context_lower:
-            # Détecter phrases négatives alors que restaurant existe
+            # Detect negative phrases when restaurant exists
             negative_phrases = [
                 "n'avons pas de restaurant",
                 "pas de restaurant dans",
@@ -440,47 +461,47 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             
             for phrase in negative_phrases:
                 if phrase in response_lower:
-                    print(f"[WARN] HALLUCINATION: '{phrase}' malgre contexte positif")
-                    # Retourner réponse corrigée simple et directe
-                    # Extraire ville/département de la query
+                    print(f"[WARN] HALLUCINATION: '{phrase}' despite positive context")
+                    # Return simple and direct corrected response
+                    # Extract city/department from query
                     import re
                     dept_match = re.search(r'\b(91|94|78|77)\b', user_query)
                     if dept_match or any(d in user_query.lower() for d in ['91', '94', '78', '77', 'essonne', 'val-de-marne', 'yvelines', 'seine-et-marne']):
-                        # Utiliser get_restaurant_info pour réponse structurée
+                        # Use get_restaurant_info for structured response
                         dept = dept_match.group(1) if dept_match else user_query
                         corrected = self.get_restaurant_info(dept)
                         return corrected, False
-                    # Sinon retourner message générique basé sur contexte
+                    # Otherwise return generic message based on context
                     return "Oui, nous avons plusieurs restaurants en Île-de-France. Pour plus de détails sur un restaurant spécifique, précisez la ville ou le département.", False
         
-        # 2. Vérifier incohérences horaires
+        # 2. Check schedule inconsistencies
         import re
-        # Extraire horaires du contexte (format HH:MM-HH:MM)
+        # Extract hours from context (format HH:MM-HH:MM)
         context_hours = re.findall(r'\d{1,2}:\d{2}-\d{1,2}:\d{2}', context)
-        # Extraire horaires de la réponse (format HH:MM-HH:MM ou HHhMM-HHhMM)
+        # Extract hours from response (format HH:MM-HH:MM or HHhMM-HHhMM)
         response_hours = re.findall(r'\d{1,2}[h:]?\d{2}\s?-\s?\d{1,2}[h:]?\d{2}', response)
         
         if context_hours and response_hours:
-            # Normaliser pour comparaison
+            # Normalize for comparison
             def normalize_hour(h):
-                # "11:30" ou "11h30" → "1130"
+                # "11:30" or "11h30" → "1130"
                 return re.sub(r'[:\sh-]', '', h)
             
             context_normalized = set(normalize_hour(h) for h in context_hours)
             response_normalized = set(normalize_hour(h) for h in response_hours)
             
-            # Si horaires complètement différents
+            # If completely different hours
             if context_normalized and not any(rh in ' '.join(context_normalized) for rh in response_normalized):
-                print(f"[WARN] HALLUCINATION HORAIRES: Contexte={context_hours} vs Reponse={response_hours}")
-                # Remplacer les horaires dans la réponse par ceux du contexte
+                print(f"[WARN] SCHEDULE HALLUCINATION: Context={context_hours} vs Response={response_hours}")
+                # Replace hours in response with context hours
                 corrected = response
                 for wrong_hour in response_hours:
-                    # Remplacer par les vrais horaires du contexte
+                    # Replace with real context hours
                     if context_hours:
                         corrected = corrected.replace(wrong_hour, context_hours[0])
                 return corrected, False
         
-        # 3. Vérifier cohérence département/ville
+        # 3. Check department/city coherence
         dept_ville = {
             "91": "corbeil",
             "94": "ivry", 
@@ -489,34 +510,42 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         }
         
         for dept, ville in dept_ville.items():
-            # Si question mentionne département
+            # If question mentions department
             if dept in user_query.lower():
-                # Mais réponse dit "pas de restaurant" ET contexte mentionne la ville
+                # But response says "no restaurant" AND context mentions the city
                 if ville in context_lower and any(neg in response_lower for neg in ["pas de restaurant", "aucun restaurant"]):
-                    print(f"[WARN] CONTRADICTION: Dit 'pas de resto' pour {dept} mais contexte contient {ville}")
-                    # Utiliser get_restaurant_info pour réponse propre
+                    print(f"[WARN] CONTRADICTION: Says 'no resto' for {dept} but context contains {ville}")
+                    # Use get_restaurant_info for clean response
                     corrected = self.get_restaurant_info(dept)
                     return corrected, False
         
-        # 4. Vérifier prix aberrants
+        # 4. Check aberrant or hallucinated prices
         context_prices = re.findall(r'(\d+[,.]?\d*)\s*€', context)
         response_prices = re.findall(r'(\d+[,.]?\d*)\s*€', response)
+        
+        # If response mentions prices BUT context has NONE → Hallucination
+        if response_prices and not context_prices:
+            print(f"[WARN] PRICE HALLUCINATION: Response contains {response_prices} but context empty")
+            # Replace all prices with generic message
+            corrected = re.sub(r'\d+[,.]?\d*\s*€', '', response)
+            corrected += "\n\nPrix disponibles sur la carte en restaurant. Contactez-nous pour plus d'informations."
+            return corrected.strip(), False
         
         if context_prices and response_prices:
             context_nums = [float(p.replace(',', '.')) for p in context_prices]
             response_nums = [float(p.replace(',', '.')) for p in response_prices]
             
-            # Si prix dans réponse > 2x max du contexte
+            # If price in response > 2x max of context
             if max(response_nums) > max(context_nums) * 2:
-                print(f"[WARN] PRIX ABERRANT: Contexte max={max(context_nums)}€ vs Reponse max={max(response_nums)}€")
-                # Corriger en remplaçant les prix aberrants
+                print(f"[WARN] ABERRANT PRICE: Context max={max(context_nums)}€ vs Response max={max(response_nums)}€")
+                # Correct by replacing aberrant prices
                 corrected = response
                 for i, wrong_price in enumerate(response_prices):
                     if i < len(context_prices):
                         corrected = corrected.replace(f"{wrong_price}€", f"{context_prices[i]}€")
                 return corrected, False
         
-        # Réponse valide
+        # Valid response
         return response, True
     
     def chat(self, user_message: str, conversation_id: Optional[str] = None) -> str:
@@ -524,11 +553,11 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         
         context = self.plan_and_execute(user_message)
         
-        # Charger dynamiquement les infos des restaurants
+        # Dynamically load restaurant info
         restaurants = self.kb.get_all_restaurants()
         restaurants_info = []
         for resto in restaurants:
-            # Extraire ville du nom "BOLKIRI {ville} Street Food Viêt"
+            # Extract city from name "BOLKIRI {city} Street Food Viêt"
             name = resto.get('name', '')
             ville = name.replace('BOLKIRI', '').replace('Street Food Viêt', '').strip()
             telephone = resto.get('telephone', 'N/A')
@@ -589,24 +618,24 @@ STYLE: First person plural, concise, LANGUAGE = detected query language.
             response = self.client.chat.completions.create(
                 model="gpt-4o-mini",
                 messages=messages,
-                temperature=0.1,  # Minimal pour cohérence tout en gardant un peu de naturel
+                temperature=0.1,  # Minimal for consistency while keeping some naturalness
                 max_tokens=500
             )
             
             assistant_message = response.choices[0].message.content
             
-            # VALIDATION AUTOMATIQUE de la réponse
+            # AUTOMATIC RESPONSE VALIDATION
             try:
                 validated_message, is_valid = self._validate_response(assistant_message, context, user_message)
                 
                 if not is_valid:
-                    print(f"[INVALID] Reponse invalidee, correction appliquee")
+                    print(f"[INVALID] Response invalidated, correction applied")
                     assistant_message = validated_message
                 else:
-                    print(f"[OK] Reponse validee")
+                    print(f"[OK] Response validated")
             except Exception as e:
-                print(f"[ERROR] Erreur validation: {e}")
-                # En cas d'erreur validation, garder la réponse originale
+                print(f"[ERROR] Validation error: {e}")
+                # In case of validation error, keep original response
             
             # POST-PROCESSING: Strip markdown syntax (bold, italic, underline)
             import re
@@ -631,24 +660,24 @@ STYLE: First person plural, concise, LANGUAGE = detected query language.
             return f"Désolé, une erreur est survenue. Veuillez réessayer."
     
     def refresh_knowledge_from_web(self):
-        """Rescrape le site et met à jour la KB"""
+        """Rescrape website and update KB"""
         try:
-            print("[INFO] Rafraichissement base connaissances...")
+            print("[INFO] Refreshing knowledge base...")
             
-            # Le scraper a déjà les données hardcodées dans extract_all_restaurants()
-            # et extract_menu_complet() - pas besoin de scraper le site réel
+            # Scraper already has hardcoded data in extract_all_restaurants()
+            # and extract_menu_complet() - no need to scrape real site
             
-            # On pourrait ajouter un vrai scraping ici si nécessaire
-            # Pour l'instant, on recharge juste la KB enrichie
+            # Could add real scraping here if necessary
+            # For now, just reload enriched KB
             
             self.kb = EnrichedKnowledgeBase()
             self.agent_state['last_update'] = datetime.now().isoformat()
             
-            print(f"KB rafraichie: {len(self.kb.get_all_restaurants())} restaurants, {len(self.kb.get_all_menu_items())} plats")
+            print(f"KB refreshed: {len(self.kb.get_all_restaurants())} restaurants, {len(self.kb.get_all_menu_items())} dishes")
             return True
             
         except Exception as e:
-            print(f"Erreur refresh KB: {e}")
+            print(f"KB refresh error: {e}")
             import traceback
             traceback.print_exc()
             return False
