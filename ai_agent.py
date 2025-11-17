@@ -327,18 +327,18 @@ class AIAgent:
         recommendations.sort(key=lambda x: x[1], reverse=True)
         
         if not recommendations:
-            # Recommend signatures by default
+            # Recommend signatures by default - return context for LLM
             signatures = self.kb.get_plats_signatures()
             if signatures:
-                result = "I recommend our SIGNATURE DISHES:\n\n"
+                result = "SIGNATURE DISHES:\n\n"
                 for plat in signatures[:3]:
                     result += f"• {plat['nom']} - {plat['prix']}\n"
                     result += f"  {plat.get('description', '')}\n\n"
                 return result
             else:
-                return "I recommend discovering our authentic Vietnamese specialties."
+                return "Authentic Vietnamese specialties available."
         
-        result = "MES RECOMMANDATIONS POUR VOUS :\n\n"
+        result = "RECOMMENDED DISHES:\n\n"
         for plat, _ in recommendations[:3]:
             result += f"• {plat['nom']}"
             if plat.get('nom_vietnamien'):
@@ -349,14 +349,14 @@ class AIAgent:
             # Why recommended
             raisons = []
             if plat.get('signature'):
-                raisons.append('Plat signature')
+                raisons.append('Signature dish')
             if plat.get('vegetarien') and vegetarien:
-                raisons.append('Végétarien')
+                raisons.append('Vegetarian')
             if plat.get('epice') and epice:
                 raisons.append(f'{plat["epice"]}')
             
             if raisons:
-                result += f"   Raisons : {', '.join(raisons)}\n"
+                result += f"   Reasons: {', '.join(raisons)}\n"
             result += "\n"
         
         return result
@@ -391,12 +391,6 @@ Outils disponibles:
 {json.dumps(self.tools, indent=2, ensure_ascii=False)}
 
 Question client: "{user_query}"
-
-RÈGLE IMPORTANTE - DÉPARTEMENTS:
-Si la question mentionne "91", "Essonne" → utilise get_restaurant_info avec ville="91"
-Si la question mentionne "94", "Val-de-Marne" → utilise get_restaurant_info avec ville="94"
-Si la question mentionne "78", "Yvelines" → utilise get_restaurant_info avec ville="78"
-Si la question mentionne "77", "Seine-et-Marne" → utilise get_restaurant_info avec ville="77"
 
 Analyse la question et choisis les meilleurs outils à utiliser.
 
