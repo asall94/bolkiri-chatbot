@@ -1,6 +1,6 @@
 {
   "version": "4.0_industrial",
-  "date_scraping": "2025-11-16 17:56:22",
+  "date_scraping": "2025-11-12 20:50:43",
   "total_pages_scrapees": 19,
   "total_restaurants": 20,
   "restaurants": [
@@ -8,7 +8,15 @@
       "name": "BOLKIRI Bondy Street Food Viêt",
       "telephone": "+33 1 48 47 00 05",
       "adresse": "10 Rue Louis Auguste Blanqui, 93140 Bondy",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:45, 18:15-22:30",
+        "mardi": "11:15-14:45, 18:15-22:30",
+        "mercredi": "11:15-14:45, 18:15-22:30",
+        "jeudi": "11:15-14:45, 18:15-22:30",
+        "vendredi": "11:15-14:45, 18:15-22:30",
+        "samedi": "11:15-14:45, 18:15-22:30",
+        "dimanche": "11:15-14:45, 18:15-22:30"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/bondy/",
       "description": "Restaurant BOLKIRI Bondy Street Food Viêt\nAdresse: 10 Rue Louis Auguste Blanqui, 93140 Bondy\nTéléphone: +33 1 48 47 00 05\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/bondy/\" target=\"_blank\">Page du restaurant</a>"
@@ -17,7 +25,15 @@
       "name": "BOLKIRI Bry-sur-Marne Street Food Viêt",
       "telephone": "+33 1 47 06 02 02",
       "adresse": "6 Pl. Carnot, 94360 Bry-Sur-Marne",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:30, 18:15-22:30",
+        "mardi": "11:15-14:30, 18:15-22:30",
+        "mercredi": "11:15-14:30, 18:15-22:30",
+        "jeudi": "11:15-14:30, 18:15-22:30",
+        "vendredi": "11:15-14:30, 18:15-22:30",
+        "samedi": "11:15-14:30, 18:15-22:30",
+        "dimanche": "11:15-14:30, 18:15-22:30"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/bry-sur-marne/",
       "description": "Restaurant BOLKIRI Bry-sur-Marne Street Food Viêt\nAdresse: 6 Pl. Carnot, 94360 Bry-Sur-Marne\nTéléphone: +33 1 47 06 02 02\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/bry-sur-marne/\" target=\"_blank\">Page du restaurant</a>"
@@ -26,7 +42,15 @@
       "name": "BOLKIRI Corbeil-Essonnes Street Food Viêt",
       "telephone": "+33 1 60 88 50 67",
       "adresse": "78 Bd Jean Jaurès, 91100 Corbeil-Essonnes",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:30-14:30, 18:30-22:30",
+        "mardi": "11:30-14:30, 18:30-22:30",
+        "mercredi": "11:30-14:30, 18:30-22:30",
+        "jeudi": "11:30-14:30, 18:30-22:30",
+        "vendredi": "11:30-14:30, 18:30-22:30",
+        "samedi": "11:30-14:30, 18:30-22:30",
+        "dimanche": "11:30-14:30, 18:30-22:30"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/corbeil-essonnes/",
       "description": "Restaurant BOLKIRI Corbeil-Essonnes Street Food Viêt\nAdresse: 78 Bd Jean Jaurès, 91100 Corbeil-Essonnes\nTéléphone: +33 1 60 88 50 67\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/corbeil-essonnes/\" target=\"_blank\">Page du restaurant</a>"
@@ -35,7 +59,15 @@
       "name": "BOLKIRI Ivry Street Food Viêt",
       "telephone": "+33 1 80 91 18 38",
       "adresse": "Avenue Maurice Thorez, 94200 Ivry-sur-Seine",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:00-24:00",
+        "mardi": "11:00-24:00",
+        "mercredi": "11:00-24:00",
+        "jeudi": "11:00-24:00",
+        "vendredi": "11:00-24:00",
+        "samedi": "11:00-24:00",
+        "dimanche": "11:00-24:00"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/ivry/",
       "description": "Restaurant BOLKIRI Ivry Street Food Viêt\nAdresse: Avenue Maurice Thorez, 94200 Ivry-sur-Seine\nTéléphone: +33 1 80 91 18 38\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/ivry/\" target=\"_blank\">Page du restaurant</a>"
@@ -44,7 +76,15 @@
       "name": "BOLKIRI La Plaine Saint-Denis Street Food Viêt",
       "telephone": "+33 1 55 99 17 74",
       "adresse": "111 Av. du Président Wilson, 93210 Saint-Denis",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:45, 18:15-22:30",
+        "mardi": "11:15-14:45, 18:15-22:30",
+        "mercredi": "11:15-14:45, 18:15-22:30",
+        "jeudi": "11:15-14:45, 18:15-22:30",
+        "vendredi": "11:15-14:45, 18:15-22:30",
+        "samedi": "11:15-14:45, 18:15-22:30",
+        "dimanche": "11:15-14:45, 18:15-22:30"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-denis/",
       "description": "Restaurant BOLKIRI La Plaine Saint-Denis Street Food Viêt\nAdresse: 111 Av. du Président Wilson, 93210 Saint-Denis\nTéléphone: +33 1 55 99 17 74\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/saint-denis/\" target=\"_blank\">Page du restaurant</a>"
@@ -53,7 +93,15 @@
       "name": "BOLKIRI Lille Léon Gambetta Street Food Viêt",
       "telephone": "+33 3 62 27 71 81",
       "adresse": "203 Rue Léon Gambetta, 59000 Lille",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:30-14:45, 18:00-22:45",
+        "mardi": "11:30-14:45, 18:00-22:45",
+        "mercredi": "11:30-14:45, 18:00-22:45",
+        "jeudi": "11:30-14:45, 18:00-22:45",
+        "vendredi": "11:30-14:45, 18:00-22:45",
+        "samedi": "11:30-14:45, 18:00-22:45",
+        "dimanche": "11:30-14:45, 18:00-22:45"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-leon-gambetta/",
       "description": "Restaurant BOLKIRI Lille Léon Gambetta Street Food Viêt\nAdresse: 203 Rue Léon Gambetta, 59000 Lille\nTéléphone: +33 3 62 27 71 81\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/lille-leon-gambetta/\" target=\"_blank\">Page du restaurant</a>"
@@ -62,7 +110,15 @@
       "name": "BOLKIRI Malakoff Street Food Viêt",
       "telephone": "+33 1 46 89 24 63",
       "adresse": "50 Rue Avaulée, 92240 Malakoff",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/malakoff/",
       "description": "Restaurant BOLKIRI Malakoff Street Food Viêt\nAdresse: 50 Rue Avaulée, 92240 Malakoff\nTéléphone: +33 1 46 89 24 63\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/malakoff/\" target=\"_blank\">Page du restaurant</a>"
@@ -71,7 +127,15 @@
       "name": "BOLKIRI Montreuil Street Food Viêt",
       "telephone": "+33 1 48 58 44 00",
       "adresse": "7 Boulevard Rouget de Lisle, 93100 Montreuil",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/montreuil/",
       "description": "Restaurant BOLKIRI Montreuil Street Food Viêt\nAdresse: 7 Boulevard Rouget de Lisle, 93100 Montreuil\nTéléphone: +33 1 48 58 44 00\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/montreuil/\" target=\"_blank\">Page du restaurant</a>"
@@ -80,7 +144,15 @@
       "name": "BOLKIRI Montrouge Street Food Viêt",
       "telephone": "+33 1 55 59 02 32",
       "adresse": "25 Av. de la République, 92120 Montrouge",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/montrouge/",
       "description": "Restaurant BOLKIRI Montrouge Street Food Viêt\nAdresse: 25 Av. de la République, 92120 Montrouge\nTéléphone: +33 1 55 59 02 32\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/montrouge/\" target=\"_blank\">Page du restaurant</a>"
@@ -89,7 +161,15 @@
       "name": "BOLKIRI Nanterre Street Food Viêt",
       "telephone": "+33 1 81 93 40 00",
       "adresse": "120 Rue du 8 Mai 1945, 92000 Nanterre",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:45, 18:15-22:30",
+        "mardi": "11:15-14:45, 18:15-22:30",
+        "mercredi": "11:15-14:45, 18:15-22:30",
+        "jeudi": "11:15-14:45, 18:15-22:30",
+        "vendredi": "11:15-14:45, 18:15-22:30",
+        "samedi": "11:15-14:45, 18:15-22:30",
+        "dimanche": "11:15-14:45, 18:15-22:30"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/nanterre/",
       "description": "Restaurant BOLKIRI Nanterre Street Food Viêt\nAdresse: 120 Rue du 8 Mai 1945, 92000 Nanterre\nTéléphone: +33 1 81 93 40 00\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/nanterre/\" target=\"_blank\">Page du restaurant</a>"
@@ -98,7 +178,15 @@
       "name": "BOLKIRI Paris 11 Street Food Viêt",
       "telephone": "+33 1 82 83 00 56",
       "adresse": "22 Av. de la République, 75011 Paris",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
+      },
       "statut": "ouverture_prochaine",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/paris-11-republique/",
       "description": "Restaurant BOLKIRI Paris 11 Street Food Viêt\nAdresse: 22 Av. de la République, 75011 Paris\nTéléphone: +33 1 82 83 00 56\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/paris-11-republique/\" target=\"_blank\">Page du restaurant</a>"
@@ -107,7 +195,15 @@
       "name": "BOLKIRI Street Food Viêt Saint-Denis (Pierrefitte) ",
       "telephone": "+33 1 48 21 04 55",
       "adresse": "1 Boulevard Charles de Gaulle, 93380 Pierrefitte-Sur-Seine",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:30, 18:15-23:00",
+        "mardi": "11:15-14:30, 18:15-23:00",
+        "mercredi": "11:15-14:30, 18:15-23:00",
+        "jeudi": "11:15-14:30, 18:15-23:00",
+        "vendredi": "11:15-14:30, 18:15-23:00",
+        "samedi": "11:15-14:30, 18:15-23:00",
+        "dimanche": "11:15-14:30, 18:15-23:00"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/pierrefitte/",
       "description": "Restaurant BOLKIRI Street Food Viêt Saint-Denis (Pierrefitte) \nAdresse: 1 Boulevard Charles de Gaulle, 93380 Pierrefitte-Sur-Seine\nTéléphone: +33 1 48 21 04 55\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/pierrefitte/\" target=\"_blank\">Page du restaurant</a>"
@@ -116,7 +212,15 @@
       "name": "BOLKIRI Les Mureaux Street Food Viêt",
       "telephone": "+33 1 80 82 36 68",
       "adresse": "101 Rue Paul Doumer, 78130 Les Mureaux",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:30-15:00, 18:30-23:00",
+        "mardi": "11:30-15:00, 18:30-23:00",
+        "mercredi": "11:30-15:00, 18:30-23:00",
+        "jeudi": "11:30-15:00, 18:30-23:00",
+        "vendredi": "11:30-15:00, 18:30-23:00",
+        "samedi": "11:30-15:00, 18:30-23:00",
+        "dimanche": "11:30-15:00, 18:30-23:00"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/les-mureaux/",
       "description": "Restaurant BOLKIRI Les Mureaux Street Food Viêt\nAdresse: 101 Rue Paul Doumer, 78130 Les Mureaux\nTéléphone: +33 1 80 82 36 68\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/les-mureaux/\" target=\"_blank\">Page du restaurant</a>"
@@ -125,7 +229,15 @@
       "name": "BOLKIRI Boulogne Street Food Viêt ",
       "telephone": "+33 1 80 87 21 66",
       "adresse": "83 Rue Marcel Dassault, 92100 Boulogne-Billancourt",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:15-14:45, 18:15-22:45",
+        "mardi": "11:15-14:45, 18:15-22:45",
+        "mercredi": "11:15-14:45, 18:15-22:45",
+        "jeudi": "11:15-14:45, 18:15-22:45",
+        "vendredi": "11:15-14:45, 18:15-22:45",
+        "samedi": "11:15-14:45, 18:15-22:45",
+        "dimanche": "11:15-14:45, 18:15-22:45"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/boulogne-billancourt/",
       "description": "Restaurant BOLKIRI Boulogne Street Food Viêt \nAdresse: 83 Rue Marcel Dassault, 92100 Boulogne-Billancourt\nTéléphone: +33 1 80 87 21 66\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/boulogne-billancourt/\" target=\"_blank\">Page du restaurant</a>"
@@ -134,7 +246,15 @@
       "name": "BOLKIRI Lagny-sur-Marne Street Food Viêt",
       "telephone": "+33 1 60 31 21 31",
       "adresse": "21 Av. du Général Leclerc, 77400 Lagny-sur-Marne",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:30-14:30, 18:30-22:30",
+        "mardi": "11:30-14:30, 18:30-22:30",
+        "mercredi": "11:30-14:30, 18:30-22:30",
+        "jeudi": "11:30-14:30, 18:30-22:30",
+        "vendredi": "11:30-14:30, 18:30-22:30",
+        "samedi": "11:30-14:30, 18:30-22:30",
+        "dimanche": "11:30-14:30, 18:30-22:30"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/lagny-sur-marne/",
       "description": "Restaurant BOLKIRI Lagny-sur-Marne Street Food Viêt\nAdresse: 21 Av. du Général Leclerc, 77400 Lagny-sur-Marne\nTéléphone: +33 1 60 31 21 31\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/lagny-sur-marne/\" target=\"_blank\">Page du restaurant</a>"
@@ -143,7 +263,15 @@
       "name": "BOLKIRI Sucy-en-brie Street Food Viêt",
       "telephone": "+33 1 83 73 98 91",
       "adresse": "2 Pl. de la Gare, 94370 Sucy-en-Brie",
-      "horaires": {},
+      "horaires": {
+        "lundi": "11:00-22:30",
+        "mardi": "11:00-22:30",
+        "mercredi": "11:00-22:30",
+        "jeudi": "11:00-22:30",
+        "vendredi": "11:00-22:30",
+        "samedi": "11:00-22:30",
+        "dimanche": "11:00-22:30"
+      },
       "statut": "ouvert",
       "url": "https://restaurants.bolkiri.fr/street-food-vietnamienne/sucy-en-brie/",
       "description": "Restaurant BOLKIRI Sucy-en-brie Street Food Viêt\nAdresse: 2 Pl. de la Gare, 94370 Sucy-en-Brie\nTéléphone: +33 1 83 73 98 91\n\nPour réserver ou commander: <a href=\"https://restaurants.bolkiri.fr/street-food-vietnamienne/sucy-en-brie/\" target=\"_blank\">Page du restaurant</a>"
@@ -638,7 +766,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:42"
+        "scraped_at": "2025-11-12 20:49:44"
       }
     ],
     "service_client": [
@@ -669,7 +797,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:43"
+        "scraped_at": "2025-11-12 20:49:46"
       }
     ],
     "concept": [
@@ -708,7 +836,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:45"
+        "scraped_at": "2025-11-12 20:49:50"
       },
       {
         "url": "https://bolkiri.fr/nos-engagements/",
@@ -765,7 +893,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:46"
+        "scraped_at": "2025-11-12 20:49:52"
       }
     ],
     "autres": [
@@ -850,7 +978,7 @@
             "text": "BOLKIRI IVRY DÉMÉNAGE !"
           }
         ],
-        "content": "Bienvenue chez COMMANDER Commandez en Click & Collect ou en livraison TÉLÉCHARGE TON APPLI BOLKIRI ! 1 € dépensé = 1 grain de riz (point) LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI Fais partie du club ! ✓ Des offres exclusives ✓ Une fidélité récompensée ✓ Une livraison directement chez vous ✓ -10% sur ta 1ère commande avec le code BOLKIRI10 Découvrir la fidélité Les nems du moment Découvrez les actualités à ne pas manquer LES STARS CHEZ BOLKIRI Voir notre carte ⬈ BOBUN SIGNATURE Le bo bun est composé de vermicelles de riz, de bœuf mariné et sauté, de nems croustillants coupés en morceaux, de crudités (carottes râpées, concombre, germes de soja, salade), d’herbes fraîches, le tout garni de cacahuètes concassées et d’oignons frits, et accompagné d’une sauce nuoc-mâm légèrement sucrée et citronnée. BŒUF LOC LAC Le loc lac est composé de morceaux de bœuf marinés sautés à feu vif, servis sur un lit de riz sauté à la tomate, accompagnés de tranches de tomate, de concombre, d’un œuf au plat, et d’un morceau de citron pour relever le tout. CROUSTY POULET Le crousty poulet est composé de morceaux de poulet panés et frits jusqu’à obtenir une texture bien croustillante, servis avec du riz, des crudités (carottes râpées, concombre, salade), des herbes fraîches, et accompagnés d’une sauce sucrée-salée PAD THAÏ Le pad thaï est composé de nouilles de riz sautées au wok, des légumes croquants, des crevettes ou du poulet, boeuf ou tofu, des cacahuètes concassées, des herbes fraîches, et est accompagné avec sa sauce maison. Nos Actualités Tous nos articles ⬈ 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! @bolkiri Tu sais pourquoi on dit Bœuf Loc Lac ? 🤔“Lắc”, ç La tête peut tromper… le wok, jamais 😏 À l’origine, les nems étaient réservés aux rois et On t’a mijoté un Black Friday bien relevé 🔥 Du 24 Bolkiri débarque à Sucy-en-Brie ! Une nouvelle adr Pourquoi il faudrait douter de Suwo ? 😅 16 restos déjà ! 💛 De Paris à Lille, chaque spot B Pas qu’en Italie qu’on sait faire rêver avec des p Follow nous\n\nTrouvez votre restaurant: <a href=\"https://bolkiri.fr/nos-restaurants/\" target=\"_blank\">Nos restaurants</a>",
+        "content": "Bienvenue chez COMMANDER Commandez en Click & Collect ou en livraison TÉLÉCHARGE TON APPLI BOLKIRI ! 1 € dépensé = 1 grain de riz (point) LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI Fais partie du club ! ✓ Des offres exclusives ✓ Une fidélité récompensée ✓ Une livraison directement chez vous ✓ -10% sur ta 1ère commande avec le code BOLKIRI10 Découvrir la fidélité Les nems du moment Découvrez les actualités à ne pas manquer LES STARS CHEZ BOLKIRI Voir notre carte ⬈ BOBUN SIGNATURE Le bo bun est composé de vermicelles de riz, de bœuf mariné et sauté, de nems croustillants coupés en morceaux, de crudités (carottes râpées, concombre, germes de soja, salade), d’herbes fraîches, le tout garni de cacahuètes concassées et d’oignons frits, et accompagné d’une sauce nuoc-mâm légèrement sucrée et citronnée. BŒUF LOC LAC Le loc lac est composé de morceaux de bœuf marinés sautés à feu vif, servis sur un lit de riz sauté à la tomate, accompagnés de tranches de tomate, de concombre, d’un œuf au plat, et d’un morceau de citron pour relever le tout. CROUSTY POULET Le crousty poulet est composé de morceaux de poulet panés et frits jusqu’à obtenir une texture bien croustillante, servis avec du riz, des crudités (carottes râpées, concombre, salade), des herbes fraîches, et accompagnés d’une sauce sucrée-salée PAD THAÏ Le pad thaï est composé de nouilles de riz sautées au wok, des légumes croquants, des crevettes ou du poulet, boeuf ou tofu, des cacahuètes concassées, des herbes fraîches, et est accompagné avec sa sauce maison. Nos Actualités Tous nos articles ⬈ 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! @bolkiri La tête peut tromper… le wok, jamais 😏 À l’origine, les nems étaient réservés aux r On t’a mijoté un Black Friday bien relevé 🔥 Bolkiri débarque à Sucy-en-Brie ! Une nouvelle a Pourquoi il faudrait douter de Suwo ? 😅 16 restos déjà ! 💛 De Paris à Lille, chaque Pas qu’en Italie qu’on sait faire rêver avec Du croustillant et encore du croustillant !Notre Follow nous\n\nTrouvez votre restaurant: <a href=\"https://bolkiri.fr/nos-restaurants/\" target=\"_blank\">Nos restaurants</a>",
         "lists": [
           [
             "6"
@@ -906,7 +1034,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:41"
+        "scraped_at": "2025-11-12 20:49:42"
       },
       {
         "url": "https://bolkiri.fr/service-traiteur/",
@@ -951,7 +1079,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:44"
+        "scraped_at": "2025-11-12 20:49:48"
       },
       {
         "url": "https://bolkiri.fr/actualites/",
@@ -1036,7 +1164,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:47"
+        "scraped_at": "2025-11-12 20:49:55"
       },
       {
         "url": "https://bolkiri.fr/devenir-franchise/",
@@ -1177,7 +1305,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:48"
+        "scraped_at": "2025-11-12 20:49:57"
       },
       {
         "url": "https://bolkiri.fr/nous-rejoindre/",
@@ -1218,7 +1346,250 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:49"
+        "scraped_at": "2025-11-12 20:49:59"
+      },
+      {
+        "url": "https://bolkiri.fr",
+        "title": "Bolkiri | Le meilleur de la Street food Vietnamienne",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Bienvenue chez"
+          },
+          {
+            "level": "h2",
+            "text": "LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "Les nems du moment"
+          },
+          {
+            "level": "h2",
+            "text": "LES STARS"
+          },
+          {
+            "level": "h2",
+            "text": "CHEZ BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "BOBUN SIGNATURE"
+          },
+          {
+            "level": "h2",
+            "text": "BŒUF LOC LAC"
+          },
+          {
+            "level": "h2",
+            "text": "CROUSTY POULET"
+          },
+          {
+            "level": "h2",
+            "text": "PAD THAÏ"
+          },
+          {
+            "level": "h2",
+            "text": "Nos Actualités"
+          },
+          {
+            "level": "h2",
+            "text": "@bolkiri"
+          },
+          {
+            "level": "h3",
+            "text": "TÉLÉCHARGE TON APPLI BOLKIRI !"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          }
+        ],
+        "content": "Bienvenue chez COMMANDER Commandez en Click & Collect ou en livraison TÉLÉCHARGE TON APPLI BOLKIRI ! 1 € dépensé = 1 grain de riz (point) LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI Fais partie du club ! ✓ Des offres exclusives ✓ Une fidélité récompensée ✓ Une livraison directement chez vous ✓ -10% sur ta 1ère commande avec le code BOLKIRI10 Découvrir la fidélité Les nems du moment Découvrez les actualités à ne pas manquer LES STARS CHEZ BOLKIRI Voir notre carte ⬈ BOBUN SIGNATURE Le bo bun est composé de vermicelles de riz, de bœuf mariné et sauté, de nems croustillants coupés en morceaux, de crudités (carottes râpées, concombre, germes de soja, salade), d’herbes fraîches, le tout garni de cacahuètes concassées et d’oignons frits, et accompagné d’une sauce nuoc-mâm légèrement sucrée et citronnée. BŒUF LOC LAC Le loc lac est composé de morceaux de bœuf marinés sautés à feu vif, servis sur un lit de riz sauté à la tomate, accompagnés de tranches de tomate, de concombre, d’un œuf au plat, et d’un morceau de citron pour relever le tout. CROUSTY POULET Le crousty poulet est composé de morceaux de poulet panés et frits jusqu’à obtenir une texture bien croustillante, servis avec du riz, des crudités (carottes râpées, concombre, salade), des herbes fraîches, et accompagnés d’une sauce sucrée-salée PAD THAÏ Le pad thaï est composé de nouilles de riz sautées au wok, des légumes croquants, des crevettes ou du poulet, boeuf ou tofu, des cacahuètes concassées, des herbes fraîches, et est accompagné avec sa sauce maison. Nos Actualités Tous nos articles ⬈ 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! @bolkiri La tête peut tromper… le wok, jamais 😏 À l’origine, les nems étaient réservés aux r On t’a mijoté un Black Friday bien relevé 🔥 Bolkiri débarque à Sucy-en-Brie ! Une nouvelle a Pourquoi il faudrait douter de Suwo ? 😅 16 restos déjà ! 💛 De Paris à Lille, chaque Pas qu’en Italie qu’on sait faire rêver avec Du croustillant et encore du croustillant !Notre Follow nous\n\nPlus d'infos: <a href=\"https://bolkiri.fr\" target=\"_blank\">En savoir plus</a>",
+        "lists": [
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-12 20:50:01"
+      },
+      {
+        "url": "https://bolkiri.fr/bolkiri-ouvre-aux-mureaux/",
+        "title": "BOLKIRI OUVRE AUX MUREAUX ! - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "BOLKIRI OUVRE AUX MUREAUX ! 🎉"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "UNE STREET FOOD VIETNAMIENNE GÉNÉREUSE ET MODERNE 🥢"
+          },
+          {
+            "level": "h2",
+            "text": "UN PROJET PORTÉ PAR DES FRANCHISÉS PASSIONNÉS"
+          },
+          {
+            "level": "h2",
+            "text": "DES OFFRES SPÉCIALES POUR CÉLÉBRER L’OUVERTURE"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri LES MUREAUX"
+          },
+          {
+            "level": "h2",
+            "text": "Envie de partager l’article ?"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Une nouvelle adresse de street food vietnamienne à découvrir dès le 27 juillet"
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER ACTUALITÉS BOLKIRI OUVRE AUX MUREAUX ! 🎉 Une nouvelle adresse de street food vietnamienne à découvrir dès le 27 juillet Une nouvelle adresse de Street-Food vietnamienne à découvrir dès le 27 juillet 2025. Nous avons le plaisir de vous annoncer l’ouverture d’un tout nouveau restaurant Bolkiri à Les Mureaux , à 101 Rue Paul Doumer, 78130 Les Mureaux 📆 Ouverture officielle : dimanche 27 juillet 2025 VOIR LE SITE Bolkiri Publié le 23 juillet 2025 UNE STREET FOOD VIETNAMIENNE GÉNÉREUSE ET MODERNE 🥢 Chez Bolkiri, nous revisitons les grands classiques de la cuisine de rue vietnamienne avec des recettes savoureuses, préparées minute dans une cuisine ouverte , pour une expérience à la fois authentique et moderne. Des plats pensés pour tous les goûts, à déguster sur place, à emporter ou en livraison. UN PROJET PORTÉ PAR DES FRANCHISÉS PASSIONNÉS Ce nouveau Bolkiri est le fruit d’un projet porté avec énergie et enthousiasme par des franchisés engagés , désireux de faire découvrir à leur ville une cuisine à la fois rapide, saine et pleine de goût. Ils partagent les valeurs fortes de notre marque : exigence, accessibilité, et plaisir de bien manger. Un accompagnement par nos équipes et collaborateurs pour la bonne mise en place pour l’ouverture. DES OFFRES SPÉCIALES POUR CÉLÉBRER L’OUVERTURE À l’occasion de cette ouverture, plusieurs offres exclusives seront proposées sur place tout au long du mois d’août 2025. C’est le moment idéal pour découvrir notre univers de la street-food Viêt, ou revenir goûter et profiter vos plats préférés ! Bolkiri LES MUREAUX Adresse : 101 Rue Paul Doumer, 78130 Les Mureaux Horaires : Ouvert tous les jours, midi et soir Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?\n\nPlus d'infos: <a href=\"https://bolkiri.fr/bolkiri-ouvre-aux-mureaux/\" target=\"_blank\">En savoir plus</a>",
+        "lists": [
+          [
+            "Publié le23 juillet 2025"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-12 20:50:03"
       },
       {
         "url": "https://bolkiri.fr/cgu/",
@@ -1243,7 +1614,164 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:51"
+        "scraped_at": "2025-11-12 20:50:05"
+      },
+      {
+        "url": "https://bolkiri.fr/presse/",
+        "title": "Presse - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "On parle de nous !​"
+          },
+          {
+            "level": "h2",
+            "text": "BFM BUSINESS\nAvec Vous"
+          },
+          {
+            "level": "h2",
+            "text": "MES INFOS"
+          },
+          {
+            "level": "h2",
+            "text": "Affiches Parisiennes"
+          },
+          {
+            "level": "h2",
+            "text": "Bolkiri propose de la street–food vietnamienne avec des plats frais, sains et authentiques. ZoéJin raconte l’histoire denotreenseigne et vous parle de notre offre à destination des clients."
+          },
+          {
+            "level": "h2",
+            "text": "NEO RESTAURATION"
+          },
+          {
+            "level": "h2",
+            "text": "FRANCE SNACKING"
+          },
+          {
+            "level": "h2",
+            "text": "FRANCHISE MAGAZINE"
+          },
+          {
+            "level": "h2",
+            "text": "OUTGOMAG"
+          },
+          {
+            "level": "h2",
+            "text": "21/10/2025"
+          },
+          {
+            "level": "h2",
+            "text": "NOS FRANCHISÉS SUR CRAZY RADIO"
+          }
+        ],
+        "content": "On parle de nous !​ Chez Bolkiri, nous sommes fiers de partager notre passion pour la cuisine vietnamienne à travers nos restaurants et nos services traiteur. Notre approche unique et notre engagement env ers la qualité ont attiré l’attention des médias. Découvrez ci – dessous les articles, interviews, et reportages qui parlent de notre aventure culinaire. BFM BUSINESS Avec Vous Ce lundi 7 octobre, Kevin Jin, fondateur de Bolkiri et trois experts du secteur de la restauration étaient les invités dans l’émission Avec vous, présentée par Sandra Gandoin sur le thème de l ’ouverture d ’un restaurant. Regarder le replay MES INFOS Affiches Parisiennes Bolkiri propose de la street – food vietnamienne avec des plats frais, sains et authentiques. Zoé Jin raconte l’histoire de notre enseigne et vous parle de notre offre à destination des clients. Regarder le replay NEO RESTAURATION Bolkiri s’ouvre à la franchise Notre enseig ne de street food vietnamienne choisit ce modèle pour se développer au – delà de la région parisienne. Retrouvez toutes les informations concernant le développement professionnel de Bolkiri Lire l'article FRANCE SNACKING Avec 9 restaurants déjà ouverts en 4 ans, un 10e programmé avant la fin du mois et 3 premières franchises prévues à la rentrée, la marque de street food Viêt, créée par Kevin Jin compte bien jouer l a carte de la différence. Avec son identité singulière et ses recettes fabriquées « maison » à base de produits frais, elle devrait vite marquer son territoire en s’ouvrant à la franchise. Lire l'article FRANCHISE MAGAZINE Interview de Kevin Jin, fondateur de Bolkiri, qui partage les valeurs et le concept de la marque. Lire l'article OUTGOMAG Bolkiri est présent dans la liste des meilleurs bo bùn de paris en 2024 dans le classement d’outgomag Lire l'article 21/10/2025 NOS FRANCHISÉS SUR CRAZY RADIO Notre franchisé Quentin Viglione de Lagny-sur-Marne a été mis en lumière par Crazy Radio, la radio locale de Seine-et-Marne. Le reportage souligne le concept Bolkiri , l’ ambiance conviviale du restaurant et nos plats signatures comme le bò bún ou le loc lac . Lire l'article Reportage audio\n\nPlus d'infos: <a href=\"https://bolkiri.fr/presse/\" target=\"_blank\">En savoir plus</a>",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-12 20:50:06"
+      },
+      {
+        "url": "https://bolkiri.fr/black-friday-2025-bolkiri/",
+        "title": "Black Friday chez BOLKIRI - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "BLACK FRIDAY AVEC BOLKIRI"
+          },
+          {
+            "level": "h2",
+            "text": "S’abonner à\nla newsletter Bolkiri"
+          },
+          {
+            "level": "h2",
+            "text": "Actualités"
+          },
+          {
+            "level": "h3",
+            "text": "Du24 au 28 novembre, BOLKIRI vous fait un petit cadeau pour vos grandes envies !"
+          },
+          {
+            "level": "h3",
+            "text": "– Enregistrez vos commandes pour les refaire encore plus vite🥡"
+          },
+          {
+            "level": "h3",
+            "text": "👉Téléchargez l’application dès maintenantet laissez BOLKIRI s’occuper du reste."
+          },
+          {
+            "level": "h3",
+            "text": "Black Friday chez BOLKIRI"
+          },
+          {
+            "level": "h3",
+            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI IVRY DÉMÉNAGE !"
+          },
+          {
+            "level": "h3",
+            "text": "BOLKIRI OUVRE AUX MUREAUX !"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER Bolkiri Publié le 6 novembre 2025 BLACK FRIDAY AVEC BOLKIRI Du 24 au 28 novembre , BOLKIRI vous fait un petit cadeau pour vos grandes envies ! Pendant 5 jours seulement , profitez de 5€ offerts dès 20€ d’achat sur toutes vos commandes passées via notre application ou notre site web. Comment en profiter ? 🥢 C’est simple : 1 – Téléchargez l’application BOLKIRI (disponible gratuitement sur l’App Store et Google Play). 2 – Créez votre compte ou connectez-vous à votre espace client. 3 – Choisissez vos plats préférés parmi tous les produits à la carte et composez votre commande. 4 – Passez commande à emporter ou en livraison , directement depuis l’application ou le site internet. 5 – Votre réduction de 5€ sera automatiquement appliquée à partir de 20€ d’achat ! 💛 Pourquoi commander sur l’application BOLKIRI ? 📱 Notre application a été pensée pour vous simplifier la vie : – Commandez vos plats préférés en quelques clics 👉 – Suivez en temps réel la préparation et la livraison 🛵 – Suivre votre programme de fidélité BOLKIRI pour encore plus d’avantages ✨ – Accédez à des offres exclusives réservées aux utilisateurs de l’application 🔥 – Retrouvez facilement vos restaurants BOLKIRI favoris 📍 – Enregistrez vos commandes pour les refaire encore plus vite 🥡 Les conditions de l’offre ⚙️ • Offre valable du 24/11 au 28/11/2025 inclus. • Réduction immédiate de 5 € dès 20 € d’achat (hors frais de livraison). • Offre valable uniquement à emporter ou en livraison , pour toute commande effectuée via l’application BOLKIRI ou le site web. • Offre non cumulable avec d’autres promotions, bons de réduction, ou programmes de fidélité. • L’offre est limitée à une utilisation par compte client pendant la période de validité. • Valable dans tous les restaurants BOLKIRI . À ne pas manquer 💛 C’est le moment parfait pour tester la commande en ligne si vous ne l’avez pas encore fait ! Que ce soit pour un déjeuner sur le pouce, un dîner entre amis ou une envie gourmande à la maison, l’app BOLKIRI vous offre simplicité, rapidité et bons plans. 👉 Téléchargez l’application dès maintenant et laissez BOLKIRI s’occuper du reste. S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?\n\nPlus d'infos: <a href=\"https://bolkiri.fr/black-friday-2025-bolkiri/\" target=\"_blank\">En savoir plus</a>",
+        "lists": [
+          [
+            "Publié le6 novembre 2025"
+          ],
+          [
+            "6"
+          ],
+          [
+            "Nov"
+          ],
+          [
+            "16"
+          ],
+          [
+            "Oct"
+          ],
+          [
+            "27"
+          ],
+          [
+            "Août"
+          ],
+          [
+            "23"
+          ],
+          [
+            "Juil"
+          ],
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-12 20:50:07"
       },
       {
         "url": "https://bolkiri.fr/bolkiri-ivry-demenage/",
@@ -1360,7 +1888,32 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:52"
+        "scraped_at": "2025-11-12 20:50:09"
+      },
+      {
+        "url": "https://bolkiri.fr/cgv/",
+        "title": "CGV - Bolkiri",
+        "headings": [
+          {
+            "level": "h2",
+            "text": "CONDITIONS GÉNÉRALES DE VENTE (CGV)"
+          }
+        ],
+        "content": "Aller au contenu COMMANDER CONDITIONS GÉNÉRALES DE VENTE (CGV) CONDITIONS GÉNÉRALES DE VENTE ARTICLE 1 – DEFINITIONS Client : désigne toute personne physique commandant des Produits sur le Site. Cette dernière reconnaît être majeure et avoir la pleine capacité juridique pour s’engager au titre des présentes. Commande : désigne toute commande de Produits à emporter réalisée sur le Site ou sur l’application auprès d’un Point de Vente. Compte : désigne l’espace personnel que le Client peut créer sur le Site, pour accéder au service de Commande de Produits, associé à un identifiant et à un mot de passe. Données personnelles : informations à caractère personnel définies à l’article 4 du Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 sur la protection des données, qui sont fournies par le Client au Vendeur et à Bolkiri ou qui sont recueillies par Bolkiri à l’occasion de l’utilisation du Site. Groupe Bolkiri : SAS au capital de 100 000.00 €, dont le siège social est situé 62 AV DE LA REPUBLIQUE, 93110 ROSNY-SOUS-BOIS immatriculé au greffe de Bobigny sous le n°919 765 776 Point de Vente : désigne un local commercial, dans lequel est exploité un fonds de commerce sous enseigne Bolkiri Produits : désigne l’ensemble des produits proposés à la vente sur le Site et l’application par un Point de Vente. Service d’intermédiation : désigne le service d’intermédiation entre les Vendeurs et les Clients proposé par Bolkiri au moyen du Site. Site : désigne le site internet accessible à l’adresse URL suivante : https://bolkiri.fr Utilisateur : désigne toute personne physique naviguant sur le Site. Vendeur : désigne la personne morale qui commercialise des Produits au sein d’un Point de Vente sous enseigne, franchisé indépendant ou filiale de Bolkiri, sélectionné au sein du réseau de Points de Vente Bolkiri en fonction de l’adresse de retrait choisie par le Client et auprès duquel la Commande sera enregistrée. ARTICLE 2 – PRÉAMBULE ET OPPOSABILITE DES CGV Les présentes conditions générales de vente (ci-après les « CGV ») ont pour objet de définir et régir les droits et obligations des Parties dans le cadre de la vente en ligne des Produits par le Vendeur au Client. Toute Commande de Produits par le Client emporte de plein droit l’acceptation entière et sans réserve par celui-ci des présentes CGV. En cas de conflit entre les dispositions des CGV et tous autres documents contractuels afférents aux Services d’intermédiation et aux Commandes de Produits, les présentes CGV prévaudront sauf accord contraire écrit des Parties. Aucune tolérance sur l’application des dispositions des CGV ne peut être interprétée comme valant renonciation de Pokawa ou du Vendeur à s’en prévaloir ultérieurement. Si l’une quelconque des dispositions des présentes était ou devenait nulle au regard d’une disposition légale présente ou à venir, elle serait réputée non écrite sans affecter la validité des autres stipulations des présentes. L’entreprise se réserve la faculté de modifier ces CGV à tout moment. En cas de modification des CGV, les CGV applicables sont celles en vigueur à la date du règlement de la Commande. ARTICLE 3 – UTILISATION DU SITE L’utilisation du Site est régie par les conditions générales d’utilisation du Site (ci-après les « CGU ») figurant sur celui-ci, que le Client accepte entièrement et sans réserve lorsqu’il navigue sur le Site et passe ses Commandes. ARTICLE 4 – INFORMATION SUR LES PRODUITS Les Produits dont la vente est encadrée par les présentes CGV sont ceux qui figurent sur le Site et qui sont indiqués comme offerts à la vente par le Vendeur. Ces Produits sont proposés dans la limite des stocks disponibles, étant précisé que le Vendeur se réserve la possibilité de modifier à tout moment ou d’interrompre l’offre de certains Produits sans en informer au préalable le Client et sans préjudice des Commandes passées par le Client. Les Produits sont décrits et présentés avec la plus grande sincérité. Toutefois, Pokawa et le Vendeur ne garantissent pas l’exactitude des photos ou les informations liés aux Produits qui n’ont qu’une finalité illustrative sans avoir une valeur contractuelle. Il résulte de ce qui précède que dans l’hypothèse où des erreurs ou omissions se seraient produites dans la présentation des Produits, la responsabilité du Vendeur et/ou de l’entreprise ne pourrait être engagée. Il appartient au Client de se renseigner sur ses allergies ou intolérance à certains ingrédients des Produits et à en rechercher les traces auprès des services du Vendeur. Le Vendeur ne pourront être tenus responsables des conséquences de la non prise en compte de ces informations par le Client lors de sa Commande. Le Client s’engage après le retrait des Produits à en assurer la bonne conservation et à les consommer avant la date indiquée sur l’emballage. En cas de non-étiquetage de la Date Limite de Consommation, le Client s’engage à recueillir l’information auprès du Vendeur et par défaut à consommer les Produits \n\nPlus d'infos: <a href=\"https://bolkiri.fr/cgv/\" target=\"_blank\">En savoir plus</a>",
+        "lists": [
+          [
+            "Gérer les options",
+            "Gérer les services",
+            "Gérer {vendor_count} fournisseurs",
+            "En savoir plus sur ces finalités"
+          ],
+          [
+            "{title}",
+            "{title}",
+            "{title}"
+          ]
+        ],
+        "scraped_at": "2025-11-12 20:50:11"
       },
       {
         "url": "https://bolkiri.fr/ouverture-bolkiri-sucy-en-brie/",
@@ -1460,72 +2013,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:53"
-      },
-      {
-        "url": "https://bolkiri.fr/presse/",
-        "title": "Presse - Bolkiri",
-        "headings": [
-          {
-            "level": "h2",
-            "text": "On parle de nous !​"
-          },
-          {
-            "level": "h2",
-            "text": "BFM BUSINESS\nAvec Vous"
-          },
-          {
-            "level": "h2",
-            "text": "MES INFOS"
-          },
-          {
-            "level": "h2",
-            "text": "Affiches Parisiennes"
-          },
-          {
-            "level": "h2",
-            "text": "Bolkiri propose de la street–food vietnamienne avec des plats frais, sains et authentiques. ZoéJin raconte l’histoire denotreenseigne et vous parle de notre offre à destination des clients."
-          },
-          {
-            "level": "h2",
-            "text": "NEO RESTAURATION"
-          },
-          {
-            "level": "h2",
-            "text": "FRANCE SNACKING"
-          },
-          {
-            "level": "h2",
-            "text": "FRANCHISE MAGAZINE"
-          },
-          {
-            "level": "h2",
-            "text": "OUTGOMAG"
-          },
-          {
-            "level": "h2",
-            "text": "21/10/2025"
-          },
-          {
-            "level": "h2",
-            "text": "NOS FRANCHISÉS SUR CRAZY RADIO"
-          }
-        ],
-        "content": "On parle de nous !​ Chez Bolkiri, nous sommes fiers de partager notre passion pour la cuisine vietnamienne à travers nos restaurants et nos services traiteur. Notre approche unique et notre engagement env ers la qualité ont attiré l’attention des médias. Découvrez ci – dessous les articles, interviews, et reportages qui parlent de notre aventure culinaire. BFM BUSINESS Avec Vous Ce lundi 7 octobre, Kevin Jin, fondateur de Bolkiri et trois experts du secteur de la restauration étaient les invités dans l’émission Avec vous, présentée par Sandra Gandoin sur le thème de l ’ouverture d ’un restaurant. Regarder le replay MES INFOS Affiches Parisiennes Bolkiri propose de la street – food vietnamienne avec des plats frais, sains et authentiques. Zoé Jin raconte l’histoire de notre enseigne et vous parle de notre offre à destination des clients. Regarder le replay NEO RESTAURATION Bolkiri s’ouvre à la franchise Notre enseig ne de street food vietnamienne choisit ce modèle pour se développer au – delà de la région parisienne. Retrouvez toutes les informations concernant le développement professionnel de Bolkiri Lire l'article FRANCE SNACKING Avec 9 restaurants déjà ouverts en 4 ans, un 10e programmé avant la fin du mois et 3 premières franchises prévues à la rentrée, la marque de street food Viêt, créée par Kevin Jin compte bien jouer l a carte de la différence. Avec son identité singulière et ses recettes fabriquées « maison » à base de produits frais, elle devrait vite marquer son territoire en s’ouvrant à la franchise. Lire l'article FRANCHISE MAGAZINE Interview de Kevin Jin, fondateur de Bolkiri, qui partage les valeurs et le concept de la marque. Lire l'article OUTGOMAG Bolkiri est présent dans la liste des meilleurs bo bùn de paris en 2024 dans le classement d’outgomag Lire l'article 21/10/2025 NOS FRANCHISÉS SUR CRAZY RADIO Notre franchisé Quentin Viglione de Lagny-sur-Marne a été mis en lumière par Crazy Radio, la radio locale de Seine-et-Marne. Le reportage souligne le concept Bolkiri , l’ ambiance conviviale du restaurant et nos plats signatures comme le bò bún ou le loc lac . Lire l'article Reportage audio\n\nPlus d'infos: <a href=\"https://bolkiri.fr/presse/\" target=\"_blank\">En savoir plus</a>",
-        "lists": [
-          [
-            "Gérer les options",
-            "Gérer les services",
-            "Gérer {vendor_count} fournisseurs",
-            "En savoir plus sur ces finalités"
-          ],
-          [
-            "{title}",
-            "{title}",
-            "{title}"
-          ]
-        ],
-        "scraped_at": "2025-11-16 17:55:54"
+        "scraped_at": "2025-11-12 20:50:13"
       },
       {
         "url": "https://bolkiri.fr/mentions-legales/",
@@ -1550,367 +2038,7 @@
             "{title}"
           ]
         ],
-        "scraped_at": "2025-11-16 17:55:55"
-      },
-      {
-        "url": "https://bolkiri.fr/bolkiri-ouvre-aux-mureaux/",
-        "title": "BOLKIRI OUVRE AUX MUREAUX ! - Bolkiri",
-        "headings": [
-          {
-            "level": "h2",
-            "text": "BOLKIRI OUVRE AUX MUREAUX ! 🎉"
-          },
-          {
-            "level": "h2",
-            "text": "Bolkiri"
-          },
-          {
-            "level": "h2",
-            "text": "UNE STREET FOOD VIETNAMIENNE GÉNÉREUSE ET MODERNE 🥢"
-          },
-          {
-            "level": "h2",
-            "text": "UN PROJET PORTÉ PAR DES FRANCHISÉS PASSIONNÉS"
-          },
-          {
-            "level": "h2",
-            "text": "DES OFFRES SPÉCIALES POUR CÉLÉBRER L’OUVERTURE"
-          },
-          {
-            "level": "h2",
-            "text": "Bolkiri LES MUREAUX"
-          },
-          {
-            "level": "h2",
-            "text": "Envie de partager l’article ?"
-          },
-          {
-            "level": "h2",
-            "text": "S’abonner à\nla newsletter Bolkiri"
-          },
-          {
-            "level": "h2",
-            "text": "Actualités"
-          },
-          {
-            "level": "h3",
-            "text": "Une nouvelle adresse de street food vietnamienne à découvrir dès le 27 juillet"
-          },
-          {
-            "level": "h3",
-            "text": "Black Friday chez BOLKIRI"
-          },
-          {
-            "level": "h3",
-            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI IVRY DÉMÉNAGE !"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI OUVRE AUX MUREAUX !"
-          }
-        ],
-        "content": "Aller au contenu COMMANDER ACTUALITÉS BOLKIRI OUVRE AUX MUREAUX ! 🎉 Une nouvelle adresse de street food vietnamienne à découvrir dès le 27 juillet Une nouvelle adresse de Street-Food vietnamienne à découvrir dès le 27 juillet 2025. Nous avons le plaisir de vous annoncer l’ouverture d’un tout nouveau restaurant Bolkiri à Les Mureaux , à 101 Rue Paul Doumer, 78130 Les Mureaux 📆 Ouverture officielle : dimanche 27 juillet 2025 VOIR LE SITE Bolkiri Publié le 23 juillet 2025 UNE STREET FOOD VIETNAMIENNE GÉNÉREUSE ET MODERNE 🥢 Chez Bolkiri, nous revisitons les grands classiques de la cuisine de rue vietnamienne avec des recettes savoureuses, préparées minute dans une cuisine ouverte , pour une expérience à la fois authentique et moderne. Des plats pensés pour tous les goûts, à déguster sur place, à emporter ou en livraison. UN PROJET PORTÉ PAR DES FRANCHISÉS PASSIONNÉS Ce nouveau Bolkiri est le fruit d’un projet porté avec énergie et enthousiasme par des franchisés engagés , désireux de faire découvrir à leur ville une cuisine à la fois rapide, saine et pleine de goût. Ils partagent les valeurs fortes de notre marque : exigence, accessibilité, et plaisir de bien manger. Un accompagnement par nos équipes et collaborateurs pour la bonne mise en place pour l’ouverture. DES OFFRES SPÉCIALES POUR CÉLÉBRER L’OUVERTURE À l’occasion de cette ouverture, plusieurs offres exclusives seront proposées sur place tout au long du mois d’août 2025. C’est le moment idéal pour découvrir notre univers de la street-food Viêt, ou revenir goûter et profiter vos plats préférés ! Bolkiri LES MUREAUX Adresse : 101 Rue Paul Doumer, 78130 Les Mureaux Horaires : Ouvert tous les jours, midi et soir Sur place, à emporter et en livraison Envie de partager l’article ? Tiktok Instagram Facebook S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?\n\nPlus d'infos: <a href=\"https://bolkiri.fr/bolkiri-ouvre-aux-mureaux/\" target=\"_blank\">En savoir plus</a>",
-        "lists": [
-          [
-            "Publié le23 juillet 2025"
-          ],
-          [
-            "6"
-          ],
-          [
-            "Nov"
-          ],
-          [
-            "16"
-          ],
-          [
-            "Oct"
-          ],
-          [
-            "27"
-          ],
-          [
-            "Août"
-          ],
-          [
-            "23"
-          ],
-          [
-            "Juil"
-          ],
-          [
-            "Gérer les options",
-            "Gérer les services",
-            "Gérer {vendor_count} fournisseurs",
-            "En savoir plus sur ces finalités"
-          ],
-          [
-            "{title}",
-            "{title}",
-            "{title}"
-          ]
-        ],
-        "scraped_at": "2025-11-16 17:55:56"
-      },
-      {
-        "url": "https://bolkiri.fr/cgv/",
-        "title": "CGV - Bolkiri",
-        "headings": [
-          {
-            "level": "h2",
-            "text": "CONDITIONS GÉNÉRALES DE VENTE (CGV)"
-          }
-        ],
-        "content": "Aller au contenu COMMANDER CONDITIONS GÉNÉRALES DE VENTE (CGV) CONDITIONS GÉNÉRALES DE VENTE ARTICLE 1 – DEFINITIONS Client : désigne toute personne physique commandant des Produits sur le Site. Cette dernière reconnaît être majeure et avoir la pleine capacité juridique pour s’engager au titre des présentes. Commande : désigne toute commande de Produits à emporter réalisée sur le Site ou sur l’application auprès d’un Point de Vente. Compte : désigne l’espace personnel que le Client peut créer sur le Site, pour accéder au service de Commande de Produits, associé à un identifiant et à un mot de passe. Données personnelles : informations à caractère personnel définies à l’article 4 du Règlement (UE) 2016/679 du Parlement européen et du Conseil du 27 avril 2016 sur la protection des données, qui sont fournies par le Client au Vendeur et à Bolkiri ou qui sont recueillies par Bolkiri à l’occasion de l’utilisation du Site. Groupe Bolkiri : SAS au capital de 100 000.00 €, dont le siège social est situé 62 AV DE LA REPUBLIQUE, 93110 ROSNY-SOUS-BOIS immatriculé au greffe de Bobigny sous le n°919 765 776 Point de Vente : désigne un local commercial, dans lequel est exploité un fonds de commerce sous enseigne Bolkiri Produits : désigne l’ensemble des produits proposés à la vente sur le Site et l’application par un Point de Vente. Service d’intermédiation : désigne le service d’intermédiation entre les Vendeurs et les Clients proposé par Bolkiri au moyen du Site. Site : désigne le site internet accessible à l’adresse URL suivante : https://bolkiri.fr Utilisateur : désigne toute personne physique naviguant sur le Site. Vendeur : désigne la personne morale qui commercialise des Produits au sein d’un Point de Vente sous enseigne, franchisé indépendant ou filiale de Bolkiri, sélectionné au sein du réseau de Points de Vente Bolkiri en fonction de l’adresse de retrait choisie par le Client et auprès duquel la Commande sera enregistrée. ARTICLE 2 – PRÉAMBULE ET OPPOSABILITE DES CGV Les présentes conditions générales de vente (ci-après les « CGV ») ont pour objet de définir et régir les droits et obligations des Parties dans le cadre de la vente en ligne des Produits par le Vendeur au Client. Toute Commande de Produits par le Client emporte de plein droit l’acceptation entière et sans réserve par celui-ci des présentes CGV. En cas de conflit entre les dispositions des CGV et tous autres documents contractuels afférents aux Services d’intermédiation et aux Commandes de Produits, les présentes CGV prévaudront sauf accord contraire écrit des Parties. Aucune tolérance sur l’application des dispositions des CGV ne peut être interprétée comme valant renonciation de Pokawa ou du Vendeur à s’en prévaloir ultérieurement. Si l’une quelconque des dispositions des présentes était ou devenait nulle au regard d’une disposition légale présente ou à venir, elle serait réputée non écrite sans affecter la validité des autres stipulations des présentes. L’entreprise se réserve la faculté de modifier ces CGV à tout moment. En cas de modification des CGV, les CGV applicables sont celles en vigueur à la date du règlement de la Commande. ARTICLE 3 – UTILISATION DU SITE L’utilisation du Site est régie par les conditions générales d’utilisation du Site (ci-après les « CGU ») figurant sur celui-ci, que le Client accepte entièrement et sans réserve lorsqu’il navigue sur le Site et passe ses Commandes. ARTICLE 4 – INFORMATION SUR LES PRODUITS Les Produits dont la vente est encadrée par les présentes CGV sont ceux qui figurent sur le Site et qui sont indiqués comme offerts à la vente par le Vendeur. Ces Produits sont proposés dans la limite des stocks disponibles, étant précisé que le Vendeur se réserve la possibilité de modifier à tout moment ou d’interrompre l’offre de certains Produits sans en informer au préalable le Client et sans préjudice des Commandes passées par le Client. Les Produits sont décrits et présentés avec la plus grande sincérité. Toutefois, Pokawa et le Vendeur ne garantissent pas l’exactitude des photos ou les informations liés aux Produits qui n’ont qu’une finalité illustrative sans avoir une valeur contractuelle. Il résulte de ce qui précède que dans l’hypothèse où des erreurs ou omissions se seraient produites dans la présentation des Produits, la responsabilité du Vendeur et/ou de l’entreprise ne pourrait être engagée. Il appartient au Client de se renseigner sur ses allergies ou intolérance à certains ingrédients des Produits et à en rechercher les traces auprès des services du Vendeur. Le Vendeur ne pourront être tenus responsables des conséquences de la non prise en compte de ces informations par le Client lors de sa Commande. Le Client s’engage après le retrait des Produits à en assurer la bonne conservation et à les consommer avant la date indiquée sur l’emballage. En cas de non-étiquetage de la Date Limite de Consommation, le Client s’engage à recueillir l’information auprès du Vendeur et par défaut à consommer les Produits \n\nPlus d'infos: <a href=\"https://bolkiri.fr/cgv/\" target=\"_blank\">En savoir plus</a>",
-        "lists": [
-          [
-            "Gérer les options",
-            "Gérer les services",
-            "Gérer {vendor_count} fournisseurs",
-            "En savoir plus sur ces finalités"
-          ],
-          [
-            "{title}",
-            "{title}",
-            "{title}"
-          ]
-        ],
-        "scraped_at": "2025-11-16 17:55:57"
-      },
-      {
-        "url": "https://bolkiri.fr/black-friday-2025-bolkiri/",
-        "title": "Black Friday chez BOLKIRI - Bolkiri",
-        "headings": [
-          {
-            "level": "h2",
-            "text": "Bolkiri"
-          },
-          {
-            "level": "h2",
-            "text": "BLACK FRIDAY AVEC BOLKIRI"
-          },
-          {
-            "level": "h2",
-            "text": "S’abonner à\nla newsletter Bolkiri"
-          },
-          {
-            "level": "h2",
-            "text": "Actualités"
-          },
-          {
-            "level": "h3",
-            "text": "Du24 au 28 novembre, BOLKIRI vous fait un petit cadeau pour vos grandes envies !"
-          },
-          {
-            "level": "h3",
-            "text": "– Enregistrez vos commandes pour les refaire encore plus vite🥡"
-          },
-          {
-            "level": "h3",
-            "text": "👉Téléchargez l’application dès maintenantet laissez BOLKIRI s’occuper du reste."
-          },
-          {
-            "level": "h3",
-            "text": "Black Friday chez BOLKIRI"
-          },
-          {
-            "level": "h3",
-            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI IVRY DÉMÉNAGE !"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI OUVRE AUX MUREAUX !"
-          }
-        ],
-        "content": "Aller au contenu COMMANDER Bolkiri Publié le 6 novembre 2025 BLACK FRIDAY AVEC BOLKIRI Du 24 au 28 novembre , BOLKIRI vous fait un petit cadeau pour vos grandes envies ! Pendant 5 jours seulement , profitez de 5€ offerts dès 20€ d’achat sur toutes vos commandes passées via notre application ou notre site web. Comment en profiter ? 🥢 C’est simple : 1 – Téléchargez l’application BOLKIRI (disponible gratuitement sur l’App Store et Google Play). 2 – Créez votre compte ou connectez-vous à votre espace client. 3 – Choisissez vos plats préférés parmi tous les produits à la carte et composez votre commande. 4 – Passez commande à emporter ou en livraison , directement depuis l’application ou le site internet. 5 – Votre réduction de 5€ sera automatiquement appliquée à partir de 20€ d’achat ! 💛 Pourquoi commander sur l’application BOLKIRI ? 📱 Notre application a été pensée pour vous simplifier la vie : – Commandez vos plats préférés en quelques clics 👉 – Suivez en temps réel la préparation et la livraison 🛵 – Suivre votre programme de fidélité BOLKIRI pour encore plus d’avantages ✨ – Accédez à des offres exclusives réservées aux utilisateurs de l’application 🔥 – Retrouvez facilement vos restaurants BOLKIRI favoris 📍 – Enregistrez vos commandes pour les refaire encore plus vite 🥡 Les conditions de l’offre ⚙️ • Offre valable du 24/11 au 28/11/2025 inclus. • Réduction immédiate de 5 € dès 20 € d’achat (hors frais de livraison). • Offre valable uniquement à emporter ou en livraison , pour toute commande effectuée via l’application BOLKIRI ou le site web. • Offre non cumulable avec d’autres promotions, bons de réduction, ou programmes de fidélité. • L’offre est limitée à une utilisation par compte client pendant la période de validité. • Valable dans tous les restaurants BOLKIRI . À ne pas manquer 💛 C’est le moment parfait pour tester la commande en ligne si vous ne l’avez pas encore fait ! Que ce soit pour un déjeuner sur le pouce, un dîner entre amis ou une envie gourmande à la maison, l’app BOLKIRI vous offre simplicité, rapidité et bons plans. 👉 Téléchargez l’application dès maintenant et laissez BOLKIRI s’occuper du reste. S’abonner à la newsletter Bolkiri Inscrivez-vous à la newsletter pour recevoir notre actualités et les futurs bons plans. Valider Actualités Voir tous les articles 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! Gérer le consentement aux cookies Pour offrir les meilleures expériences, nous utilisons des technologies telles que les cookies pour stocker et/ou accéder aux informations des appareils. Le fait de consentir à ces technologies nous permettra de traiter des données telles que le comportement de navigation ou les ID uniques sur ce site. Le fait de ne pas consentir ou de retirer son consentement peut avoir un effet négatif sur certaines caractéristiques et fonctions. Fonctionnel Fonctionnel Toujours activé Le stockage ou l’accès technique est strictement nécessaire dans la finalité d’intérêt légitime de permettre l’utilisation d’un service spécifique explicitement demandé par l’abonné ou l’internaute, ou dans le seul but d’effectuer la transmission d’une communication sur un réseau de communications électroniques. Préférences Préférences L’accès ou le stockage technique est nécessaire dans la finalité d’intérêt légitime de stocker des préférences qui ne sont pas demandées par l’abonné ou l’internaute. Statistiques Statistiques Le stockage ou l’accès technique qui est utilisé exclusivement à des fins statistiques. Le stockage ou l’accès technique qui est utilisé exclusivement dans des finalités statistiques anonymes. En l’absence d’une assignation à comparaître, d’une conformité volontaire de la part de votre fournisseur d’accès à internet ou d’enregistrements supplémentaires provenant d’une tierce partie, les informations stockées ou extraites à cette seule fin ne peuvent généralement pas être utilisées pour vous identifier. Marketing Marketing Le stockage ou l’accès technique est nécessaire pour créer des profils d’internautes afin d’envoyer des publicités, ou pour suivre l’internaute sur un site web ou sur plusieurs sites web ayant des finalités marketing similaires. Gérer les options Gérer les services Gérer {vendor_count} fournisseurs En savoir plus sur ces finalités Accepter Refuser Voir les préférences Enregistrer les préférences Voir les préférences {title} {title} {title} Gérer le consentement COMMANDER Besoin d'aide ?\n\nPlus d'infos: <a href=\"https://bolkiri.fr/black-friday-2025-bolkiri/\" target=\"_blank\">En savoir plus</a>",
-        "lists": [
-          [
-            "Publié le6 novembre 2025"
-          ],
-          [
-            "6"
-          ],
-          [
-            "Nov"
-          ],
-          [
-            "16"
-          ],
-          [
-            "Oct"
-          ],
-          [
-            "27"
-          ],
-          [
-            "Août"
-          ],
-          [
-            "23"
-          ],
-          [
-            "Juil"
-          ],
-          [
-            "Gérer les options",
-            "Gérer les services",
-            "Gérer {vendor_count} fournisseurs",
-            "En savoir plus sur ces finalités"
-          ],
-          [
-            "{title}",
-            "{title}",
-            "{title}"
-          ]
-        ],
-        "scraped_at": "2025-11-16 17:55:58"
-      },
-      {
-        "url": "https://bolkiri.fr",
-        "title": "Bolkiri | Le meilleur de la Street food Vietnamienne",
-        "headings": [
-          {
-            "level": "h2",
-            "text": "Bienvenue chez"
-          },
-          {
-            "level": "h2",
-            "text": "LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI"
-          },
-          {
-            "level": "h2",
-            "text": "Les nems du moment"
-          },
-          {
-            "level": "h2",
-            "text": "LES STARS"
-          },
-          {
-            "level": "h2",
-            "text": "CHEZ BOLKIRI"
-          },
-          {
-            "level": "h2",
-            "text": "BOBUN SIGNATURE"
-          },
-          {
-            "level": "h2",
-            "text": "BŒUF LOC LAC"
-          },
-          {
-            "level": "h2",
-            "text": "CROUSTY POULET"
-          },
-          {
-            "level": "h2",
-            "text": "PAD THAÏ"
-          },
-          {
-            "level": "h2",
-            "text": "Nos Actualités"
-          },
-          {
-            "level": "h2",
-            "text": "@bolkiri"
-          },
-          {
-            "level": "h3",
-            "text": "TÉLÉCHARGE TON APPLI BOLKIRI !"
-          },
-          {
-            "level": "h3",
-            "text": "Black Friday chez BOLKIRI"
-          },
-          {
-            "level": "h3",
-            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI IVRY DÉMÉNAGE !"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI OUVRE AUX MUREAUX !"
-          },
-          {
-            "level": "h3",
-            "text": "Black Friday chez BOLKIRI"
-          },
-          {
-            "level": "h3",
-            "text": "C’est le jour-J pour BOLKIRI Sucy-En-Brie"
-          },
-          {
-            "level": "h3",
-            "text": "BOLKIRI IVRY DÉMÉNAGE !"
-          }
-        ],
-        "content": "Bienvenue chez COMMANDER Commandez en Click & Collect ou en livraison TÉLÉCHARGE TON APPLI BOLKIRI ! 1 € dépensé = 1 grain de riz (point) LA MEILLEURE FAÇON DE BIEN PROFITER CHEZ BOLKIRI Fais partie du club ! ✓ Des offres exclusives ✓ Une fidélité récompensée ✓ Une livraison directement chez vous ✓ -10% sur ta 1ère commande avec le code BOLKIRI10 Découvrir la fidélité Les nems du moment Découvrez les actualités à ne pas manquer LES STARS CHEZ BOLKIRI Voir notre carte ⬈ BOBUN SIGNATURE Le bo bun est composé de vermicelles de riz, de bœuf mariné et sauté, de nems croustillants coupés en morceaux, de crudités (carottes râpées, concombre, germes de soja, salade), d’herbes fraîches, le tout garni de cacahuètes concassées et d’oignons frits, et accompagné d’une sauce nuoc-mâm légèrement sucrée et citronnée. BŒUF LOC LAC Le loc lac est composé de morceaux de bœuf marinés sautés à feu vif, servis sur un lit de riz sauté à la tomate, accompagnés de tranches de tomate, de concombre, d’un œuf au plat, et d’un morceau de citron pour relever le tout. CROUSTY POULET Le crousty poulet est composé de morceaux de poulet panés et frits jusqu’à obtenir une texture bien croustillante, servis avec du riz, des crudités (carottes râpées, concombre, salade), des herbes fraîches, et accompagnés d’une sauce sucrée-salée PAD THAÏ Le pad thaï est composé de nouilles de riz sautées au wok, des légumes croquants, des crevettes ou du poulet, boeuf ou tofu, des cacahuètes concassées, des herbes fraîches, et est accompagné avec sa sauce maison. Nos Actualités Tous nos articles ⬈ 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! 23 Juil BOLKIRI OUVRE AUX MUREAUX ! 6 Nov Black Friday chez BOLKIRI 16 Oct C’est le jour-J pour BOLKIRI Sucy-En-Brie 27 Août BOLKIRI IVRY DÉMÉNAGE ! @bolkiri Tu sais pourquoi on dit Bœuf Loc Lac ? 🤔“Lắc”, ç La tête peut tromper… le wok, jamais 😏 À l’origine, les nems étaient réservés aux rois et On t’a mijoté un Black Friday bien relevé 🔥 Du 24 Bolkiri débarque à Sucy-en-Brie ! Une nouvelle adr Pourquoi il faudrait douter de Suwo ? 😅 16 restos déjà ! 💛 De Paris à Lille, chaque spot B Pas qu’en Italie qu’on sait faire rêver avec des p Follow nous\n\nPlus d'infos: <a href=\"https://bolkiri.fr\" target=\"_blank\">En savoir plus</a>",
-        "lists": [
-          [
-            "6"
-          ],
-          [
-            "Nov"
-          ],
-          [
-            "16"
-          ],
-          [
-            "Oct"
-          ],
-          [
-            "27"
-          ],
-          [
-            "Août"
-          ],
-          [
-            "23"
-          ],
-          [
-            "Juil"
-          ],
-          [
-            "6"
-          ],
-          [
-            "Nov"
-          ],
-          [
-            "16"
-          ],
-          [
-            "Oct"
-          ],
-          [
-            "27"
-          ],
-          [
-            "Août"
-          ],
-          [
-            "Gérer les options",
-            "Gérer les services",
-            "Gérer {vendor_count} fournisseurs",
-            "En savoir plus sur ces finalités"
-          ],
-          [
-            "{title}",
-            "{title}",
-            "{title}"
-          ]
-        ],
-        "scraped_at": "2025-11-16 17:56:00"
+        "scraped_at": "2025-11-12 20:50:14"
       }
     ]
   },
