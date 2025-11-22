@@ -392,6 +392,12 @@ Outils disponibles:
 
 Question client: "{user_query}"
 
+RÈGLE IMPORTANTE - DÉPARTEMENTS:
+Si la question mentionne "91", "Essonne" → utilise get_restaurant_info avec ville="91"
+Si la question mentionne "94", "Val-de-Marne" → utilise get_restaurant_info avec ville="94"
+Si la question mentionne "78", "Yvelines" → utilise get_restaurant_info avec ville="78"
+Si la question mentionne "77", "Seine-et-Marne" → utilise get_restaurant_info avec ville="77"
+
 Analyse la question et choisis les meilleurs outils à utiliser.
 
 Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
