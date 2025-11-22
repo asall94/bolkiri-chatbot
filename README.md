@@ -79,6 +79,71 @@ npm install && npm start
 
 ## Architecture Details
 
+**System Architecture:**
+```mermaid
+graph TB
+    subgraph "Client Layer"
+        A[User Query] --> B[FastAPI /chat endpoint]
+    end
+    
+    subgraph "Agent Layer"
+        B --> C[AI Agent<br/>ai_agent.py]
+        C --> D{Tool Selection<br/>GPT-4o-mini}
+        D --> E1[search_knowledge]
+        D --> E2[get_restaurants]
+        D --> E3[filter_menu]
+        D --> E4[get_hours]
+        D --> E5[get_contact]
+        D --> E6[recommend_dish]
+        D --> E7[get_restaurant_info]
+        D --> E8[get_menu]
+    end
+    
+    subgraph "RAG Layer"
+        E1 --> F[RAG Engine<br/>rag_engine.py]
+        E2 --> G[Enriched KB<br/>knowledge_base_enriched.py]
+        E3 --> G
+        E4 --> G
+        E5 --> G
+        E6 --> G
+        E7 --> G
+        E8 --> G
+        F --> H[(FAISS Index<br/>IndexFlatIP)]
+        G --> I[(Knowledge Base<br/>bolkiri_knowledge_industrial_2025.json)]
+    end
+    
+    subgraph "Validation Layer"
+        C --> J{Anti-Hallucination<br/>4 Validators}
+        J --> J1[Restaurant Existence]
+        J --> J2[Schedule Format]
+        J --> J3[Price Consistency]
+        J --> J4[Department Coherence]
+    end
+    
+    subgraph "LLM Layer"
+        D -.token usage.-> K[OpenAI API<br/>GPT-4o-mini]
+        F -.embeddings.-> L[OpenAI API<br/>text-embedding-ada-002]
+    end
+    
+    J --> M[Final Response]
+    M --> B
+    
+    subgraph "Auto-Update Pipeline"
+        N[GitHub Actions<br/>Weekly Cron] --> O[Scraper<br/>scraper_industrial_2025.py]
+        O --> P[Bolkiri Website<br/>JSON-LD + HTML]
+        O --> I
+        I --> Q[Rebuild FAISS<br/>on Deploy]
+        Q --> H
+    end
+    
+    style C fill:#e1f5ff
+    style F fill:#ffe1e1
+    style G fill:#ffe1e1
+    style J fill:#fff4e1
+    style K fill:#e8f5e9
+    style L fill:#e8f5e9
+```
+
 **Agentic Workflow:**
 ```
 Query → GPT-4o-mini Tool Selection → Parallel Execution (8 tools) 
@@ -119,6 +184,7 @@ See `DEPLOYMENT.md` for complete guide.
 
 ## Documentation
 
+- **[ARCHITECTURE_DECISIONS.md](docs/ARCHITECTURE_DECISIONS.md)**: Technical decision records (ADRs)
 - **[DEPLOYMENT.md](DEPLOYMENT.md)**: Production deployment guide for Render.com
 - **[RAG_ARCHITECTURE.html](docs/RAG_ARCHITECTURE.html)**: Interactive architecture visualization
 
