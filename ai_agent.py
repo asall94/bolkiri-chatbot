@@ -256,9 +256,17 @@ class AIAgent:
         if ville and contact.get('restaurant'):
             result = f"CONTACT - {contact['restaurant']}\n\n"
             result += f"Adresse: {contact.get('adresse', 'N/A')}\n"
-            result += f"Téléphone: {contact.get('telephone', 'N/A')}\n"
-            result += f"Email: {contact.get('email', 'N/A')}\n"
-            result += f"Services: {', '.join(contact.get('services', []))}"
+            
+            # Handle missing contact info explicitly
+            tel = contact.get('telephone', '').strip()
+            email = contact.get('email', '').strip()
+            result += f"Téléphone: {tel if tel else 'Non renseigné sur le site'}\n"
+            result += f"Email: {email if email else 'Non renseigné sur le site'}\n"
+            result += f"Services: {', '.join(contact.get('services', []))}\n\n"
+            
+            # Add link if available
+            if contact.get('url'):
+                result += f"Plus d'infos: {contact['url']}"
         else:
             result = f"CONTACT BOLKIRI\n\n"
             result += f"Entreprise: {contact.get('entreprise', 'Bolkiri')}\n"

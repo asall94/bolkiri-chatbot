@@ -222,7 +222,8 @@ class EnrichedKnowledgeBase:
                     'adresse': resto['adresse'],
                     'telephone': resto['telephone'],
                     'email': resto.get('email', 'N/A'),
-                    'services': resto.get('services', [])
+                    'services': resto.get('services', []),
+                    'url': resto.get('url', '')
                 }
         
         # General info

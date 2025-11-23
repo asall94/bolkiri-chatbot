@@ -3,6 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-purple)
+![Tests](https://img.shields.io/badge/Tests-19%2F19%20passing-brightgreen)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
 24/7 multilingual customer support chatbot with 100% RAG architecture and <2% hallucination rate.
