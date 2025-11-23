@@ -3,6 +3,10 @@ from openai import OpenAI
 import json
 from datetime import datetime
 from knowledge_base_enriched import EnrichedKnowledgeBase
+from logger_config import setup_logger
+
+# Setup structured JSON logging
+logger = setup_logger(__name__)
 
 class AIAgent:
     
@@ -461,7 +465,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             
             for phrase in negative_phrases:
                 if phrase in response_lower:
-                    print(f"[WARN] HALLUCINATION: '{phrase}' despite positive context")
+                    logger.warning("Restaurant hallucination detected", extra={"phrase": phrase, "validation_result": "negative_phrase_despite_positive_context"})
                     # Return simple and direct corrected response
                     # Extract city/department from query
                     import re
@@ -492,7 +496,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             
             # If completely different hours
             if context_normalized and not any(rh in ' '.join(context_normalized) for rh in response_normalized):
-                print(f"[WARN] SCHEDULE HALLUCINATION: Context={context_hours} vs Response={response_hours}")
+                logger.warning("Schedule hallucination detected", extra={"context_hours": context_hours, "response_hours": response_hours})
                 # Replace hours in response with context hours
                 corrected = response
                 for wrong_hour in response_hours:
@@ -514,7 +518,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             if dept in user_query.lower():
                 # But response says "no restaurant" AND context mentions the city
                 if ville in context_lower and any(neg in response_lower for neg in ["pas de restaurant", "aucun restaurant"]):
-                    print(f"[WARN] CONTRADICTION: Says 'no resto' for {dept} but context contains {ville}")
+                    logger.warning("Department contradiction detected", extra={"department": dept, "ville": ville})
                     # Use get_restaurant_info for clean response
                     corrected = self.get_restaurant_info(dept)
                     return corrected, False
@@ -525,7 +529,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
         
         # If response mentions prices BUT context has NONE → Hallucination
         if response_prices and not context_prices:
-            print(f"[WARN] PRICE HALLUCINATION: Response contains {response_prices} but context empty")
+            logger.warning("Price hallucination detected", extra={"response_prices": response_prices, "context_empty": True})
             # Replace all prices with generic message
             corrected = re.sub(r'\d+[,.]?\d*\s*€', '', response)
             corrected += "\n\nPrix disponibles sur la carte en restaurant. Contactez-nous pour plus d'informations."
@@ -537,7 +541,7 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
             
             # If price in response > 2x max of context
             if max(response_nums) > max(context_nums) * 2:
-                print(f"[WARN] ABERRANT PRICE: Context max={max(context_nums)}€ vs Response max={max(response_nums)}€")
+                logger.warning("Aberrant price detected", extra={"context_max": max(context_nums), "response_max": max(response_nums)})
                 # Correct by replacing aberrant prices
                 corrected = response
                 for i, wrong_price in enumerate(response_prices):
@@ -629,12 +633,12 @@ STYLE: First person plural, concise, LANGUAGE = detected query language.
                 validated_message, is_valid = self._validate_response(assistant_message, context, user_message)
                 
                 if not is_valid:
-                    print(f"[INVALID] Response invalidated, correction applied")
+                    logger.info("Response corrected by validator", extra={"validation_result": "invalid_corrected"})
                     assistant_message = validated_message
                 else:
-                    print(f"[OK] Response validated")
+                    logger.info("Response validated successfully", extra={"validation_result": "valid"})
             except Exception as e:
-                print(f"[ERROR] Validation error: {e}")
+                logger.error("Validation error", extra={"error_type": type(e).__name__}, exc_info=True)
                 # In case of validation error, keep original response
             
             # POST-PROCESSING: Strip markdown syntax (bold, italic, underline)
@@ -654,15 +658,13 @@ STYLE: First person plural, concise, LANGUAGE = detected query language.
             return assistant_message
             
         except Exception as e:
-            print(f"ERREUR OPENAI: {type(e).__name__}: {e}")
-            import traceback
-            traceback.print_exc()
+            logger.error("OpenAI API error", extra={"error_type": type(e).__name__, "error_message": str(e)}, exc_info=True)
             return f"Désolé, une erreur est survenue. Veuillez réessayer."
     
     def refresh_knowledge_from_web(self):
         """Rescrape website and update KB"""
         try:
-            print("[INFO] Refreshing knowledge base...")
+            logger.info("Refreshing knowledge base...")
             
             # Scraper already has hardcoded data in extract_all_restaurants()
             # and extract_menu_complet() - no need to scrape real site
@@ -673,13 +675,13 @@ STYLE: First person plural, concise, LANGUAGE = detected query language.
             self.kb = EnrichedKnowledgeBase()
             self.agent_state['last_update'] = datetime.now().isoformat()
             
-            print(f"KB refreshed: {len(self.kb.get_all_restaurants())} restaurants, {len(self.kb.get_all_menu_items())} dishes")
+            restaurant_count = len(self.kb.get_all_restaurants())
+            menu_count = len(self.kb.get_all_menu_items())
+            logger.info("Knowledge base refreshed successfully", extra={"restaurant_count": restaurant_count, "menu_count": menu_count})
             return True
             
         except Exception as e:
-            print(f"KB refresh error: {e}")
-            import traceback
-            traceback.print_exc()
+            logger.error("KB refresh failed", extra={"error_type": type(e).__name__}, exc_info=True)
             return False
 
 if __name__ == "__main__":

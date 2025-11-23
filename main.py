@@ -8,8 +8,12 @@ import os
 from datetime import datetime
 from dotenv import load_dotenv
 from ai_agent import AIAgent
+from logger_config import setup_logger
 
 load_dotenv()
+
+# Setup structured JSON logging
+logger = setup_logger(__name__)
 
 app = FastAPI(title="Bolkiri Chatbot API")
 
@@ -34,19 +38,18 @@ async def startup_event():
     website_url = os.getenv("WEBSITE_URL", "https://bolkiri.fr")
     
     if not api_key:
-        print("WARNING: OPENAI_API_KEY not set")
+        logger.warning("OPENAI_API_KEY not set - agent initialization skipped")
         return
     
-    print(f"Initializing agent...")
+    logger.info("Initializing AI agent...")
     
     try:
         agent = AIAgent(openai_api_key=api_key, website_url=website_url)
         # KB enrichie déjà chargée dans __init__, pas besoin de scraper
-        print(f"Agent initialized successfully with {len(agent.kb.get_all_restaurants())} restaurants")
+        restaurant_count = len(agent.kb.get_all_restaurants())
+        logger.info("Agent initialized successfully", extra={"restaurant_count": restaurant_count})
     except Exception as e:
-        print(f"Failed to initialize agent: {e}")
-        import traceback
-        traceback.print_exc()
+        logger.error("Failed to initialize agent", extra={"error_type": type(e).__name__, "error_message": str(e)}, exc_info=True)
 
 class ChatMessage(BaseModel):
     message: str

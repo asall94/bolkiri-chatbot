@@ -47,13 +47,25 @@ AI-powered customer support for Bolkiri restaurant chain. 100% RAG architecture 
 
 **[Try the chatbot here →](https://asall94.github.io/bolkiri-chatbot/)**
 
-### Local Setup
+### Docker (Recommended)
 
 ```bash
 # Clone repository
 git clone https://github.com/asall94/bolkiri-chatbot.git
 cd bolkiri-chatbot
 
+# Configure environment
+echo "OPENAI_API_KEY=sk-your-key" > .env
+
+# Run with Docker Compose
+docker-compose up -d
+
+# Access at http://localhost:8000
+```
+
+### Local Setup
+
+```bash
 # Install dependencies
 pip install -r requirements.txt
 
@@ -64,17 +76,13 @@ echo "REBUILD_EMBEDDINGS=false" >> .env  # true on first run
 # Launch backend
 python main.py  # http://localhost:8000
 
+# Run tests
+python -m pytest tests/ --cov=ai_agent --cov-report=html
+
 # Test endpoint
 curl -X POST http://localhost:8000/chat \
   -H "Content-Type: application/json" \
   -d '{"message":"Quels restaurants en Essonne?"}'
-```
-
-### Frontend (Optional)
-
-```bash
-cd frontend
-npm install && npm start
 ```
 
 ## Architecture Details
@@ -198,11 +206,26 @@ See `DEPLOYMENT.md` for complete guide.
 - Knowledge base content in `bolkiri_knowledge_industrial_2025.json` (scraped from French website)
 
 
+## Testing & Quality
+
+- **Unit Tests**: 16/20 passing (80% success rate)
+- **Code Coverage**: 42% (ai_agent.py)
+- **Framework**: pytest + pytest-cov
+- **Continuous Integration**: GitHub Actions (weekly scraping)
+
+```bash
+# Run tests
+python -m pytest tests/ -v
+
+# With coverage report
+python -m pytest tests/ --cov=ai_agent --cov-report=html
+```
+
 ## Author
 
 **Abdoulaye SALL** - AI Engineer  
 [LinkedIn](https://linkedin.com/in/abdoulaye-sall/) • [GitHub](https://github.com/asall94)
 
-**Skills Demonstrated:** RAG Architecture, Agentic AI, FAISS, FastAPI, OpenAI GPT-4, Hallucination Prevention, CI/CD
+**Skills Demonstrated:** RAG Architecture, Agentic AI, FAISS, FastAPI, OpenAI GPT-4, Hallucination Prevention, Docker, CI/CD, Unit Testing
 
 **License:** Proprietary | **Business:** Bolkiri Vietnamese Street Food ([bolkiri.fr](https://bolkiri.fr))

@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  bolkiri-chatbot:
+    build: .
+    container_name: bolkiri-rag-chatbot
+    ports:
+      - "8000:8000"
+    environment:
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - REBUILD_EMBEDDINGS=false
+    volumes:
+      - ./bolkiri_knowledge_industrial_2025.json:/app/bolkiri_knowledge_industrial_2025.json:ro
+      - ./embeddings_cache.pkl:/app/embeddings_cache.pkl
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c", "import requests; requests.get('http://localhost:8000/health')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 5s
