@@ -259,19 +259,21 @@ class AIAgent:
             return f"Site web: {self.website_url}"
         
         if ville and contact.get('restaurant'):
-            result = f"CONTACT - {contact['restaurant']}\n\n"
-            result += f"Adresse: {contact.get('adresse', 'N/A')}\n"
+            result = f"Voici les coordonnées du restaurant BOLKIRI à {contact.get('ville', ville)} :\n\n"
             
-            # Handle missing contact info explicitly
-            tel = contact.get('telephone', '').strip()
-            email = contact.get('email', '').strip()
-            result += f"Téléphone: {tel if tel else 'Non renseigné sur le site'}\n"
-            result += f"Email: {email if email else 'Non renseigné sur le site'}\n"
-            result += f"Services: {', '.join(contact.get('services', []))}\n\n"
+            # Only show available fields (no N/A or "Non renseigné")
+            if contact.get('adresse'):
+                result += f"Adresse : {contact['adresse']}\n"
             
-            # Add link if available
+            if contact.get('telephone'):
+                result += f"Téléphone : {contact['telephone']}\n"
+            
+            if contact.get('email') and contact['email'] != 'N/A':
+                result += f"Email : {contact['email']}\n"
+            
+            # Add clickable link in HTML format (like find_nearest_restaurant)
             if contact.get('url'):
-                result += f"Plus d'infos: {contact['url']}"
+                result += f'\nPlus d\'infos: <a href="{contact["url"]}" target="_blank">{contact["url"]}</a>'
         else:
             result = f"CONTACT BOLKIRI\n\n"
             result += f"Entreprise: {contact.get('entreprise', 'Bolkiri')}\n"

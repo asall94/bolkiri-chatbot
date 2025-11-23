@@ -4,7 +4,7 @@
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)
 ![Agentic RAG](https://img.shields.io/badge/Architecture-Agentic%20RAG-orange)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-purple)
-![Tests](https://img.shields.io/badge/Tests-27%2F27%20passing-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-28%2F28%20passing-brightgreen)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
 Production-grade agentic RAG system with 9-tool architecture and <2% hallucination rate.
@@ -149,7 +149,7 @@ See `DEPLOYMENT.md` for full guide.
 
 ## Testing & Quality
 
-**27/27 tests passing (100%)** | pytest + mocks (KB, OpenAI)
+**28/28 tests passing (100%)** | pytest + mocks (KB, OpenAI)
 
 ```bash
 python -m pytest tests/ -v

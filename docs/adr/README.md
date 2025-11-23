@@ -21,7 +21,7 @@ Quantified technical decisions for Bolkiri Agentic RAG chatbot.
 
 **Performance:** ~500ms avg latency (5ms FAISS + 10ms validation + 200-700ms LLM), 99.5% uptime (Render.com + UptimeRobot)
 
-**Reliability:** <2% hallucination rate, 27/27 tests passing (100%), zero manual KB maintenance, auto-recovery on deploy
+**Reliability:** <2% hallucination rate, 28/28 tests passing (100%), zero manual KB maintenance, auto-recovery on deploy
 
 ## Reading Guide
 

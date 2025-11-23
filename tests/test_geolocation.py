@@ -104,3 +104,28 @@ def test_contact_info_format():
     # Should include link when available
     if "Plus d'infos:" in response:
         assert "http" in response, "Contact response should include restaurant URL"
+
+
+def test_get_contact_link_html_format():
+    """Test that get_contact returns clickable HTML links (regression test)"""
+    from ai_agent import AIAgent
+    import os
+    
+    # Create agent with mock API key
+    agent = AIAgent(
+        openai_api_key=os.getenv('OPENAI_API_KEY', 'test-key'),
+        website_url='https://bolkiri.fr'
+    )
+    
+    # Get contact for a known restaurant
+    response = agent.get_contact("Ivry sur Seine")
+    
+    # Should contain HTML formatted link (not plain text)
+    assert "Plus d'infos:" in response, "Should include restaurant link"
+    assert '<a href="' in response, "Link should be in HTML format <a href=...>"
+    assert 'target="_blank"' in response, "Link should open in new tab (target=_blank)"
+    assert '</a>' in response, "Link should be properly closed with </a>"
+    
+    # Should NOT display Email if not available in KB
+    assert "Email" not in response or ("N/A" not in response and "Non renseigné" not in response), \
+        "Should skip Email field entirely if not available in KB"
