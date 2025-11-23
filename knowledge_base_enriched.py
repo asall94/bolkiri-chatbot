@@ -156,17 +156,35 @@ class EnrichedKnowledgeBase:
         elif ville_search.startswith("77"):
             ville_search = "lagny"
         
-        # Search restaurant (more permissive partial match)
+        # Search restaurant (fuzzy matching with normalization)
         ville_lower = ville_search.lower()
+        # Normalize for matching (remove hyphens and extra spaces)
+        ville_normalized = ville_lower.replace('-', ' ').replace('  ', ' ').strip()
+        # Also create version without spaces for partial word matching
+        ville_compact = ville_normalized.replace(' ', '')
+        
         for resto in self.restaurants:
-            # Extract city from name
+            # Extract city from name and address
             resto_ville = self._extract_ville_from_name(resto.get('name', '')).lower()
             resto_adresse = resto.get('adresse', '').lower()
             
-            # Partial match on city or address
+            # Normalize restaurant data
+            resto_ville_normalized = resto_ville.replace('-', ' ').replace('  ', ' ').strip()
+            resto_adresse_normalized = resto_adresse.replace('-', ' ')
+            resto_ville_compact = resto_ville_normalized.replace(' ', '')
+            
+            # Multi-strategy matching:
+            # 1. Exact or starts-with match (original)
             if ville_lower in resto_ville or resto_ville.startswith(ville_lower):
                 return resto
-            if ville_lower in resto_adresse:
+            # 2. Normalized match (with spaces)
+            if ville_normalized in resto_ville_normalized or resto_ville_normalized.startswith(ville_normalized):
+                return resto
+            # 3. Compact match (e.g., "ivrysurseine" matches "ivry")
+            if resto_ville_compact in ville_compact or ville_compact.startswith(resto_ville_compact):
+                return resto
+            # 4. Address match
+            if ville_lower in resto_adresse or ville_normalized in resto_adresse_normalized:
                 return resto
         
         return None
