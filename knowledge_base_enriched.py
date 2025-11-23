@@ -2,6 +2,7 @@ from typing import List, Dict, Optional
 import json
 import os
 from datetime import datetime
+from math import radians, sin, cos, sqrt, atan2
 
 # Import RAG Engine (OBLIGATOIRE)
 from rag_engine import RAGEngine
@@ -266,6 +267,82 @@ class EnrichedKnowledgeBase:
         if key:
             return self.infos_generales.get(key)
         return self.infos_generales
+    
+    def haversine_distance(self, lat1: float, lon1: float, lat2: float, lon2: float) -> float:
+        """Calculate distance between two GPS coordinates in km using Haversine formula"""
+        R = 6371  # Earth radius in kilometers
+        
+        lat1, lon1, lat2, lon2 = map(radians, [lat1, lon1, lat2, lon2])
+        dlat = lat2 - lat1
+        dlon = lon2 - lon1
+        
+        a = sin(dlat/2)**2 + cos(lat1) * cos(lat2) * sin(dlon/2)**2
+        c = 2 * atan2(sqrt(a), sqrt(1-a))
+        
+        return R * c
+    
+    def find_nearest_restaurant(self, ville_reference: str) -> Dict:
+        """Find nearest restaurant to a reference city using geocoding
+        
+        Args:
+            ville_reference: City name to find nearest restaurant from
+            
+        Returns:
+            Dict with nearest restaurant info and distance
+        """
+        # First try to geocode the reference city
+        import requests
+        try:
+            url = "https://nominatim.openstreetmap.org/search"
+            params = {
+                'q': f"{ville_reference}, France",
+                'format': 'json',
+                'limit': 1
+            }
+            headers = {'User-Agent': 'BolkiriChatbot/1.0'}
+            
+            response = requests.get(url, params=params, headers=headers, timeout=5)
+            response.raise_for_status()
+            data = response.json()
+            
+            if not data:
+                return {"error": f"Ville '{ville_reference}' non trouvée"}
+            
+            ref_lat = float(data[0]['lat'])
+            ref_lon = float(data[0]['lon'])
+            
+        except Exception as e:
+            return {"error": f"Erreur de géolocalisation: {str(e)}"}
+        
+        # Find nearest restaurant with coordinates
+        nearest = None
+        min_distance = float('inf')
+        
+        for resto in self.restaurants:
+            coords = resto.get('coordinates')
+            if not coords or not coords.get('lat') or not coords.get('lon'):
+                continue
+            
+            distance = self.haversine_distance(
+                ref_lat, ref_lon,
+                coords['lat'], coords['lon']
+            )
+            
+            if distance < min_distance:
+                min_distance = distance
+                nearest = resto
+        
+        if not nearest:
+            return {"error": "Aucun restaurant avec coordonnées GPS disponibles"}
+        
+        return {
+            'restaurant': nearest['name'],
+            'ville': self._extract_ville_from_name(nearest['name']),
+            'adresse': nearest['adresse'],
+            'distance_km': round(min_distance, 1),
+            'telephone': nearest.get('telephone', ''),
+            'url': nearest.get('url', '')
+        }
     
     # Compatibility methods with old system
     def add_documents(self, documents: List[Dict]):

@@ -64,6 +64,11 @@ class AIAgent:
                 "name": "recommend_dish",
                 "description": "Recommande un plat selon les préférences du client",
                 "parameters": {"preferences": "Préférences culinaires"}
+            },
+            {
+                "name": "find_nearest_restaurant",
+                "description": "Trouve le restaurant Bolkiri le plus proche d'une ville donnée en utilisant les coordonnées GPS",
+                "parameters": {"ville_reference": "Nom de la ville de référence"}
             }
         ]
     
@@ -280,6 +285,26 @@ class AIAgent:
         
         return result
     
+    def find_nearest_restaurant(self, ville_reference: str) -> str:
+        """Find nearest Bolkiri restaurant from a reference city"""
+        result = self.kb.find_nearest_restaurant(ville_reference)
+        
+        if result.get('error'):
+            return f"[ERREUR] {result['error']}\n\nVoici la liste de tous nos restaurants:\n{self.get_restaurants()}"
+        
+        output = f"RESTAURANT LE PLUS PROCHE DE {ville_reference.upper()}\n\n"
+        output += f"Restaurant: {result['restaurant']}\n"
+        output += f"Ville: {result['ville']}\n"
+        output += f"Distance: {result['distance_km']} km\n"
+        output += f"Adresse: {result['adresse']}\n"
+        
+        if result.get('telephone'):
+            output += f"Téléphone: {result['telephone']}\n"
+        if result.get('url'):
+            output += f"Plus d'infos: {result['url']}\n"
+        
+        return output
+    
     def get_hours(self, ville: Optional[str] = None) -> str:
         """Horaires d'ouverture"""
         hours = self.kb.get_hours(ville)
@@ -393,6 +418,8 @@ class AIAgent:
             return self.get_hours(parameters.get("ville"))
         elif tool_name == "recommend_dish":
             return self.recommend_dish(parameters.get("preferences", ""))
+        elif tool_name == "find_nearest_restaurant":
+            return self.find_nearest_restaurant(parameters.get("ville_reference", ""))
         else:
             return f"Outil inconnu: {tool_name}"
     

@@ -12,12 +12,13 @@ class BolkiriIndustrialScraper:
     def __init__(self, base_url: str = "https://bolkiri.fr"):
         self.base_url = base_url
         self.headers = {
-            'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+            'User-Agent': 'BolkiriChatbot/1.0 (https://github.com/asall94/bolkiri-chatbot)'
         }
         self.visited_urls: Set[str] = set()
         self.all_pages_content = {}
         self.restaurants = []
         self.menu = []
+        self.geocoding_cache = {}  # Cache for Nominatim API calls
         
         # Priority pages to scrape
         self.priority_pages = [
@@ -363,6 +364,9 @@ class BolkiriIndustrialScraper:
             if "prochaine" in page_text.lower():
                 statut = "ouverture_prochaine"
             
+            # Get coordinates
+            coordinates = self.geocode_address(adresse)
+            
             restaurant_data = {
                 "name": name,
                 "telephone": telephone,
@@ -370,6 +374,7 @@ class BolkiriIndustrialScraper:
                 "horaires": horaires,
                 "statut": statut,
                 "url": url,
+                "coordinates": coordinates,
                 "description": f"Restaurant {name}\nAdresse: {adresse}\nTéléphone: {telephone}\n\nPour réserver ou commander: <a href=\"{url}\" target=\"_blank\">Page du restaurant</a>"
             }
             
@@ -378,6 +383,40 @@ class BolkiriIndustrialScraper:
         except Exception as e:
             print(f"    Erreur: {e}")
             return None
+    
+    def geocode_address(self, address: str) -> Dict:
+        """Get coordinates from address using Nominatim (OpenStreetMap)"""
+        if address in self.geocoding_cache:
+            return self.geocoding_cache[address]
+        
+        try:
+            # Clean address for better results
+            clean_address = address.replace('\n', ', ').strip()
+            url = f"https://nominatim.openstreetmap.org/search"
+            params = {
+                'q': clean_address,
+                'format': 'json',
+                'limit': 1,
+                'countrycodes': 'fr'  # France only
+            }
+            
+            response = requests.get(url, params=params, headers=self.headers)
+            response.raise_for_status()
+            data = response.json()
+            
+            if data:
+                coords = {
+                    'lat': float(data[0]['lat']),
+                    'lon': float(data[0]['lon'])
+                }
+                self.geocoding_cache[address] = coords
+                time.sleep(1)  # Nominatim rate limit: 1 req/sec
+                return coords
+            
+        except Exception as e:
+            print(f"    Geocoding error: {e}")
+        
+        return None
     
     def parse_opening_hours(self, specs: List[Dict]) -> Dict:
         """Parse openingHoursSpecification from Schema.org
