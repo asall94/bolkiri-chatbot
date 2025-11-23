@@ -97,6 +97,7 @@ graph TB
         D --> E6[recommend_dish]
         D --> E7[get_restaurant_info]
         D --> E8[get_menu]
+        D --> E9[find_nearest]
     end
     
     subgraph "RAG Layer"
@@ -241,6 +242,7 @@ python -m pytest tests/ --cov=ai_agent --cov-report=html
 **Skills Demonstrated:**
 - Agentic RAG architecture with multi-step tool calling (9 specialized functions)
 - Anti-hallucination system with 4-layer validation (<2% error rate)
+- GPS-based geolocation with Haversine distance calculation (Nominatim API)
 - FAISS vector search optimization (5-10ms latency, $840/year saved vs Pinecone)
 - Production FastAPI deployment on Render.com with auto-scaling
 - OpenAI GPT-4o-mini integration with function calling (66x cheaper than GPT-4)
