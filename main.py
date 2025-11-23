@@ -25,7 +25,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Monter le dossier static
+# Mount static directory
 if os.path.exists("static"):
     app.mount("/static", StaticFiles(directory="static"), name="static")
 
@@ -45,7 +45,7 @@ async def startup_event():
     
     try:
         agent = AIAgent(openai_api_key=api_key, website_url=website_url)
-        # KB enrichie déjà chargée dans __init__, pas besoin de scraper
+        # Enriched KB already loaded in __init__, no need to scrape
         restaurant_count = len(agent.kb.get_all_restaurants())
         logger.info("Agent initialized successfully", extra={"restaurant_count": restaurant_count})
     except Exception as e:
@@ -100,7 +100,7 @@ async def refresh_knowledge(background_tasks: BackgroundTasks):
     if agent is None:
         raise HTTPException(status_code=503, detail="Agent not initialized")
     
-    # Lancer le refresh en arrière-plan
+    # Launch refresh in background
     background_tasks.add_task(agent.refresh_knowledge_from_web)
     
     return {
