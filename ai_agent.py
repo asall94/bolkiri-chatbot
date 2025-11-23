@@ -301,7 +301,7 @@ class AIAgent:
         if result.get('telephone'):
             output += f"Téléphone: {result['telephone']}\n"
         if result.get('url'):
-            output += f"Plus d'infos: [BOLKIRI {result['ville']}]({result['url']})\n"
+            output += f'Plus d\'infos: <a href="{result["url"]}" target="_blank">[BOLKIRI {result["ville"]}]</a>\n'
         
         return output
     

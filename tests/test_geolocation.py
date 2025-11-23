@@ -75,9 +75,9 @@ def test_find_nearest_restaurant_output_format():
     # Should not be an error
     assert "[ERREUR]" not in response
     
-    # Check markdown link format [text](url)
-    assert re.search(r'\[BOLKIRI .+\]\(https://restaurants\.bolkiri\.fr/.+\)', response), \
-        "Link should be in markdown format [text](url)"
+    # Check HTML link format <a href="url">text</a>
+    assert re.search(r'<a href="https://restaurants\.bolkiri\.fr/.+" target="_blank">\[BOLKIRI .+\]</a>', response), \
+        "Link should be in HTML format with target=_blank"
     
     # Check structured output sections
     assert "RESTAURANT LE PLUS PROCHE" in response
