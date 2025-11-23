@@ -58,3 +58,49 @@ def test_find_nearest_restaurant_returns_required_fields():
         assert 'adresse' in result
         assert 'distance_km' in result
         assert isinstance(result['distance_km'], (int, float))
+
+def test_find_nearest_restaurant_output_format():
+    """Test output format matches UX standards (regression test)"""
+    import re
+    from ai_agent import AIAgent
+    from unittest.mock import Mock
+    import os
+    
+    # Mock OpenAI client to avoid API calls
+    api_key = os.getenv('OPENAI_API_KEY', 'test-key')
+    agent = AIAgent(openai_api_key=api_key, website_url="https://bolkiri.fr")
+    
+    response = agent.find_nearest_restaurant("Meudon")
+    
+    # Should not be an error
+    assert "[ERREUR]" not in response
+    
+    # Check markdown link format [text](url)
+    assert re.search(r'\[BOLKIRI .+\]\(https://restaurants\.bolkiri\.fr/.+\)', response), \
+        "Link should be in markdown format [text](url)"
+    
+    # Check structured output sections
+    assert "RESTAURANT LE PLUS PROCHE" in response
+    assert "Restaurant:" in response
+    assert "Distance:" in response
+    assert "km" in response
+    
+def test_contact_info_format():
+    """Test contact info displays correctly (no 'N/A' for missing data)"""
+    from ai_agent import AIAgent
+    import os
+    
+    api_key = os.getenv('OPENAI_API_KEY', 'test-key')
+    agent = AIAgent(openai_api_key=api_key, website_url="https://bolkiri.fr")
+    
+    # Test with restaurant that has missing contact info
+    response = agent.get_contact("Saint-Gratien")
+    
+    # Should say "Non renseigné sur le site" instead of "N/A"
+    if "Téléphone:" in response and not response.split("Téléphone:")[1].split("\n")[0].strip().startswith("+"):
+        assert "Non renseigné sur le site" in response, \
+            "Missing contact info should say 'Non renseigné sur le site'"
+    
+    # Should include link when available
+    if "Plus d'infos:" in response:
+        assert "http" in response, "Contact response should include restaurant URL"

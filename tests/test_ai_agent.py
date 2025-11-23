@@ -51,11 +51,11 @@ class TestAIAgentInitialization:
         """Agent initializes with correct default state"""
         assert agent.agent_state['knowledge_ready'] is True
         assert agent.agent_state['total_interactions'] == 0
-        assert len(agent.tools) == 8
+        assert len(agent.tools) == 9
         assert agent.greeting_message is not None
     
     def test_tools_defined(self, agent):
-        """All 8 required tools are defined"""
+        """All 9 required tools are defined"""
         tool_names = [tool['name'] for tool in agent.tools]
         expected_tools = [
             'search_knowledge',
@@ -65,7 +65,8 @@ class TestAIAgentInitialization:
             'filter_menu',
             'get_contact',
             'get_hours',
-            'recommend_dish'
+            'recommend_dish',
+            'find_nearest_restaurant'
         ]
         assert set(tool_names) == set(expected_tools)
 
