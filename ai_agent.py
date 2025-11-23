@@ -632,9 +632,9 @@ RETRIEVED CONTEXT FROM TOOLS:
 
 GENERATION CONSTRAINTS:
 - Context is absolute source of truth. Never contradict retrieved data.
-- If context empty or contains [HORS_PERIMETRE]: Inform user information not available on website, suggest direct contact.
-- Schedules: Use exact format from context (11:30-14:30). If missing: "Horaires disponibles directement en restaurant."
-- Prices: Only mention if present in context. If missing: "Prix disponibles sur la carte en restaurant."
+- If context empty or contains [HORS_PERIMETRE]: Say "Cette information n'est pas disponible sur le site pour le moment." + suggest contacting restaurant directly.
+- Schedules: Use exact format from context (11:30-14:30). If missing: "Ces horaires ne sont pas disponibles sur le site pour le moment."
+- Prices: Only mention if present in context. If missing: "Les prix sont disponibles sur la carte en restaurant."
 - Links: If context has HTML tags <a href>, copy EXACTLY as-is (preserve HTML).
 - Format: Plain text only. NO markdown syntax (no bold/italic/underline markers).
 
