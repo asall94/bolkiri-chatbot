@@ -1,12 +1,12 @@
 # Deployment Guide
 
-Production deployment configuration for Bolkiri Chatbot on Render.com.
+Production deployment on Render.com.
 
 ## Prerequisites
 
 - Render.com account
 - OpenAI API key
-- GitHub repository (for auto-deploy)
+- GitHub repository
 
 ## Configuration Files
 
@@ -14,16 +14,14 @@ Production deployment configuration for Bolkiri Chatbot on Render.com.
 ```
 python-3.12.0
 ```
-Specifies Python version for Render.
 
 ### `Procfile`
 ```
 web: uvicorn main:app --host 0.0.0.0 --port $PORT
 ```
-Defines web service startup command.
 
 ### `requirements.txt`
-Production dependencies (FastAPI, OpenAI, FAISS, etc.)
+FastAPI, OpenAI, FAISS, etc.
 
 ## Environment Variables
 
@@ -37,52 +35,47 @@ Set these in Render dashboard:
 
 ## Deployment Steps
 
-### 1. Create Web Service on Render
+### 1. Create Web Service
 
 - Connect GitHub repository
-- Select Python 3.12 runtime
-- Build command: `pip install -r requirements.txt`
-- Start command: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+- Runtime: Python 3.12
+- Build: `pip install -r requirements.txt`
+- Start: `uvicorn main:app --host 0.0.0.0 --port $PORT`
 
-### 2. Set Environment Variables
+### 2. Environment Variables
 
-Add `OPENAI_API_KEY` in Render dashboard.
+Set `OPENAI_API_KEY` in Render dashboard.
 
 ### 3. Auto-Deploy
 
-Render auto-deploys on git push to `main` branch.
+Auto-deploys on push to `main`.
 
 ## CI/CD
 
-### Weekly Knowledge Base Update
+### Weekly KB Update
 
-GitHub Actions workflow (`.github/workflows/auto-scraping.yml`):
-- Runs every Thursday at 2am UTC
-- Scrapes website for updates
-- Commits updated KB to repo
-- Triggers auto-deploy on Render
+GitHub Actions (`.github/workflows/auto-scraping.yml`):
+- Every Thursday 2am UTC
+- Scrapes website
+- Commits KB updates
+- Triggers auto-deploy
 
 ## Health Checks
 
-- **Endpoint**: `GET /health`
-- **Expected**: `{"status": "healthy", "agent": "ready"}`
+`GET /health` returns `{"status": "healthy", "agent": "ready"}`
 
 ## Scaling
 
-Render auto-scales based on traffic:
-- Free tier: 1 instance (sleeps after inactivity)
+- Free tier: 1 instance (sleeps after 15min)
 - Paid tier: Auto-scale 1-10 instances
 
 ## Troubleshooting
 
-### FAISS Import Error
-Ensure `faiss-cpu` is in `requirements.txt`.
+**FAISS Import Error:** Check `faiss-cpu` in `requirements.txt`
 
-### Embeddings Cache Missing
-Set `REBUILD_EMBEDDINGS=true` to force regeneration on deploy.
+**Embeddings Cache Missing:** Set `REBUILD_EMBEDDINGS=true`
 
-### Cold Start Delay
-Free tier instances sleep after 15min inactivity. First request may take 30-60s.
+**Cold Start Delay:** Free tier sleeps after 15min (first request: 30-60s)
 
 ## Production URLs
 
@@ -92,32 +85,14 @@ Free tier instances sleep after 15min inactivity. First request may take 30-60s.
 
 ## GitHub Pages Setup
 
-To publish the demo at `https://asall94.github.io/bolkiri-chatbot/`:
+Publish demo at `https://asall94.github.io/bolkiri-chatbot/`:
 
-1. **Enable GitHub Pages:**
-   - Go to repo Settings → Pages
-   - Source: Deploy from a branch
-   - Branch: `main` → `/docs` folder
-   - Save
+1. **Enable:** Settings → Pages → Deploy from `main` → `/docs` folder
+2. **Verify:** `docs/index.html` + `docs/logo_bolkiri.png`
+3. **Access:** Wait 1-2 min, then visit URL
 
-2. **Verify `docs/index.html`:**
-   - Must be at root of `/docs` folder
-   - Favicon: `docs/logo_bolkiri.png`
-
-3. **Access URL:**
-   - Wait 1-2 minutes after enabling
-   - Visit: `https://asall94.github.io/bolkiri-chatbot/`
-
-**Benefits:**
-- Professional URL (no `.onrender.com` suffix)
-- Free static hosting
-- Auto-deploy on push to `main`
-- Custom domain support (optional)
+**Benefits:** Professional URL, free hosting, auto-deploy, custom domain support
 
 ## Monitoring
 
-Check Render dashboard for:
-- Response times
-- Error rates
-- Memory usage
-- Deploy logs
+Render dashboard: response times, error rates, memory usage, deploy logs

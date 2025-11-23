@@ -31,3 +31,17 @@ embeddings_cache.pkl
 
 # Internal docs
 .github/copilot-instructions.md
+
+# Test artifacts
+htmlcov/
+.coverage
+.pytest_cache/
+
+# Cache files
+embeddings_cache.pkl
+
+# Virtual environment
+venv/
+
+# Python cache
+__pycache__/

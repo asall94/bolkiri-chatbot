@@ -5,15 +5,15 @@
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-purple)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
-AI-powered customer support for Bolkiri restaurant chain. 100% RAG architecture with 4-layer validation system.
+24/7 multilingual customer support chatbot with 100% RAG architecture and <2% hallucination rate.
 
 ## Problem & Solution
 
-**Challenge:** Restaurant chain needs 24/7 multilingual customer support for menu inquiries, locations, and schedules across 20 locations.
+**Challenge:** 20-location restaurant chain requires 24/7 multilingual support for menu/location/schedule queries.
 
-**Solution:** Agentic RAG chatbot with zero maintenance (auto-updates via weekly scraping) and hallucination-proof responses (4-layer validation).
+**Solution:** Agentic RAG with auto-updating knowledge base (weekly scraping) and 4-layer anti-hallucination validation.
 
-**Impact:** Automated customer support with <2% hallucination rate, no manual KB updates required.
+**Impact:** <2% hallucination rate, zero manual KB maintenance, <500ms response time.
 
 ## Tech Stack
 
@@ -26,20 +26,11 @@ AI-powered customer support for Bolkiri restaurant chain. 100% RAG architecture 
 
 ## Architecture Principles
 
-- **100% RAG**: Zero hardcoded data, single source of truth (bolkiri_knowledge_industrial_2025.json)
-- **Agentic Reasoning**: Multi-step tool calling with 8 specialized functions
+- **100% RAG**: Single source of truth (bolkiri_knowledge_industrial_2025.json), zero hardcoded data
+- **Agentic Reasoning**: Multi-step tool calling (8 specialized functions)
 - **Hallucination Prevention**: 4-layer validator (restaurants/schedules/prices/departments)
-- **Multilingual**: Auto-detects French/Vietnamese/English queries
-- **Auto-Update**: Weekly scraping + FAISS reindexing via GitHub Actions
-
-## Performance & Scale
-
-- **Knowledge Base**: 20 restaurants, 32 menu items, 19 pages (148 KB JSON)
-- **Embedding Model**: text-embedding-ada-002 (1536 dimensions)
-- **LLM**: GPT-4o-mini (temp=0.1, ~0.15$/1000 requests)
-- **Search Engine**: FAISS IndexFlatIP (exact cosine similarity)
-- **Response Time**: <500ms avg (RAG search + LLM generation)
-- **Deployment**: Render.com free tier
+- **Multilingual**: Auto-detects French/Vietnamese/English
+- **Auto-Update**: Weekly scraping via GitHub Actions
 
 ## Quick Start
 
@@ -188,65 +179,49 @@ User Query → Intent Analysis → Tool Selection (GPT-4o-mini)
    ```
 
 **8 Available Tools:**
-- `search_knowledge`: FAISS semantic search across entire KB
-- `get_restaurants`: List all 20 locations (Paris region)
-- `get_restaurant_info`: Query by city/department code (91/94/77/78)
-- `get_menu`: Full menu retrieval (32 dishes with prices)
-- `filter_menu`: Criteria-based filtering (vegetarian/vegan/price range)
-- `get_contact`: Contact information (phone/email/social media)
-- `detect_department`: Extract department code from natural language
-- `recommend_dish`: Personalized suggestions based on user preferences
+- `search_knowledge`: FAISS semantic search
+- `get_restaurants`: List 20 locations
+- `get_restaurant_info`: Query by city/department (91/94/77/78)
+- `get_menu`: Full menu with prices
+- `filter_menu`: Filter by criteria (vegetarian/vegan/price)
+- `get_contact`: Phone/email/social media
+- `detect_department`: Extract department from natural language
+- `recommend_dish`: Personalized suggestions
 
 **Key Components:**
-- `ai_agent.py`: Agentic core (tool calling, planning, validation)
-- `rag_engine.py`: FAISS semantic search engine
+- `ai_agent.py`: Tool calling, planning, validation
+- `rag_engine.py`: FAISS semantic search
 - `scraper_industrial_2025.py`: JSON-LD + HTML parser
 - `knowledge_base_enriched.py`: RAG wrapper with domain methods
 
 **Anti-Hallucination Validation (4 layers):**
-1. **Restaurant existence**: Only 20 allowed names from KB
-2. **Schedule format**: Regex validation ("lun-dim 11h30-14h30")
-3. **Price consistency**: Strips hallucinated prices when KB has no data
-4. **Department coherence**: Maps 91/94/77/78 to correct cities
+1. **Restaurant existence**: Whitelist of 20 KB names
+2. **Schedule format**: Regex validation
+3. **Price consistency**: Strips hallucinated prices
+4. **Department coherence**: Maps 91/94/77/78 to cities
 
 ## Deployment
 
-Configured for Render.com with:
+Render.com deployment:
 - Python 3.12 runtime
-- Auto-rebuild embeddings on deploy
-- Weekly scraping via automated CI/CD (Every Thursday at 2am)
+- Auto-rebuild embeddings
+- Weekly scraping (Thursday 2am UTC)
 
-See `DEPLOYMENT.md` for complete guide.
+See `DEPLOYMENT.md` for full guide.
 
 ## Documentation
 
-- **[ARCHITECTURE_DECISIONS.md](docs/ARCHITECTURE_DECISIONS.md)**: Technical decision records (ADRs)
-- **[DEPLOYMENT.md](DEPLOYMENT.md)**: Production deployment guide for Render.com
+- **[Architecture Decision Records](docs/adr/README.md)**: 8 technical decisions with quantified trade-offs
+- **[DEPLOYMENT.md](DEPLOYMENT.md)**: Production deployment guide
 - **[RAG_ARCHITECTURE.html](docs/RAG_ARCHITECTURE.html)**: Interactive architecture visualization
-
-## Why Agentic Architecture?
-
-Traditional RAG systems retrieve context then generate. This agent uses tool-calling for multi-step reasoning:
-
-**Advantages:**
-- Modular tool design (8 specialized functions vs monolithic retrieval)
-- Parallel execution (3 tools simultaneously for complex queries)
-- Deterministic validation (4-layer hallucination prevention)
-- Explicit reasoning trace (tool selection + execution logs)
-
-**Real-World Impact:**
-- 87% reduction in hallucinated responses (vs baseline GPT-4 without validation)
-- 40% faster responses (parallel tool execution vs sequential RAG)
-- Zero manual KB updates (auto-scraping + FAISS rebuild)
-
 
 ## Testing & Quality
 
-- **Unit Tests**: 19/19 passing (100% success rate)
-- **Code Coverage**: 42% on ai_agent.py core logic
+- **Tests**: 19/19 passing (100%)
+- **Coverage**: 42% on ai_agent.py
 - **Framework**: pytest + pytest-cov + pytest-mock
-- **Mocking Strategy**: Fixtures for EnrichedKnowledgeBase, OpenAI API responses
-- **CI/CD**: GitHub Actions (weekly scraping automation)
+- **Mocks**: EnrichedKnowledgeBase, OpenAI API
+- **CI/CD**: GitHub Actions weekly scraping
 
 ```bash
 # Run tests
@@ -261,6 +236,6 @@ python -m pytest tests/ --cov=ai_agent --cov-report=html
 **Abdoulaye SALL** - AI Engineer  
 [LinkedIn](https://linkedin.com/in/abdoulaye-sall/) • [GitHub](https://github.com/asall94)
 
-**Technical Skills:** RAG Architecture, Agentic AI Design, FAISS Vector Search, FastAPI Production APIs, OpenAI GPT-4o-mini, Anti-Hallucination Systems, Docker Containerization, GitHub Actions CI/CD, pytest Unit Testing
+**Stack:** RAG Architecture • Agentic AI • FAISS Vector Search • FastAPI • OpenAI GPT-4o-mini • Docker • GitHub Actions • pytest
 
 **Business Context:** Bolkiri Vietnamese Street Food (bolkiri.fr)
