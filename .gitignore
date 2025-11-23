@@ -31,6 +31,8 @@ embeddings_cache.pkl
 
 # Internal docs
 .github/copilot-instructions.md
+portfolio_brief_bolkiri.md
+qa_technique_bolkiri.md
 
 # Test artifacts
 htmlcov/
