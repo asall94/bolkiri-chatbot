@@ -66,16 +66,4 @@ Documents technical choices with quantified trade-offs for the Bolkiri chatbot p
 - Control: Add validators in 15min vs framework customization complexity
 
 **Trade-off:** Manual maintenance (but validators have unit tests catching regressions)
-
----
-
-## Why No RAGAS?
-
-**RAGAS** = RAG evaluation metrics (faithfulness, answer relevancy, context precision).
-
-**Not implemented because:**
-1. **Agentic system** = multi-tool orchestration, not pure RAG pipeline (RAGAS designed for retrieve→generate only)
-2. **Effort/value**: Requires golden Q&A dataset (~50 examples) + 10h setup vs custom validators (5ms, catches 98% issues)
-3. **Production monitoring**: Current approach = 4 validators + manual testing (sufficient for 20 restaurants scale)
-
-**When to add:** If scaling to 100+ restaurants or multi-domain (RAGAS then justifies effort for systematic eval)
+ 
