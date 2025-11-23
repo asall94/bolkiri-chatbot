@@ -7,7 +7,7 @@
 ![Tests](https://img.shields.io/badge/Tests-27%2F27%20passing-brightgreen)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
-24/7 multilingual customer support chatbot with 100% RAG architecture and <2% hallucination rate.
+Production-grade agentic RAG system with 9-tool architecture and <2% hallucination rate.
 
 ## Problem & Solution
 

@@ -8,9 +8,9 @@ Set in Render dashboard: `OPENAI_API_KEY=sk-your-key`
 
 ## Deployment Steps
 
-1. **Connect GitHub** → Render auto-detects `runtime.txt` (Python 3.12) + `Procfile`
-2. **Set env var** → `OPENAI_API_KEY` in dashboard
-3. **Deploy** → Auto-deploys on push to `main`, rebuilds embeddings on first boot
+1. **Connect GitHub** → Render auto-detects `runtime.txt` (Python 3.12) and `Procfile`
+2. **Configure environment** → Set `OPENAI_API_KEY` in Render dashboard
+3. **Deploy** → Auto-deploys on push to `main` branch, rebuilds FAISS index on first boot (2-3 min)
 
 ## CI/CD & Health
 
@@ -23,10 +23,10 @@ Set in Render dashboard: `OPENAI_API_KEY=sk-your-key`
 
 | Issue | Solution |
 |-------|----------|
-| FAISS import error | Verify `faiss-cpu` in `requirements.txt` |
-| Embeddings missing | Set `REBUILD_EMBEDDINGS=true` |
-| OpenAI rate limit | Upgrade to paid tier or reduce traffic |
-| High latency | Check UptimeRobot pings (should be <5s interval) |
+| FAISS import error | Requires Python 3.12 x86_64 (faiss-cpu incompatible with ARM/M1 chips) |
+| Embeddings missing | First deploy auto-rebuilds embeddings (wait 2-3 min for FAISS index creation) |
+| OpenAI rate limit | Upgrade OpenAI tier or implement rate limiting middleware |
+| High latency (>2s) | UptimeRobot configured for 5-min intervals - verify pings active at uptimerobot.com |
 
 ## Production URLs
 
