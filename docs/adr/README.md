@@ -1,6 +1,6 @@
 # Architecture Decision Records (ADRs)
 
-Quantified technical decisions for Bolkiri RAG chatbot.
+Quantified technical decisions for Bolkiri Agentic RAG chatbot.
 
 ## Summary Table
 
@@ -19,7 +19,7 @@ Quantified technical decisions for Bolkiri RAG chatbot.
 
 **Cost:** $840/year saved (FAISS), $9.85/1K requests saved (GPT-4o-mini), 95% token reduction (agentic tools)
 
-**Performance:** <500ms avg latency (5ms FAISS + 10ms validation + 200ms LLM), 70% cache hit rate, 99.5% uptime (Render.com)
+**Performance:** ~500ms avg latency (5ms FAISS + 10ms validation + 200-700ms LLM), 99.5% uptime (Render.com + UptimeRobot)
 
 **Reliability:** <2% hallucination rate, 27/27 tests passing (100%), zero manual KB maintenance, auto-recovery on deploy
 

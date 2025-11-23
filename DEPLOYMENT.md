@@ -4,13 +4,7 @@ Production deployment on Render.com (free tier sufficient).
 
 ## Environment Variables
 
-Set these in Render dashboard:
-
-| Variable | Description | Required |
-|----------|-------------|----------|
-| `OPENAI_API_KEY` | OpenAI API key | Yes |
-| `WEBSITE_URL` | Bolkiri website URL | No (default: bolkiri.fr) |
-| `REBUILD_EMBEDDINGS` | Force FAISS rebuild on deploy | No (default: true) |
+Set in Render dashboard: `OPENAI_API_KEY=sk-your-key`
 
 ## Deployment Steps
 
@@ -22,7 +16,8 @@ Set these in Render dashboard:
 
 - **Auto-scraping:** GitHub Actions weekly (Thursday 2am UTC) → scrape → commit → deploy
 - **Health check:** `GET /health` returns `{"status": "healthy", "agent": "ready"}`
-- **Scaling:** Free tier 1 instance (sleeps after 15min), paid tier auto-scale 1-10
+- **Uptime:** Free tier kept alive 24/7 via UptimeRobot (no cold starts)
+- **Scaling:** Paid tier auto-scale 1-10 instances
 
 ## Troubleshooting
 
@@ -30,8 +25,8 @@ Set these in Render dashboard:
 |-------|----------|
 | FAISS import error | Verify `faiss-cpu` in `requirements.txt` |
 | Embeddings missing | Set `REBUILD_EMBEDDINGS=true` |
-| Cold start (30-60s) | Free tier sleeps after 15min inactivity |
 | OpenAI rate limit | Upgrade to paid tier or reduce traffic |
+| High latency | Check UptimeRobot pings (should be <5s interval) |
 
 ## Production URLs
 

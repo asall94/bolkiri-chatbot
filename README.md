@@ -2,6 +2,7 @@
 
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)
+![Agentic RAG](https://img.shields.io/badge/Architecture-Agentic%20RAG-orange)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-purple)
 ![Tests](https://img.shields.io/badge/Tests-27%2F27%20passing-brightgreen)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
@@ -14,20 +15,20 @@
 
 **Solution:** Agentic RAG with auto-updating knowledge base (weekly scraping) and 4-layer anti-hallucination validation.
 
-**Impact:** <2% hallucination rate, zero manual KB maintenance, <500ms response time.
+**Impact:** 9 agentic tools, <2% hallucination rate, 20x token savings vs mega-prompt, ~500ms avg latency.
 
 ## Tech Stack
 
 - **Backend**: FastAPI (Python 3.12)
 - **AI**: OpenAI GPT-4o-mini + Agentic tool calling (9 tools)
-- **RAG**: FAISS semantic search (IndexFlatIP, 1536-dim embeddings)
+- **Agentic RAG**: FAISS semantic search (IndexFlatIP, 1536-dim embeddings)
 - **KB**: Automated web scraping (BeautifulSoup, JSON-LD Schema.org)
-- **Deployment**: Render.com (750h/month free tier)
+- **Deployment**: Render.com (750h/month free tier + UptimeRobot 24/7)
 - **CI/CD**: GitHub Actions (weekly KB updates)
 
 ## Architecture Principles
 
-- **100% RAG**: Single source of truth (bolkiri_knowledge_industrial_2025.json), zero hardcoded data
+- **100% Agentic RAG**: Single source of truth (bolkiri_knowledge_industrial_2025.json), zero hardcoded data
 - **Agentic Reasoning**: Multi-step tool calling (9 specialized functions)
 - **Hallucination Prevention**: 4-layer validator (restaurants/schedules/prices/departments)
 - **Multilingual**: Auto-detects French/Vietnamese/English
@@ -37,43 +38,28 @@
 
 ### Live Demo
 
-Live chatbot: https://asall94.github.io/bolkiri-chatbot/
+**Try 9 agentic tools:** https://asall94.github.io/bolkiri-chatbot/
 
 ### Docker (Recommended)
 
 ```bash
-# Clone repository
-git clone https://github.com/asall94/bolkiri-chatbot.git
-cd bolkiri-chatbot
-
-# Configure environment
+git clone https://github.com/asall94/bolkiri-chatbot.git && cd bolkiri-chatbot
 echo "OPENAI_API_KEY=sk-your-key" > .env
-
-# Run with Docker Compose
-docker-compose up -d
-
-# Access at http://localhost:8000
+docker-compose up -d  # Access at http://localhost:8000
 ```
 
 ### Local Setup
 
 ```bash
-# Install dependencies
 pip install -r requirements.txt
-
-# Configure OpenAI
 echo "OPENAI_API_KEY=sk-your-key" > .env
-echo "REBUILD_EMBEDDINGS=false" >> .env  # true on first run
-
-# Launch backend
 python main.py  # http://localhost:8000
 
 # Run tests
-python -m pytest tests/ --cov=ai_agent --cov-report=html
+python -m pytest tests/ --cov=ai_agent
 
 # Test endpoint
-curl -X POST http://localhost:8000/chat \
-  -H "Content-Type: application/json" \
+curl -X POST http://localhost:8000/chat -H "Content-Type: application/json" \
   -d '{"message":"Quels restaurants en Essonne?"}'
 ```
 
@@ -131,38 +117,9 @@ User Query → Intent Analysis → Tool Selection (GPT-4o-mini)
 
 **Multi-Step Reasoning Examples:**
 
-1. **Query:** "Do you have vegetarian options in Essonne?"
-   ```
-   Step 1: detect_department("Essonne") → Extract "91"
-   Step 2: filter_menu(vegetarian=True) → 12 veggie dishes
-   Step 3: get_restaurant_info("91") → Corbeil-Essonnes location
-   Step 4: Synthesize → "Yes, Bolkiri Corbeil-Essonnes (91) offers 12 vegetarian dishes including..."
-   ```
-
-2. **Query:** "What's your menu and where are you located?"
-   ```
-   Step 1: get_menu() → Full 32-dish menu with prices
-   Step 2: get_restaurants() → All 20 locations
-   Step 3: Synthesize → Combined response with menu + addresses
-   ```
-
-3. **Query:** "Spring rolls available?"
-   ```
-   Step 1: search_knowledge("spring rolls") → RAG retrieval (FAISS cosine similarity)
-   Step 2: Extract dish data from context (name, price, description)
-   Step 3: Synthesize → "Yes, Nems (spring rolls) available at 6.50€..."
-   ```
-
-**9 Available Tools:**
-- `search_knowledge`: FAISS semantic search
-- `get_restaurants`: List 20 locations
-- `get_restaurant_info`: Query by city/department (91/94/77/78)
-- `get_menu`: Full menu with prices
-- `filter_menu`: Filter by criteria (vegetarian/vegan/price)
-- `get_contact`: Phone/email/social media
-- `find_nearest_restaurant`: GPS-based proximity search
-- `detect_department`: Extract department from natural language
-- `recommend_dish`: Personalized suggestions
+1. **"Vegetarian options in Essonne?"** → detect_department(91) → filter_menu(vegetarian) → get_restaurant_info → Synthesize
+2. **"Menu + locations?"** → get_menu() + get_restaurants() → Combined response
+3. **"Spring rolls available?"** → search_knowledge(FAISS) → Extract dish data → "Yes, Nems at 6.50€"
 
 **Key Components:**
 - `ai_agent.py`: Tool calling, planning, validation
@@ -189,22 +146,13 @@ See `DEPLOYMENT.md` for full guide.
 
 - **[Architecture Decision Records](docs/adr/README.md)**: 8 technical decisions with quantified trade-offs
 - **[DEPLOYMENT.md](DEPLOYMENT.md)**: Production deployment guide
-- **[RAG_ARCHITECTURE.html](docs/RAG_ARCHITECTURE.html)**: Interactive architecture visualization
 
 ## Testing & Quality
 
-- **Tests**: 27/27 passing (100%)
-- **Coverage**: 42% on ai_agent.py
-- **Framework**: pytest + pytest-cov + pytest-mock
-- **Mocks**: EnrichedKnowledgeBase, OpenAI API
-- **CI/CD**: GitHub Actions weekly scraping
+**27/27 tests passing (100%)** | pytest + mocks (KB, OpenAI)
 
 ```bash
-# Run tests
 python -m pytest tests/ -v
-
-# With coverage report
-python -m pytest tests/ --cov=ai_agent --cov-report=html
 ```
 
 ## Author & Copyright
