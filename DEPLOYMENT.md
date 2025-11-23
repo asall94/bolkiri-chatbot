@@ -1,27 +1,6 @@
 # Deployment Guide
 
-Production deployment on Render.com.
-
-## Prerequisites
-
-- Render.com account
-- OpenAI API key
-- GitHub repository
-
-## Configuration Files
-
-### `runtime.txt`
-```
-python-3.12.0
-```
-
-### `Procfile`
-```
-web: uvicorn main:app --host 0.0.0.0 --port $PORT
-```
-
-### `requirements.txt`
-FastAPI, OpenAI, FAISS, etc.
+Production deployment on Render.com (free tier sufficient).
 
 ## Environment Variables
 
@@ -35,63 +14,30 @@ Set these in Render dashboard:
 
 ## Deployment Steps
 
-### 1. Create Web Service
+1. **Connect GitHub** → Render auto-detects `runtime.txt` (Python 3.12) + `Procfile`
+2. **Set env var** → `OPENAI_API_KEY` in dashboard
+3. **Deploy** → Auto-deploys on push to `main`, rebuilds embeddings on first boot
 
-- Connect GitHub repository
-- Runtime: Python 3.12
-- Build: `pip install -r requirements.txt`
-- Start: `uvicorn main:app --host 0.0.0.0 --port $PORT`
+## CI/CD & Health
 
-### 2. Environment Variables
-
-Set `OPENAI_API_KEY` in Render dashboard.
-
-### 3. Auto-Deploy
-
-Auto-deploys on push to `main`.
-
-## CI/CD
-
-### Weekly KB Update
-
-GitHub Actions (`.github/workflows/auto-scraping.yml`):
-- Every Thursday 2am UTC
-- Scrapes website
-- Commits KB updates
-- Triggers auto-deploy
-
-## Health Checks
-
-`GET /health` returns `{"status": "healthy", "agent": "ready"}`
-
-## Scaling
-
-- Free tier: 1 instance (sleeps after 15min)
-- Paid tier: Auto-scale 1-10 instances
+- **Auto-scraping:** GitHub Actions weekly (Thursday 2am UTC) → scrape → commit → deploy
+- **Health check:** `GET /health` returns `{"status": "healthy", "agent": "ready"}`
+- **Scaling:** Free tier 1 instance (sleeps after 15min), paid tier auto-scale 1-10
 
 ## Troubleshooting
 
-**FAISS Import Error:** Check `faiss-cpu` in `requirements.txt`
-
-**Embeddings Cache Missing:** Set `REBUILD_EMBEDDINGS=true`
-
-**Cold Start Delay:** Free tier sleeps after 15min (first request: 30-60s)
+| Issue | Solution |
+|-------|----------|
+| FAISS import error | Verify `faiss-cpu` in `requirements.txt` |
+| Embeddings missing | Set `REBUILD_EMBEDDINGS=true` |
+| Cold start (30-60s) | Free tier sleeps after 15min inactivity |
+| OpenAI rate limit | Upgrade to paid tier or reduce traffic |
 
 ## Production URLs
 
 - **API**: `https://bolkiri-chatbot.onrender.com`
-- **Health Check**: `https://bolkiri-chatbot.onrender.com/health`
-- **Chat Demo**: `https://asall94.github.io/bolkiri-chatbot/`
-
-## GitHub Pages Setup
-
-Publish demo at `https://asall94.github.io/bolkiri-chatbot/`:
-
-1. **Enable:** Settings → Pages → Deploy from `main` → `/docs` folder
-2. **Verify:** `docs/index.html` + `docs/logo_bolkiri.png`
-3. **Access:** Wait 1-2 min, then visit URL
-
-**Benefits:** Professional URL, free hosting, auto-deploy, custom domain support
+- **Health**: `https://bolkiri-chatbot.onrender.com/health`
+- **Demo**: `https://asall94.github.io/bolkiri-chatbot/` (GitHub Pages: Settings → Pages → `/docs` folder)
 
 ## Monitoring
 

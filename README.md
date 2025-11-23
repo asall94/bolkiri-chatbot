@@ -82,67 +82,40 @@ curl -X POST http://localhost:8000/chat \
 **System Architecture:**
 ```mermaid
 graph TB
-    subgraph "Client Layer"
-        A[User Query] --> B[FastAPI /chat endpoint]
-    end
+    A[User Query] --> B[FastAPI /chat]
+    B --> C[AI Agent]
+    C --> D{Tool Selection<br/>GPT-4o-mini}
+    D --> E1[search_knowledge]
+    D --> E2[get_restaurants]
+    D --> E3[filter_menu]
+    D --> E4[get_hours]
+    D --> E5[get_contact]
+    D --> E6[recommend_dish]
+    D --> E7[get_restaurant_info]
+    D --> E8[get_menu]
+    D --> E9[find_nearest]
     
-    subgraph "Agent Layer"
-        B --> C[AI Agent<br/>ai_agent.py]
-        C --> D{Tool Selection<br/>GPT-4o-mini}
-        D --> E1[search_knowledge]
-        D --> E2[get_restaurants]
-        D --> E3[filter_menu]
-        D --> E4[get_hours]
-        D --> E5[get_contact]
-        D --> E6[recommend_dish]
-        D --> E7[get_restaurant_info]
-        D --> E8[get_menu]
-        D --> E9[find_nearest]
-    end
+    E1 --> F[RAG Engine]
+    E2 --> G[Enriched KB]
+    E3 --> G
+    E4 --> G
+    E5 --> G
+    E6 --> G
+    E7 --> G
+    E8 --> G
+    E9 --> G
     
-    subgraph "RAG Layer"
-        E1 --> F[RAG Engine<br/>rag_engine.py]
-        E2 --> G[Enriched KB<br/>knowledge_base_enriched.py]
-        E3 --> G
-        E4 --> G
-        E5 --> G
-        E6 --> G
-        E7 --> G
-        E8 --> G
-        F --> H[(FAISS Index<br/>IndexFlatIP)]
-        G --> I[(Knowledge Base<br/>bolkiri_knowledge_industrial_2025.json)]
-    end
+    F --> H[(FAISS Index)]
+    G --> I[(Knowledge Base JSON)]
     
-    subgraph "Validation Layer"
-        C --> J{Anti-Hallucination<br/>4 Validators}
-        J --> J1[Restaurant Existence]
-        J --> J2[Schedule Format]
-        J --> J3[Price Consistency]
-        J --> J4[Department Coherence]
-    end
-    
-    subgraph "LLM Layer"
-        D -.token usage.-> K[OpenAI API<br/>GPT-4o-mini]
-        F -.embeddings.-> L[OpenAI API<br/>text-embedding-ada-002]
-    end
-    
+    C --> J{4-Layer Validation}
     J --> M[Final Response]
     M --> B
     
-    subgraph "Auto-Update Pipeline"
-        N[GitHub Actions<br/>Weekly Cron] --> O[Scraper<br/>scraper_industrial_2025.py]
-        O --> P[Bolkiri Website<br/>JSON-LD + HTML]
-        O --> I
-        I --> Q[Rebuild FAISS<br/>on Deploy]
-        Q --> H
-    end
-    
-    style C fill:#e1f5ff
-    style F fill:#ffe1e1
-    style G fill:#ffe1e1
-    style J fill:#fff4e1
-    style K fill:#e8f5e9
-    style L fill:#e8f5e9
+    N[GitHub Actions<br/>Weekly] --> O[Scraper]
+    O --> I
+    I --> Q[Rebuild FAISS]
+    Q --> H
 ```
 
 ## Agentic Architecture
@@ -220,7 +193,7 @@ See `DEPLOYMENT.md` for full guide.
 
 ## Testing & Quality
 
-- **Tests**: 24/24 passing (100%)
+- **Tests**: 27/27 passing (100%)
 - **Coverage**: 42% on ai_agent.py
 - **Framework**: pytest + pytest-cov + pytest-mock
 - **Mocks**: EnrichedKnowledgeBase, OpenAI API
@@ -240,17 +213,12 @@ python -m pytest tests/ --cov=ai_agent --cov-report=html
 [LinkedIn](https://linkedin.com/in/abdoulaye-sall/)
 
 **Skills Demonstrated:**
-- Agentic RAG architecture with multi-step tool calling (9 specialized functions)
-- Anti-hallucination system with 4-layer validation (<2% error rate)
-- GPS-based geolocation with Haversine distance calculation (Nominatim API)
-- FAISS vector search optimization (5-10ms latency, $840/year saved vs Pinecone)
-- Production FastAPI deployment on Render.com with auto-scaling
-- OpenAI GPT-4o-mini integration with function calling (66x cheaper than GPT-4)
-- Automated knowledge base updates via GitHub Actions CI/CD
-- Web scraping with JSON-LD + BeautifulSoup for structured data extraction
-- Docker containerization with multi-stage builds
-- pytest unit testing with 100% pass rate (24/24 tests)
-- Structured JSON logging for production observability
+- Agentic RAG with 9-tool multi-step reasoning + <2% hallucination rate (4-layer validation)
+- FAISS optimization: 5-10ms latency, $840/year saved vs Pinecone, IndexFlatIP for exact search
+- Cost engineering: GPT-4o-mini (66x cheaper), token reduction (2K vs 40K), 95% savings via tools
+- GPS geolocation: Nominatim API, Haversine distance, automated geocoding pipeline
+- Production deployment: FastAPI on Render.com, auto-scaling, GitHub Actions CI/CD, Docker multi-stage
+- Testing: 27/27 passing (100%), pytest + mocks, JSON logging for observability
 
 **License:** Proprietary - See LICENSE for details
 
