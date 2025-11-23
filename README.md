@@ -3,7 +3,7 @@
 ![Python](https://img.shields.io/badge/Python-3.12-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.104-green)
 ![OpenAI](https://img.shields.io/badge/OpenAI-GPT--4o--mini-purple)
-![Tests](https://img.shields.io/badge/Tests-19%2F19%20passing-brightgreen)
+![Tests](https://img.shields.io/badge/Tests-24%2F24%20passing-brightgreen)
 ![License](https://img.shields.io/badge/License-Proprietary-red)
 
 24/7 multilingual customer support chatbot with 100% RAG architecture and <2% hallucination rate.
@@ -19,7 +19,7 @@
 ## Tech Stack
 
 - **Backend**: FastAPI (Python 3.12)
-- **AI**: OpenAI GPT-4o-mini + Agentic tool calling (8 tools)
+- **AI**: OpenAI GPT-4o-mini + Agentic tool calling (9 tools)
 - **RAG**: FAISS semantic search (IndexFlatIP, 1536-dim embeddings)
 - **KB**: Automated web scraping (BeautifulSoup, JSON-LD Schema.org)
 - **Deployment**: Render.com (750h/month free tier)
@@ -28,7 +28,7 @@
 ## Architecture Principles
 
 - **100% RAG**: Single source of truth (bolkiri_knowledge_industrial_2025.json), zero hardcoded data
-- **Agentic Reasoning**: Multi-step tool calling (8 specialized functions)
+- **Agentic Reasoning**: Multi-step tool calling (9 specialized functions)
 - **Hallucination Prevention**: 4-layer validator (restaurants/schedules/prices/departments)
 - **Multilingual**: Auto-detects French/Vietnamese/English
 - **Auto-Update**: Weekly scraping via GitHub Actions
@@ -179,13 +179,14 @@ User Query → Intent Analysis → Tool Selection (GPT-4o-mini)
    Step 3: Synthesize → "Yes, Nems (spring rolls) available at 6.50€..."
    ```
 
-**8 Available Tools:**
+**9 Available Tools:**
 - `search_knowledge`: FAISS semantic search
 - `get_restaurants`: List 20 locations
 - `get_restaurant_info`: Query by city/department (91/94/77/78)
 - `get_menu`: Full menu with prices
 - `filter_menu`: Filter by criteria (vegetarian/vegan/price)
 - `get_contact`: Phone/email/social media
+- `find_nearest_restaurant`: GPS-based proximity search
 - `detect_department`: Extract department from natural language
 - `recommend_dish`: Personalized suggestions
 
@@ -218,7 +219,7 @@ See `DEPLOYMENT.md` for full guide.
 
 ## Testing & Quality
 
-- **Tests**: 19/19 passing (100%)
+- **Tests**: 24/24 passing (100%)
 - **Coverage**: 42% on ai_agent.py
 - **Framework**: pytest + pytest-cov + pytest-mock
 - **Mocks**: EnrichedKnowledgeBase, OpenAI API
@@ -238,7 +239,7 @@ python -m pytest tests/ --cov=ai_agent --cov-report=html
 [LinkedIn](https://linkedin.com/in/abdoulaye-sall/)
 
 **Skills Demonstrated:**
-- Agentic RAG architecture with multi-step tool calling (8 specialized functions)
+- Agentic RAG architecture with multi-step tool calling (9 specialized functions)
 - Anti-hallucination system with 4-layer validation (<2% error rate)
 - FAISS vector search optimization (5-10ms latency, $840/year saved vs Pinecone)
 - Production FastAPI deployment on Render.com with auto-scaling
@@ -246,7 +247,7 @@ python -m pytest tests/ --cov=ai_agent --cov-report=html
 - Automated knowledge base updates via GitHub Actions CI/CD
 - Web scraping with JSON-LD + BeautifulSoup for structured data extraction
 - Docker containerization with multi-stage builds
-- pytest unit testing with 100% pass rate (19/19 tests)
+- pytest unit testing with 100% pass rate (24/24 tests)
 - Structured JSON logging for production observability
 
 **License:** Proprietary - See LICENSE for details
