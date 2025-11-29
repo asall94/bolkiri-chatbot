@@ -89,16 +89,20 @@ class AIAgent:
             "seine-et-marne": "Lagny-sur-Marne"
         }
         
-        # Check if department mentioned
+        # Check if department mentioned - replace dept name with ville
+        dept_found = None
         for dept, ville in dept_mapping.items():
-            if dept in query_lower or re.search(rf'\b{dept}\b', query_lower):
-                # Force search on this city
-                query = f"{query} {ville}"
+            if dept in query_lower:
+                # Replace department name with city name
+                query = re.sub(rf'\b{dept}\b', ville, query, flags=re.IGNORECASE)
+                query = query.replace('essonne', ville).replace('val-de-marne', ville).replace('yvelines', ville).replace('seine-et-marne', ville)
+                dept_found = ville
+                logger.info("Department detected and replaced", extra={"dept": dept, "ville": ville, "query": query})
                 break
         
         # Enrich vague queries with conversation context (last restaurant mentioned)
         vague_queries = ['url', 'lien', 'site', 'link', 'tel', 'telephone', 'adresse', 'address']
-        if query_lower.strip() in vague_queries or len(query.split()) <= 2:
+        if query_lower.strip() in vague_queries or (len(query.split()) <= 2 and not dept_found):
             # Extract city from last 3 messages in conversation memory
             for msg in reversed(self.conversation_memory[-3:]):
                 content = msg.get('content', '').lower()
