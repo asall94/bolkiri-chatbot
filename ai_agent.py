@@ -96,6 +96,22 @@ class AIAgent:
                 query = f"{query} {ville}"
                 break
         
+        # Enrich vague queries with conversation context (last restaurant mentioned)
+        vague_queries = ['url', 'lien', 'site', 'link', 'tel', 'telephone', 'adresse', 'address']
+        if query_lower.strip() in vague_queries or len(query.split()) <= 2:
+            # Extract city from last 3 messages in conversation memory
+            for msg in reversed(self.conversation_memory[-3:]):
+                content = msg.get('content', '').lower()
+                for ville in ['ivry', 'corbeil', 'mureaux', 'lagny', 'bondy', 'bry', 'saint-denis', 
+                             'lille', 'malakoff', 'montreuil', 'montrouge', 'nanterre', 'paris', 
+                             'pierrefitte', 'boulogne', 'sucy', 'saint-michel']:
+                    if ville in content:
+                        query = f"{query} {ville}"
+                        logger.info("Vague query enriched with conversation context", extra={"original_query": query_lower, "enriched_query": query, "ville": ville})
+                        break
+                if ville in content:
+                    break
+        
         results = self.kb.search(query, limit=5)
         
         if not results:
