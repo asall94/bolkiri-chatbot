@@ -374,6 +374,61 @@ class EnrichedKnowledgeBase:
     def clear(self):
         """For compatibility - does nothing"""
         pass
+    
+    def get_department_mapping(self) -> Dict[str, str]:
+        """100% RAG - Extract department mapping from restaurants data
+        
+        Returns:
+            Dict mapping department codes and names to cities
+        """
+        mapping = {}
+        
+        # Extract from restaurants
+        for resto in self.restaurants:
+            name = resto.get('name', '')
+            adresse = resto.get('adresse', '')
+            
+            # Extract city from name "BOLKIRI {City} Street Food Viêt"
+            ville = name.replace('BOLKIRI', '').replace('Street Food Viêt', '').strip()
+            
+            # Extract department code from address (postal code)
+            import re
+            postal_match = re.search(r'\b(\d{5})\b', adresse)
+            if postal_match:
+                postal = postal_match.group(1)
+                dept_code = postal[:2]
+                
+                # Map department code to city
+                mapping[dept_code] = ville
+                
+                # Add full department names
+                dept_names = {
+                    "91": "essonne",
+                    "94": "val-de-marne",
+                    "78": "yvelines",
+                    "77": "seine-et-marne"
+                }
+                if dept_code in dept_names:
+                    mapping[dept_names[dept_code]] = ville
+        
+        return mapping
+    
+    def get_all_cities(self) -> List[str]:
+        """100% RAG - Extract all cities from restaurants data
+        
+        Returns:
+            List of all city names
+        """
+        cities = []
+        
+        for resto in self.restaurants:
+            name = resto.get('name', '')
+            # Extract city from name "BOLKIRI {City} Street Food Viêt"
+            ville = name.replace('BOLKIRI', '').replace('Street Food Viêt', '').strip()
+            if ville and ville not in cities:
+                cities.append(ville)
+        
+        return cities
 
 
 # Alias for compatibility

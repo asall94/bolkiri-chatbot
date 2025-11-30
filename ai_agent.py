@@ -76,18 +76,9 @@ class AIAgent:
         """Enriched search across entire knowledge base - auto-detects department"""
         import re
         
-        # Department detection in query
+        # Department detection in query - 100% RAG from KB
         query_lower = query.lower()
-        dept_mapping = {
-            "91": "Corbeil-Essonnes",
-            "essonne": "Corbeil-Essonnes",
-            "94": "Ivry-sur-Seine",
-            "val-de-marne": "Ivry-sur-Seine",
-            "78": "Les Mureaux",
-            "yvelines": "Les Mureaux",
-            "77": "Lagny-sur-Marne",
-            "seine-et-marne": "Lagny-sur-Marne"
-        }
+        dept_mapping = self.kb.get_department_mapping()  # Dynamic from KB
         
         # Check if department mentioned - replace dept name with ville
         dept_found = None
@@ -101,19 +92,19 @@ class AIAgent:
                 break
         
         # Enrich vague queries with conversation context (last restaurant mentioned)
+        # Get all cities dynamically from KB
+        all_cities = self.kb.get_all_cities()  # Dynamic from KB
         vague_queries = ['url', 'lien', 'site', 'link', 'tel', 'telephone', 'adresse', 'address']
         if query_lower.strip() in vague_queries or (len(query.split()) <= 2 and not dept_found):
             # Extract city from last 3 messages in conversation memory
             for msg in reversed(self.conversation_memory[-3:]):
                 content = msg.get('content', '').lower()
-                for ville in ['ivry', 'corbeil', 'mureaux', 'lagny', 'bondy', 'bry', 'saint-denis', 
-                             'lille', 'malakoff', 'montreuil', 'montrouge', 'nanterre', 'paris', 
-                             'pierrefitte', 'boulogne', 'sucy', 'saint-michel']:
-                    if ville in content:
+                for ville in all_cities:
+                    if ville.lower() in content:
                         query = f"{query} {ville}"
                         logger.info("Vague query enriched with conversation context", extra={"original_query": query_lower, "enriched_query": query, "ville": ville})
                         break
-                if ville in content:
+                if any(v.lower() in content for v in all_cities):
                     break
         
         results = self.kb.search(query, limit=5)
@@ -386,18 +377,18 @@ class AIAgent:
         recommendations.sort(key=lambda x: x[1], reverse=True)
         
         if not recommendations:
-            # Recommend signatures by default - return context for LLM
+            # Recommend signatures by default - return context for LLM (language-agnostic)
             signatures = self.kb.get_plats_signatures()
             if signatures:
-                result = "SIGNATURE DISHES:\n\n"
+                result = "PLATS SIGNATURE:\n\n"
                 for plat in signatures[:3]:
                     result += f"• {plat['nom']} - {plat['prix']}\n"
                     result += f"  {plat.get('description', '')}\n\n"
                 return result
             else:
-                return "Authentic Vietnamese specialties available."
+                return "Spécialités vietnamiennes authentiques disponibles."
         
-        result = "RECOMMENDED DISHES:\n\n"
+        result = "PLATS RECOMMANDÉS:\n\n"
         for plat, _ in recommendations[:3]:
             result += f"• {plat['nom']}"
             if plat.get('nom_vietnamien'):
@@ -408,14 +399,14 @@ class AIAgent:
             # Why recommended
             raisons = []
             if plat.get('signature'):
-                raisons.append('Signature dish')
+                raisons.append('Plat signature')
             if plat.get('vegetarien') and vegetarien:
-                raisons.append('Vegetarian')
+                raisons.append('Végétarien')
             if plat.get('epice') and epice:
                 raisons.append(f'{plat["epice"]}')
             
             if raisons:
-                result += f"   Reasons: {', '.join(raisons)}\n"
+                result += f"   Raisons: {', '.join(raisons)}\n"
             result += "\n"
         
         return result
@@ -446,6 +437,14 @@ class AIAgent:
             return f"Outil inconnu: {tool_name}"
     
     def plan_and_execute(self, user_query: str) -> str:
+        # 100% RAG - Build department rules dynamically from KB
+        dept_mapping = self.kb.get_department_mapping()
+        dept_rules = "\n".join([
+            f'Si la question mentionne "{dept}" → utilise get_restaurant_info avec ville="{dept}"'
+            for dept in dept_mapping.keys()
+            if dept.isdigit()  # Only numeric department codes
+        ])
+        
         planning_prompt = f"""Tu es un agent IA autonome et intelligent pour le restaurant Bolkiri.
 
 Outils disponibles:
@@ -453,11 +452,8 @@ Outils disponibles:
 
 Question client: "{user_query}"
 
-RÈGLE IMPORTANTE - DÉPARTEMENTS:
-Si la question mentionne "91", "Essonne" → utilise get_restaurant_info avec ville="91"
-Si la question mentionne "94", "Val-de-Marne" → utilise get_restaurant_info avec ville="94"
-Si la question mentionne "78", "Yvelines" → utilise get_restaurant_info avec ville="78"
-Si la question mentionne "77", "Seine-et-Marne" → utilise get_restaurant_info avec ville="77"
+RÈGLE IMPORTANTE - DÉPARTEMENTS (auto-généré depuis base de connaissances):
+{dept_rules}
 
 Analyse la question et choisis les meilleurs outils à utiliser.
 
@@ -524,10 +520,14 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
                 if phrase in response_lower:
                     logger.warning("Restaurant hallucination detected", extra={"phrase": phrase, "validation_result": "negative_phrase_despite_positive_context"})
                     # Return simple and direct corrected response
-                    # Extract city/department from query
+                    # Extract city/department from query - 100% RAG
                     import re
-                    dept_match = re.search(r'\b(91|94|78|77)\b', user_query)
-                    if dept_match or any(d in user_query.lower() for d in ['91', '94', '78', '77', 'essonne', 'val-de-marne', 'yvelines', 'seine-et-marne']):
+                    dept_mapping = self.kb.get_department_mapping()
+                    dept_codes = [d for d in dept_mapping.keys() if d.isdigit()]
+                    dept_pattern = r'\b(' + '|'.join(dept_codes) + r')\b'
+                    dept_match = re.search(dept_pattern, user_query)
+                    
+                    if dept_match or any(d in user_query.lower() for d in dept_mapping.keys()):
                         # Use get_restaurant_info for structured response
                         dept = dept_match.group(1) if dept_match else user_query
                         corrected = self.get_restaurant_info(dept)
@@ -562,12 +562,13 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
                         corrected = corrected.replace(wrong_hour, context_hours[0])
                 return corrected, False
         
-        # 3. Check department/city coherence
+        # 3. Check department/city coherence - 100% RAG
+        dept_mapping = self.kb.get_department_mapping()
+        # Filter to numeric departments only and lowercase cities for comparison
         dept_ville = {
-            "91": "corbeil",
-            "94": "ivry", 
-            "78": "mureaux",
-            "77": "lagny"
+            dept: ville.lower() 
+            for dept, ville in dept_mapping.items() 
+            if dept.isdigit()
         }
         
         for dept, ville in dept_ville.items():
