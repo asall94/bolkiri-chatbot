@@ -34,6 +34,9 @@ embeddings_cache.pkl
 portfolio_brief_bolkiri.md
 qa_technique_bolkiri.md
 
+# Replication script (internal use only)
+replicate_project.py
+
 # Test artifacts
 htmlcov/
 .coverage
