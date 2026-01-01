@@ -14,7 +14,7 @@ class AIAgent:
         self.client = OpenAI(api_key=openai_api_key)
         self.website_url = website_url
         self.kb = EnrichedKnowledgeBase()
-        self.conversation_memory = []
+        self.conversations = {}  # {conversation_id: [messages]}
         self.tools = self._define_tools()
         self.agent_state = {
             'knowledge_ready': True,
@@ -96,8 +96,13 @@ class AIAgent:
         all_cities = self.kb.get_all_cities()  # Dynamic from KB
         vague_queries = ['url', 'lien', 'site', 'link', 'tel', 'telephone', 'adresse', 'address']
         if query_lower.strip() in vague_queries or (len(query.split()) <= 2 and not dept_found):
-            # Extract city from last 3 messages in conversation memory
-            for msg in reversed(self.conversation_memory[-3:]):
+            # Extract city from last 3 messages across all active conversations
+            # (Fallback: check most recent conversation for context)
+            recent_messages = []
+            for conv_messages in self.conversations.values():
+                recent_messages.extend(conv_messages[-3:])
+            
+            for msg in reversed(recent_messages[-10:]):  # Check last 10 messages max
                 content = msg.get('content', '').lower()
                 for ville in all_cities:
                     if ville.lower() in content:
@@ -613,6 +618,10 @@ Réponds UNIQUEMENT avec un JSON valide (pas de texte avant ou après):
     def chat(self, user_message: str, conversation_id: Optional[str] = None) -> str:
         self.agent_state['total_interactions'] += 1
         
+        # Initialize conversation if new
+        if conversation_id not in self.conversations:
+            self.conversations[conversation_id] = []
+        
         context = self.plan_and_execute(user_message)
         
         # Dynamically load restaurant info
@@ -669,14 +678,14 @@ Query "yes" (after confirmation request) → execute previously suggested action
 RESPONSE STYLE: First-person plural, concise, conversational. Respect detected language.
 """
 
-        self.conversation_memory.append({
+        self.conversations[conversation_id].append({
             "role": "user",
             "content": user_message
         })
         
         messages = [
             {"role": "system", "content": system_prompt}
-        ] + self.conversation_memory[-10:]
+        ] + self.conversations[conversation_id][-10:]
         
         try:
             response = self.client.chat.completions.create(
@@ -710,7 +719,7 @@ RESPONSE STYLE: First-person plural, concise, conversational. Respect detected l
             assistant_message = re.sub(r'(?<!\*)\*(?!\*)([^*]+)(?<!\*)\*(?!\*)', r'\1', assistant_message)
             assistant_message = re.sub(r'(?<!_)_(?!_)([^_]+)(?<!_)_(?!_)', r'\1', assistant_message)
             
-            self.conversation_memory.append({
+            self.conversations[conversation_id].append({
                 "role": "assistant",
                 "content": assistant_message
             })
